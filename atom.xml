@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-22T10:17:10.000Z</updated>
+  <updated>2017-02-22T10:24:46.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/02/20/new/"/>
     <id>http://yoursite.com/2017/02/20/new/</id>
     <published>2017-02-20T02:18:04.000Z</published>
-    <updated>2017-02-22T10:17:10.000Z</updated>
+    <updated>2017-02-22T10:24:46.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2016年这一年过得很快，但是足以发生许许多多的事情。如果要叙述一个复杂的故事，最简单的办法就是利用时间作为线索，采用顺序的叙述结构。这种结构同样非常适合个人学习总结。我毕业于2015年，本身对所学的机械设计行业并没有太大的兴趣,由于读的专业所以毕业后就进入了一家上市公司做机械设计，很遗憾一年时间工作还是没能提起兴趣所以决定年底辞职。2016年底开始筹划着转行,这段时间我边工作边开始了解互联网行业，通过知乎了解到互联网职位有产品经理、UI、前端、后端、运维等等这些职位的工作内容及需要技能。大学时期对互联网行业一直比较有兴趣，偏it的课程也就只有单片机C语言及PLC，选修过一门网页设计的课程知道有HTML和CSS。真正引我入前端是在腾讯工作的堂哥和在阿里巴巴工作的妹妹，通过他们介绍认识了2位在职的前端工程师，那时候才对前端知识体系及工作内容有了初步的认识，对前端所见所得及技术的迭代速度产生了浓厚的兴趣，并开始收集学习资料及制定了我为期2个月的学习计划。2016年12月20日辞职，开始自学前端。<br><a id="more"></a></p>
 <p>上面所提到的虽不全面，但也大体覆盖了这一年发生的事情和所做的主要努力。下面的过程将开始分享自己过去两个月的前端学习历程。</p>
@@ -64,13 +64,13 @@
 </li>
 </ul>
 </li>
-<li><h3 id="HTML5-amp-amp-CSS3-amp-amp-AJAX-amp-amp-Bootstrap"><a href="#HTML5-amp-amp-CSS3-amp-amp-AJAX-amp-amp-Bootstrap" class="headerlink" title="HTML5 &amp;&amp; CSS3 &amp;&amp; AJAX &amp;&amp; Bootstrap"></a>HTML5 &amp;&amp; CSS3 &amp;&amp; AJAX &amp;&amp; Bootstrap</h3><ul>
+<li><h3 id="HTML5-CSS3-AJAX-Bootstrap"><a href="#HTML5-CSS3-AJAX-Bootstrap" class="headerlink" title="HTML5+CSS3+AJAX+Bootstrap"></a>HTML5+CSS3+AJAX+Bootstrap</h3><ul>
 <li>这段时间由于过年节假氛围和来到别的城市需要租房和搬行李,刚开始浪费了一个星期时间在这里,不过还好我很快就调回状态了。这部分比较碎,HTML5、CSS3、AJXA看完传智博客<a href="http://v.itcast.cn/course/197.html" target="_blank" rel="external">2016年最新H5+CSS3教程视频</a>,然后这部分一定要结合前面所学的知识进行复习和总结,了解新属性、智能表单、网页多媒体、SVG,重点在于HTML5新增的标签和CSS3的动画及标签。AJXA这部分重点学习AJAX的运行机制和原理,jsonp是怎么实现跨域的。看完后自己封装了一个简单的ajax,然后再应用此demo。Bootstrap看完慕课网<a href="http://www.imooc.com/learn/141" target="_blank" rel="external">玩转Bootstrap（基础）</a>,看完后了解Bootstrap框架、使用Bootstrap制作Web页面或Web应用程序、能定制个性化Bootstra,看完后再看网易云<a href="http://study.163.com/course/introduction.htm?courseId=1017002#/courseDetail" target="_blank" rel="external">Bootstrap视频教程</a>。这部分比较琐碎,需要多看视频多百度来查不懂的概念,只能如此反复,多看几个人的答案,一个苹果交换后还是一个苹果,一种思想交换后就变成了两种思想。<br>看完这部分,我做了1个项目:基于Bootstrap的PC/移动端响应式页面实战,以上用时14天。<br></li>
 </ul>
 </li>
 </ul>
 <hr>
-<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2><p><strong>总结:</strong> 由于最近准备面试的简历和项目,自己开始将线下的日记和项目搬到github上。通过慕课网的学习<a href="http://www.imooc.com/learn/390" target="_blank" rel="external">版本控制入门 – 搬进 Github</a>和<a href="http://www.imooc.com/learn/208" target="_blank" rel="external">版本管理工具介绍—Git篇</a>申请了github的并且学会开源项目的基本操作与git的基本命令,并且用github+hexo搭建了这个博客。有兴趣请点击这篇文章<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">手把手教你用Hexo+Github 搭建属于自己的博客</a>,最后由于后续会将每个学习到的知识点放入博客的每篇文章以便于日后总结复习,我学习了慕课网在线代码编辑的方式,实现方法是将文章嵌入一个codeopen在线编辑器页面,其它页面可以放到github的gh-pages上以便于观看。<br></p>
+<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2><p><strong>总结:</strong> 由于最近准备面试的简历和项目,自己开始将线下的日记和项目搬到github上。通过慕课网的学习<a href="http://www.imooc.com/learn/390" target="_blank" rel="external">版本控制入门 – 搬进 Github</a>和<a href="http://www.imooc.com/learn/208" target="_blank" rel="external">版本管理工具介绍—Git篇</a>申请了github的并且学会开源项目的基本操作与git的基本命令,并且用github+hexo搭建了这个博客。有兴趣请点击这篇文章<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">手把手教你用Hexo+Github 搭建属于自己的博客</a>,最后由于后续会将每个学习到的知识点放入博客的每篇文章以便于日后总结复习,我学习了慕课网在线代码编辑的方式,实现方法是将文章嵌入一个codeopen在线编辑器页面,其它页面可以放到github的gh-pages上以便于观看。<br>后面计划学习几种常见的框架Angular,Vue,脑补计算机基础知识:算法和数据结构。目前正在看华科课程,日后学习基础。很多知识刚开始接触比较困难,唯一的捷径就是多复习几次,所以有人说看一遍和看三遍《高级程序设计》是有巨大差别的,复习巩固才是真谛。手脑并用这一步也不能省略,大量模仿，无他，唯手熟尔。</p>
 <p><strong>后记:</strong> 至此,是我两个月自学前端的时间流。其实学的内容越多,就越感到自己知识面匮乏,工作实践项目接触少是我目前最缺乏的。大学期间我很多课程基本都是在图书馆自学总结并且能考出不错的成绩,这点从我的毕业绩点能看出。这段时间经历了过年的缓冲和转行的决心,给自己带上了一份特别的心理压力。很庆幸，这段时间以来自己能决心跨过传统机械行业,那种每天机械式工作的无力感转瞬被学习前端的兴趣所取代。两个月的自学,每天都充满斗志在学习和总结,也愈发觉得自己渐入佳境。<br><br>希望新的一年,家人及周围的亲戚朋友身体健康,一切顺利！也希望自己能找到一份满意的工作并实现自己的人生价值,做自己喜欢的事情,愿意为它加班的工作！<br><br>祝君好,一定要！</p>
 ]]></content>
     
