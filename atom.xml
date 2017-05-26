@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-26T17:42:54.000Z</updated>
+  <updated>2017-05-26T17:49:24.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,25 +16,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>html</title>
-    <link href="http://yoursite.com/2017/05/27/html/"/>
-    <id>http://yoursite.com/2017/05/27/html/</id>
-    <published>2017-05-26T17:42:52.000Z</published>
-    <updated>2017-05-26T17:42:54.000Z</updated>
+    <title>CSS基础知识(长期)</title>
+    <link href="http://yoursite.com/2017/03/10/css/"/>
+    <id>http://yoursite.com/2017/03/10/css/</id>
+    <published>2017-03-09T17:48:30.000Z</published>
+    <updated>2017-05-26T17:49:24.000Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
     
   </entry>
   
   <entry>
-    <title>web</title>
-    <link href="http://yoursite.com/2017/02/27/web/"/>
-    <id>http://yoursite.com/2017/02/27/web/</id>
-    <published>2017-02-26T17:39:17.000Z</published>
-    <updated>2017-05-26T17:43:46.000Z</updated>
+    <title>HTML基础知识(长期)</title>
+    <link href="http://yoursite.com/2017/02/27/html/"/>
+    <id>http://yoursite.com/2017/02/27/html/</id>
+    <published>2017-02-26T17:42:52.000Z</published>
+    <updated>2017-05-26T17:49:10.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
+    
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自学准备工作</title>
+    <link href="http://yoursite.com/2017/02/20/web/"/>
+    <id>http://yoursite.com/2017/02/20/web/</id>
+    <published>2017-02-19T17:39:17.000Z</published>
+    <updated>2017-05-26T17:49:28.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="web前端开发职能"><a href="#web前端开发职能" class="headerlink" title="web前端开发职能"></a>web前端开发职能</h2><h3 id="职能"><a href="#职能" class="headerlink" title="职能"></a>职能</h3><ul>
 <li>web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求。  <h3 id="常见简称"><a href="#常见简称" class="headerlink" title="常见简称"></a>常见简称</h3></li>
@@ -43,7 +65,8 @@
 <li>UE：交互设计师、视觉设计师  </li>
 <li>RD：后端工程师、前端工程师、无线工程师  </li>
 <li>QA：测试工程师  </li>
-<li>OP：运维工程师  <h3 id="互联网公司产品流程"><a href="#互联网公司产品流程" class="headerlink" title="互联网公司产品流程"></a>互联网公司产品流程</h3></li>
+<li>OP：运维工程师<a id="more"></a>
+<h3 id="互联网公司产品流程"><a href="#互联网公司产品流程" class="headerlink" title="互联网公司产品流程"></a>互联网公司产品流程</h3></li>
 <li>项目经理提出需求,开会审核</li>
 <li>设计定稿</li>
 <li>前端工程师和后端工程师进行开发</li>
@@ -64,10 +87,21 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;web前端开发职能&quot;&gt;&lt;a href=&quot;#web前端开发职能&quot; class=&quot;headerlink&quot; title=&quot;web前端开发职能&quot;&gt;&lt;/a&gt;web前端开发职能&lt;/h2&gt;&lt;h3 id=&quot;职能&quot;&gt;&lt;a href=&quot;#职能&quot; class=&quot;headerlink&quot; 
+      &lt;h2 id=&quot;web前端开发职能&quot;&gt;&lt;a href=&quot;#web前端开发职能&quot; class=&quot;headerlink&quot; title=&quot;web前端开发职能&quot;&gt;&lt;/a&gt;web前端开发职能&lt;/h2&gt;&lt;h3 id=&quot;职能&quot;&gt;&lt;a href=&quot;#职能&quot; class=&quot;headerlink&quot; title=&quot;职能&quot;&gt;&lt;/a&gt;职能&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求。  &lt;h3 id=&quot;常见简称&quot;&gt;&lt;a href=&quot;#常见简称&quot; class=&quot;headerlink&quot; title=&quot;常见简称&quot;&gt;&lt;/a&gt;常见简称&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;PM：项目经理  &lt;/li&gt;
+&lt;li&gt;PD：产品经理&lt;/li&gt;
+&lt;li&gt;UE：交互设计师、视觉设计师  &lt;/li&gt;
+&lt;li&gt;RD：后端工程师、前端工程师、无线工程师  &lt;/li&gt;
+&lt;li&gt;QA：测试工程师  &lt;/li&gt;
+&lt;li&gt;OP：运维工程师
     
     </summary>
     
+      <category term="自学准备" scheme="http://yoursite.com/categories/%E8%87%AA%E5%AD%A6%E5%87%86%E5%A4%87/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   

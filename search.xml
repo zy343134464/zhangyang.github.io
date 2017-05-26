@@ -3,15 +3,22 @@
   
     
     <entry>
-      <title><![CDATA[html]]></title>
-      <url>%2F2017%2F05%2F27%2Fhtml%2F</url>
+      <title><![CDATA[CSS基础知识(长期)]]></title>
+      <url>%2F2017%2F03%2F10%2Fcss%2F</url>
       <content type="text"></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[web]]></title>
-      <url>%2F2017%2F02%2F27%2Fweb%2F</url>
+      <title><![CDATA[HTML基础知识(长期)]]></title>
+      <url>%2F2017%2F02%2F27%2Fhtml%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[自学准备工作]]></title>
+      <url>%2F2017%2F02%2F20%2Fweb%2F</url>
       <content type="text"><![CDATA[web前端开发职能职能 web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求。 常见简称 PM：项目经理 PD：产品经理 UE：交互设计师、视觉设计师 RD：后端工程师、前端工程师、无线工程师 QA：测试工程师 OP：运维工程师 互联网公司产品流程 项目经理提出需求,开会审核 设计定稿 前端工程师和后端工程师进行开发 进行自测、联调、测试（满足冒烟测试、回归测试） 上线 上线观察—项目总结 编辑器sublime编辑器&gt;&gt;sublime使用 markdowm常用语法 Markdown是一种轻量级的「标记语言」而且轻松的导出 HTML、PDF 和本身的 .md 文件，用起来非常方便。 常用语法&gt;&gt;markdowm官网 GitHub+hexo(博客) 本博客&gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客]]></content>
     </entry>
 
