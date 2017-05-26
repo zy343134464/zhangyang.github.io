@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-26T17:49:24.000Z</updated>
+  <updated>2017-05-26T18:05:46.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jQuery基础知识(API)</title>
+    <link href="http://yoursite.com/2017/04/27/jquery/"/>
+    <id>http://yoursite.com/2017/04/27/jquery/</id>
+    <published>2017-04-26T18:02:02.000Z</published>
+    <updated>2017-05-26T18:05:46.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="库" scheme="http://yoursite.com/categories/%E5%BA%93/"/>
+    
+    
+      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript基础知识(长期)</title>
+    <link href="http://yoursite.com/2017/04/25/javascript/"/>
+    <id>http://yoursite.com/2017/04/25/javascript/</id>
+    <published>2017-04-24T18:01:41.000Z</published>
+    <updated>2017-05-26T18:04:20.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS基础知识(长期)</title>
@@ -52,11 +88,33 @@
   </entry>
   
   <entry>
+    <title>git、linux、vim命令行</title>
+    <link href="http://yoursite.com/2017/02/23/gitlinuxvim/"/>
+    <id>http://yoursite.com/2017/02/23/gitlinuxvim/</id>
+    <published>2017-02-22T17:58:48.000Z</published>
+    <updated>2017-05-26T18:00:18.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="vim" scheme="http://yoursite.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自学准备工作</title>
     <link href="http://yoursite.com/2017/02/20/web/"/>
     <id>http://yoursite.com/2017/02/20/web/</id>
     <published>2017-02-19T17:39:17.000Z</published>
-    <updated>2017-05-26T17:53:54.000Z</updated>
+    <updated>2017-05-26T17:57:10.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="web前端开发职能"><a href="#web前端开发职能" class="headerlink" title="web前端开发职能"></a>web前端开发职能</h2><h3 id="职能"><a href="#职能" class="headerlink" title="职能"></a>职能</h3><ul>
 <li>web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.</li>
@@ -68,7 +126,9 @@
 <li>RD：后端工程师、前端工程师、无线工程师  </li>
 <li>QA：测试工程师  </li>
 <li>OP：运维工程师<a id="more"></a>  
-<h3 id="互联网公司产品流程"><a href="#互联网公司产品流程" class="headerlink" title="互联网公司产品流程"></a>互联网公司产品流程</h3></li>
+</li>
+</ul>
+<h3 id="互联网公司产品流程"><a href="#互联网公司产品流程" class="headerlink" title="互联网公司产品流程"></a>互联网公司产品流程</h3><ul>
 <li>项目经理提出需求,开会审核</li>
 <li>设计定稿</li>
 <li>前端工程师和后端工程师进行开发</li>
@@ -77,9 +137,12 @@
 <li>上线观察—项目总结</li>
 </ul>
 <hr>
-<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><h3 id="sublime编辑器"><a href="#sublime编辑器" class="headerlink" title="sublime编辑器"></a>sublime编辑器</h3><h3 id="gt-gt-sublime使用"><a href="#gt-gt-sublime使用" class="headerlink" title="&gt;&gt;sublime使用"></a>&gt;&gt;<a href="http://www.jb51.net/softjc/87907.html" target="_blank" rel="external">sublime使用</a></h3><hr>
-<h2 id="markdowm常用语法"><a href="#markdowm常用语法" class="headerlink" title="markdowm常用语法"></a>markdowm常用语法</h2><p>Markdown是一种轻量级的「标记语言」而且轻松的导出 HTML、PDF 和本身的 .md 文件，用起来非常方便。  </p>
-<ul>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><ul>
+<li>sublime编辑器<h3 id="gt-gt-sublime使用"><a href="#gt-gt-sublime使用" class="headerlink" title="&gt;&gt;sublime使用"></a>&gt;&gt;<a href="http://www.jb51.net/softjc/87907.html" target="_blank" rel="external">sublime使用</a></h3></li>
+</ul>
+<hr>
+<h2 id="markdowm常用语法"><a href="#markdowm常用语法" class="headerlink" title="markdowm常用语法"></a>markdowm常用语法</h2><ul>
+<li>Markdown是一种轻量级的「标记语言」而且轻松的导出 HTML、PDF 和本身的 .md 文件，用起来非常方便。  </li>
 <li>常用语法<h3 id="gt-gt-markdowm官网"><a href="#gt-gt-markdowm官网" class="headerlink" title="&gt;&gt;markdowm官网"></a>&gt;&gt;<a href="http://wowubuntu.com/markdown/#p" target="_blank" rel="external">markdowm官网</a></h3></li>
 </ul>
 <hr>
