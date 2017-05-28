@@ -113,7 +113,8 @@ UE：交互设计师、视觉设计师
 RD：后端工程师、前端工程师、无线工程师  
 QA：测试工程师  
 OP：运维工程师">
-<meta property="og:updated_time" content="2017-05-26T17:57:10.000Z">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/1.jpg">
+<meta property="og:updated_time" content="2017-05-28T13:21:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自学准备工作">
 <meta name="twitter:description" content="web前端开发职能职能
@@ -126,6 +127,7 @@ UE：交互设计师、视觉设计师
 RD：后端工程师、前端工程师、无线工程师  
 QA：测试工程师  
 OP：运维工程师">
+<meta name="twitter:image" content="http://oqev4hx8u.bkt.clouddn.com/1.jpg">
 
 
 
@@ -458,8 +460,31 @@ OP：运维工程师">
 </ul>
 <hr>
 <h3 id="GitHub-hexo-博客"><a href="#GitHub-hexo-博客" class="headerlink" title="GitHub+hexo(博客)"></a>GitHub+hexo(博客)</h3><ul>
-<li>本博客<h3 id="gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客"><a href="#gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客" class="headerlink" title="&gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客"></a>&gt;&gt;<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">手把手教你用Hexo+Github 搭建属于自己的博客</a></h3></li>
+<li>本博客<h3 id="gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客"><a href="#gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客" class="headerlink" title="&gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客"></a>&gt;&gt;<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">手把手教你用Hexo+Github 搭建属于自己的博客</a></h3><img src="http://oqev4hx8u.bkt.clouddn.com/1.jpg" alt="图片"></li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"> &lt;!doctype html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;div class=&quot;query-area&quot;&gt;</div><div class="line">    &lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;hunger&quot; placeholder=&quot;hunger, ruoyu, anyone&quot;&gt;</div><div class="line">    &lt;button&gt;查询朋友&lt;/button&gt;   </div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&quot;detail-area&quot;&gt;</div><div class="line">    &lt;ul&gt;     </div><div class="line">    &lt;/ul&gt;</div><div class="line"></div><div class="line">  &lt;/div&gt;</div><div class="line"></div><div class="line">  &lt;script&gt;</div><div class="line">    var btn = document.querySelector(&apos;.query-area button&apos;)</div><div class="line">    var input = document.querySelector(&apos;.query-area input&apos;)</div><div class="line">    </div><div class="line"></div><div class="line">    btn.addEventListener(&apos;click&apos;, function()&#123;</div><div class="line">       var xhr = new XMLHttpRequest()</div><div class="line">       xhr.onreadystatechange = function()&#123;</div><div class="line">         if(xhr.readyState === 4 &amp;&amp; (xhr.status === 200 || xhr.status === 304))&#123;</div><div class="line">          var friends = JSON.parse(xhr.responseText)</div><div class="line">          render(friends)</div><div class="line">         &#125;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">      xhr.open(&apos;get&apos;, &apos;/getFriends?username=&apos; + input.value, true)</div><div class="line">      xhr.send()</div><div class="line">    &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    function render(friends)&#123;</div><div class="line">      var detailCt = document.querySelector(&apos;.detail-area ul&apos;)</div><div class="line">      detailCt.innerHTML = &apos;&apos;;</div><div class="line">      var ct = document.createDocumentFragment()</div><div class="line">      for(var i = 0; i &lt; friends.length; i++)&#123;</div><div class="line">        var node = document.createElement(&apos;li&apos;)</div><div class="line">        node.innerText = friends[i]</div><div class="line">        ct.appendChild(node)</div><div class="line">      &#125;</div><div class="line">      detailCt.appendChild(ct)</div><div class="line">    &#125;</div><div class="line">  &lt;/script&gt;</div><div class="line">  </div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">E = mc^2</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">graph LR</div><div class="line">A--&gt;B</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sequenceDiagram</div><div class="line">A-&gt;&gt;B: How are you?</div><div class="line">B-&gt;&gt;A: Great!</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gantt</div><div class="line">dateFormat YYYY-MM-DD</div><div class="line">section S1</div><div class="line">T1: 2014-01-01, 9d</div><div class="line">section S2</div><div class="line">T2: 2014-01-11, 9d</div><div class="line">section S3</div><div class="line">T3: 2014-01-02, 9d</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>header 1</th>
+<th>header 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>row 1 col 1</td>
+<td>row 1 col 2</td>
+</tr>
+<tr>
+<td>row 2 col 1</td>
+<td>row 2 col 2</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
