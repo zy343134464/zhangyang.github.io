@@ -113,7 +113,7 @@ UE：交互设计师、视觉设计师
 RD：后端工程师、前端工程师、无线工程师  
 QA：测试工程师  
 OP：运维工程师">
-<meta property="og:updated_time" content="2017-06-02T04:19:30.000Z">
+<meta property="og:updated_time" content="2017-06-03T15:06:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自学准备工作">
 <meta name="twitter:description" content="web前端开发职能职能
@@ -460,7 +460,7 @@ OP：运维工程师">
 <h3 id="GitHub-hexo-博客"><a href="#GitHub-hexo-博客" class="headerlink" title="GitHub+hexo(博客)"></a>GitHub+hexo(博客)</h3><ul>
 <li>本博客<h3 id="gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客"><a href="#gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客" class="headerlink" title="&gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客"></a>&gt;&gt;<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">手把手教你用Hexo+Github 搭建属于自己的博客</a></h3></li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"> &lt;!doctype html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;div class="query-area"&gt;</div><div class="line">    &lt;input type="text" name="username" value="hunger" placeholder="hunger, ruoyu, anyone"&gt;</div><div class="line">    &lt;button&gt;查询朋友&lt;/button&gt;   </div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class="detail-area"&gt;</div><div class="line">    &lt;ul&gt;     </div><div class="line">    &lt;/ul&gt;</div><div class="line"></div><div class="line">  &lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">    var btn = document.querySelector('.query-area button')</div><div class="line">    var input = document.querySelector('.query-area input')</div><div class="line">    </div><div class="line"></div><div class="line">    btn.addEventListener('click', function()&#123;</div><div class="line">       var xhr = new XMLHttpRequest()</div><div class="line">       xhr.onreadystatechange = function()&#123;</div><div class="line">         if(xhr.readyState === 4 &amp;&amp; (xhr.status === 200 || xhr.status === 304))&#123;</div><div class="line">          var friends = JSON.parse(xhr.responseText)</div><div class="line">          render(friends)</div><div class="line">         &#125;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">      xhr.open('get', '/getFriends?username=' + input.value, true)</div><div class="line">      xhr.send()</div><div class="line">    &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    function render(friends)&#123;</div><div class="line">      var detailCt = document.querySelector('.detail-area ul')</div><div class="line">      detailCt.innerHTML = '';</div><div class="line">      var ct = document.createDocumentFragment()</div><div class="line">      for(var i = 0; i &lt; friends.length; i++)&#123;</div><div class="line">        var node = document.createElement('li')</div><div class="line">        node.innerText = friends[i]</div><div class="line">        ct.appendChild(node)</div><div class="line">      &#125;</div><div class="line">      detailCt.appendChild(ct)</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">  </div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -502,7 +502,7 @@ OP：运维工程师">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/23/gitlinuxvim/" rel="prev" title="git、linux、vim命令行">
+              <a href="/2017/02/25/gitlinuxvim/" rel="prev" title="git、linux、vim命令行">
                 git、linux、vim命令行 <i class="fa fa-chevron-right"></i>
               </a>
             

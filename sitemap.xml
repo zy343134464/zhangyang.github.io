@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/03/20/css/</loc>
+    
+    <lastmod>2017-06-03T15:06:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/03/05/html/</loc>
+    
+    <lastmod>2017-06-03T15:06:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/02/20/web/</loc>
     
-    <lastmod>2017-06-02T04:19:30.000Z</lastmod>
+    <lastmod>2017-06-03T15:06:38.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/03/10/css/</loc>
+    <loc>http://yoursite.com/2017/02/25/gitlinuxvim/</loc>
     
-    <lastmod>2017-06-01T09:37:20.000Z</lastmod>
+    <lastmod>2017-06-03T15:06:36.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/02/27/html/</loc>
+    <loc>http://yoursite.com/2017/04/30/jquery/</loc>
     
-    <lastmod>2017-06-01T09:37:10.000Z</lastmod>
+    <lastmod>2017-06-03T15:06:36.000Z</lastmod>
     
   </url>
   
@@ -26,20 +40,6 @@
     <loc>http://yoursite.com/2017/04/25/javascript/</loc>
     
     <lastmod>2017-06-01T09:37:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/27/jquery/</loc>
-    
-    <lastmod>2017-06-01T09:36:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/02/23/gitlinuxvim/</loc>
-    
-    <lastmod>2017-05-26T18:00:18.000Z</lastmod>
     
   </url>
   
