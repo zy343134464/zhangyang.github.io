@@ -402,7 +402,7 @@
     <link href="http://yoursite.com/2017/02/20/web/"/>
     <id>http://yoursite.com/2017/02/20/web/</id>
     <published>2017-02-19T17:39:17.000Z</published>
-    <updated>2017-06-04T08:48:46.000Z</updated>
+    <updated>2017-06-04T09:27:14.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="web前端开发职能"><a href="#web前端开发职能" class="headerlink" title="web前端开发职能"></a>web前端开发职能</h2><h3 id="职能"><a href="#职能" class="headerlink" title="职能"></a>职能</h3><ul>
 <li>web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.</li>
@@ -431,8 +431,9 @@
 <h3 id="gt-gt-sublime使用"><a href="#gt-gt-sublime使用" class="headerlink" title="&gt;&gt;sublime使用"></a>&gt;&gt;<a href="http://www.jb51.net/softjc/87907.html" target="_blank" rel="external">sublime使用</a></h3><hr>
 <h2 id="markdowm常用语法"><a href="#markdowm常用语法" class="headerlink" title="markdowm常用语法"></a>markdowm常用语法</h2><ul>
 <li>Markdown是一种轻量级的「标记语言」而且轻松的导出 HTML、PDF 和本身的 .md 文件，用起来非常方便。  </li>
-<li>常用语法</li>
+<li>常用语法<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># 一级标题 h1</div><div class="line">## 二级标题 h2</div><div class="line">### 三级标题 h3</div><div class="line">#### 四级标题 h4</div><div class="line">##### 五级标题 h5</div><div class="line"></div><div class="line">这是段落 p</div><div class="line"></div><div class="line">- 无序列表</div><div class="line">- 无序列表</div><div class="line">- 无序列表</div><div class="line"></div><div class="line">1. 有序列表</div><div class="line">2. 有序列表</div><div class="line">3. 有序列表</div><div class="line"></div><div class="line">\</div></pre></td></tr></table></figure></li>
 </ul>
+<p>var a = 1<br>var b = 2<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">`var a = 1`</div><div class="line"></div><div class="line">[链接文字](http://jirengu.com)</div><div class="line"></div><div class="line">![](http://jirengu.com/imgs/a.png)</div><div class="line"></div><div class="line">&gt; 引用</div><div class="line"></div><div class="line">| 表头 | 表头 | 表头 |</div><div class="line">| --- | --- | ---  |</div><div class="line">| 内容 | 内容 | 内容 |</div><div class="line">| 内容 | 内容 | 内容 |</div><div class="line">\</div></pre></td></tr></table></figure></p>
 <h3 id="gt-gt-markdowm官网"><a href="#gt-gt-markdowm官网" class="headerlink" title="&gt;&gt;markdowm官网"></a>&gt;&gt;<a href="http://wowubuntu.com/markdown/#p" target="_blank" rel="external">markdowm官网</a></h3><hr>
 <h3 id="GitHub-hexo-博客"><a href="#GitHub-hexo-博客" class="headerlink" title="GitHub+hexo(博客)"></a>GitHub+hexo(博客)</h3><ul>
 <li>本博客</li>
