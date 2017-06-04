@@ -31,16 +31,16 @@
 
     
     <entry>
-      <title><![CDATA[git、linux、vim命令行]]></title>
+      <title><![CDATA[vim、linus、git命令行]]></title>
       <url>%2F2017%2F02%2F25%2Fgitlinuxvim%2F</url>
-      <content type="text"></content>
+      <content type="text"><![CDATA[vim vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴. 常用vim命令行 查看文件：cat test.html 查看并编辑：vim test.html ,按下 i 会发现左下角出现 –INSERT– 表示可以输入内容 保存文件：按 esc , shift + : ,左下角出现 : ,输入 w 表示保存 ,输入 q 表示退出 ,输入 wq 表示保存退出 光标操作：按 esc ,使用 k 上一行, j 下一行 , h 向前, l 向后,也可以使用键盘箭头键来实现 删除内容：按 esc ,使用光标移动到想要删除的位置 dd 删除当前行, x 删除当前一个, 5x删除后面5个, 5X 删除前面5个, u 恢复前一次操作 快速翻页：按 ctrl + d 向下滚动半屏, ctrl + u 向上滚动半屏, ctrl + f 向下滚动一屏, ctrl + d 向上滚动半屏 给文本添加行号: 按 esc ,输入 :set nu , ctrl + g 显示此时光标所在位置的行号和总列数,输入 :set nonu取消行号,快速切换行号按 esc ,输入 : 0 切换到头部,例如输入:20光标切换到20行号位置. 跳转段落结尾: 按 esc , shift + ( 跳转到上一段落, shift +) 跳转到后一段落 实现复制和粘贴: 按 esc ,在光标所在位置按下 yy 表示复制当前行 , p 表示粘贴 查找某个字符串 : esc , :/foo 表示搜索字符串foo &gt;&gt;简明vim命令行]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[自学准备工作]]></title>
       <url>%2F2017%2F02%2F20%2Fweb%2F</url>
-      <content type="text"><![CDATA[web前端开发职能职能 web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求. 常见简称 PM：项目经理 PD：产品经理 UE：交互设计师、视觉设计师 RD：后端工程师、前端工程师、无线工程师 QA：测试工程师 OP：运维工程师 互联网公司产品流程 项目经理提出需求,开会审核 设计定稿 前端工程师和后端工程师进行开发 进行自测、联调、测试（满足冒烟测试、回归测试） 上线 上线观察—项目总结 编辑器 sublime编辑器&gt;&gt;sublime使用 markdowm常用语法 Markdown是一种轻量级的「标记语言」而且轻松的导出 HTML、PDF 和本身的 .md 文件，用起来非常方便。 常用语法&gt;&gt;markdowm官网 GitHub+hexo(博客) 本博客&gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客]]></content>
+      <content type="text"><![CDATA[web前端开发职能职能 web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求. 常见简称 PM：项目经理 PD：产品经理 UE：交互设计师、视觉设计师 RD：后端工程师、前端工程师、无线工程师 QA：测试工程师 OP：运维工程师 互联网公司产品流程 项目经理提出需求,开会审核 设计定稿 前端工程师和后端工程师进行开发 进行自测、联调、测试（满足冒烟测试、回归测试） 上线 上线观察—项目总结 编辑器 sublime编辑器 &gt;&gt;sublime使用 markdowm常用语法 Markdown是一种轻量级的「标记语言」而且轻松的导出 HTML、PDF 和本身的 .md 文件，用起来非常方便。 常用语法 &gt;&gt;markdowm官网 GitHub+hexo(博客) 本博客 &gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客VPN Green &gt;&gt;Green官网]]></content>
     </entry>
 
     
