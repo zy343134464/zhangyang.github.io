@@ -74,13 +74,13 @@
     <link href="http://yoursite.com/2017/03/05/html/"/>
     <id>http://yoursite.com/2017/03/05/html/</id>
     <published>2017-03-04T17:42:52.000Z</published>
-    <updated>2017-06-04T11:23:24.000Z</updated>
+    <updated>2017-06-04T11:33:30.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="从URL到页面展现的过程"><a href="#从URL到页面展现的过程" class="headerlink" title="从URL到页面展现的过程"></a>从URL到页面展现的过程</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ul>
 <li>地址栏输入URL</li>
 <li>域名解析</li>
 <li>服务器处理请求</li>
-<li>服务器处理响应</li>
+<li>浏览器处理响应</li>
 <li>浏览器绘制网页<a id="more"></a> 
 <h3 id="输入URL"><a href="#输入URL" class="headerlink" title="输入URL"></a>输入URL</h3></li>
 <li>URL(Uniform Resoure Locator)统一资源定位符,分为协议、网络地址、资源路径,用于定位互联网上的资源,即网址.<h4 id="协议-浏览器和万维网之间的约定"><a href="#协议-浏览器和万维网之间的约定" class="headerlink" title="协议:浏览器和万维网之间的约定."></a>协议:浏览器和万维网之间的约定.</h4></li>
@@ -95,12 +95,18 @@
 <li>我们是通过域名访问,浏览器对域名解析成对应IP地址,找到计算机<h4 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h4></li>
 <li>IP地址为互联网上每一个网络和每一台主机分配的一个逻辑地址,如220.181.112.244<h4 id="域名DN-domain-name"><a href="#域名DN-domain-name" class="headerlink" title="域名DN(domain name)"></a>域名DN(domain name)</h4></li>
 <li>域名是为了识别主机名称和组织机构名称的一种具有分层的名称,如www.baidu.com<h4 id="计算机域名系统DNS-Domain-Name-System-or-Domain-Name-Service"><a href="#计算机域名系统DNS-Domain-Name-System-or-Domain-Name-Service" class="headerlink" title="计算机域名系统DNS(Domain Name System or Domain Name Service)"></a>计算机域名系统DNS(Domain Name System or Domain Name Service)</h4></li>
-<li>主要是用于保存网络中所有主机的域名和对应IP地址,并具有将域名转换为IP地址功能的服务器,它是由域名解析器和域名服务器组成<h4 id="域名解析的流程-如下步骤"><a href="#域名解析的流程-如下步骤" class="headerlink" title="域名解析的流程,如下步骤:"></a>域名解析的流程,如下步骤:</h4></li>
+<li>主要是用于保存网络中所有主机的域名和对应IP地址,并具有将域名转换为IP地址功能的服务器,它是由域名解析器和域名服务器组成<h4 id="域名解析的流程-如下"><a href="#域名解析的流程-如下" class="headerlink" title="域名解析的流程,如下:"></a>域名解析的流程,如下:</h4></li>
 <li>浏览器缓存——浏览器会缓存DNS记录一段时间</li>
 <li>系统缓存——从Hosts文件查找是否有该域名和对应IP</li>
 <li>路由器缓存——一般路由器也会缓存域名信息</li>
 <li>ISP DNS 缓存——比如到电信的DNS上查找缓存(DNS劫持)</li>
-<li>如果都没有找到,则向根域名服务器查找域名对应IP，根域名服务器把请求转发到下一级，直到找到IP</li>
+<li>如果都没有找到,则向根域名服务器查找域名对应IP，根域名服务器把请求转发到下一级，直到找到IP<br>ps:<blockquote>
+<ul>
+<li>域名与 URL 是两个概念：域名是一台或一组服务器的名称，用来确定服务器在 Internet 上的位置；URL 是统一资源定位符，用来确定某一个文件的具体位置，例如，zhihu.com 是 知乎 的域名，根据这个域名可以找到知乎的服务器， zhihu.com/people/Compile 是 URL ，可以根据这个 URL 定位我的知乎主页；</li>
+<li>IP 地址与域名不是一一对应的关系：可以把多个提供相同服务的服务器 IP 设置为同一个域名，但在同一时刻一个域名只能解析出一个 IP地址；同时，一个 IP 地址可以绑定多个域名，数量不限；</li>
+</ul>
+</blockquote>
+</li>
 </ul>
 ]]></content>
     
@@ -110,7 +116,7 @@
 &lt;li&gt;地址栏输入URL&lt;/li&gt;
 &lt;li&gt;域名解析&lt;/li&gt;
 &lt;li&gt;服务器处理请求&lt;/li&gt;
-&lt;li&gt;服务器处理响应&lt;/li&gt;
+&lt;li&gt;浏览器处理响应&lt;/li&gt;
 &lt;li&gt;浏览器绘制网页
     
     </summary>
