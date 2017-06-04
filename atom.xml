@@ -74,7 +74,7 @@
     <link href="http://yoursite.com/2017/03/05/html/"/>
     <id>http://yoursite.com/2017/03/05/html/</id>
     <published>2017-03-04T17:42:52.000Z</published>
-    <updated>2017-06-04T14:04:16.000Z</updated>
+    <updated>2017-06-04T14:09:06.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="从URL到页面展现的过程"><a href="#从URL到页面展现的过程" class="headerlink" title="从URL到页面展现的过程"></a>从URL到页面展现的过程</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>地址栏输入URL</li>
@@ -88,7 +88,7 @@
 <h2 id="输入URL"><a href="#输入URL" class="headerlink" title="输入URL"></a>输入URL</h2><ul>
 <li>URL(Uniform Resoure Locator)统一资源定位符,分为协议、网络地址、资源路径,用于定位互联网上的资源,即网址  </li>
 </ul>
-<h3 id="协议-浏览器和万维网之间的约定"><a href="#协议-浏览器和万维网之间的约定" class="headerlink" title="协议:浏览器和万维网之间的约定."></a>协议:浏览器和万维网之间的约定.</h3><ul>
+<h3 id="协议-浏览器和万维网之间的约定"><a href="#协议-浏览器和万维网之间的约定" class="headerlink" title="协议:浏览器和万维网之间的约定"></a>协议:浏览器和万维网之间的约定</h3><ul>
 <li>http:找到网络上资源的协议</li>
 <li>https:对http进行加密的协议</li>
 <li>file:定位本地电脑文件的协议</li>
@@ -161,7 +161,9 @@
 </ul>
 <h2 id="网页展示"><a href="#网页展示" class="headerlink" title="网页展示"></a>网页展示</h2><ul>
 <li>浏览器通过上面步骤计算得到渲染树，是DOM树的可视化表示，构建渲染树使页面以正确的顺序绘制出来</li>
-<li>浏览器下载的顺序是从上到下，渲染的顺序也是从上到下，下载和渲染同时进行<h3 id="网页展示步骤"><a href="#网页展示步骤" class="headerlink" title="网页展示步骤"></a>网页展示步骤</h3></li>
+<li>浏览器下载的顺序是从上到下，渲染的顺序也是从上到下，下载和渲染同时进行</li>
+</ul>
+<h3 id="网页展示步骤"><a href="#网页展示步骤" class="headerlink" title="网页展示步骤"></a>网页展示步骤</h3><ul>
 <li>解析html成DOM树</li>
 <li>解析html中的css，构建渲染树。完成后浏览器开始布局渲染树并绘制到屏幕</li>
 <li>解析JavaScript，解析到的时候执行（JS的解析由浏览器中的JS解析引擎完成）</li>
