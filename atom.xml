@@ -92,22 +92,22 @@
     <link href="http://yoursite.com/2017/02/25/gitlinuxvim/"/>
     <id>http://yoursite.com/2017/02/25/gitlinuxvim/</id>
     <published>2017-02-24T17:58:48.000Z</published>
-    <updated>2017-06-04T05:24:44.000Z</updated>
+    <updated>2017-06-04T06:09:16.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><ul>
 <li>vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.</li>
 </ul>
 <h3 id="常用vim命令行"><a href="#常用vim命令行" class="headerlink" title="常用vim命令行"></a>常用vim命令行</h3><ul>
-<li>查看文件：cat test.html  </li>
-<li>查看并编辑：vim test.html ,按下 i 会发现左下角出现 –INSERT– 表示可以输入内容</li>
-<li>保存文件：按 esc , shift + : ,左下角出现 : ,输入 w 表示保存 ,输入 q 表示退出 ,输入 wq 表示保存退出</li>
-<li>光标操作：按 esc ,使用 k 上一行, j 下一行 , h 向前, l 向后,也可以使用键盘箭头键来实现</li>
-<li>删除内容：按 esc ,使用光标移动到想要删除的位置 dd 删除当前行, x 删除当前一个, 5x删除后面5个, 5X 删除前面5个, u 恢复前一次操作  </li>
-<li>快速翻页：按 ctrl + d 向下滚动半屏, ctrl + u 向上滚动半屏, ctrl + f 向下滚动一屏, ctrl + d 向上滚动半屏<a id="more"></a></li>
-<li>给文本添加行号: 按 esc ,输入 :set nu , ctrl + g 显示此时光标所在位置的行号和总列数,输入 :set nonu取消行号,快速切换行号按 esc ,输入 : 0 切换到头部,例如输入:20光标切换到20行号位置.</li>
-<li>跳转段落结尾: 按 esc , shift + ( 跳转到上一段落, shift +) 跳转到后一段落 </li>
-<li>实现复制和粘贴: 按 esc ,在光标所在位置按下 yy 表示复制当前行 , p 表示粘贴    </li>
-<li>查找某个字符串 : esc , :/foo 表示搜索字符串foo</li>
+<li>查看文件：<strong>cat test.html</strong>  </li>
+<li>查看并编辑：<strong>vim test.html</strong> ,按下 <strong>i</strong> 会发现左下角出现 –INSERT– 表示可以输入内容</li>
+<li>保存文件：按 <strong>esc</strong> , <strong>shift +</strong> : ,左下角出现 : ,输入 <strong>w</strong> 表示保存 ,输入 <strong>q</strong> 表示退出 ,输入 <strong>wq</strong> 表示保存退出</li>
+<li>光标操作：按 <strong>esc</strong> ,使用 <strong>k</strong> 上一行, <strong>j</strong> 下一行 , <strong>h</strong> 向前, <strong>l</strong> 向后,也可以使用键盘箭头键来实现</li>
+<li>删除内容：按 <strong>esc</strong> ,使用光标移动到想要删除的位置 <strong>dd</strong> 删除当前行, <strong>x</strong> 删除当前一个, <strong>5x</strong>删除后面5个, <strong>5X</strong> 删除前面5个, <strong>u</strong> 恢复前一次操作  </li>
+<li>快速翻页：按 <strong>ctrl + d</strong> 向下滚动半屏, <strong>ctrl + u</strong> 向上滚动半屏, <strong>ctrl + f</strong> 向下滚动一屏, <strong>ctrl + d</strong> 向上滚动半屏<a id="more"></a></li>
+<li>给文本添加行号: 按 <strong>esc</strong> ,输入 <strong>:set nu</strong> , <strong>ctrl + g</strong> 显示此时光标所在位置的行号和总列数,输入 <strong>:set nonu</strong>取消行号,快速切换行号按 <strong>esc</strong> ,输入 <strong>: 0</strong> 切换到头部,例如输入<strong>:20</strong>光标切换到20行号位置.</li>
+<li>跳转段落结尾: 按 <strong>esc</strong> , <strong>shift + (</strong> 跳转到上一段落, <strong>shift +)</strong> 跳转到后一段落 </li>
+<li>实现复制和粘贴: 按 <strong>esc</strong> ,在光标所在位置按下 <strong>yy</strong> 表示复制当前行 , <strong>p</strong> 表示粘贴    </li>
+<li>查找某个字符串: 按<strong>esc</strong> , 输入<strong>:/foo</strong> 表示搜索字符串foo</li>
 </ul>
 <h3 id="gt-gt-简明vim命令行"><a href="#gt-gt-简明vim命令行" class="headerlink" title="&gt;&gt;简明vim命令行"></a>&gt;&gt;<a href="http://coolshell.cn/articles/5426.html" target="_blank" rel="external">简明vim命令行</a></h3><hr>
 ]]></content>
@@ -118,12 +118,12 @@
 &lt;li&gt;vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;常用vim命令行&quot;&gt;&lt;a href=&quot;#常用vim命令行&quot; class=&quot;headerlink&quot; title=&quot;常用vim命令行&quot;&gt;&lt;/a&gt;常用vim命令行&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;查看文件：cat test.html  &lt;/li&gt;
-&lt;li&gt;查看并编辑：vim test.html ,按下 i 会发现左下角出现 –INSERT– 表示可以输入内容&lt;/li&gt;
-&lt;li&gt;保存文件：按 esc , shift + : ,左下角出现 : ,输入 w 表示保存 ,输入 q 表示退出 ,输入 wq 表示保存退出&lt;/li&gt;
-&lt;li&gt;光标操作：按 esc ,使用 k 上一行, j 下一行 , h 向前, l 向后,也可以使用键盘箭头键来实现&lt;/li&gt;
-&lt;li&gt;删除内容：按 esc ,使用光标移动到想要删除的位置 dd 删除当前行, x 删除当前一个, 5x删除后面5个, 5X 删除前面5个, u 恢复前一次操作  &lt;/li&gt;
-&lt;li&gt;快速翻页：按 ctrl + d 向下滚动半屏, ctrl + u 向上滚动半屏, ctrl + f 向下滚动一屏, ctrl + d 向上滚动半屏
+&lt;li&gt;查看文件：&lt;strong&gt;cat test.html&lt;/strong&gt;  &lt;/li&gt;
+&lt;li&gt;查看并编辑：&lt;strong&gt;vim test.html&lt;/strong&gt; ,按下 &lt;strong&gt;i&lt;/strong&gt; 会发现左下角出现 –INSERT– 表示可以输入内容&lt;/li&gt;
+&lt;li&gt;保存文件：按 &lt;strong&gt;esc&lt;/strong&gt; , &lt;strong&gt;shift +&lt;/strong&gt; : ,左下角出现 : ,输入 &lt;strong&gt;w&lt;/strong&gt; 表示保存 ,输入 &lt;strong&gt;q&lt;/strong&gt; 表示退出 ,输入 &lt;strong&gt;wq&lt;/strong&gt; 表示保存退出&lt;/li&gt;
+&lt;li&gt;光标操作：按 &lt;strong&gt;esc&lt;/strong&gt; ,使用 &lt;strong&gt;k&lt;/strong&gt; 上一行, &lt;strong&gt;j&lt;/strong&gt; 下一行 , &lt;strong&gt;h&lt;/strong&gt; 向前, &lt;strong&gt;l&lt;/strong&gt; 向后,也可以使用键盘箭头键来实现&lt;/li&gt;
+&lt;li&gt;删除内容：按 &lt;strong&gt;esc&lt;/strong&gt; ,使用光标移动到想要删除的位置 &lt;strong&gt;dd&lt;/strong&gt; 删除当前行, &lt;strong&gt;x&lt;/strong&gt; 删除当前一个, &lt;strong&gt;5x&lt;/strong&gt;删除后面5个, &lt;strong&gt;5X&lt;/strong&gt; 删除前面5个, &lt;strong&gt;u&lt;/strong&gt; 恢复前一次操作  &lt;/li&gt;
+&lt;li&gt;快速翻页：按 &lt;strong&gt;ctrl + d&lt;/strong&gt; 向下滚动半屏, &lt;strong&gt;ctrl + u&lt;/strong&gt; 向上滚动半屏, &lt;strong&gt;ctrl + f&lt;/strong&gt; 向下滚动一屏, &lt;strong&gt;ctrl + d&lt;/strong&gt; 向上滚动半屏
     
     </summary>
     
@@ -143,14 +143,14 @@
     <link href="http://yoursite.com/2017/02/20/web/"/>
     <id>http://yoursite.com/2017/02/20/web/</id>
     <published>2017-02-19T17:39:17.000Z</published>
-    <updated>2017-06-04T06:00:46.000Z</updated>
+    <updated>2017-06-04T06:03:44.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="web前端开发职能"><a href="#web前端开发职能" class="headerlink" title="web前端开发职能"></a>web前端开发职能</h2><h3 id="职能"><a href="#职能" class="headerlink" title="职能"></a>职能</h3><ul>
 <li>web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.</li>
 </ul>
 <h3 id="常见简称"><a href="#常见简称" class="headerlink" title="常见简称"></a>常见简称</h3><ul>
-<li>PM：==项目经理==  </li>
-<li>PD：<strong>产品经理</strong></li>
+<li>PM：项目经理  </li>
+<li>PD：产品经理</li>
 <li>UE：交互设计师、视觉设计师  </li>
 <li>RD：后端工程师、前端工程师、无线工程师  </li>
 <li>QA：测试工程师  </li>
@@ -178,7 +178,8 @@
 <h3 id="GitHub-hexo-博客"><a href="#GitHub-hexo-博客" class="headerlink" title="GitHub+hexo(博客)"></a>GitHub+hexo(博客)</h3><ul>
 <li>本博客</li>
 </ul>
-<h3 id="gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客"><a href="#gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客" class="headerlink" title="&gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客"></a>&gt;&gt;<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">手把手教你用Hexo+Github 搭建属于自己的博客</a></h3><h3 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h3><ul>
+<h3 id="gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客"><a href="#gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客" class="headerlink" title="&gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客"></a>&gt;&gt;<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">手把手教你用Hexo+Github 搭建属于自己的博客</a></h3><hr>
+<h3 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h3><ul>
 <li>Green </li>
 </ul>
 <h3 id="gt-gt-Green官网"><a href="#gt-gt-Green官网" class="headerlink" title="&gt;&gt;Green官网"></a>&gt;&gt;<a href="https://www.greenjsq.me" target="_blank" rel="external">Green官网</a></h3>]]></content>
@@ -189,8 +190,8 @@
 &lt;li&gt;web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;常见简称&quot;&gt;&lt;a href=&quot;#常见简称&quot; class=&quot;headerlink&quot; title=&quot;常见简称&quot;&gt;&lt;/a&gt;常见简称&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;PM：==项目经理==  &lt;/li&gt;
-&lt;li&gt;PD：&lt;strong&gt;产品经理&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;PM：项目经理  &lt;/li&gt;
+&lt;li&gt;PD：产品经理&lt;/li&gt;
 &lt;li&gt;UE：交互设计师、视觉设计师  &lt;/li&gt;
 &lt;li&gt;RD：后端工程师、前端工程师、无线工程师  &lt;/li&gt;
 &lt;li&gt;QA：测试工程师  &lt;/li&gt;
