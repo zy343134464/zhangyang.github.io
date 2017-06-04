@@ -109,7 +109,7 @@ vim是一个操作文本的编辑器,对文本进行添加、删除、复制、�
 查看并编辑：vim test.html ,按下 i 会发现左下角出现 –INSERT– 表示可以输入内容
 保存文件：按 esc , shift + : ,左下角出现 : ,输入 w 表示保存 ,输入 q 表示退出 ,输入 wq 表示保存退出
 光标操作：按 esc ,使">
-<meta property="og:updated_time" content="2017-06-04T09:15:10.000Z">
+<meta property="og:updated_time" content="2017-06-04T09:22:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim、linus、git命令行">
 <meta name="twitter:description" content="vim
@@ -437,17 +437,214 @@ vim是一个操作文本的编辑器,对文本进行添加、删除、复制、�
 <li>查找某个字符串: 按<strong>esc</strong> , 输入<strong>:/foo</strong> 表示搜索字符串foo</li>
 </ul>
 <h3 id="常用命令基础"><a href="#常用命令基础" class="headerlink" title="常用命令基础"></a>常用命令基础</h3><ul>
-<li><p>光标移动<br>命令 | 作用<br>—|—<br>h,j,k,l | 分别表示左,下,右,上<br>ctrl + f | 上一页<br>ctrl + b | 下一页<br>o | 开启新的一行<br>^ | 一行的开始<br>$ | 一行的结尾<br>gg | 文档的第一行<br>[N]G | 文档的第N行或者最后一行</p>
-</li>
-<li><p>编辑<br>命令 | 作用<br>—|—<br>r | 分别表示左,下,右,上<br>J | 合并下一行到上一行<br>s | 删除光标所在的一个字符,光标还在当行<br>S | 删除光标所在的一行,光标还在当行,不同于dd<br>u | 撤销上一步操作<br>ctrl + r | 恢复上一步操作<br>. | 重复最后一个命令<br>~ | 变换为大写</p>
-</li>
-<li><p>插入模式<br>命令 | 作用<br>—|—<br>i | 插入到光标前面<br>I | 插入到行的开始位置<br>a | 插入到光标的后面<br>A | 插入到行的最后位置<br>o,O | 新开一行<br>Esc | 关闭插入模式</p>
-</li>
-<li><p>退出<br>命令 | 作用<br>—|—<br>:w | 保存<br>:wq | 保存并关闭<br>:q | 关闭(已保存)<br>:q! | 强制关闭</p>
-</li>
-<li><p>剪切/赋值<br>命令 | 作用<br>—|—<br>v | 选中一个或多个字符<br>V | 选中一行<br>dd | 删除一行<br>dw | 删除一个单词<br>x | 删除后一个字符<br>X | 删除前一个字符<br>D | 删除一行最后一个字符<br>[N]yy | 复制一行或者N行<br>yw | 复制一个单词<br>p | 粘贴</p>
-</li>
+<li>光标移动</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h,j,k,l</td>
+<td>分别表示左,下,右,上</td>
+</tr>
+<tr>
+<td>ctrl + f</td>
+<td>上一页</td>
+</tr>
+<tr>
+<td>ctrl + b</td>
+<td>下一页</td>
+</tr>
+<tr>
+<td>o</td>
+<td>开启新的一行</td>
+</tr>
+<tr>
+<td>^</td>
+<td>一行的开始</td>
+</tr>
+<tr>
+<td>$</td>
+<td>一行的结尾</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>文档的第一行</td>
+</tr>
+<tr>
+<td>[N]G</td>
+<td>文档的第N行或者最后一行</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>编辑 </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>分别表示左,下,右,上</td>
+</tr>
+<tr>
+<td>J</td>
+<td>合并下一行到上一行</td>
+</tr>
+<tr>
+<td>s</td>
+<td>删除光标所在的一个字符,光标还在当行</td>
+</tr>
+<tr>
+<td>S</td>
+<td>删除光标所在的一行,光标还在当行,不同于dd</td>
+</tr>
+<tr>
+<td>u</td>
+<td>撤销上一步操作</td>
+</tr>
+<tr>
+<td>ctrl + r</td>
+<td>恢复上一步操作</td>
+</tr>
+<tr>
+<td>.</td>
+<td>重复最后一个命令 </td>
+</tr>
+<tr>
+<td>~</td>
+<td>变换为大写</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>插入模式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>插入到光标前面</td>
+</tr>
+<tr>
+<td>I</td>
+<td>插入到行的开始位置</td>
+</tr>
+<tr>
+<td>a</td>
+<td>插入到光标的后面</td>
+</tr>
+<tr>
+<td>A</td>
+<td>插入到行的最后位置</td>
+</tr>
+<tr>
+<td>o,O</td>
+<td>新开一行</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>关闭插入模式</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>退出</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:w</td>
+<td>保存</td>
+</tr>
+<tr>
+<td>:wq</td>
+<td>保存并关闭</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>关闭(已保存)</td>
+</tr>
+<tr>
+<td>:q!</td>
+<td>强制关闭</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>剪切/赋值</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v</td>
+<td>选中一个或多个字符</td>
+</tr>
+<tr>
+<td>V</td>
+<td>选中一行</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除一行</td>
+</tr>
+<tr>
+<td>dw</td>
+<td>删除一个单词</td>
+</tr>
+<tr>
+<td>x</td>
+<td>删除后一个字符</td>
+</tr>
+<tr>
+<td>X</td>
+<td>删除前一个字符</td>
+</tr>
+<tr>
+<td>D</td>
+<td>删除一行最后一个字符</td>
+</tr>
+<tr>
+<td>[N]yy</td>
+<td>复制一行或者N行</td>
+</tr>
+<tr>
+<td>yw</td>
+<td>复制一个单词</td>
+</tr>
+<tr>
+<td>p</td>
+<td>粘贴</td>
+</tr>
+</tbody>
+</table>
 <h3 id="gt-gt-简明vim命令行"><a href="#gt-gt-简明vim命令行" class="headerlink" title="&gt;&gt;简明vim命令行"></a>&gt;&gt;<a href="http://coolshell.cn/articles/5426.html" target="_blank" rel="external">简明vim命令行</a></h3><hr>
 
       
