@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-03T15:06:36.000Z</updated>
+  <updated>2017-06-04T15:46:08.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,283 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>移动响应式</title>
+    <link href="http://yoursite.com/2017/06/04/phone/"/>
+    <id>http://yoursite.com/2017/06/04/phone/</id>
+    <published>2017-06-04T15:17:50.000Z</published>
+    <updated>2017-06-04T15:46:08.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="库" scheme="http://yoursite.com/categories/%E5%BA%93/"/>
+    
+    
+      <category term="flex" scheme="http://yoursite.com/tags/flex/"/>
+    
+      <category term="响应式" scheme="http://yoursite.com/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue.js</title>
+    <link href="http://yoursite.com/2017/05/25/vue/"/>
+    <id>http://yoursite.com/2017/05/25/vue/</id>
+    <published>2017-05-25T15:16:41.000Z</published>
+    <updated>2017-06-04T15:46:04.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="vue.js" scheme="http://yoursite.com/tags/vue-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>boostrap基础</title>
+    <link href="http://yoursite.com/2017/05/15/boostrap/"/>
+    <id>http://yoursite.com/2017/05/15/boostrap/</id>
+    <published>2017-05-15T15:16:03.000Z</published>
+    <updated>2017-06-04T15:45:50.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="boostrap" scheme="http://yoursite.com/tags/boostrap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack</title>
+    <link href="http://yoursite.com/2017/05/07/webpack/"/>
+    <id>http://yoursite.com/2017/05/07/webpack/</id>
+    <published>2017-05-07T15:14:59.000Z</published>
+    <updated>2017-06-04T15:45:46.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>less</title>
+    <link href="http://yoursite.com/2017/05/05/less/"/>
+    <id>http://yoursite.com/2017/05/05/less/</id>
+    <published>2017-05-05T15:14:51.000Z</published>
+    <updated>2017-06-04T15:45:42.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="less" scheme="http://yoursite.com/tags/less/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css3基础</title>
+    <link href="http://yoursite.com/2017/04/30/css3/"/>
+    <id>http://yoursite.com/2017/04/30/css3/</id>
+    <published>2017-04-30T15:14:44.000Z</published>
+    <updated>2017-06-04T15:43:28.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="css3" scheme="http://yoursite.com/categories/css3/"/>
+    
+    
+      <category term="css3" scheme="http://yoursite.com/tags/css3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html5基础</title>
+    <link href="http://yoursite.com/2017/04/27/html5/"/>
+    <id>http://yoursite.com/2017/04/27/html5/</id>
+    <published>2017-04-27T15:14:31.000Z</published>
+    <updated>2017-06-04T15:43:20.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="html5" scheme="http://yoursite.com/categories/html5/"/>
+    
+    
+      <category term="html5" scheme="http://yoursite.com/tags/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node.js、npm、gulp、brower-sync</title>
+    <link href="http://yoursite.com/2017/04/25/gulp/"/>
+    <id>http://yoursite.com/2017/04/25/gulp/</id>
+    <published>2017-04-25T15:13:19.000Z</published>
+    <updated>2017-06-04T15:43:10.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
+    
+      <category term="npm" scheme="http://yoursite.com/tags/npm/"/>
+    
+      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
+    
+      <category term="brower-sync" scheme="http://yoursite.com/tags/brower-sync/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模块化基础</title>
+    <link href="http://yoursite.com/2017/04/18/modular/"/>
+    <id>http://yoursite.com/2017/04/18/modular/</id>
+    <published>2017-04-18T15:14:17.000Z</published>
+    <updated>2017-06-04T15:43:06.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="模块化" scheme="http://yoursite.com/categories/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+    
+      <category term="CMD" scheme="http://yoursite.com/tags/CMD/"/>
+    
+      <category term="AMD" scheme="http://yoursite.com/tags/AMD/"/>
+    
+      <category term="Common.js" scheme="http://yoursite.com/tags/Common-js/"/>
+    
+      <category term="requer.js" scheme="http://yoursite.com/tags/requer-js/"/>
+    
+      <category term="r.js" scheme="http://yoursite.com/tags/r-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP基础</title>
+    <link href="http://yoursite.com/2017/04/15/http/"/>
+    <id>http://yoursite.com/2017/04/15/http/</id>
+    <published>2017-04-15T15:13:10.000Z</published>
+    <updated>2017-06-04T15:42:52.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="HTTP" scheme="http://yoursite.com/categories/HTTP/"/>
+    
+    
+      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery造轮子</title>
+    <link href="http://yoursite.com/2017/04/13/jq/"/>
+    <id>http://yoursite.com/2017/04/13/jq/</id>
+    <published>2017-04-13T15:16:25.000Z</published>
+    <updated>2017-06-04T15:44:56.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="库" scheme="http://yoursite.com/categories/%E5%BA%93/"/>
+    
+    
+      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原生js造轮子</title>
+    <link href="http://yoursite.com/2017/04/10/js/"/>
+    <id>http://yoursite.com/2017/04/10/js/</id>
+    <published>2017-04-10T15:16:10.000Z</published>
+    <updated>2017-06-04T15:44:46.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="js实战" scheme="http://yoursite.com/categories/js%E5%AE%9E%E6%88%98/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面向对象基础</title>
+    <link href="http://yoursite.com/2017/04/08/object/"/>
+    <id>http://yoursite.com/2017/04/08/object/</id>
+    <published>2017-04-08T15:13:02.000Z</published>
+    <updated>2017-06-04T15:44:40.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="面向对象" scheme="http://yoursite.com/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>后端基础</title>
+    <link href="http://yoursite.com/2017/04/05/node/"/>
+    <id>http://yoursite.com/2017/04/05/node/</id>
+    <published>2017-04-05T15:12:44.000Z</published>
+    <updated>2017-06-04T15:42:38.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="后端" scheme="http://yoursite.com/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
+    
+      <category term="php" scheme="http://yoursite.com/tags/php/"/>
+    
+      <category term="xmapp" scheme="http://yoursite.com/tags/xmapp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jQuery基础</title>
-    <link href="http://yoursite.com/2017/04/30/jquery/"/>
-    <id>http://yoursite.com/2017/04/30/jquery/</id>
-    <published>2017-04-29T18:02:02.000Z</published>
-    <updated>2017-06-03T15:06:36.000Z</updated>
+    <link href="http://yoursite.com/2017/03/30/jquery/"/>
+    <id>http://yoursite.com/2017/03/30/jquery/</id>
+    <published>2017-03-29T18:02:02.000Z</published>
+    <updated>2017-06-04T15:41:18.000Z</updated>
     
     <summary type="html">
     
@@ -35,10 +307,10 @@
   
   <entry>
     <title>JavaScript基础</title>
-    <link href="http://yoursite.com/2017/04/25/javascript/"/>
-    <id>http://yoursite.com/2017/04/25/javascript/</id>
-    <published>2017-04-24T18:01:41.000Z</published>
-    <updated>2017-06-03T15:06:36.000Z</updated>
+    <link href="http://yoursite.com/2017/03/25/javascript/"/>
+    <id>http://yoursite.com/2017/03/25/javascript/</id>
+    <published>2017-03-24T18:01:41.000Z</published>
+    <updated>2017-06-04T15:40:52.000Z</updated>
     
     <summary type="html">
     
@@ -49,14 +321,20 @@
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
+      <category term="ajax" scheme="http://yoursite.com/tags/ajax/"/>
+    
+      <category term="json" scheme="http://yoursite.com/tags/json/"/>
+    
+      <category term="jsonp" scheme="http://yoursite.com/tags/jsonp/"/>
+    
   </entry>
   
   <entry>
     <title>CSS基础</title>
-    <link href="http://yoursite.com/2017/03/20/css/"/>
-    <id>http://yoursite.com/2017/03/20/css/</id>
-    <published>2017-03-19T17:48:30.000Z</published>
-    <updated>2017-06-03T15:06:38.000Z</updated>
+    <link href="http://yoursite.com/2017/02/25/css/"/>
+    <id>http://yoursite.com/2017/02/25/css/</id>
+    <published>2017-02-24T17:48:30.000Z</published>
+    <updated>2017-06-04T15:40:14.000Z</updated>
     
     <summary type="html">
     
@@ -71,19 +349,18 @@
   
   <entry>
     <title>HTML基础</title>
-    <link href="http://yoursite.com/2017/03/05/html/"/>
-    <id>http://yoursite.com/2017/03/05/html/</id>
-    <published>2017-03-04T17:42:52.000Z</published>
-    <updated>2017-06-04T14:09:06.000Z</updated>
+    <link href="http://yoursite.com/2017/02/23/html/"/>
+    <id>http://yoursite.com/2017/02/23/html/</id>
+    <published>2017-02-22T17:42:52.000Z</published>
+    <updated>2017-06-04T15:40:06.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="从URL到页面展现的过程"><a href="#从URL到页面展现的过程" class="headerlink" title="从URL到页面展现的过程"></a>从URL到页面展现的过程</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>地址栏输入URL</li>
-<li>域名解析</li>
+<li>域名解析<a id="more"></a> </li>
 <li>服务器处理请求</li>
 <li>网站处理</li>
 <li>浏览器处理响应</li>
-<li>浏览器绘制网页<a id="more"></a>  
-</li>
+<li>浏览器绘制网页 </li>
 </ul>
 <h2 id="输入URL"><a href="#输入URL" class="headerlink" title="输入URL"></a>输入URL</h2><ul>
 <li>URL(Uniform Resoure Locator)统一资源定位符,分为协议、网络地址、资源路径,用于定位互联网上的资源,即网址  </li>
@@ -175,11 +452,7 @@
     
       &lt;h1 id=&quot;从URL到页面展现的过程&quot;&gt;&lt;a href=&quot;#从URL到页面展现的过程&quot; class=&quot;headerlink&quot; title=&quot;从URL到页面展现的过程&quot;&gt;&lt;/a&gt;从URL到页面展现的过程&lt;/h1&gt;&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;地址栏输入URL&lt;/li&gt;
-&lt;li&gt;域名解析&lt;/li&gt;
-&lt;li&gt;服务器处理请求&lt;/li&gt;
-&lt;li&gt;网站处理&lt;/li&gt;
-&lt;li&gt;浏览器处理响应&lt;/li&gt;
-&lt;li&gt;浏览器绘制网页
+&lt;li&gt;域名解析
     
     </summary>
     
@@ -192,10 +465,10 @@
   
   <entry>
     <title>vim、linus、git命令行</title>
-    <link href="http://yoursite.com/2017/02/25/gitlinuxvim/"/>
-    <id>http://yoursite.com/2017/02/25/gitlinuxvim/</id>
-    <published>2017-02-24T17:58:48.000Z</published>
-    <updated>2017-06-04T12:23:08.000Z</updated>
+    <link href="http://yoursite.com/2017/02/21/gitlinuxvim/"/>
+    <id>http://yoursite.com/2017/02/21/gitlinuxvim/</id>
+    <published>2017-02-20T17:58:48.000Z</published>
+    <updated>2017-06-04T15:39:48.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><ul>
 <li>vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.</li>
@@ -406,7 +679,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="gt-gt-简明vim命令行"><a href="#gt-gt-简明vim命令行" class="headerlink" title="&gt;&gt;简明vim命令行"></a>&gt;&gt;<a href="http://coolshell.cn/articles/5426.html" target="_blank" rel="external">简明vim命令行</a></h3><hr>
+<h3 id="gt-gt-简明vim命令行"><a href="#gt-gt-简明vim命令行" class="headerlink" title="&gt;&gt;简明vim命令行"></a>&gt;&gt;<a href="http://www.cnblogs.com/xianyulaodi/p/6547807.html" target="_blank" rel="external">简明vim命令行</a></h3><hr>
 ]]></content>
     
     <summary type="html">
@@ -419,7 +692,7 @@
     
     </summary>
     
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="命令行" scheme="http://yoursite.com/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     
     
       <category term="vim" scheme="http://yoursite.com/tags/vim/"/>
@@ -435,10 +708,11 @@
     <link href="http://yoursite.com/2017/02/20/web/"/>
     <id>http://yoursite.com/2017/02/20/web/</id>
     <published>2017-02-19T17:39:17.000Z</published>
-    <updated>2017-06-04T11:40:24.000Z</updated>
+    <updated>2017-06-04T15:07:42.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="web前端开发职能"><a href="#web前端开发职能" class="headerlink" title="web前端开发职能"></a>web前端开发职能</h1><h2 id="职能"><a href="#职能" class="headerlink" title="职能"></a>职能</h2><ul>
-<li>web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.</li>
+<li>web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.<a id="more"></a>  
+</li>
 </ul>
 <h2 id="常见简称"><a href="#常见简称" class="headerlink" title="常见简称"></a>常见简称</h2><ul>
 <li>PM：项目经理  </li>
@@ -446,8 +720,7 @@
 <li>UE：交互设计师、视觉设计师  </li>
 <li>RD：后端工程师、前端工程师、无线工程师  </li>
 <li>QA：测试工程师  </li>
-<li>OP：运维工程师<a id="more"></a>  
-</li>
+<li>OP：运维工程师</li>
 </ul>
 <h2 id="互联网公司产品流程"><a href="#互联网公司产品流程" class="headerlink" title="互联网公司产品流程"></a>互联网公司产品流程</h2><ul>
 <li>项目经理提出需求,开会审核</li>
@@ -480,15 +753,7 @@
     <summary type="html">
     
       &lt;h1 id=&quot;web前端开发职能&quot;&gt;&lt;a href=&quot;#web前端开发职能&quot; class=&quot;headerlink&quot; title=&quot;web前端开发职能&quot;&gt;&lt;/a&gt;web前端开发职能&lt;/h1&gt;&lt;h2 id=&quot;职能&quot;&gt;&lt;a href=&quot;#职能&quot; class=&quot;headerlink&quot; title=&quot;职能&quot;&gt;&lt;/a&gt;职能&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;常见简称&quot;&gt;&lt;a href=&quot;#常见简称&quot; class=&quot;headerlink&quot; title=&quot;常见简称&quot;&gt;&lt;/a&gt;常见简称&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;PM：项目经理  &lt;/li&gt;
-&lt;li&gt;PD：产品经理&lt;/li&gt;
-&lt;li&gt;UE：交互设计师、视觉设计师  &lt;/li&gt;
-&lt;li&gt;RD：后端工程师、前端工程师、无线工程师  &lt;/li&gt;
-&lt;li&gt;QA：测试工程师  &lt;/li&gt;
-&lt;li&gt;OP：运维工程师
+&lt;li&gt;web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.
     
     </summary>
     

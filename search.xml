@@ -3,36 +3,134 @@
   
     
     <entry>
+      <title><![CDATA[移动响应式]]></title>
+      <url>%2F2017%2F06%2F04%2Fphone%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[vue.js]]></title>
+      <url>%2F2017%2F05%2F25%2Fvue%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[boostrap基础]]></title>
+      <url>%2F2017%2F05%2F15%2Fboostrap%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[webpack]]></title>
+      <url>%2F2017%2F05%2F07%2Fwebpack%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[less]]></title>
+      <url>%2F2017%2F05%2F05%2Fless%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[css3基础]]></title>
+      <url>%2F2017%2F04%2F30%2Fcss3%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[html5基础]]></title>
+      <url>%2F2017%2F04%2F27%2Fhtml5%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[node.js、npm、gulp、brower-sync]]></title>
+      <url>%2F2017%2F04%2F25%2Fgulp%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[模块化基础]]></title>
+      <url>%2F2017%2F04%2F18%2Fmodular%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[HTTP基础]]></title>
+      <url>%2F2017%2F04%2F15%2Fhttp%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery造轮子]]></title>
+      <url>%2F2017%2F04%2F13%2Fjq%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[原生js造轮子]]></title>
+      <url>%2F2017%2F04%2F10%2Fjs%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[面向对象基础]]></title>
+      <url>%2F2017%2F04%2F08%2Fobject%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[后端基础]]></title>
+      <url>%2F2017%2F04%2F05%2Fnode%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[jQuery基础]]></title>
-      <url>%2F2017%2F04%2F30%2Fjquery%2F</url>
+      <url>%2F2017%2F03%2F30%2Fjquery%2F</url>
       <content type="text"></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[JavaScript基础]]></title>
-      <url>%2F2017%2F04%2F25%2Fjavascript%2F</url>
+      <url>%2F2017%2F03%2F25%2Fjavascript%2F</url>
       <content type="text"></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[CSS基础]]></title>
-      <url>%2F2017%2F03%2F20%2Fcss%2F</url>
+      <url>%2F2017%2F02%2F25%2Fcss%2F</url>
       <content type="text"></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[HTML基础]]></title>
-      <url>%2F2017%2F03%2F05%2Fhtml%2F</url>
+      <url>%2F2017%2F02%2F23%2Fhtml%2F</url>
       <content type="text"><![CDATA[从URL到页面展现的过程概述 地址栏输入URL 域名解析 服务器处理请求 网站处理 浏览器处理响应 浏览器绘制网页 输入URL URL(Uniform Resoure Locator)统一资源定位符,分为协议、网络地址、资源路径,用于定位互联网上的资源,即网址 协议:浏览器和万维网之间的约定 http:找到网络上资源的协议 https:对http进行加密的协议 file:定位本地电脑文件的协议 ftp:文件的传输协议 网络地址:指示连接哪台计算机,可以是域名或者IP地址,可以包括端口号资源路径:指示从服务器上获取哪一项资源examplehttp://www.baidu.com/question/12345/ 协议:http 网络地址:www.baidu.com 资源路径:/question/12345/ 域名解析 我们是通过域名访问,浏览器对域名解析成对应IP地址,找到计算机 IP地址 IP地址为互联网上每一个网络和每一台主机分配的一个逻辑地址,如220.181.112.244 域名DN(domain name) 域名是为了识别主机名称和组织机构名称的一种具有分层的名称,如www.baidu.com 计算机域名系统DNS(Domain Name System or Domain Name Service) 主要是用于保存网络中所有主机的域名和对应IP地址,并具有将域名转换为IP地址功能的服务器,它是由域名解析器和域名服务器组成 域名解析的流程,如下 浏览器缓存——浏览器会缓存DNS记录一段时间 系统缓存——从Hosts文件查找是否有该域名和对应IP 路由器缓存——一般路由器也会缓存域名信息 ISP DNS 缓存——比如到电信的DNS上查找缓存(DNS劫持) 如果都没有找到,则向根域名服务器查找域名对应IP，根域名服务器把请求转发到下一级，直到找到IP ps 域名与 URL 是两个概念:域名是一台或一组服务器的名称,用来确定服务器在 Internet 上的位置；URL 是统一资源定位符,用来确定某一个文件的具体位置,例如，zhihu.com 是 知乎 的域名，根据这个域名可以找到知乎的服务器， zhihu.com/people/Compile 是 URL ,可以根据这个 URL 定位我的知乎主页 IP 地址与域名不是一一对应的关系:可以把多个提供相同服务的服务器 IP 设置为同一个域名,但在同一时刻一个域名只能解析出一个 IP地址；同时,一个 IP 地址可以绑定多个域名,数量不限 服务器处理请求 服务器上会有安装用于接收处理请求的应用——web server（常见的webserver产品有apache、nginx等）,并且决定采用哪种方法来处理这个请求 网页请求是一个单向请求的过程，即是一个主机向服务器请求数据，服务器返回相应的数据的过程。 web server 担任管控的角色，对于不同用户发送的请求，会结合配置文件，把不同请求委托给服务器上处理对应请求的程序进行处理（例如JSP脚本，服务器端JavaScript等一些服务器端技术），然后返回后台程序处理产生的结果作为响应 浏览器根据 URL 内容生成 HTTP 请求，请求中包含请求文件的位置、请求文件的方式等 服务器响应请求，将数据（可能是根据HTML协议组织的网页，包含页面的布局、文字等）返回给浏览器 如果返回的是一个页面，根据页面里一些外链的URL，例如图片的地址，它会按照之前的步骤以及第二步中忽略的请求部分再次获取 网站处理响应 网站处理，就是实际后台处理的工作 MVCMVC是一种设计模式,模型（model）–视图（view）–控制器（controller）,它们各自处理自己的任务，实现输入、处理和输出的分离 最上面的一层-视图（view）:视图是直接面向用户的一层，是前端工作的主力部分 最底下的一层-模型（model）:模型是将实际开发中的业务规则和所涉及的数据格式模型化，应用于模型的代码只需写一次就可以被多个视图重用。在MVC的三个部件中，模型拥有最多的处理任务。一个模型能为多个视图提供数据 中间的一层-控制器（controller）:它负责根据用户从”视图层”输入的指令，选取”数据层”中的数据，然后对其进行相应的操作，产生最终结果 ps 首先，控制器（controller）接收用户请求，并决定调用哪种模型来进行处理 然后，模型（model）用业务逻辑来处理用户的请求并返回数据 最后，控制器（controller）用相应的视图格式化模型返回html字符串给浏览器，浏览器呈现网页给用户。这部分完成后，就要开始接下来的浏览器处理部分 浏览器处理 现代浏览器渲染页面的过程是这样的：解析HTML以构建DOM树 –&gt; 构建渲染树 –&gt; 布局渲染树 –&gt; 绘制渲染树 浏览器渲染步骤加载 浏览器对一个html页面的加载顺序是从上而下的，并在加载过程并行进行解析渲染处理。在这个过程中遇到link标签、image标签、script标签时，浏览器会再次向服务器发送请求获取CSS文件、图片资源、JS文件，并执行JS代码，同步进行加载解析 解析、渲染 解析的过程，其实就是生成解析树，即DOM树。DOM树是由DOM元素及属性节点组成，加上CSS解析的样式对象和js解析后的动作实现。而渲染，就是将DOM树进行可视化表示 网页展示 浏览器通过上面步骤计算得到渲染树，是DOM树的可视化表示，构建渲染树使页面以正确的顺序绘制出来 浏览器下载的顺序是从上到下，渲染的顺序也是从上到下，下载和渲染同时进行 网页展示步骤 解析html成DOM树 解析html中的css，构建渲染树。完成后浏览器开始布局渲染树并绘制到屏幕 解析JavaScript，解析到的时候执行（JS的解析由浏览器中的JS解析引擎完成） &gt;&gt;从URL到页面展现的过程]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[vim、linus、git命令行]]></title>
-      <url>%2F2017%2F02%2F25%2Fgitlinuxvim%2F</url>
+      <url>%2F2017%2F02%2F21%2Fgitlinuxvim%2F</url>
       <content type="text"><![CDATA[vim vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴. 常用命令入门 查看文件：cat test.html 查看并编辑：vim test.html ,按下 i 会发现左下角出现 –INSERT– 表示可以输入内容 保存文件：按 esc , shift + : ,左下角出现 : ,输入 w 表示保存 ,输入 q 表示退出 ,输入 wq 表示保存退出 光标操作：按 esc ,使用 k 上一行, j 下一行 , h 向前, l 向后,也可以使用键盘箭头键来实现 删除内容：按 esc ,使用光标移动到想要删除的位置 dd 删除当前行, x 删除当前一个, 5x删除后面5个, 5X 删除前面5个, u 恢复前一次操作 快速翻页：按 ctrl + d 向下滚动半屏, ctrl + u 向上滚动半屏, ctrl + f 向下滚动一屏, ctrl + d 向上滚动半屏 给文本添加行号: 按 esc ,输入 :set nu , ctrl + g 显示此时光标所在位置的行号和总列数,输入 :set nonu取消行号,快速切换行号按 esc ,输入 : 0 切换到头部,例如输入:20光标切换到20行号位置. 跳转段落结尾: 按 esc , shift + ( 跳转到上一段落, shift +) 跳转到后一段落 实现复制和粘贴: 按 esc ,在光标所在位置按下 yy 表示复制当前行 , p 表示粘贴 查找某个字符串: 按esc , 输入:/foo 表示搜索字符串foo 常用命令基础光标移动 命令 作用 h,j,k,l 分别表示左,下,右,上 ctrl + f 上一页 ctrl + b 下一页 o 开启新的一行 ^ 一行的开始 $ 一行的结尾 gg 文档的第一行 [N]G 文档的第N行或者最后一行 编辑 命令 作用 r 分别表示左,下,右,上 J 合并下一行到上一行 s 删除光标所在的一个字符,光标还在当行 S 删除光标所在的一行,光标还在当行,不同于dd u 撤销上一步操作 ctrl + r 恢复上一步操作 . 重复最后一个命令 ~ 变换为大写 插入模式 命令 作用 i 插入到光标前面 I 插入到行的开始位置 a 插入到光标的后面 A 插入到行的最后位置 o,O 新开一行 Esc 关闭插入模式 退出 命令 作用 :w 保存 :wq 保存并关闭 :q 关闭(已保存) :q! 强制关闭 剪切/赋值 命令 作用 v 选中一个或多个字符 V 选中一行 dd 删除一行 dw 删除一个单词 x 删除后一个字符 X 删除前一个字符 D 删除一行最后一个字符 [N]yy 复制一行或者N行 yw 复制一个单词 p 粘贴 &gt;&gt;简明vim命令行]]></content>
     </entry>
 
