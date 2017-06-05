@@ -334,7 +334,7 @@
     <link href="http://yoursite.com/2017/02/25/css/"/>
     <id>http://yoursite.com/2017/02/25/css/</id>
     <published>2017-02-24T17:48:30.000Z</published>
-    <updated>2017-06-05T04:42:42.000Z</updated>
+    <updated>2017-06-05T04:55:06.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h1><ul>
 <li>CSS全称是Cascading Style Sheets,层叠样式表</li>
@@ -347,7 +347,7 @@
 <h2 id="浏览器F12"><a href="#浏览器F12" class="headerlink" title="浏览器F12"></a>浏览器F12</h2><ul>
 <li>查看浏览器默认样式</li>
 <li>查看设置样式</li>
-<li>查看html结构<br><img src="http://oqev4hx8u.bkt.clouddn.com/css-1.png" alt="css-1.png"></li>
+<li>查看html结构<br><img src="http://oqev4hx8u.bkt.clouddn.com/css-2.png" alt="css-1.png"></li>
 </ul>
 <h2 id="CSS书写规范"><a href="#CSS书写规范" class="headerlink" title="CSS书写规范"></a>CSS书写规范</h2><h3 id="gt-gt-CSS书写规范"><a href="#gt-gt-CSS书写规范" class="headerlink" title="&gt;&gt;CSS书写规范"></a>&gt;&gt;<a href="https://github.com/fex-team/styleguide/blob/master/css.md" target="_blank" rel="external">CSS书写规范</a></h3><hr>
 ]]></content>
