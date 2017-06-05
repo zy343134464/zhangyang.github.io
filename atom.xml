@@ -334,7 +334,7 @@
     <link href="http://yoursite.com/2017/02/25/css/"/>
     <id>http://yoursite.com/2017/02/25/css/</id>
     <published>2017-02-24T17:48:30.000Z</published>
-    <updated>2017-06-05T13:15:14.000Z</updated>
+    <updated>2017-06-05T13:21:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h1><ul>
 <li>CSS全称是Cascading Style Sheets,层叠样式表</li>
@@ -446,8 +446,7 @@
 <td>匹配所有属性attr具有多个空格分隔、其中一个值等于value的元素</td>
 </tr>
 <tr>
-<td>E[attr \</td>
-<td>= value]</td>
+<td>E[attr \= value]</td>
 <td>匹配所有属性attr为value或是以value-为前缀开头的元素</td>
 </tr>
 <tr>
