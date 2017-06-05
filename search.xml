@@ -117,7 +117,7 @@
     <entry>
       <title><![CDATA[CSS基础]]></title>
       <url>%2F2017%2F02%2F25%2Fcss%2F</url>
-      <content type="text"></content>
+      <content type="text"><![CDATA[CSS基础 CSS全称是Cascading Style Sheets,层叠样式表 引用CSS内联样式1&lt;h1 style="font-size:16px;color:blue"&gt;&lt;/h1&gt; 内部样式1234567&lt;style type="text/css"&gt; h1&#123; font-size:16px; color:blue; &#125;&lt;/style&gt;&lt;h1&gt;你好&lt;/h1&gt; 外部样式第一种方式1&lt;link rel="stylesheet" type="text/css" href="index.css"&gt;&lt;/style&gt; 第二种方式1234&lt;style&gt; @import url("index.css"); @import "index.css";&lt;/style&gt; 浏览器F12 查看浏览器默认样式 查看设置样式 查看html结构 CSS书写规范&gt;&gt;CSS书写规范]]></content>
     </entry>
 
     
