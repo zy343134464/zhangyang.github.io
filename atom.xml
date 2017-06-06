@@ -310,7 +310,7 @@
     <link href="http://yoursite.com/2017/03/25/javascript/"/>
     <id>http://yoursite.com/2017/03/25/javascript/</id>
     <published>2017-03-24T18:01:41.000Z</published>
-    <updated>2017-06-06T15:28:32.000Z</updated>
+    <updated>2017-06-06T15:59:18.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript基础概念"><a href="#JavaScript基础概念" class="headerlink" title="JavaScript基础概念"></a>JavaScript基础概念</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
 <li>指变量、函数、属性的名字，或者函数的参数</li>
@@ -624,7 +624,74 @@
 <h4 id="parseFloat-和-Number-的区别"><a href="#parseFloat-和-Number-的区别" class="headerlink" title="parseFloat () 和 Number () 的区别"></a>parseFloat () 和 Number () 的区别</h4><ul>
 <li>一般Number()比较复杂,所以建议使用parseFloat ()</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">parseFloat(true)       // NaN</div><div class="line">Number(true)           // 1</div><div class="line"></div><div class="line">parseFloat(null)       // NaN</div><div class="line">Number(null)           // 0</div><div class="line"></div><div class="line">parseFloat('')         // NaN</div><div class="line">Number('')             // 0</div><div class="line"></div><div class="line">parseFloat('123.45#')  // 123.45</div><div class="line">Number('123.45#')      // NaN</div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">parseFloat(true)       // NaN</div><div class="line">Number(true)           // 1</div><div class="line"></div><div class="line">parseFloat(null)       // NaN</div><div class="line">Number(null)           // 0</div><div class="line"></div><div class="line">parseFloat('')         // NaN</div><div class="line">Number('')             // 0</div><div class="line"></div><div class="line">parseFloat('123.45#')  // 123.45</div><div class="line">Number('123.45#')      // NaN</div></pre></td></tr></table></figure>
+<h2 id="code-JS中-、-、-的区别"><a href="#code-JS中-、-、-的区别" class="headerlink" title="code:JS中=、==、===的区别"></a>code:JS中=、==、===的区别</h2><h3 id="explain-3"><a href="#explain-3" class="headerlink" title="explain"></a>explain</h3><ul>
+<li>JS中的=、==、===是不同的</li>
+</ul>
+<h4 id="“-”表示赋值"><a href="#“-”表示赋值" class="headerlink" title="“=”表示赋值"></a>“=”表示赋值</h4><ul>
+<li>把后面的值赋给前面</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var a=1  // 赋值</div></pre></td></tr></table></figure>
+<h4 id="“-”相等运算符"><a href="#“-”相等运算符" class="headerlink" title="“==”相等运算符"></a>“==”相等运算符</h4><ul>
+<li><p>宽松的比较两个数据，如果两个数据类型相同，就直接比较，如果两个数据类型不同，则会先转化数据类型相同，再比较</p>
+</li>
+<li><ul>
+<li>原始类型间的比较</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">// 原始类型的数据会转换成数值类型再比较</div><div class="line"></div><div class="line">1 == true // true</div><div class="line">// 等同于 1 === 1</div><div class="line"></div><div class="line">0 == false // true</div><div class="line">// 等同于 0 === 0</div><div class="line"></div><div class="line">2 == true // false</div><div class="line">// 等同于 2 === 1</div><div class="line"></div><div class="line">2 == false // false</div><div class="line">// 等同于 2 === 0</div><div class="line"></div><div class="line">'true' == true // false</div><div class="line">// 等同于 Number('true') === Number(true)</div><div class="line">// 等同于 NaN === 1</div><div class="line"></div><div class="line">'' == 0 // true</div><div class="line">// 等同于 Number('') === 0</div><div class="line">// 等同于 0 === 0</div><div class="line"></div><div class="line">'' == false  // true</div><div class="line">// 等同于 Number('') === Number(false)</div><div class="line">// 等同于 0 === 0</div><div class="line"></div><div class="line">'1' == true  // true</div><div class="line">// 等同于 Number('1') === Number(true)</div><div class="line">// 等同于 1 === 1</div><div class="line"></div><div class="line">'\n  123  \t' == 123 // true</div><div class="line">// 因为字符串转为数字时，省略前置和后置的空格</div></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>对象与原始类型比较</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// 对象与原始类型的值比较时，对象转化成原始类型的值，再进行比较。</div><div class="line"></div><div class="line">[1] == 1 // true</div><div class="line">// 等同于 Number([1]) == 1</div><div class="line"></div><div class="line">[1] == '1' // true</div><div class="line">// 等同于 String([1]) == Number('1')</div><div class="line"></div><div class="line">[1] == true // true</div><div class="line">// 等同于 Number([1]) == Number(true)</div></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>undefined 和 null</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">false == null // false</div><div class="line">false == undefined // false</div><div class="line"></div><div class="line">0 == null // false</div><div class="line">0 == undefined // false</div><div class="line">// undefined 和 null与其他类型的值比较时，结果都为false</div><div class="line"></div><div class="line">undefined == null // true</div><div class="line">undefined 和 null 比较时，结果为 true</div></pre></td></tr></table></figure>
+<h4 id="“-”-严格相等运算符"><a href="#“-”-严格相等运算符" class="headerlink" title="“===” 严格相等运算符"></a>“===” 严格相等运算符</h4><ul>
+<li><p>严格相等运算符（===）比较它们是否为“同一个值”。如果两个值不是同一类型，严格相等运算符（===）直接返回false</p>
+</li>
+<li><ul>
+<li>不同类型的值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1 === "1" // false</div><div class="line">true === "true" // false</div><div class="line">// 不同类型的值直接返回 false</div></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>同一类的原始类型值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1 === 0x1 // true</div><div class="line">// 十进制和十六进制的 1 ，是相同的值，同一类型</div></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>同一类的复合类型值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">两个复合类型（对象、数组、函数）的数据比较时，不是比较它们的值是否相等，而是比较它们是否指向同一个对象。</div><div class="line">&#123;&#125; === &#123;&#125; // false</div><div class="line">[] === [] // false</div><div class="line">(function ()&#123;&#125; === function ()&#123;&#125;) // false</div><div class="line">// 严格相等运算比较的是，它们是否引用同一个内存地址</div></pre></td></tr></table></figure>
+<h2 id="code-break与continue有什么区别"><a href="#code-break与continue有什么区别" class="headerlink" title="code:break与continue有什么区别"></a>code:break与continue有什么区别</h2><h3 id="explain-4"><a href="#explain-4" class="headerlink" title="explain"></a>explain</h3><h4 id="break"><a href="#break" class="headerlink" title="break"></a>break</h4><ul>
+<li>break用于强制退出本次循环</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var num = 0;</div><div class="line"></div><div class="line">for(var i = 1;i <span class="tag">&lt; <span class="attr">10</span>;<span class="attr">i</span>++)&#123;</span></div><div class="line">	<span class="attr">if</span>(<span class="attr">i</span> % <span class="attr">5</span> == <span class="string">0)&#123;</span></div><div class="line">		<span class="attr">break</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="attr">num</span>++;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="attr">alert</span>(<span class="attr">num</span>); //<span class="attr">4</span></div></pre></td></tr></table></figure>
+<h4 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h4><ul>
+<li>continue用于退出本次循环,执行下次循环</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var num = 0;</div><div class="line"></div><div class="line">for(var i = 1;i <span class="tag">&lt; <span class="attr">10</span>;<span class="attr">i</span>++)&#123;</span></div><div class="line">	<span class="attr">if</span>(<span class="attr">i</span> % <span class="attr">5</span> == <span class="string">0)&#123;</span></div><div class="line">		<span class="attr">continue</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="attr">num</span>++;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="attr">alert</span>(<span class="attr">num</span>); //<span class="attr">8</span></div></pre></td></tr></table></figure>
+<h2 id="code-void-0-和-undefined在使用场景上有什么区别"><a href="#code-void-0-和-undefined在使用场景上有什么区别" class="headerlink" title="code:void 0 和 undefined在使用场景上有什么区别"></a>code:void 0 和 undefined在使用场景上有什么区别</h2><h3 id="explain-5"><a href="#explain-5" class="headerlink" title="explain"></a>explain</h3><ul>
+<li>void 0 运算后返回值是 undefined，不可被重写</li>
+<li>undefined 在局部作用域中，是可以被重写的，如果要判断一个变量是否和 undefined 相等，可以使用 void 0 来进行比较</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">function f()&#123;</div><div class="line">  var undefined = 100;</div><div class="line">  var str;</div><div class="line">  if(str == undefined)&#123;</div><div class="line">      console.log('相等');</div><div class="line">  &#125;else&#123;</div><div class="line">      console.log('不相等');</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">f(); // 返回不相等，因为undefined 被赋值 100</div><div class="line">function f()&#123;</div><div class="line">  var undefined = 100;</div><div class="line">  var str;</div><div class="line">  if(str == void 0)&#123;</div><div class="line">      console.log('相等');</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">f(); // 返回相等</div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
