@@ -310,7 +310,7 @@
     <link href="http://yoursite.com/2017/03/25/javascript/"/>
     <id>http://yoursite.com/2017/03/25/javascript/</id>
     <published>2017-03-24T18:01:41.000Z</published>
-    <updated>2017-06-06T14:20:40.000Z</updated>
+    <updated>2017-06-06T15:28:32.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript基础概念"><a href="#JavaScript基础概念" class="headerlink" title="JavaScript基础概念"></a>JavaScript基础概念</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
 <li>指变量、函数、属性的名字，或者函数的参数</li>
@@ -494,7 +494,7 @@
 <h4 id="object"><a href="#object" class="headerlink" title="object"></a>object</h4><ul>
 <li>除此以外，其他情况都返回object</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">typeof window // "object"</div><div class="line">typeof &#123;&#125; // "object"</div><div class="line">typeof [] // "object"</div><div class="line">typeof null // "object"</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">typeof window; // "object"</div><div class="line">typeof &#123;&#125;; // "object"</div><div class="line">typeof [];// "object"</div><div class="line">typeof null; // "object"</div></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>空数值[]返回值也是object,说明数组本质上也是一种特殊的对象</li>
@@ -504,8 +504,127 @@
 <h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><ul>
 <li>instanceof 是判断变量是否为某个对象的实例，返回值为true或false</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;;</div><div class="line">var a = [];</div><div class="line">o instanceof Array // false</div><div class="line">a instanceof Array // true</div><div class="line">a instanceof Object // true</div></pre></td></tr></table></figure>
-<h2 id="code-完成如下代码判断一个变量是否是数字、字符串、布尔、函数"><a href="#code-完成如下代码判断一个变量是否是数字、字符串、布尔、函数" class="headerlink" title="code:完成如下代码判断一个变量是否是数字、字符串、布尔、函数"></a>code:完成如下代码判断一个变量是否是数字、字符串、布尔、函数</h2>]]></content>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;;</div><div class="line">var a = [];</div><div class="line">o instanceof Array; // false</div><div class="line">a instanceof Array; // true</div><div class="line">a instanceof Object; // true</div></pre></td></tr></table></figure>
+<h2 id="code-如何判断一个变量是否是数字、字符串、布尔、函数"><a href="#code-如何判断一个变量是否是数字、字符串、布尔、函数" class="headerlink" title="code:如何判断一个变量是否是数字、字符串、布尔、函数"></a>code:如何判断一个变量是否是数字、字符串、布尔、函数</h2><h3 id="explain"><a href="#explain" class="headerlink" title="explain"></a>explain</h3><ul>
+<li>typeof 运算符可以判断一个变量是否是数字、字符串、布尔、函数</li>
+</ul>
+<h4 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a=1;</div><div class="line">typeof a;  //"number"</div></pre></td></tr></table></figure>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var b='abc';</div><div class="line">typeof b;  //"string"</div></pre></td></tr></table></figure>
+<h4 id="布尔"><a href="#布尔" class="headerlink" title="布尔"></a>布尔</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var c=false;</div><div class="line">typeof c;  //"boolean"</div></pre></td></tr></table></figure>
+<h4 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a>函数</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var d=function()&#123;&#125;;</div><div class="line">typeof d;  //"function"</div></pre></td></tr></table></figure>
+<h2 id="code-NaN是什么-有什么特别之处"><a href="#code-NaN是什么-有什么特别之处" class="headerlink" title="code:NaN是什么?有什么特别之处?"></a>code:NaN是什么?有什么特别之处?</h2><h3 id="explain-1"><a href="#explain-1" class="headerlink" title="explain"></a>explain</h3><ul>
+<li>NaN是JavaScript的特殊值，表示“非数字”（Not a Number），主要出现在将字符串解析成数字出错的场合</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">5 - 'x';// NaN</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>上面代码运行时，会自动将字符串x转为数值，但是由于x不是数值，所以最后得到结果为·NaN·，表示它是“非数字”（NaN）</li>
+</ul>
+</blockquote>
+<ul>
+<li>一些数学函数的运算结果会出现NaN</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Math.acos(2) // NaN</div><div class="line">Math.log(-1) // NaN</div><div class="line">Math.sqrt(-1) // NaN</div><div class="line">0/0           //NaN</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>这些计算在数学上本来就是错误的，所以计算结果返回NaN</li>
+</ul>
+</blockquote>
+<h4 id="判断NaN-的方法"><a href="#判断NaN-的方法" class="headerlink" title="判断NaN 的方法"></a>判断NaN 的方法</h4><ul>
+<li>isNaN() ，判断一个数是否为NaN，返回 true 或false，但是只对数值有效，不是数值的参数会先转化成数值，当转化不了的时候就转成了NaN，所有这个方法判断不一定准确</li>
+<li>判断NaN更可靠的方法是，利用NaN是JavaScript之中唯一不等于自身的值这个特点，进行判断</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function myIsNaN(value) &#123;</div><div class="line">return value !== value;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="code-如何把非数值转化为数值"><a href="#code-如何把非数值转化为数值" class="headerlink" title="code:如何把非数值转化为数值"></a>code:如何把非数值转化为数值</h2><h3 id="explain-2"><a href="#explain-2" class="headerlink" title="explain"></a>explain</h3><ul>
+<li>有三个函数可以把非数值转化为数值</li>
+<li>Number () 把给定的值转换成数字</li>
+<li>parseInt () 把值转换成整数</li>
+<li>parseFloat () 把值转换成浮点数</li>
+</ul>
+<h4 id="Number"><a href="#Number" class="headerlink" title="Number ()"></a>Number ()</h4><ul>
+<li>如果是Boolean值，true 返回 1，false 返回 0</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Number(true)  ;//1</div><div class="line">Number(false) ;//0</div></pre></td></tr></table></figure>
+<ul>
+<li>如果是数字，就是原样</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Number(3.1415) ;//3.1415</div></pre></td></tr></table></figure>
+<ul>
+<li>如果是null，返回 0</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Number(null)  //0</div></pre></td></tr></table></figure>
+<ul>
+<li>如果是undefined，返回NaN</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Number(undefined)   //NaN</div></pre></td></tr></table></figure>
+<ul>
+<li>如果是字符串，有以下规则</li>
+<li><ul>
+<li>如果是字符串中只包含数字（包括前面带正号或负号的情况），则将其转化成十进制数值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Number ('123')    //123</div><div class="line">Number ('+123')   //123 </div><div class="line">Number ('-123')   //-123</div><div class="line">Number ('0110')   //110  前面的0会忽略</div></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>如果字符串中包含的有效的浮点数，就会转化成对应的浮点数，前面的0会忽略</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Number ('3.1415')    //3.1415</div><div class="line">Number ('03.1415')   //3.1415</div></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>如果字符串中包含有效的十六进制格式，前面为0x的格式，会自动转化成相同大小的十进制数</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Number ('0x11')      //17</div></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>如果字符串是空字符串，则返回 0</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Number ('')          //0</div></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>如果字符串中包含上述格式外的其他字符，则转化成NaN</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x</div><div class="line">Number (x)        //NaN</div><div class="line">// 如果 x 没有用 var 声明过，就会报错。</div></pre></td></tr></table></figure>
+<h4 id="parseInt"><a href="#parseInt" class="headerlink" title="parseInt ()"></a>parseInt ()</h4><ul>
+<li>parseInt方法用于将 字符串 转为整数。返回值只有两种可能，不是一个十进制整数，就是NaN</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">parseInt ('520')       //520   整数转化成整数</div><div class="line">parseInt ('3.1415')    //3     浮点数转化前面的整数部分</div><div class="line">parseInt ('    11')    //11    前面的空格会忽略</div><div class="line">parseInt ('000011')    //11    前面的0会忽略</div></pre></td></tr></table></figure>
+<ul>
+<li>如果parseInt的参数不是字符串，则会先转为字符串再转换</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">parseInt(1.23) // 1</div><div class="line">// 等同于</div><div class="line">parseInt('1.23') // 1</div></pre></td></tr></table></figure>
+<ul>
+<li>字符串转为整数的时候，是一个个字符依次转换，如果遇到不能转为数字的字符，就不再进行下去，返回已经转好的部分</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">parseInt('8a') // 8</div><div class="line">parseInt('12**') // 12</div><div class="line">parseInt('12.34') // 12</div><div class="line">parseInt('15e2') // 15</div><div class="line">parseInt('15px') // 15</div><div class="line">//parseInt的参数都是字符串，结果只返回字符串头部可以转为数字的部分。</div></pre></td></tr></table></figure>
+<ul>
+<li>如果字符串的第一个字符不能转化为数字（后面跟着数字的正负号除外），返回NaN</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">parseInt('abc')   // NaN</div><div class="line">parseInt('.3')    // NaN</div><div class="line">parseInt('')      // NaN</div><div class="line">parseInt('+')     // NaN</div><div class="line">parseInt('+1')    // 1</div></pre></td></tr></table></figure>
+<ul>
+<li>parseInt方法还可以接受第二个参数（2到36之间），表示被解析的值的进制，返回该值对应的十进制数。默认情况下，parseInt的第二个参数为10，即默认是十进制转十进制</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">parseInt('1000', 10)    // 1000  以十进制解读（默认）</div><div class="line">parseInt('1000', 2)     // 8    以二进制解读</div><div class="line">parseInt('1000', 6)     // 216   以六进制解读</div><div class="line">parseInt('1000', 8)     // 512   以八进制解读</div><div class="line">parseInt('10', 37) // NaN   进制超出范围，就返回 NaN</div><div class="line">parseInt('10', 1) // NaN  进制超出范围，就返回 NaN</div><div class="line">parseInt('10', 0) // 10</div><div class="line">parseInt('10', null) // 10</div><div class="line">parseInt('10', undefined) // 10  第二个参数是0、null、undefined 则直接忽略</div></pre></td></tr></table></figure>
+<h4 id="parseFloat"><a href="#parseFloat" class="headerlink" title="parseFloat ()"></a>parseFloat ()</h4><ul>
+<li>parseFloat用于将一个字符串转为浮点数</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">parseFloat('3.14')         // 3.14  浮点数转浮点数</div><div class="line">parseFloat('314e-2')       // 3.14  </div><div class="line">parseFloat('0.0314E+2')    // 3.14  科学计数法转换</div><div class="line">parseFloat ('3.14abc')     // 3.14  转换前面的数值部分</div><div class="line">parseFloat ('    3.14')    // 3.14</div><div class="line">parseFloat ('00003.14')    // 3.14  前面的 0 和空格忽略</div></pre></td></tr></table></figure>
+<ul>
+<li>如果第一个字符不能转化成浮点数，就返回NaN</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">parseFloat([])     // NaN  空数组返回 NaN</div><div class="line">parseFloat('FF2')  // NaN  第一个字符不能转化浮点数</div><div class="line">parseFloat('')     // NaN  空字符串转化为 NaN</div></pre></td></tr></table></figure>
+<h4 id="parseFloat-和-Number-的区别"><a href="#parseFloat-和-Number-的区别" class="headerlink" title="parseFloat () 和 Number () 的区别"></a>parseFloat () 和 Number () 的区别</h4><ul>
+<li>一般Number()比较复杂,所以建议使用parseFloat ()</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">parseFloat(true)       // NaN</div><div class="line">Number(true)           // 1</div><div class="line"></div><div class="line">parseFloat(null)       // NaN</div><div class="line">Number(null)           // 0</div><div class="line"></div><div class="line">parseFloat('')         // NaN</div><div class="line">Number('')             // 0</div><div class="line"></div><div class="line">parseFloat('123.45#')  // 123.45</div><div class="line">Number('123.45#')      // NaN</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
