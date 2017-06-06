@@ -1116,7 +1116,43 @@
       
         
           
-            
+            <h1 id="JavaScript语法"><a href="#JavaScript语法" class="headerlink" title="JavaScript语法"></a>JavaScript语法</h1><h2 id="CSS和JS放置顺序"><a href="#CSS和JS放置顺序" class="headerlink" title="CSS和JS放置顺序"></a>CSS和JS放置顺序</h2><ul>
+<li>浏览器渲染机制一种是等全部加载后再一起渲染(IE、Chrome),另一种是边加载边渲染(Firefox)</li>
+<li>常用方法:根据不同浏览器渲染机制不同一般选用折中的方法来解决即CSS一般用style标签放在<head>的末尾,而JS放置在</head><body>末尾</body></li>
+</ul>
+<h3 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"index.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">		body&#123;</div><div class="line">			background: red;</div><div class="line">		&#125;</div><div class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span>	</div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	    <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">	    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	    </div><div class="line">	    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">	        alert(1);</div><div class="line">	    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>CSS放置在head,浏览器会先读取CSS的样式,当读到<body>里面的内容时候,读一个添加一个样式;如果CSS放在后面,对于IE、Chorme浏览器,可能出现白屏问题;对于Firefox浏览器,可能会出现无样式内容闪烁</body></li>
+<li>JS放置在后面,JS加载的过程中,其它HTML、CSS等读取会停下来,等待JS加载完后在读取后面的内容,JS阻塞了后面内容的呈现以及后面组件的加载;故采取HTML和CSS先静态页面出来,再读取JS,让页面动起来</li>
+</ul>
+</blockquote>
+<h2 id="白屏和FOUC"><a href="#白屏和FOUC" class="headerlink" title="白屏和FOUC"></a>白屏和FOUC</h2><h3 id="白屏"><a href="#白屏" class="headerlink" title="白屏"></a>白屏</h3><ul>
+<li>网页无任何内容样式呈白色背景的现象</li>
+</ul>
+<h4 id="出现白屏的情况"><a href="#出现白屏的情况" class="headerlink" title="出现白屏的情况"></a>出现白屏的情况</h4><ul>
+<li>对于IE、Chrome,CSS样式放在底部,页面出现白屏而不是内容逐步展现</li>
+<li>@import标签,即使CSS放入link,并且放在头部也会出现白屏(直接link放在顶部代替@import)</li>
+<li>对于CSS加载可以并发加载,而加载JS是会禁用并发,所以JS放在顶部也会导致白屏</li>
+</ul>
+<h3 id="FOUC-无样式内容闪烁"><a href="#FOUC-无样式内容闪烁" class="headerlink" title="FOUC(无样式内容闪烁)"></a>FOUC(无样式内容闪烁)</h3><ul>
+<li>页面只有HTML结构无样式的现象</li>
+</ul>
+<h4 id="出现FOUC的情况"><a href="#出现FOUC的情况" class="headerlink" title="出现FOUC的情况"></a>出现FOUC的情况</h4><ul>
+<li>对于Firefox,CSS样式放在底部,浏览器逐步呈现无样式的内容,所以用户看到的页面就是无样式内容闪烁</li>
+</ul>
+<blockquote>
+<ul>
+<li>白屏和FOUC出现的原因是因为两种浏览器的渲染机制不同造成的,所以解决办法就是将CSS放在顶部,这样不管浏览器渲染机制如何,最先得到CSS样式一般就不会出现这两种情况</li>
+</ul>
+</blockquote>
+<h3 id="JS异步加载"><a href="#JS异步加载" class="headerlink" title="JS异步加载"></a>JS异步加载</h3><ul>
+<li>默认情况下,读到script标签会立即加载并执行脚本,阻塞后面的内容</li>
+</ul>
+<h4 id="async"><a href="#async" class="headerlink" title="async"></a>async</h4><ul>
+<li></li>
+</ul>
+
           
         
       

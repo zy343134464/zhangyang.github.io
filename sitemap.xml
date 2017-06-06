@@ -4,7 +4,21 @@
   <url>
     <loc>http://yoursite.com/2017/02/25/css/</loc>
     
-    <lastmod>2017-06-05T15:22:46.000Z</lastmod>
+    <lastmod>2017-06-06T09:56:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/03/25/javascript/</loc>
+    
+    <lastmod>2017-06-06T09:56:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/02/23/html/</loc>
+    
+    <lastmod>2017-06-06T09:51:04.000Z</lastmod>
     
   </url>
   
@@ -110,20 +124,6 @@
     <loc>http://yoursite.com/2017/03/30/jquery/</loc>
     
     <lastmod>2017-06-04T15:41:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/03/25/javascript/</loc>
-    
-    <lastmod>2017-06-04T15:40:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/02/23/html/</loc>
-    
-    <lastmod>2017-06-04T15:40:06.000Z</lastmod>
     
   </url>
   
