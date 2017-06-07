@@ -310,7 +310,7 @@
     <link href="http://yoursite.com/2017/03/25/javascript/"/>
     <id>http://yoursite.com/2017/03/25/javascript/</id>
     <published>2017-03-24T18:01:41.000Z</published>
-    <updated>2017-06-07T15:24:28.000Z</updated>
+    <updated>2017-06-07T17:14:18.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript基础概念"><a href="#JavaScript基础概念" class="headerlink" title="JavaScript基础概念"></a>JavaScript基础概念</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
 <li>指变量、函数、属性的名字，或者函数的参数</li>
@@ -811,10 +811,10 @@
 </ul>
 <h2 id="code-如下代码输出什么"><a href="#code-如下代码输出什么" class="headerlink" title="code:如下代码输出什么"></a>code:如下代码输出什么</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var a = 1, b = 2, c = 3;</div><div class="line">var val = typeof a + b ||  c &gt;0 ;   </div><div class="line">console.log(val);</div><div class="line"></div><div class="line">var d = 5;</div><div class="line">var data = d ==5 &amp;&amp; console.log('bb') ; </div><div class="line">console.log(data);</div><div class="line"></div><div class="line">var data2 = d = 0 || console.log('haha');</div><div class="line">console.log(data2);</div><div class="line"></div><div class="line">var x = !!"Hello" + (!"world", !!"from here!!");  </div><div class="line">console.log(x) ;</div></pre></td></tr></table></figure>
 <h3 id="explain-13"><a href="#explain-13" class="headerlink" title="explain"></a>explain</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var a = 1, b = 2, c = 3;</div><div class="line">var val = typeof a + b ||  c &gt;0    //  优先级顺序typeof   +  &gt;   ||</div><div class="line">console.log(val)    //  'number2' || true</div><div class="line">    // 输出‘number2’</div><div class="line"></div><div class="line">var d = 5;</div><div class="line">var data = d ==5 &amp;&amp; console.log('bb')  </div><div class="line">    // console.log('bb') 输出了字符串bb，但它的返回值是undefined</div><div class="line">console.log(data)  // data = true &amp;&amp; undefined</div><div class="line">    //输出 undefined</div><div class="line"></div><div class="line">var data2 = d = 0 || console.log('haha')  </div><div class="line">    // console.log('haha') 输出了字符串haha，但它的返回值是undefined</div><div class="line">console.log(data2)  // data2 = d = 0 || undefined</div><div class="line">    //输出 undefined</div><div class="line"></div><div class="line">var x = !!"Hello" + (!"world", !!"from here!!");  </div><div class="line">    // true+(false, true)</div><div class="line">console.log(x)  //  console.log (true+true)</div><div class="line">    // 输出 2</div></pre></td></tr></table></figure>
-<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
 <li>运算符是处理数据的基本方法，用来从现有数据得到新的数据</li>
 </ul>
-<h4 id="加法运算符"><a href="#加法运算符" class="headerlink" title="加法运算符"></a>加法运算符</h4><ul>
+<h3 id="加法运算符"><a href="#加法运算符" class="headerlink" title="加法运算符"></a>加法运算符</h3><ul>
 <li>加法运算符（+）是最常见的运算符之一，但是使用规则却相对复杂。因为在JavaScript语言里面，这个运算符可以完成两种运算，既可以处理算术的加法，也可以用作字符串连接，它们都写成+</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 加法</div><div class="line">1 + 1 // 2</div><div class="line">true + true // 2</div><div class="line">1 + true // 2</div><div class="line"></div><div class="line">// 字符串连接</div><div class="line">'1' + '1' // "11"</div><div class="line">'1.1' + '1.1' // "1.11.1"</div></pre></td></tr></table></figure>
@@ -828,7 +828,7 @@
 </ul>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">'1' + &#123;foo: 'bar'&#125; // "1[object Object]"</div><div class="line">'1' + 1 // "11"</div><div class="line">'1' + true // "1true"</div><div class="line">'1' + [1] // "11"</div></pre></td></tr></table></figure>
-<h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><ul>
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><ul>
 <li>加法运算符（Addition）：x + y</li>
 <li>减法运算符（Subtraction）： x - y</li>
 <li>乘法运算符（Multiplication）： x * y</li>
@@ -839,11 +839,11 @@
 <li>数值运算符（Convert to number）： +x</li>
 <li>负数值运算符（Negate）：-x</li>
 </ul>
-<h5 id="余数运算符"><a href="#余数运算符" class="headerlink" title="余数运算符"></a>余数运算符</h5><ul>
+<h4 id="余数运算符"><a href="#余数运算符" class="headerlink" title="余数运算符"></a>余数运算符</h4><ul>
 <li>余数运算符（%）返回前一个运算子被后一个运算子除，所得的余数</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">12 % 5 // 2</div></pre></td></tr></table></figure>
-<h5 id="自增和自减运算符"><a href="#自增和自减运算符" class="headerlink" title="自增和自减运算符"></a>自增和自减运算符</h5><ul>
+<h4 id="自增和自减运算符"><a href="#自增和自减运算符" class="headerlink" title="自增和自减运算符"></a>自增和自减运算符</h4><ul>
 <li>自增和自减运算符，是一元运算符，只需要一个运算子。它们的作用是将运算子首先转为数值，然后加上1或者减去1。它们会修改原始变量</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var x = 1;</div><div class="line">++x // 2</div><div class="line">x // 2</div><div class="line"></div><div class="line">--x // 1</div><div class="line">x // 1</div></pre></td></tr></table></figure>
@@ -853,20 +853,20 @@
 </ul>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var x = 1;</div><div class="line">var y = 1;</div><div class="line"></div><div class="line">x++ // 1</div><div class="line">++y // 2</div><div class="line">上面代码中，x是先返回当前值，然后自增，所以得到1；y是先自增，然后返回新的值，所以得到2</div></pre></td></tr></table></figure>
-<h5 id="数值运算符"><a href="#数值运算符" class="headerlink" title="数值运算符"></a>数值运算符</h5><ul>
+<h4 id="数值运算符"><a href="#数值运算符" class="headerlink" title="数值运算符"></a>数值运算符</h4><ul>
 <li>数值运算符（+）同样使用加号，但是加法运算符是二元运算符（需要两个操作数），它是一元运算符（只需要一个操作数）</li>
 <li>数值运算符的作用在于可以将任何值转为数值（与Number函数的作用相同）</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">+true // 1</div><div class="line">+[] // 0</div><div class="line">+&#123;&#125; // NaN</div><div class="line">//上面代码表示，非数值类型的值经过数值运算符以后，都变成了数值（最后一行NaN也是数值）</div></pre></td></tr></table></figure>
-<h5 id="负数值运算符"><a href="#负数值运算符" class="headerlink" title="负数值运算符"></a>负数值运算符</h5><ul>
+<h4 id="负数值运算符"><a href="#负数值运算符" class="headerlink" title="负数值运算符"></a>负数值运算符</h4><ul>
 <li>负数值运算符（-），也同样具有将一个值转为数值的功能，只不过得到的值正负相反。连用两个负数值运算符，等同于数值运算符</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x = 1;</div><div class="line">-x // -1</div><div class="line">-(-x) // 1</div></pre></td></tr></table></figure>
-<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><ul>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><ul>
 <li>赋值运算符（Assignment Operators）用于给变量赋值。最常见的赋值运算符，当然就是等号（=），表达式x = y表示将y的值赋给x。除此之外，JavaScript还提供其他11个复合的赋值运算符</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">x += y // 等同于 x = x + y</div><div class="line">x -= y // 等同于 x = x - y</div><div class="line">x *= y // 等同于 x = x * y</div><div class="line">x /= y // 等同于 x = x / y</div><div class="line">x %= y // 等同于 x = x % y</div><div class="line">x &gt;&gt;= y // 等同于 x = x &gt;&gt; y</div><div class="line">x &lt;&lt;= y // 等同于 x = x &lt;&lt; y</div><div class="line">x &gt;&gt;&gt;= y // 等同于 x = x &gt;&gt;&gt; y</div><div class="line">x &amp;= y // 等同于 x = x &amp; y</div><div class="line">x |= y // 等同于 x = x | y</div><div class="line">x ^= y // 等同于 x = x ^ y</div><div class="line">这些复合的赋值运算符，都是先进行指定运算，然后将得到值返回给左边的变量</div></pre></td></tr></table></figure>
-<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><ul>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><ul>
 <li>== 相等</li>
 <li>=== 严格相等</li>
 <li>!= 不相等</li>
@@ -888,19 +888,19 @@
 </ul>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2 &gt; 1 // true</div></pre></td></tr></table></figure>
-<h4 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h4><ul>
+<h3 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h3><ul>
 <li>取反运算符：!</li>
 <li>且运算符：&amp;&amp;</li>
 <li>或运算符：||</li>
 <li>三元运算符：?:</li>
 </ul>
-<h5 id="取反运算符（-）"><a href="#取反运算符（-）" class="headerlink" title="取反运算符（!）"></a>取反运算符（!）</h5><ul>
+<h4 id="取反运算符（-）"><a href="#取反运算符（-）" class="headerlink" title="取反运算符（!）"></a>取反运算符（!）</h4><ul>
 <li>取反运算符形式上是一个感叹号，用于将布尔值变为相反值，即true变成false，false变成true</li>
 <li>不管什么类型的值，经过取反运算后，都变成了布尔值</li>
 <li>对一个值连续做两次取反运算，等于将其转为对应的布尔值，与Boolean函数的作用相同。这是一种常用的类型转换的写法</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">!true // false</div><div class="line">!false // true</div><div class="line"></div><div class="line">!undefined // true</div><div class="line">!null // true</div><div class="line">!0 // true</div><div class="line">!NaN // true</div><div class="line">!"" // true</div><div class="line"></div><div class="line">!54 // false</div><div class="line">!'hello' // false</div><div class="line">![] // false</div><div class="line">!&#123;&#125; // false</div><div class="line"></div><div class="line">!!x</div><div class="line">// 等同于</div><div class="line">Boolean(x)</div></pre></td></tr></table></figure>
-<h5 id="且运算符（-amp-amp-）"><a href="#且运算符（-amp-amp-）" class="headerlink" title="且运算符（&amp;&amp;）"></a>且运算符（&amp;&amp;）</h5><ul>
+<h4 id="且运算符（-amp-amp-）"><a href="#且运算符（-amp-amp-）" class="headerlink" title="且运算符（&amp;&amp;）"></a>且运算符（&amp;&amp;）</h4><ul>
 <li>第一个操作数为true并且第二个操作数为true,返回true</li>
 <li>且运算符的运算规则是：如果第一个运算子的布尔值为true，则返回第二个运算子的值（注意是值，不是布尔值）；如果第一个运算子的布尔值为false，则直接返回第一个运算子的值，且不再对第二个运算子求值</li>
 </ul>
@@ -917,7 +917,7 @@
 </ul>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">true &amp;&amp; 'foo' &amp;&amp; '' &amp;&amp; 4 &amp;&amp; 'foo' &amp;&amp; true</div><div class="line">// ''</div></pre></td></tr></table></figure>
-<h5 id="或运算符（-）"><a href="#或运算符（-）" class="headerlink" title="或运算符（||）"></a>或运算符（||）</h5><ul>
+<h4 id="或运算符（-）"><a href="#或运算符（-）" class="headerlink" title="或运算符（||）"></a>或运算符（||）</h4><ul>
 <li>只要一个操作数是true,则返回是true</li>
 <li>或运算符（||）的运算规则是：如果第一个运算子的布尔值为true，则返回第一个运算子的值，且不再对第二个运算子求值；如果第一个运算子的布尔值为false，则返回第二个运算子的值。短路规则对这个运算符也适用</li>
 </ul>
@@ -934,7 +934,7 @@
 </ul>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function saveText(text) &#123;</div><div class="line">  text = text || '';</div><div class="line">  // ...</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 或者写成</div><div class="line"></div><div class="line">saveText(this.text || '')</div><div class="line">上面代码表示，如果函数调用时，没有提供参数，则该参数默认设置为空字符串</div></pre></td></tr></table></figure>
-<h5 id="三元条件运算符（-）"><a href="#三元条件运算符（-）" class="headerlink" title="三元条件运算符（?:）"></a>三元条件运算符（?:）</h5><ul>
+<h4 id="三元条件运算符（-）"><a href="#三元条件运算符（-）" class="headerlink" title="三元条件运算符（?:）"></a>三元条件运算符（?:）</h4><ul>
 <li>三元条件运算符用问号（?）和冒号（:），分隔三个表达式。如果第一个表达式的布尔值为true，则返回第二个表达式的值，否则返回第三个表达式的值</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">'t' ? 'hello' : 'world' // "hello"</div><div class="line">0 ? 'hello' : 'world' // "world"</div></pre></td></tr></table></figure>
@@ -944,7 +944,7 @@
 </ul>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(true ? 'T' : 'F');</div><div class="line">上面代码中，console.log方法的参数必须是一个表达式，这时就只能使用三元条件表达式。如果要用if...else语句，就必须改变整个代码写法了</div></pre></td></tr></table></figure>
-<h5 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h5><ul>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><ul>
 <li>或运算（or）：符号为|，表示若两个二进制位都为0，则结果为0，否则为1。</li>
 <li>与运算（and）：符号为&amp;，表示若两个二进制位都为1，则结果为1，否则为0。</li>
 <li>否运算（not）：符号为~，表示对一个二进制位取反。</li>
@@ -959,7 +959,47 @@
 <li>有一点需要特别注意，位运算符只对整数起作用，如果一个运算子不是整数，会自动转为整数后再执行。另外，虽然在JavaScript内部，数值都是以64位浮点数的形式储存，但是做位运算的时候，是以32位带符号的整数进行运算的，并且返回值也是一个32位带符号的整数</li>
 </ul>
 </blockquote>
-]]></content>
+<h3 id="其他运算符"><a href="#其他运算符" class="headerlink" title="其他运算符"></a>其他运算符</h3><h4 id="void运算符"><a href="#void运算符" class="headerlink" title="void运算符"></a>void运算符</h4><ul>
+<li>void运算符的作用是执行一个表达式，然后不返回任何值，或者说返回undefined</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x = 3;</div><div class="line">void (x = 5) //undefined</div><div class="line">x // 5</div></pre></td></tr></table></figure>
+<h4 id="逗号运算符"><a href="#逗号运算符" class="headerlink" title="逗号运算符"></a>逗号运算符</h4><ul>
+<li>逗号运算符用于对两个表达式求值，并返回后一个表达式的值</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">'a', 'b' // "b"</div><div class="line"></div><div class="line">var x = 0;</div><div class="line">var y = (x++, 10);</div><div class="line">x // 1</div><div class="line">y // 10</div></pre></td></tr></table></figure>
+<h3 id="运算顺序"><a href="#运算顺序" class="headerlink" title="运算顺序"></a>运算顺序</h3><h4 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h4><ul>
+<li>JavaScript各种运算符的优先级别（Operator Precedence）是不一样的。优先级高的运算符先执行，优先级低的运算符后执行</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">4 + 5 * 6 // 34</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>上面的代码中，乘法运算符（*）的优先性高于加法运算符（+），所以先执行乘法，再执行加法，相当于下面这样</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var x = 1;</div><div class="line">var arr = [];</div><div class="line"></div><div class="line">var y = arr.length <span class="tag">&lt;<span class="name">=</span> <span class="attr">0</span> || <span class="attr">arr</span>[<span class="attr">0</span>] === <span class="string">undefined</span> ? <span class="attr">x</span> <span class="attr">:</span> <span class="attr">arr</span>[<span class="attr">0</span>];</span></div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>上面代码中，变量y的值就很难看出来，因为这个表达式涉及5个运算符，到底谁的优先级最高，实在不容易记住。</li>
+<li>根据语言规格，这五个运算符的优先级从高到低依次为：小于等于（&lt;=)、严格相等（===）、或（||）、三元（?:）、等号（=）。因此上面的表达式，实际的运算顺序如下</li>
+</ul>
+</blockquote>
+<h5 id="有几个我们需要注意的地方"><a href="#有几个我们需要注意的地方" class="headerlink" title="有几个我们需要注意的地方"></a>有几个我们需要注意的地方</h5><ul>
+<li>typeof的优先级相当的高，比加减乘除神马的都高，所以虽然是操作符，在复杂表达式的时候我们还是习惯加括号</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">typeof 2*3;//NaN</div><div class="line">typeof (2*3);//"number"</div><div class="line">typeof 2+3;// "number3"</div></pre></td></tr></table></figure>
+<ul>
+<li>++、–是右结合的操作符（优先级最高的几个都是右结合），而且比加减乘除优先级高。同时自增、自减运算符的运算数得是左值（可以放在赋值符号左边的值），而不能是常数</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">4++; //ReferenceError: Invalid left-hand side expression in postfix operation</div><div class="line">var a=0,b=0;</div><div class="line">a+++b;//0</div><div class="line">a;//1，++优先级比+高，所以相当于(a++)+b</div><div class="line">b;//0</div></pre></td></tr></table></figure>
+<ul>
+<li>赋值运算符的优先级相当的低</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a = b == c; //等同于a = (b==c)</div></pre></td></tr></table></figure>
+<ul>
+<li>逻辑非!也在优先级队列的前端，比加减乘除高，但逻辑与、逻辑或优先级很低，不如加减乘除</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!2*0; //0, 等价于(!2)*0</div></pre></td></tr></table></figure>
+<h2 id="js流程控制语句"><a href="#js流程控制语句" class="headerlink" title="js流程控制语句"></a>js流程控制语句</h2><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3>]]></content>
     
     <summary type="html">
     
