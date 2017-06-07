@@ -310,7 +310,7 @@
     <link href="http://yoursite.com/2017/03/25/javascript/"/>
     <id>http://yoursite.com/2017/03/25/javascript/</id>
     <published>2017-03-24T18:01:41.000Z</published>
-    <updated>2017-06-06T15:59:18.000Z</updated>
+    <updated>2017-06-07T13:33:52.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript基础概念"><a href="#JavaScript基础概念" class="headerlink" title="JavaScript基础概念"></a>JavaScript基础概念</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
 <li>指变量、函数、属性的名字，或者函数的参数</li>
@@ -352,6 +352,39 @@
 <li>JavaScript中语句以;结束，一行可以包含多条语句，如果省略分号不会产生语法错误，解释器会自动判断语句结束</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var sum = 1 + 2</div><div class="line">var diff = 3 - 4;</div></pre></td></tr></table></figure>
+<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ul>
+<li>一个为了得到返回值的计算式(凡是JavaScript语言中预期为值的地方，都可以使用表达式)</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1+3</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>语句和表达式的区别在于，前者主要为了进行某种操作，一般情况下不需要返回值；后者则是为了得到返回值，一定会返回一个值</li>
+</ul>
+</blockquote>
+<h3 id="表达式的几种形式"><a href="#表达式的几种形式" class="headerlink" title="表达式的几种形式"></a>表达式的几种形式</h3><h4 id="原始表达式"><a href="#原始表达式" class="headerlink" title="原始表达式"></a>原始表达式</h4><ul>
+<li>常量、变量、保留字</li>
+</ul>
+<h4 id="对象、数组初始化表达式"><a href="#对象、数组初始化表达式" class="headerlink" title="对象、数组初始化表达式"></a>对象、数组初始化表达式</h4><ul>
+<li>var obj = {a:1,b:2};</li>
+<li>var a =[1,2,3];</li>
+</ul>
+<h4 id="函数定义表达式"><a href="#函数定义表达式" class="headerlink" title="函数定义表达式"></a>函数定义表达式</h4><ul>
+<li>var fn = function(){}</li>
+</ul>
+<h4 id="属性访问表达式"><a href="#属性访问表达式" class="headerlink" title="属性访问表达式"></a>属性访问表达式</h4><ul>
+<li>Math.abs</li>
+</ul>
+<h4 id="调用表达式"><a href="#调用表达式" class="headerlink" title="调用表达式"></a>调用表达式</h4><ul>
+<li>alert(‘hello’)</li>
+</ul>
+<h4 id="对象创建表达式"><a href="#对象创建表达式" class="headerlink" title="对象创建表达式"></a>对象创建表达式</h4><ul>
+<li>new object()</li>
+</ul>
+<blockquote>
+<ul>
+<li>变量名也是表达式,因为计算出的结果就是赋值给变量的值</li>
+</ul>
+</blockquote>
 <h2 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h2><ul>
 <li>JavaScript引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的变量的声明语句，都会被提升到代码的头部，这就叫做变量提升</li>
 </ul>
@@ -367,8 +400,20 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//为变量赋值</div><div class="line">var a = 1; //赋值成功</div><div class="line"></div><div class="line">/*</div><div class="line">	下面定义个函数</div><div class="line">	至于什么是函数</div><div class="line">	且听下回分解</div><div class="line">*/</div><div class="line"></div><div class="line">function getName(id)&#123;</div><div class="line">	return 'Byron';</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="关键字和保留字"><a href="#关键字和保留字" class="headerlink" title="关键字和保留字"></a>关键字和保留字</h2><ul>
 <li>关键字是JavaScript引擎会用到的一些字，我们标识符不能再使用</li>
+</ul>
+<blockquote>
+<ul>
+<li>break\case\catch\continue\default\delete\do\else\finally\for\function\if\in\instanceof\new\return\switch\this\throw\try\typeof\var\void\while\with</li>
+</ul>
+</blockquote>
+<ul>
 <li>js还规定了一些不能用作标识符的保留字，这些字符没有什么意义，但是未来会用到</li>
 </ul>
+<blockquote>
+<ul>
+<li>abstract\boolean\byte\char\class\const\debugger\double\enum\export\extends\final\float\goto\implements\import\int\interface\long\native\package\private\protected\public\short\static\super\synchronized\throws\transient\volatile</li>
+</ul>
+</blockquote>
 <h1 id="JavaScript语法"><a href="#JavaScript语法" class="headerlink" title="JavaScript语法"></a>JavaScript语法</h1><h2 id="CSS和JS放置顺序"><a href="#CSS和JS放置顺序" class="headerlink" title="CSS和JS放置顺序"></a>CSS和JS放置顺序</h2><ul>
 <li>浏览器渲染机制一种是等全部加载后再一起渲染(IE、Chrome),另一种是边加载边渲染(Firefox)</li>
 <li>常用方法:根据不同浏览器渲染机制不同一般选用折中的方法来解决即CSS一般用style标签放在<head>的末尾,而JS放置在</head><body>末尾</body></li>
@@ -447,6 +492,58 @@
 <li>对象分狭义的对象(object)、数组(array)、函数(function)等等</li>
 </ul>
 </blockquote>
+<h3 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h3><ul>
+<li>布尔值代表“真”和“假”两个状态。“真”用关键字true表示，“假”用关键字false表示。布尔值只有这两个值</li>
+</ul>
+<h4 id="下列运算符会返回布尔值"><a href="#下列运算符会返回布尔值" class="headerlink" title="下列运算符会返回布尔值"></a>下列运算符会返回布尔值</h4><ul>
+<li>两元逻辑运算符： &amp;&amp; (And)，|| (Or)</li>
+<li>前置逻辑运算符： ! (Not)</li>
+<li>相等运算符：===，!==，==，!=</li>
+<li>比较运算符：&gt;，&gt;=，&lt;，&lt;=</li>
+</ul>
+<h4 id="如果JavaScript预期某个位置应该是布尔值，会将该位置上现有的值自动转为布尔值。转换规则是除了下面六个值被转为false，其他值都视为true"><a href="#如果JavaScript预期某个位置应该是布尔值，会将该位置上现有的值自动转为布尔值。转换规则是除了下面六个值被转为false，其他值都视为true" class="headerlink" title="如果JavaScript预期某个位置应该是布尔值，会将该位置上现有的值自动转为布尔值。转换规则是除了下面六个值被转为false，其他值都视为true"></a>如果JavaScript预期某个位置应该是布尔值，会将该位置上现有的值自动转为布尔值。转换规则是除了下面六个值被转为false，其他值都视为true</h4><ul>
+<li>undefined</li>
+<li>null</li>
+<li>false</li>
+<li>0</li>
+<li>NaN</li>
+<li>“”（空字符串）</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if ('') &#123;</div><div class="line">  console.log(true);</div><div class="line">&#125;</div><div class="line">// 由于空字符串是false,所以没有任何输出</div></pre></td></tr></table></figure>
+<h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><ul>
+<li>JavaScript的数字类型和其它语言有所不同，没有整型和浮点数的区别，统一都是Number类型，可以表示十进制、八进制、十六进制</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = 10; //十进制</div><div class="line">var b = 073; //八进制</div><div class="line">vat c = 0xf3; //十六进制</div></pre></td></tr></table></figure>
+<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><ul>
+<li>浮点数是指数字包含小数点，小数点后至少有一位数字(没有或者是0会转为整数)，前面可以没有</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a = 0.27;</div><div class="line">var b = .45;</div></pre></td></tr></table></figure>
+<ul>
+<li>对于极大或极小的数字可以使用科学计数法</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var a = 3.1e5; //310000</div></pre></td></tr></table></figure>
+<ul>
+<li>浮点数最高精度是17位，但是在计算的时候精度不如整数</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1 - 0.9; // 0.09999999999999998</div><div class="line">0.1 + 0.2; //0.30000000000000004</div></pre></td></tr></table></figure>
+<ul>
+<li>Infinity:表示无穷大</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1/0  //Infinity</div></pre></td></tr></table></figure>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><ul>
+<li>String是Unicode字符组成的序列，俗称字符串，可以用双引号或者单引号表示，没有区别，匹配即可</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = 'hello';</div><div class="line">var str2 = "baidu";</div><div class="line">var str3 = 'hello "xiaoming" ';</div></pre></td></tr></table></figure>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><ul>
+<li>对象，就是一种无序的数据集合，由若干个“键值对”（key-value）构成。key我们称为对象的属性，value可以是任何JavaScript类型，甚至可以是对象</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">  name: 'xiaoming',</div><div class="line">  age: 2</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h4 id="对象属性的读取方式"><a href="#对象属性的读取方式" class="headerlink" title="对象属性的读取方式"></a>对象属性的读取方式</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- obj.name;</div><div class="line">- obj['name'];</div></pre></td></tr></table></figure>
+<ul>
+<li>对象的属性key不确定而是一个变量的时候必须使用[]</li>
+<li>[]里可以是任何字符串,而.不能</li>
+<li>使用.属性可以不加引号,使用[]属性当是常量的时候必须加引号</li>
+</ul>
 <h2 id="NaN、undefined、null"><a href="#NaN、undefined、null" class="headerlink" title="NaN、undefined、null"></a>NaN、undefined、null</h2><h3 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h3><ul>
 <li>NaN,即非数值(Not a Number)是一个特殊的数值,这个数值用于表示一个本来要返回数值的操作数未返回数值的情况(这样就不会报错了),即出现在将字符串解析成数字出错的场合</li>
 <li>NaN和任何值不相等,包括本身</li>
@@ -541,7 +638,7 @@
 <li>parseInt () 把值转换成整数</li>
 <li>parseFloat () 把值转换成浮点数</li>
 </ul>
-<h4 id="Number"><a href="#Number" class="headerlink" title="Number ()"></a>Number ()</h4><ul>
+<h4 id="Number-1"><a href="#Number-1" class="headerlink" title="Number ()"></a>Number ()</h4><ul>
 <li>如果是Boolean值，true 返回 1，false 返回 0</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Number(true)  ;//1</div><div class="line">Number(false) ;//0</div></pre></td></tr></table></figure>
@@ -691,7 +788,29 @@
 <li>undefined 在局部作用域中，是可以被重写的，如果要判断一个变量是否和 undefined 相等，可以使用 void 0 来进行比较</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">function f()&#123;</div><div class="line">  var undefined = 100;</div><div class="line">  var str;</div><div class="line">  if(str == undefined)&#123;</div><div class="line">      console.log('相等');</div><div class="line">  &#125;else&#123;</div><div class="line">      console.log('不相等');</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">f(); // 返回不相等，因为undefined 被赋值 100</div><div class="line">function f()&#123;</div><div class="line">  var undefined = 100;</div><div class="line">  var str;</div><div class="line">  if(str == void 0)&#123;</div><div class="line">      console.log('相等');</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">f(); // 返回相等</div></pre></td></tr></table></figure>
-]]></content>
+<h2 id="code-完成如下代码判断一个变量是否是数字、字符串、布尔、函数"><a href="#code-完成如下代码判断一个变量是否是数字、字符串、布尔、函数" class="headerlink" title="code:完成如下代码判断一个变量是否是数字、字符串、布尔、函数"></a>code:完成如下代码判断一个变量是否是数字、字符串、布尔、函数</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">function isNumber(el)&#123;</div><div class="line">  // todo...</div><div class="line">&#125;</div><div class="line">function isString(el)&#123;</div><div class="line">  // todo...</div><div class="line">&#125;</div><div class="line">function isBoolean(el)&#123;</div><div class="line">  // todo...</div><div class="line">&#125;</div><div class="line">function isFunction(el)&#123;</div><div class="line">  // todo...</div><div class="line">&#125;</div><div class="line"></div><div class="line">var a = 2,</div><div class="line">    b = "hello world",</div><div class="line">    c = "false";</div><div class="line"></div><div class="line">alert(isNumber(a)); //true</div><div class="line">alert(isString(a)); //false</div><div class="line">alert(isString(b)); //true</div><div class="line">alert(isBoolean(c)); //true</div><div class="line">alert(isFunction(a)); //false</div><div class="line">alert(isFunction(isNumber)); //true</div></pre></td></tr></table></figure>
+<h3 id="explain-6"><a href="#explain-6" class="headerlink" title="explain"></a>explain</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line">// 方法一 </div><div class="line">function isNumber(el)&#123;</div><div class="line">  if(typeof el === "number")&#123;</div><div class="line">    return true</div><div class="line">  &#125;else&#123;</div><div class="line">    return false</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">function isString(el)&#123;</div><div class="line">  if(typeof el === "string")&#123;</div><div class="line">    return true</div><div class="line">  &#125;else&#123;</div><div class="line">    return false</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">function isBoolean(el)&#123;</div><div class="line">  if(typeof el === "boolean")&#123;</div><div class="line">    return true</div><div class="line">  &#125;else&#123;</div><div class="line">    return false</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">function isFunction(el)&#123;</div><div class="line">  if(typeof el === "function")&#123;</div><div class="line">    return true</div><div class="line">  &#125;else&#123;</div><div class="line">    return false</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 方法二</div><div class="line"></div><div class="line">function isNumber(el)&#123;</div><div class="line">	return typeof el ==="number";</div><div class="line">&#125;</div><div class="line">function isString(el)&#123;</div><div class="line">  return typeof el ==="string";</div><div class="line">&#125;</div><div class="line">function isBoolean(el)&#123;</div><div class="line">  return typeof el ==="boolean";</div><div class="line">&#125;</div><div class="line">function isFunction(el)&#123;</div><div class="line">  return typeof el ==="function";</div><div class="line">&#125;</div><div class="line"></div><div class="line">var a = 2,</div><div class="line">    b = "hello world",</div><div class="line">    c = false;</div><div class="line"></div><div class="line">alert(isNumber(a)); //true</div><div class="line">alert(isString(a)); //false</div><div class="line">alert(isString(b)); //true</div><div class="line">alert(isBoolean(c)); //true</div><div class="line">alert(isFunction(a)); //false</div><div class="line">alert(isFunction(isNumber)); //true</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="code-以下代码的输出结果是？"><a href="#code-以下代码的输出结果是？" class="headerlink" title="code:以下代码的输出结果是？"></a>code:以下代码的输出结果是？</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(1+1);</div><div class="line">console.log("2"+"4");</div><div class="line">console.log(2+"4");</div><div class="line">console.log(+new Date());</div><div class="line">console.log(+"4");</div></pre></td></tr></table></figure>
+<h3 id="explain-7"><a href="#explain-7" class="headerlink" title="explain"></a>explain</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(1+1); //2 加法运算</div><div class="line">console.log("2"+"4"); //24 字符串的拼接</div><div class="line">console.log(2+"4");	//24 先转换数字为字符串,在拼接</div><div class="line">console.log(+new Date()); //1496808358426 获得从1970.1.1开始到当前日期的毫秒数</div><div class="line">console.log(+"4"); //4 有运算符,会将字符串转换为数字</div></pre></td></tr></table></figure>
+<ul>
+<li>运算符通常会对操作数进行类型的转换,称隐式类型转换</li>
+</ul>
+<h2 id="code-以下代码的输出结果是"><a href="#code-以下代码的输出结果是" class="headerlink" title="code: 以下代码的输出结果是?"></a>code: 以下代码的输出结果是?</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">a+++a;</div><div class="line">typeof a+2;</div></pre></td></tr></table></figure>
+<h3 id="explain-8"><a href="#explain-8" class="headerlink" title="explain"></a>explain</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">a+++a; //3 等同于(a++)+a,前面(a++)为1,后面a为2,++优先级高于+</div><div class="line">typeof a+2; //"number2" 等同于(typeof a)+2,前面为"number",后面为2,typeof优先级高于+</div></pre></td></tr></table></figure>
+<h2 id="code-以下代码的输出结果是-1"><a href="#code-以下代码的输出结果是-1" class="headerlink" title="code: 以下代码的输出结果是?"></a>code: 以下代码的输出结果是?</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = 3;</div><div class="line">console.log(a+++b);</div></pre></td></tr></table></figure>
+<h3 id="explain-9"><a href="#explain-9" class="headerlink" title="explain"></a>explain</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = 3;</div><div class="line">console.log(a+++b); //4 括号内等同于(a++)+b,前面的（a++）为1,a++是先用a的值,用完后再给a加1</div></pre></td></tr></table></figure>
+<h2 id="code-遍历数组-把数组里的打印数组每一项的平方"><a href="#code-遍历数组-把数组里的打印数组每一项的平方" class="headerlink" title="code:遍历数组,把数组里的打印数组每一项的平方"></a>code:遍历数组,把数组里的打印数组每一项的平方</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [3,4,5];</div><div class="line">// todo...</div><div class="line">// 输出9,16,25</div></pre></td></tr></table></figure>
+<h3 id="explain-10"><a href="#explain-10" class="headerlink" title="explain"></a>explain</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// 方法一</div><div class="line">var arr = [3,4,5];</div><div class="line">for(var i=0;i&lt;arr.length;i++)&#123;</div><div class="line">  array=Math.pow(arr[i],2);</div><div class="line">  console.log(array);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 方法二</div><div class="line">var i =0;</div><div class="line">while(i&lt;arr.length)&#123;</div><div class="line">	array=Math.pow(arr[i],2);</div><div class="line">  	console.log(array);</div><div class="line">  	i++;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//方法三</div><div class="line">do&#123;</div><div class="line">	array=Math.pow(arr[i],2);</div><div class="line">  	console.log(array);</div><div class="line">  	i++;</div><div class="line">&#125;while(i&lt;arr.length)</div></pre></td></tr></table></figure>
+<h2 id="code-遍历JSON-打印里面的值"><a href="#code-遍历JSON-打印里面的值" class="headerlink" title="code:遍历JSON,打印里面的值"></a>code:遍历JSON,打印里面的值</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	name: "xiaoming",</div><div class="line">	sex: "male",</div><div class="line">	age: 28</div><div class="line">&#125;</div><div class="line">//todo...</div><div class="line">//输出name:xiaoming,sex:male,age:28</div></pre></td></tr></table></figure>
+<h3 id="explain-11"><a href="#explain-11" class="headerlink" title="explain"></a>explain</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	name: "xiaoming",</div><div class="line">	sex: "male",</div><div class="line">	age: 28</div><div class="line">&#125;</div><div class="line"></div><div class="line">for(var key in obj)&#123;</div><div class="line">	console.log(key+':'+obj[key]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="code-下面代码的输出是什么"><a href="#code-下面代码的输出是什么" class="headerlink" title="code:下面代码的输出是什么?"></a>code:下面代码的输出是什么?</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">console.log(a);</div><div class="line">var a =1;</div><div class="line">console.log(a);</div><div class="line">console.log(b);</div></pre></td></tr></table></figure>
+<h3 id="explain-12"><a href="#explain-12" class="headerlink" title="explain"></a>explain</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">console.log(a);</div><div class="line">var a =1;</div><div class="line">console.log(a);</div><div class="line">console.log(b);</div><div class="line"></div><div class="line">//相当于</div><div class="line">var a;</div><div class="line">console.log(a); //undefined</div><div class="line">a=1;</div><div class="line">console.log(a); //1</div><div class="line">console.log(b); //报错</div></pre></td></tr></table></figure>
+<ul>
+<li>js存在变量提升机制,使得a声明提升至最前面,此时a没有赋值所以是undefined;到a=1时,给a赋值1，输出1；最后b未声明所以控制台报错</li>
+</ul>
+<h2 id="code-如下代码输出什么"><a href="#code-如下代码输出什么" class="headerlink" title="code:如下代码输出什么"></a>code:如下代码输出什么</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var a = 1, b = 2, c = 3;</div><div class="line">var val = typeof a + b ||  c &gt;0 ;   </div><div class="line">console.log(val);</div><div class="line"></div><div class="line">var d = 5;</div><div class="line">var data = d ==5 &amp;&amp; console.log('bb') ; </div><div class="line">console.log(data);</div><div class="line"></div><div class="line">var data2 = d = 0 || console.log('haha');</div><div class="line">console.log(data2);</div><div class="line"></div><div class="line">var x = !!"Hello" + (!"world", !!"from here!!");  </div><div class="line">console.log(x) ;</div></pre></td></tr></table></figure>
+<h3 id="explain-13"><a href="#explain-13" class="headerlink" title="explain"></a>explain</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var a = 1, b = 2, c = 3;</div><div class="line">var val = typeof a + b ||  c &gt;0    //  优先级顺序typeof   +  &gt;   ||</div><div class="line">console.log(val)    //  'number2' || true</div><div class="line">    // 输出‘number2’</div><div class="line"></div><div class="line">var d = 5;</div><div class="line">var data = d ==5 &amp;&amp; console.log('bb')  </div><div class="line">    // console.log('bb') 输出了字符串bb，但它的返回值是undefined</div><div class="line">console.log(data)  // data = true &amp;&amp; undefined</div><div class="line">    //输出 undefined</div><div class="line"></div><div class="line">var data2 = d = 0 || console.log('haha')  </div><div class="line">    // console.log('haha') 输出了字符串haha，但它的返回值是undefined</div><div class="line">console.log(data2)  // data2 = d = 0 || undefined</div><div class="line">    //输出 undefined</div><div class="line"></div><div class="line">var x = !!"Hello" + (!"world", !!"from here!!");  </div><div class="line">    // true+(false, true)</div><div class="line">console.log(x)  //  console.log (true+true)</div><div class="line">    // 输出 2</div></pre></td></tr></table></figure>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3>]]></content>
     
     <summary type="html">
     
@@ -1432,7 +1551,7 @@
     <link href="http://yoursite.com/2017/02/20/web/"/>
     <id>http://yoursite.com/2017/02/20/web/</id>
     <published>2017-02-19T17:39:17.000Z</published>
-    <updated>2017-06-04T15:07:42.000Z</updated>
+    <updated>2017-06-07T13:36:44.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="web前端开发职能"><a href="#web前端开发职能" class="headerlink" title="web前端开发职能"></a>web前端开发职能</h1><h2 id="职能"><a href="#职能" class="headerlink" title="职能"></a>职能</h2><ul>
 <li>web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.<a id="more"></a>  
@@ -1472,7 +1591,41 @@
 <h1 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h1><ul>
 <li>Green </li>
 </ul>
-<h3 id="gt-gt-Green官网"><a href="#gt-gt-Green官网" class="headerlink" title="&gt;&gt;Green官网"></a>&gt;&gt;<a href="https://www.greenjsq.me" target="_blank" rel="external">Green官网</a></h3>]]></content>
+<h3 id="gt-gt-Green官网"><a href="#gt-gt-Green官网" class="headerlink" title="&gt;&gt;Green官网"></a>&gt;&gt;<a href="https://www.greenjsq.me" target="_blank" rel="external">Green官网</a></h3><h1 id="编程基础"><a href="#编程基础" class="headerlink" title="编程基础"></a>编程基础</h1><h2 id="二进制的单位"><a href="#二进制的单位" class="headerlink" title="二进制的单位"></a>二进制的单位</h2><ul>
+<li>1位(bit):0或1</li>
+<li>1字节(byte):00000000-11111111(例如十进制0-9转化字节就是00000000-99999999)</li>
+<li>1KB(kilobyte):1024byte</li>
+<li>1MB(Megabyte):1024byte x 1024byte</li>
+</ul>
+<h2 id="计算机存数据"><a href="#计算机存数据" class="headerlink" title="计算机存数据"></a>计算机存数据</h2><ul>
+<li>123(原文)</li>
+<li>495051(编码)</li>
+<li>001100010011001000110011(二进制)</li>
+<li>313233(十六进制)</li>
+</ul>
+<h2 id="键盘上的字符"><a href="#键盘上的字符" class="headerlink" title="键盘上的字符"></a>键盘上的字符</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-1.png" alt="web-1.png"></p>
+<h2 id="字符集-简单的ASCII"><a href="#字符集-简单的ASCII" class="headerlink" title="字符集-简单的ASCII"></a>字符集-简单的ASCII</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-2.png" alt="web-2.png"></p>
+<h2 id="字符集-容纳全球语言的字符集Unicode"><a href="#字符集-容纳全球语言的字符集Unicode" class="headerlink" title="字符集-容纳全球语言的字符集Unicode"></a>字符集-容纳全球语言的字符集Unicode</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-3.png" alt="web-3.png"></p>
+<h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h3><ul>
+<li><p>如何才能区别Unicode和ASCII？<br>计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢</p>
+</li>
+<li><p>资源浪费<br>英文字母只用一个字节表示就够了，如果Unicode统一规定，每个符号用四个字节表示，那么每个英文字母前都必然有3个字节是0，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍</p>
+</li>
+</ul>
+<h3 id="解决办法-字符编码"><a href="#解决办法-字符编码" class="headerlink" title="解决办法-字符编码"></a>解决办法-字符编码</h3><ul>
+<li>字符集只规定了字符对应的数字，却没有规定如何存储</li>
+<li>字符编码是字符集的存储方式</li>
+</ul>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/web-4.png" alt="web-4.png"></p>
+<h4 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h4><blockquote>
+<ul>
+<li>已知”严”的unicode是4E25（100111000100101）</li>
+<li>根据上表，格式是”1110xxxx 10xxxxxx 10xxxxxx”</li>
+<li>从后向前填入格式中的x，多出的位补0</li>
+<li>得到了”严”的UTF-8编码是”11100100 10111000 10100101”，转换成十六进制就是E4B8A5 </li>
+</ul>
+</blockquote>
+]]></content>
     
     <summary type="html">
     

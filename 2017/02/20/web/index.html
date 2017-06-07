@@ -97,11 +97,16 @@ web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合�
 <meta property="og:site_name" content="Learning and Doing">
 <meta property="og:description" content="web前端开发职能职能
 web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.">
-<meta property="og:updated_time" content="2017-06-04T15:07:42.000Z">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/web-1.png">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/web-2.png">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/web-3.png">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/web-4.png">
+<meta property="og:updated_time" content="2017-06-07T13:36:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自学准备工作">
 <meta name="twitter:description" content="web前端开发职能职能
 web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.">
+<meta name="twitter:image" content="http://oqev4hx8u.bkt.clouddn.com/web-1.png">
 
 
 
@@ -441,7 +446,41 @@ web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合�
 <h1 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h1><ul>
 <li>Green </li>
 </ul>
-<h3 id="gt-gt-Green官网"><a href="#gt-gt-Green官网" class="headerlink" title="&gt;&gt;Green官网"></a>&gt;&gt;<a href="https://www.greenjsq.me" target="_blank" rel="external">Green官网</a></h3>
+<h3 id="gt-gt-Green官网"><a href="#gt-gt-Green官网" class="headerlink" title="&gt;&gt;Green官网"></a>&gt;&gt;<a href="https://www.greenjsq.me" target="_blank" rel="external">Green官网</a></h3><h1 id="编程基础"><a href="#编程基础" class="headerlink" title="编程基础"></a>编程基础</h1><h2 id="二进制的单位"><a href="#二进制的单位" class="headerlink" title="二进制的单位"></a>二进制的单位</h2><ul>
+<li>1位(bit):0或1</li>
+<li>1字节(byte):00000000-11111111(例如十进制0-9转化字节就是00000000-99999999)</li>
+<li>1KB(kilobyte):1024byte</li>
+<li>1MB(Megabyte):1024byte x 1024byte</li>
+</ul>
+<h2 id="计算机存数据"><a href="#计算机存数据" class="headerlink" title="计算机存数据"></a>计算机存数据</h2><ul>
+<li>123(原文)</li>
+<li>495051(编码)</li>
+<li>001100010011001000110011(二进制)</li>
+<li>313233(十六进制)</li>
+</ul>
+<h2 id="键盘上的字符"><a href="#键盘上的字符" class="headerlink" title="键盘上的字符"></a>键盘上的字符</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-1.png" alt="web-1.png"></p>
+<h2 id="字符集-简单的ASCII"><a href="#字符集-简单的ASCII" class="headerlink" title="字符集-简单的ASCII"></a>字符集-简单的ASCII</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-2.png" alt="web-2.png"></p>
+<h2 id="字符集-容纳全球语言的字符集Unicode"><a href="#字符集-容纳全球语言的字符集Unicode" class="headerlink" title="字符集-容纳全球语言的字符集Unicode"></a>字符集-容纳全球语言的字符集Unicode</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-3.png" alt="web-3.png"></p>
+<h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h3><ul>
+<li><p>如何才能区别Unicode和ASCII？<br>计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢</p>
+</li>
+<li><p>资源浪费<br>英文字母只用一个字节表示就够了，如果Unicode统一规定，每个符号用四个字节表示，那么每个英文字母前都必然有3个字节是0，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍</p>
+</li>
+</ul>
+<h3 id="解决办法-字符编码"><a href="#解决办法-字符编码" class="headerlink" title="解决办法-字符编码"></a>解决办法-字符编码</h3><ul>
+<li>字符集只规定了字符对应的数字，却没有规定如何存储</li>
+<li>字符编码是字符集的存储方式</li>
+</ul>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/web-4.png" alt="web-4.png"></p>
+<h4 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h4><blockquote>
+<ul>
+<li>已知”严”的unicode是4E25（100111000100101）</li>
+<li>根据上表，格式是”1110xxxx 10xxxxxx 10xxxxxx”</li>
+<li>从后向前填入格式中的x，多出的位补0</li>
+<li>得到了”严”的UTF-8编码是”11100100 10111000 10100101”，转换成十六进制就是E4B8A5 </li>
+</ul>
+</blockquote>
+
       
     </div>
 
@@ -689,7 +728,7 @@ web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web前端开发职能"><span class="nav-number">1.</span> <span class="nav-text">web前端开发职能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#职能"><span class="nav-number">1.1.</span> <span class="nav-text">职能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见简称"><span class="nav-number">1.2.</span> <span class="nav-text">常见简称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网公司产品流程"><span class="nav-number">1.3.</span> <span class="nav-text">互联网公司产品流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编辑器"><span class="nav-number">2.</span> <span class="nav-text">编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gt-gt-sublime使用"><span class="nav-number">2.1.</span> <span class="nav-text">>>sublime使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#markdowm常用语法"><span class="nav-number">3.</span> <span class="nav-text">markdowm常用语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-markdowm官网"><span class="nav-number">3.0.1.</span> <span class="nav-text">>>markdowm官网</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-hexo-博客"><span class="nav-number">4.</span> <span class="nav-text">GitHub+hexo(博客)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客"><span class="nav-number">4.0.1.</span> <span class="nav-text">>>手把手教你用Hexo+Github 搭建属于自己的博客</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VPN"><span class="nav-number">5.</span> <span class="nav-text">VPN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-Green官网"><span class="nav-number">5.0.1.</span> <span class="nav-text">>>Green官网</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web前端开发职能"><span class="nav-number">1.</span> <span class="nav-text">web前端开发职能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#职能"><span class="nav-number">1.1.</span> <span class="nav-text">职能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见简称"><span class="nav-number">1.2.</span> <span class="nav-text">常见简称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网公司产品流程"><span class="nav-number">1.3.</span> <span class="nav-text">互联网公司产品流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编辑器"><span class="nav-number">2.</span> <span class="nav-text">编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gt-gt-sublime使用"><span class="nav-number">2.1.</span> <span class="nav-text">>>sublime使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#markdowm常用语法"><span class="nav-number">3.</span> <span class="nav-text">markdowm常用语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-markdowm官网"><span class="nav-number">3.0.1.</span> <span class="nav-text">>>markdowm官网</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-hexo-博客"><span class="nav-number">4.</span> <span class="nav-text">GitHub+hexo(博客)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客"><span class="nav-number">4.0.1.</span> <span class="nav-text">>>手把手教你用Hexo+Github 搭建属于自己的博客</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VPN"><span class="nav-number">5.</span> <span class="nav-text">VPN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-Green官网"><span class="nav-number">5.0.1.</span> <span class="nav-text">>>Green官网</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编程基础"><span class="nav-number">6.</span> <span class="nav-text">编程基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制的单位"><span class="nav-number">6.1.</span> <span class="nav-text">二进制的单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机存数据"><span class="nav-number">6.2.</span> <span class="nav-text">计算机存数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#键盘上的字符"><span class="nav-number">6.3.</span> <span class="nav-text">键盘上的字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符集-简单的ASCII"><span class="nav-number">6.4.</span> <span class="nav-text">字符集-简单的ASCII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符集-容纳全球语言的字符集Unicode"><span class="nav-number">6.5.</span> <span class="nav-text">字符集-容纳全球语言的字符集Unicode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到问题"><span class="nav-number">6.5.1.</span> <span class="nav-text">遇到问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法-字符编码"><span class="nav-number">6.5.2.</span> <span class="nav-text">解决办法-字符编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#举例"><span class="nav-number">6.5.2.1.</span> <span class="nav-text">举例</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
