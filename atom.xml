@@ -456,7 +456,7 @@
     <link href="http://yoursite.com/2017/03/25/javascript/"/>
     <id>http://yoursite.com/2017/03/25/javascript/</id>
     <published>2017-03-24T18:01:41.000Z</published>
-    <updated>2017-06-08T03:06:54.000Z</updated>
+    <updated>2017-06-08T18:47:30.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript基础概念"><a href="#JavaScript基础概念" class="headerlink" title="JavaScript基础概念"></a>JavaScript基础概念</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
 <li>指变量、函数、属性的名字，或者函数的参数</li>
@@ -1145,6 +1145,92 @@
 <li>逻辑非!也在优先级队列的前端，比加减乘除高，但逻辑与、逻辑或优先级很低，不如加减乘除</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!2*0; //0, 等价于(!2)*0</div></pre></td></tr></table></figure>
+<h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><ul>
+<li>条件语句提供一种语法构造，只有满足某个条件，才会执行相应的语句</li>
+</ul>
+<h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h4><ul>
+<li>if结构先判断一个表达式的布尔值，然后根据布尔值的真伪，执行不同的语句</li>
+<li>如果condition为true，就执行紧跟在后面的语句；如果结果为false，则跳过不执行</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if(condition) &#123;</div><div class="line">    当条件为 true 时执行的代码</div><div class="line">&#125;</div><div class="line"></div><div class="line">if(a &gt; 2)&#123;</div><div class="line">   alert("大于2")</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>condition可以是任意表达式，结果不一定是布尔值，JavaScript解释器会自动调用Boolean()将表达式结果转为布尔值</li>
+<li>注意，if后面的表达式，不要混淆“赋值表达式”（=）与“严格相等运算符”（===）或“相等运算符”（==）。因为，“赋值表达式”不具有比较作用</li>
+</ul>
+</blockquote>
+<h4 id="if…else结构"><a href="#if…else结构" class="headerlink" title="if…else结构"></a>if…else结构</h4><ul>
+<li>if代码块后面，还可以跟一个else代码块，表示不满足条件时，所要执行的代码</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">if(condition) &#123;</div><div class="line">    当条件为 true 时执行的代码</div><div class="line">&#125; else &#123;</div><div class="line">    当条件不为 true 时执行的代码</div><div class="line">&#125;</div><div class="line"></div><div class="line">var a = 100;</div><div class="line">if(a &gt; 90)&#123;</div><div class="line">  console.log('优秀');</div><div class="line">&#125;else if(a &gt; 60)&#123;</div><div class="line">  console.log('良好');</div><div class="line">&#125;else&#123;</div><div class="line">  console.log('不及格');</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>对同一个变量进行多次判断时，多个if…else语句可以连写在一起</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">if (m === 0) &#123;</div><div class="line">  // ...</div><div class="line">&#125; else if (m === 1) &#123;</div><div class="line">  // ...</div><div class="line">&#125; else if (m === 2) &#123;</div><div class="line">  // ...</div><div class="line">&#125; else &#123;</div><div class="line">  // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="switch结构"><a href="#switch结构" class="headerlink" title="switch结构"></a>switch结构</h4><ul>
+<li>多个if…else连在一起使用的时候，可以转为使用更方便的switch结构</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">switch(a)&#123;</div><div class="line">    case 1: </div><div class="line">        //todo...</div><div class="line">        break;</div><div class="line">    case 2:</div><div class="line">        //todo...</div><div class="line">        break;</div><div class="line">    default:</div><div class="line">        //todo</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">if(i == 25)&#123;</div><div class="line">    console.log('25');</div><div class="line">&#125;else if(i == 35)&#123;</div><div class="line">    console.log('35');</div><div class="line">&#125;else if(i == 45)&#123;</div><div class="line">    console.log('45');</div><div class="line">&#125;else&#123;</div><div class="line">    console.log('Other');</div><div class="line">&#125;</div><div class="line">// 等价于  </div><div class="line">switch(i)&#123;</div><div class="line">    case 25:</div><div class="line">        console.log('25');</div><div class="line">        break;</div><div class="line">    case 35:</div><div class="line">        console.log('35');</div><div class="line">        break;</div><div class="line">    case 45:</div><div class="line">        console.log('45');</div><div class="line">        break;</div><div class="line">    default:</div><div class="line">        console.log('Other');</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>假如没有break语句，导致不会跳出switch结构，而会一直执行下去</li>
+<li>switch语句在比较值的时候使用全等操作符,不会进行类型转换</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var score = 70;</div><div class="line">if(score &gt;= 90)&#123;</div><div class="line">    console.log('优');</div><div class="line">&#125;else if(score &gt;= 70)&#123;</div><div class="line">    console.log('良');</div><div class="line">&#125;else if(score &gt;= 60)&#123;</div><div class="line">    console.log('中');</div><div class="line">&#125;else&#123;</div><div class="line">    console.log('差');</div><div class="line">&#125;</div><div class="line">// 等价于  </div><div class="line">var score = 70;</div><div class="line">switch(true)&#123;</div><div class="line">    case score &gt;= 90:</div><div class="line">        console.log('优');</div><div class="line">        break;</div><div class="line">    case score &gt;= 70:</div><div class="line">        console.log('良');</div><div class="line">        break;</div><div class="line">    default:</div><div class="line">        console.log('差');</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>这是另一种写法,之所以给表达式传递true,因为每个case值都可以返回一个布尔值</li>
+</ul>
+</blockquote>
+<h4 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符 ?:"></a>三元运算符 ?:</h4><ul>
+<li>JavaScript还有一个三元运算符（即该运算符需要三个运算子）?:，也可以用于逻辑判断</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">(condition) ? expr1 : expr2</div><div class="line"></div><div class="line">var even;</div><div class="line">if (n % 2 === 0) &#123;</div><div class="line">  even = true;</div><div class="line">&#125; else &#123;</div><div class="line">  even = false;</div><div class="line">&#125;</div><div class="line">//等同于</div><div class="line">var even = (n % 2 === 0) ? true : false;</div></pre></td></tr></table></figure>
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><ul>
+<li>循环语句用于重复执行某个操作，它有多种形式</li>
+</ul>
+<h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><ul>
+<li>While语句包括一个循环条件和一段代码块，只要条件为真，就不断循环执行代码块</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">while (expression) &#123;</div><div class="line">  statement;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var i = 0;</div><div class="line"></div><div class="line">while (i <span class="tag">&lt; <span class="attr">100</span>) &#123;</span></div><div class="line">  <span class="attr">console.log</span>('<span class="attr">i</span>当前为：' + <span class="attr">i</span>);</div><div class="line">  <span class="attr">i</span> += <span class="string">1;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><ul>
+<li>for语句是循环命令的另一种形式，可以指定循环的起点、终点和终止条件</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">for (initialize; test; increment) &#123;</div><div class="line">  statement</div><div class="line">&#125;</div><div class="line"></div><div class="line">var x = 3;</div><div class="line">for (var i = 0; i &lt; x; i++) &#123;</div><div class="line">  console.log(i);</div><div class="line">&#125;</div><div class="line">// 0</div><div class="line">// 1</div><div class="line">// 2</div><div class="line"></div><div class="line">//等同于while如下</div><div class="line">var x = 3;</div><div class="line">var i = 0;</div><div class="line"></div><div class="line">while (i &lt; x) &#123;</div><div class="line">  console.log(i);</div><div class="line">  i++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="for语句后面的括号里面，有三个表达式"><a href="#for语句后面的括号里面，有三个表达式" class="headerlink" title="for语句后面的括号里面，有三个表达式"></a>for语句后面的括号里面，有三个表达式</h5><ul>
+<li>初始化表达式（initialize）：确定循环的初始值，只在循环开始时执行一次。</li>
+<li>测试表达式（test）：检查循环条件，只要为真就进行后续操作。</li>
+<li>递增表达式（increment）：完成后续操作，然后返回上一步，再一次检查循环条件</li>
+</ul>
+<h4 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h4><ul>
+<li>do…while循环与while循环类似，唯一的区别就是先运行一次循环体，然后判断循环条件</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">do &#123;</div><div class="line">  statement</div><div class="line">&#125; while (expression);</div><div class="line"></div><div class="line">var x = 3;</div><div class="line">var i = 0;</div><div class="line">do &#123;</div><div class="line">  console.log(i);</div><div class="line">  i++;</div><div class="line">&#125; while(i <span class="tag">&lt; <span class="attr">x</span>);</span></div></pre></td></tr></table></figure>
+<h4 id="break语句和continue语句"><a href="#break语句和continue语句" class="headerlink" title="break语句和continue语句"></a>break语句和continue语句</h4><ul>
+<li>break语句和continue语句都具有跳转作用，可以让代码不按既有的顺序执行</li>
+</ul>
+<h5 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h5><ul>
+<li>break语句用于跳出代码块或循环</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">for (var i = 0; i <span class="tag">&lt; <span class="attr">5</span>; <span class="attr">i</span>++) &#123;</span></div><div class="line">  <span class="attr">console.log</span>(<span class="attr">i</span>);</div><div class="line">  <span class="attr">if</span> (<span class="attr">i</span> === <span class="string">3)&#123;</span></div><div class="line">    <span class="attr">break</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">// <span class="attr">0</span></div><div class="line">// <span class="attr">1</span></div><div class="line">// <span class="attr">2</span></div><div class="line">// <span class="attr">3</span></div><div class="line"></div><div class="line">// 上面代码执行到<span class="attr">i</span>等于<span class="attr">3</span>，就会跳出循环</div></pre></td></tr></table></figure>
+<h5 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h5><ul>
+<li>continue语句用于立即终止本轮循环，返回循环结构的头部，开始下一轮循环</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var i = 0;</div><div class="line">while (i <span class="tag">&lt; <span class="attr">100</span>)&#123;</span></div><div class="line">  <span class="attr">i</span>++;</div><div class="line">  <span class="attr">if</span> (<span class="attr">i</span>%<span class="attr">2</span> === <span class="string">0)</span> &#123;</div><div class="line">    <span class="attr">continue</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="attr">console.log</span>('<span class="attr">i</span>当前为：' + <span class="attr">i</span>);</div><div class="line">&#125;</div><div class="line">//上面代码只有在<span class="attr">i</span>为奇数时，才会输出<span class="attr">i</span>的值。如果<span class="attr">i</span>为偶数，则直接进入下一轮循环</div></pre></td></tr></table></figure>
+<h4 id="标签（label）"><a href="#标签（label）" class="headerlink" title="标签（label）"></a>标签（label）</h4><ul>
+<li>JavaScript语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置</li>
+<li>标签可以是任意的标识符，但是不能是保留字，语句部分可以是任意语句</li>
+<li>标签通常与break语句和continue语句配合使用，跳出特定的循环</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">label:</div><div class="line">  statement</div><div class="line"></div><div class="line">top:</div><div class="line">  for (var i = 0; i &lt; 3; i++)&#123;</div><div class="line">    for (var j = 0; j &lt; 3; j++)&#123;</div><div class="line">      if (i === 1 &amp;&amp; j === 1) break top;</div><div class="line">      console.log('i=' + i + ', j=' + j);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">// i=0, j=0</div><div class="line">// i=0, j=1</div><div class="line">// i=0, j=2</div><div class="line">// i=1, j=0</div><div class="line"></div><div class="line">top:</div><div class="line">  for (var i = 0; i &lt; 3; i++)&#123;</div><div class="line">    for (var j = 0; j &lt; 3; j++)&#123;</div><div class="line">      if (i === 1 &amp;&amp; j === 1) continue top;</div><div class="line">      console.log('i=' + i + ', j=' + j);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">// i=0, j=0</div><div class="line">// i=0, j=1</div><div class="line">// i=0, j=2</div><div class="line">// i=1, j=0</div><div class="line">// i=2, j=0</div><div class="line">// i=2, j=1</div><div class="line">// i=2, j=2</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>不建议使用此语句,看起来很复杂的嵌套</li>
+</ul>
+</blockquote>
 ]]></content>
     
     <summary type="html">
