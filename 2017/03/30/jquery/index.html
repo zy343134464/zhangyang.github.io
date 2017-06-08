@@ -89,16 +89,40 @@
 
 
 
-<meta name="description" content="Learning and Doing">
+<meta name="description" content="jQuery基础知识库和框架的区别库
+更像是工具,把原生代码功能封装成很多便捷的api,要用的时候再去调用封装的api,需要用到的时候查看文档
+
+框架
+更像是一种解决方案,有其自定义的语法,然后用这些语法去填充模板,实现效果。需要用到就了解文档,了解在这个框架下解决问题的模式
+
+jQuery的作用
+jQuery是一个轻量级的”写得少,做得多(Write less, do more)”的JavaSc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery基础">
 <meta property="og:url" content="http://yoursite.com/2017/03/30/jquery/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="Learning and Doing">
-<meta property="og:updated_time" content="2017-06-04T15:41:18.000Z">
+<meta property="og:description" content="jQuery基础知识库和框架的区别库
+更像是工具,把原生代码功能封装成很多便捷的api,要用的时候再去调用封装的api,需要用到的时候查看文档
+
+框架
+更像是一种解决方案,有其自定义的语法,然后用这些语法去填充模板,实现效果。需要用到就了解文档,了解在这个框架下解决问题的模式
+
+jQuery的作用
+jQuery是一个轻量级的”写得少,做得多(Write less, do more)”的JavaSc">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-1.png">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-2.png">
+<meta property="og:updated_time" content="2017-06-08T08:37:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery基础">
-<meta name="twitter:description" content="Learning and Doing">
+<meta name="twitter:description" content="jQuery基础知识库和框架的区别库
+更像是工具,把原生代码功能封装成很多便捷的api,要用的时候再去调用封装的api,需要用到的时候查看文档
+
+框架
+更像是一种解决方案,有其自定义的语法,然后用这些语法去填充模板,实现效果。需要用到就了解文档,了解在这个框架下解决问题的模式
+
+jQuery的作用
+jQuery是一个轻量级的”写得少,做得多(Write less, do more)”的JavaSc">
+<meta name="twitter:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-1.png">
 
 
 
@@ -400,7 +424,68 @@
       
 
       
-        
+        <h1 id="jQuery基础知识"><a href="#jQuery基础知识" class="headerlink" title="jQuery基础知识"></a>jQuery基础知识</h1><h2 id="库和框架的区别"><a href="#库和框架的区别" class="headerlink" title="库和框架的区别"></a>库和框架的区别</h2><h3 id="库"><a href="#库" class="headerlink" title="库"></a>库</h3><ul>
+<li>更像是工具,把原生代码功能封装成很多便捷的api,要用的时候再去调用封装的api,需要用到的时候查看文档</li>
+</ul>
+<h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><ul>
+<li>更像是一种解决方案,有其自定义的语法,然后用这些语法去填充模板,实现效果。需要用到就了解文档,了解在这个框架下解决问题的模式</li>
+</ul>
+<h2 id="jQuery的作用"><a href="#jQuery的作用" class="headerlink" title="jQuery的作用"></a>jQuery的作用</h2><ul>
+<li>jQuery是一个轻量级的”写得少,做得多(Write less, do more)”的JavaScript库</li>
+</ul>
+<h3 id="jQuery库包含以下功能"><a href="#jQuery库包含以下功能" class="headerlink" title="jQuery库包含以下功能"></a>jQuery库包含以下功能</h3><ul>
+<li>选择网页元素</li>
+<li>改变结果集</li>
+<li>元素的操作：取值和赋值</li>
+<li>元素的操作：移动</li>
+<li>元素的操作：复制、删除和创建</li>
+<li>工具方法</li>
+<li>事件操作</li>
+<li>特殊效果</li>
+<li>AJAX</li>
+</ul>
+<h2 id="jquery对象和原生DOM对象的转化"><a href="#jquery对象和原生DOM对象的转化" class="headerlink" title="jquery对象和原生DOM对象的转化"></a>jquery对象和原生DOM对象的转化</h2><ul>
+<li>DOM原生对象:通过原生JS获取的对象,使用原生JS的属性和方法</li>
+<li>jQuery对象:通过jQuery获取的对象,是一个类数组对象,只能使用jQuery自己封装属性和方法</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var name = node.getAttribute('name')</div><div class="line">node.setAttribute('name','bar')</div><div class="line"></div><div class="line">var name = $node.attr('name')</div><div class="line">$node.attr('name','bar')</div></pre></td></tr></table></figure>
+<h3 id="jQuery对象转换为DOM原生对象"><a href="#jQuery对象转换为DOM原生对象" class="headerlink" title="jQuery对象转换为DOM原生对象"></a>jQuery对象转换为DOM原生对象</h3><ul>
+<li>jQuery对象[0]—&gt;DOM原生对象</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var el = $('div')[0];</div></pre></td></tr></table></figure>
+<h3 id="DOM原生对象转换为jQuery对象"><a href="#DOM原生对象转换为jQuery对象" class="headerlink" title="DOM原生对象转换为jQuery对象"></a>DOM原生对象转换为jQuery对象</h3><ul>
+<li>$(DOM原生对象)—&gt;jQuery对象</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var el = document.getElementById('wrap');</div><div class="line">var $el = $(el);</div></pre></td></tr></table></figure>
+<h2 id="jQuery绑定事件"><a href="#jQuery绑定事件" class="headerlink" title="jQuery绑定事件"></a>jQuery绑定事件</h2><ul>
+<li>jQuery中可以使用bind()/delegate()/live()/on()绑定事件,unbind()和off()对应bind()和on()解除绑定</li>
+</ul>
+<blockquote>
+<ul>
+<li>推荐使用on()事件绑定,off()事件解除绑定,on()提供了绑定事件处理的所有功能,方便快捷</li>
+</ul>
+</blockquote>
+<h3 id="on-绑定事件"><a href="#on-绑定事件" class="headerlink" title="on()绑定事件"></a>on()绑定事件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//code.jquery.com/jquery-2.1.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"myUl"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>我是1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>我是2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>我是3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>点我增加li<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">    $('.btn').on('click',function()&#123;</div><div class="line">      $('.myUl').append('<span class="tag">&lt;<span class="name">li</span>&gt;</span>我是4<span class="tag">&lt;/<span class="name">li</span>&gt;</span>');</div><div class="line">    &#125;)</div><div class="line">    </div><div class="line">    $('.myUl&gt;li').on('click',function()&#123;</div><div class="line">      console.log($(this).text());</div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/jquery-1.png" alt="jquery-1.png"></p>
+<blockquote>
+<ul>
+<li>上面点击会生成多个’我是li4’,但是无法在生成出来的’我是li4’添加事件,所以点击’我是li4’文本,console.log无反应.要解决这个问题可以用事件代理来解决</li>
+</ul>
+</blockquote>
+<h3 id="on-事件代理"><a href="#on-事件代理" class="headerlink" title="on()事件代理"></a>on()事件代理</h3><ul>
+<li>用父级元素来代理监听子集事件的一种方式</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//code.jquery.com/jquery-2.1.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"myUl"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>我是1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>我是2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>我是3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>点我增加li<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">    $('.btn').on('click',function()&#123;</div><div class="line">      $('.myUl').append('<span class="tag">&lt;<span class="name">li</span>&gt;</span>我是4<span class="tag">&lt;/<span class="name">li</span>&gt;</span>');</div><div class="line">    &#125;)</div><div class="line">    </div><div class="line">    $('.myUl').on('click','li',function()&#123;</div><div class="line">      console.log($(this).text());</div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/jquery-2.png" alt="jquery-2.png"></p>
+<h3 id="off-解除绑定事件"><a href="#off-解除绑定事件" class="headerlink" title="off()解除绑定事件"></a>off()解除绑定事件</h3><h4 id="通过传入的第三个参数，仅移除先前绑定的事件处理函数"><a href="#通过传入的第三个参数，仅移除先前绑定的事件处理函数" class="headerlink" title="通过传入的第三个参数，仅移除先前绑定的事件处理函数"></a>通过传入的第三个参数，仅移除先前绑定的事件处理函数</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//code.jquery.com/jquery-2.1.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    var foo = function () &#123;</div><div class="line">      console.log('我被点击了')</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    $("body").on("click", "p", foo);</div><div class="line"></div><div class="line">    // ... foo will no longer be called.</div><div class="line">    $("body").off("click", "p", foo); </div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="通过指定名字空间，解除绑定表单上所有的事件"><a href="#通过指定名字空间，解除绑定表单上所有的事件" class="headerlink" title="通过指定名字空间，解除绑定表单上所有的事件"></a>通过指定名字空间，解除绑定表单上所有的事件</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//code.jquery.com/jquery-2.1.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"我是文本"</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    var foo = function () &#123;</div><div class="line">      console.log('我被点击了')</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    $("form").on("click.myClick", "button", foo);</div><div class="line"></div><div class="line">    $("form").on("keypress.myClick", "input[type='text']", foo);</div><div class="line"></div><div class="line">    $("form").off(".myClick");</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>下面来个综合常用的解除绑定事件的例子</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">button &#123; margin:5px; &#125;</div><div class="line">button#theone &#123; color:red; background:yellow; &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"theone"</span>&gt;</span>Does nothing...<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"bind"</span>&gt;</span>Add Click<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"unbind"</span>&gt;</span>Remove Click<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display:none;"</span>&gt;</span>Click!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">function aClick() &#123;</div><div class="line">  $("div").show().fadeOut("slow");</div><div class="line">&#125;</div><div class="line">$("#bind").click(function () &#123;</div><div class="line">  $("body").on("click", "#theone", aClick)</div><div class="line">    .find("#theone").text("Can Click!");</div><div class="line">&#125;);</div><div class="line">$("#unbind").click(function () &#123;</div><div class="line">  $("body").off("click", "#theone", aClick)</div><div class="line">    .find("#theone").text("Does nothing...");</div><div class="line">&#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"> </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -495,8 +580,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -633,6 +727,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery基础知识"><span class="nav-number">1.</span> <span class="nav-text">jQuery基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#库和框架的区别"><span class="nav-number">1.1.</span> <span class="nav-text">库和框架的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#库"><span class="nav-number">1.1.1.</span> <span class="nav-text">库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架"><span class="nav-number">1.1.2.</span> <span class="nav-text">框架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery的作用"><span class="nav-number">1.2.</span> <span class="nav-text">jQuery的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery库包含以下功能"><span class="nav-number">1.2.1.</span> <span class="nav-text">jQuery库包含以下功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jquery对象和原生DOM对象的转化"><span class="nav-number">1.3.</span> <span class="nav-text">jquery对象和原生DOM对象的转化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery对象转换为DOM原生对象"><span class="nav-number">1.3.1.</span> <span class="nav-text">jQuery对象转换为DOM原生对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM原生对象转换为jQuery对象"><span class="nav-number">1.3.2.</span> <span class="nav-text">DOM原生对象转换为jQuery对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery绑定事件"><span class="nav-number">1.4.</span> <span class="nav-text">jQuery绑定事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#on-绑定事件"><span class="nav-number">1.4.1.</span> <span class="nav-text">on()绑定事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#on-事件代理"><span class="nav-number">1.4.2.</span> <span class="nav-text">on()事件代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#off-解除绑定事件"><span class="nav-number">1.4.3.</span> <span class="nav-text">off()解除绑定事件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过传入的第三个参数，仅移除先前绑定的事件处理函数"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">通过传入的第三个参数，仅移除先前绑定的事件处理函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过指定名字空间，解除绑定表单上所有的事件"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">通过指定名字空间，解除绑定表单上所有的事件</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
