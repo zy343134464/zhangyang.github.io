@@ -270,7 +270,7 @@
     <link href="http://yoursite.com/2017/04/05/node/"/>
     <id>http://yoursite.com/2017/04/05/node/</id>
     <published>2017-04-05T15:12:44.000Z</published>
-    <updated>2017-06-09T09:31:34.000Z</updated>
+    <updated>2017-06-09T09:55:52.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="搭建Apache与PHP"><a href="#搭建Apache与PHP" class="headerlink" title="搭建Apache与PHP"></a>搭建Apache与PHP</h1><ul>
 <li>安装xampp套件,包含Apache和PHP</li>
@@ -281,7 +281,22 @@
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>My first PHP page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	&lt;?php</div><div class="line">		echo "hello world";</div><div class="line">	?&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><img src="http://oqev4hx8u.bkt.clouddn.com/node-1.png" alt="node-1.png"></p>
-<h2 id="gt-gt-PHP教程"><a href="#gt-gt-PHP教程" class="headerlink" title="&gt;&gt;PHP教程"></a>&gt;&gt;<a href="http://www.w3school.com.cn/php/" target="_blank" rel="external">PHP教程</a></h2><h1 id="常见的web服务器"><a href="#常见的web服务器" class="headerlink" title="常见的web服务器"></a>常见的web服务器</h1><h2 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h2><ul>
+<h2 id="gt-gt-PHP教程"><a href="#gt-gt-PHP教程" class="headerlink" title="&gt;&gt;PHP教程"></a>&gt;&gt;<a href="http://www.w3school.com.cn/php/" target="_blank" rel="external">PHP教程</a></h2><h1 id="web-服务器、PHP、数据库、浏览器实现动态网站的过程"><a href="#web-服务器、PHP、数据库、浏览器实现动态网站的过程" class="headerlink" title="web 服务器、PHP、数据库、浏览器实现动态网站的过程"></a>web 服务器、PHP、数据库、浏览器实现动态网站的过程</h1><h2 id="客户端输入URL，DNS解析URL成IP地址"><a href="#客户端输入URL，DNS解析URL成IP地址" class="headerlink" title="客户端输入URL，DNS解析URL成IP地址"></a>客户端输入URL，DNS解析URL成IP地址</h2><ul>
+<li>用户在客户端（浏览器）的地址栏输入访问资源所在的URL，然后本机（客户机）根据DNS特定的工作模式将URL解析成IP地址，从而通过IP地址寻址到对应的服务器</li>
+</ul>
+<h2 id="客户机通过TCP-IP协议建立到服务器的TCP连接"><a href="#客户机通过TCP-IP协议建立到服务器的TCP连接" class="headerlink" title="客户机通过TCP/IP协议建立到服务器的TCP连接"></a>客户机通过TCP/IP协议建立到服务器的TCP连接</h2><h2 id="客户端向服务器发送HTTP协议请求包，请求服务器里的资源文档"><a href="#客户端向服务器发送HTTP协议请求包，请求服务器里的资源文档" class="headerlink" title="客户端向服务器发送HTTP协议请求包，请求服务器里的资源文档"></a>客户端向服务器发送HTTP协议请求包，请求服务器里的资源文档</h2><h2 id="Web服务器向客户机发送HTTP协议响应包"><a href="#Web服务器向客户机发送HTTP协议响应包" class="headerlink" title="Web服务器向客户机发送HTTP协议响应包"></a>Web服务器向客户机发送HTTP协议响应包</h2><ul>
+<li>如果请求的资源是html文档，则Web服务器在受到用户访问请求后，在它管理的文档目录中找到并打开相应的html文件（如index.htm），将文件内容响应给客户端浏览器</li>
+<li>如果请求的资源是php文件，那么Web服务器本身不能处理php动态语言脚本文件，就寻找并委托PHP应用服务器——将用户请求访问的php文件（如index.php）文件交给PHP应用服务器来处理；php应用服务器接收php文件，打开并解释php文件并最终翻译成html静态代码，再讲html静态代码交还给Web服务器，Web服务器将接收到的html静态代码发送到客户端</li>
+<li>如果请求的资源是访问数据库，那么Web服务器通过php应用服务器间接访问数据库；PHP应用服务器打开php文件，在php文件中通过对数据库连接的代码来连接本机或者网络上其他机器上的数据库，并在php程序中通过执行标准的SQL查询语句来获取数据库中的数据，再通过PHP应用服务器将数据生成html静态代码；<br>再将html静态代码交还给Web服务器，最后响应请求</li>
+</ul>
+<h2 id="客户端加载并解析文档"><a href="#客户端加载并解析文档" class="headerlink" title="客户端加载并解析文档"></a>客户端加载并解析文档</h2><ul>
+<li>由客户端解释HTML文档，在客户端屏幕上渲染图形结果，最终实现网页在客户端的呈现</li>
+</ul>
+<h2 id="客户机与服务器断开"><a href="#客户机与服务器断开" class="headerlink" title="客户机与服务器断开"></a>客户机与服务器断开</h2><ul>
+<li>需要注意的是客户机与服务器之间的通信是非持久连接的，也就是当服务器发送了应答后就与客户机断开连接，等待下一次请求</li>
+</ul>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/node-2.png" alt="node-2.png"></p>
+<h1 id="常见的web服务器"><a href="#常见的web服务器" class="headerlink" title="常见的web服务器"></a>常见的web服务器</h1><h2 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h2><ul>
 <li>Apache是世界使用排名第一的Web服务器软件。它几乎可以运行在所有的计算机平台上。由于Apache是开源免费的，因此有很多人参与到新功能的开发设计，不断对其进行完善。Apache的特点是简单、速度快、性能稳定，并可做代理服务器来使用</li>
 </ul>
 <h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><ul>
