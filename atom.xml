@@ -270,13 +270,12 @@
     <link href="http://yoursite.com/2017/04/05/node/"/>
     <id>http://yoursite.com/2017/04/05/node/</id>
     <published>2017-04-05T15:12:44.000Z</published>
-    <updated>2017-06-09T10:56:56.000Z</updated>
+    <updated>2017-06-09T14:24:14.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="搭建Apache与PHP"><a href="#搭建Apache与PHP" class="headerlink" title="搭建Apache与PHP"></a>搭建Apache与PHP</h1><ul>
 <li>安装xampp套件,包含Apache和PHP</li>
 </ul>
-<h2 id="gt-gt-xampp下载"><a href="#gt-gt-xampp下载" class="headerlink" title="&gt;&gt;xampp下载"></a>&gt;&gt;<a href="https://www.apachefriends.org/zh_cn/download.html" target="_blank" rel="external">xampp下载</a></h2><a id="more"></a> 
-<h1 id="xampp简单配置"><a href="#xampp简单配置" class="headerlink" title="xampp简单配置"></a>xampp简单配置</h1><ul>
+<h2 id="gt-gt-xampp下载"><a href="#gt-gt-xampp下载" class="headerlink" title="&gt;&gt;xampp下载"></a>&gt;&gt;<a href="https://www.apachefriends.org/zh_cn/download.html" target="_blank" rel="external">xampp下载</a></h2><h1 id="xampp简单配置"><a href="#xampp简单配置" class="headerlink" title="xampp简单配置"></a>xampp简单配置</h1><ul>
 <li>配置完会在本地启动web服务器,通过浏览器访问打开本地webserver下的php文件</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>My first PHP page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	&lt;?php</div><div class="line">		echo "hello world";</div><div class="line">	?&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -316,7 +315,7 @@
 </ul>
 <h1 id="从URL到页面展现的过程"><a href="#从URL到页面展现的过程" class="headerlink" title="从URL到页面展现的过程"></a>从URL到页面展现的过程</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>地址栏输入URL</li>
-<li>域名解析<!-- more  --> </li>
+<li>域名解析</li>
 <li>服务器处理请求</li>
 <li>网站处理</li>
 <li>浏览器处理响应</li>
@@ -405,14 +404,13 @@
 <li>解析html中的css，构建渲染树。完成后浏览器开始布局渲染树并绘制到屏幕</li>
 <li>解析JavaScript，解析到的时候执行（JS的解析由浏览器中的JS解析引擎完成）</li>
 </ul>
-<h3 id="gt-gt-从URL到页面展现的过程"><a href="#gt-gt-从URL到页面展现的过程" class="headerlink" title="&gt;&gt;从URL到页面展现的过程"></a>&gt;&gt;<a href="http://www.cnblogs.com/xianyulaodi/p/6547807.html" target="_blank" rel="external">从URL到页面展现的过程</a></h3>]]></content>
+<h3 id="gt-gt-从URL到页面展现的过程"><a href="#gt-gt-从URL到页面展现的过程" class="headerlink" title="&gt;&gt;从URL到页面展现的过程"></a>&gt;&gt;<a href="http://www.cnblogs.com/xianyulaodi/p/6547807.html" target="_blank" rel="external">从URL到页面展现的过程</a></h3><p><img src="http://oqev4hx8u.bkt.clouddn.com/node-siwei-1.png" alt="node-siwei-1"></p>
+]]></content>
     
     <summary type="html">
     
       &lt;h1 id=&quot;搭建Apache与PHP&quot;&gt;&lt;a href=&quot;#搭建Apache与PHP&quot; class=&quot;headerlink&quot; title=&quot;搭建Apache与PHP&quot;&gt;&lt;/a&gt;搭建Apache与PHP&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;安装xampp套件,包含Apache和PHP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;gt-gt-xampp下载&quot;&gt;&lt;a href=&quot;#gt-gt-xampp下载&quot; class=&quot;headerlink&quot; title=&quot;&amp;gt;&amp;gt;xampp下载&quot;&gt;&lt;/a&gt;&amp;gt;&amp;gt;&lt;a href=&quot;https://www.apachefriends.org/zh_cn/download.html&quot;&gt;xampp下载&lt;/a&gt;&lt;/h2&gt;
+&lt;li&gt;安装xampp套件,包含Apache和PHP&lt;/
     
     </summary>
     
