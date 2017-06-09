@@ -270,12 +270,13 @@
     <link href="http://yoursite.com/2017/04/05/node/"/>
     <id>http://yoursite.com/2017/04/05/node/</id>
     <published>2017-04-05T15:12:44.000Z</published>
-    <updated>2017-06-09T14:24:14.000Z</updated>
+    <updated>2017-06-09T14:41:20.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="搭建Apache与PHP"><a href="#搭建Apache与PHP" class="headerlink" title="搭建Apache与PHP"></a>搭建Apache与PHP</h1><ul>
 <li>安装xampp套件,包含Apache和PHP</li>
 </ul>
-<h2 id="gt-gt-xampp下载"><a href="#gt-gt-xampp下载" class="headerlink" title="&gt;&gt;xampp下载"></a>&gt;&gt;<a href="https://www.apachefriends.org/zh_cn/download.html" target="_blank" rel="external">xampp下载</a></h2><h1 id="xampp简单配置"><a href="#xampp简单配置" class="headerlink" title="xampp简单配置"></a>xampp简单配置</h1><ul>
+<h2 id="gt-gt-xampp下载"><a href="#gt-gt-xampp下载" class="headerlink" title="&gt;&gt;xampp下载"></a>&gt;&gt;<a href="https://www.apachefriends.org/zh_cn/download.html" target="_blank" rel="external">xampp下载</a></h2><a id="more"></a>
+<h1 id="xampp简单配置"><a href="#xampp简单配置" class="headerlink" title="xampp简单配置"></a>xampp简单配置</h1><ul>
 <li>配置完会在本地启动web服务器,通过浏览器访问打开本地webserver下的php文件</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>My first PHP page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	&lt;?php</div><div class="line">		echo "hello world";</div><div class="line">	?&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -410,7 +411,9 @@
     <summary type="html">
     
       &lt;h1 id=&quot;搭建Apache与PHP&quot;&gt;&lt;a href=&quot;#搭建Apache与PHP&quot; class=&quot;headerlink&quot; title=&quot;搭建Apache与PHP&quot;&gt;&lt;/a&gt;搭建Apache与PHP&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;安装xampp套件,包含Apache和PHP&lt;/
+&lt;li&gt;安装xampp套件,包含Apache和PHP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;gt-gt-xampp下载&quot;&gt;&lt;a href=&quot;#gt-gt-xampp下载&quot; class=&quot;headerlink&quot; title=&quot;&amp;gt;&amp;gt;xampp下载&quot;&gt;&lt;/a&gt;&amp;gt;&amp;gt;&lt;a href=&quot;https://www.apachefriends.org/zh_cn/download.html&quot;&gt;xampp下载&lt;/a&gt;&lt;/h2&gt;
     
     </summary>
     
