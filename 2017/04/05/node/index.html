@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="node.js,php,xmapp," />
+  <meta name="keywords" content="php,xmapp," />
 
 
 
@@ -89,16 +89,28 @@
 
 
 
-<meta name="description" content="Learning and Doing">
+<meta name="description" content="搭建Apache与PHP
+安装xampp套件,包含Apache和PHP
+
+&amp;gt;&amp;gt;xampp下载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="后端基础">
 <meta property="og:url" content="http://yoursite.com/2017/04/05/node/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="Learning and Doing">
-<meta property="og:updated_time" content="2017-06-04T15:42:38.000Z">
+<meta property="og:description" content="搭建Apache与PHP
+安装xampp套件,包含Apache和PHP
+
+&amp;gt;&amp;gt;xampp下载">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/node-1.png">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/html-1.png">
+<meta property="og:updated_time" content="2017-06-09T09:31:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="后端基础">
-<meta name="twitter:description" content="Learning and Doing">
+<meta name="twitter:description" content="搭建Apache与PHP
+安装xampp套件,包含Apache和PHP
+
+&amp;gt;&amp;gt;xampp下载">
+<meta name="twitter:image" content="http://oqev4hx8u.bkt.clouddn.com/node-1.png">
 
 
 
@@ -400,7 +412,125 @@
       
 
       
-        
+        <h1 id="搭建Apache与PHP"><a href="#搭建Apache与PHP" class="headerlink" title="搭建Apache与PHP"></a>搭建Apache与PHP</h1><ul>
+<li>安装xampp套件,包含Apache和PHP</li>
+</ul>
+<h2 id="gt-gt-xampp下载"><a href="#gt-gt-xampp下载" class="headerlink" title="&gt;&gt;xampp下载"></a>&gt;&gt;<a href="https://www.apachefriends.org/zh_cn/download.html" target="_blank" rel="external">xampp下载</a></h2><a id="more"></a> 
+<h1 id="xampp简单配置"><a href="#xampp简单配置" class="headerlink" title="xampp简单配置"></a>xampp简单配置</h1><ul>
+<li>配置完会在本地启动web服务器,通过浏览器访问打开本地webserver下的php文件</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>My first PHP page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	&lt;?php</div><div class="line">		echo "hello world";</div><div class="line">	?&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/node-1.png" alt="node-1.png"></p>
+<h2 id="gt-gt-PHP教程"><a href="#gt-gt-PHP教程" class="headerlink" title="&gt;&gt;PHP教程"></a>&gt;&gt;<a href="http://www.w3school.com.cn/php/" target="_blank" rel="external">PHP教程</a></h2><h1 id="常见的web服务器"><a href="#常见的web服务器" class="headerlink" title="常见的web服务器"></a>常见的web服务器</h1><h2 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h2><ul>
+<li>Apache是世界使用排名第一的Web服务器软件。它几乎可以运行在所有的计算机平台上。由于Apache是开源免费的，因此有很多人参与到新功能的开发设计，不断对其进行完善。Apache的特点是简单、速度快、性能稳定，并可做代理服务器来使用</li>
+</ul>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><ul>
+<li>Nginx不仅是一个小巧且高效的HTTP服务器，也可以做一个高效的负载均衡反向代理，通过它接受用户的请求并分发到多个Mongrel进程可以极大提高Rails应用的并发能力。</li>
+</ul>
+<h2 id="IIS"><a href="#IIS" class="headerlink" title="IIS"></a>IIS</h2><ul>
+<li>IIS（Internet信息服务）英文InternetInformationServer的缩写。它是微软公司主推的服务器。IIS的特点具有：安全性，强大，灵活。</li>
+</ul>
+<h2 id="Lighttpd"><a href="#Lighttpd" class="headerlink" title="Lighttpd"></a>Lighttpd</h2><ul>
+<li>Lighttpd是由德国人JanKneschke领导开发的，基于BSD许可的开源WEB服务器软件，其根本的目的是提供一个专门针对高性能网站，安全、快速、兼容性好并且灵活的webserver环境。具有非常低的内存开销，CPU占用率低，效能好，以及丰富的模块等特点。支持FastCGI,CGI,Auth,输出压缩(outputcompress),URL重写,Alias等重要功能。</li>
+</ul>
+<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><ul>
+<li>Tomcat是Apache软件基金会（ApacheSoftwareFoundation）的Jakarta项目中的一个核心项目，由Apache、Sun和其他一些公司及个人共同开发而成。Tomcat技术先进、性能稳定，而且免费，因而深受Java爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web应用服务器。</li>
+</ul>
+<h2 id="Zeus"><a href="#Zeus" class="headerlink" title="Zeus"></a>Zeus</h2><ul>
+<li>Zeus是一个运行于Unix下的非常优秀的Web服务器，据说性能超过Apache，是效率最高的Web服务器之一。</li>
+</ul>
+<h1 id="从URL到页面展现的过程"><a href="#从URL到页面展现的过程" class="headerlink" title="从URL到页面展现的过程"></a>从URL到页面展现的过程</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>地址栏输入URL</li>
+<li>域名解析<!-- more  --> </li>
+<li>服务器处理请求</li>
+<li>网站处理</li>
+<li>浏览器处理响应</li>
+<li>浏览器绘制网页 </li>
+</ul>
+<h2 id="输入URL"><a href="#输入URL" class="headerlink" title="输入URL"></a>输入URL</h2><ul>
+<li>URL(Uniform Resoure Locator)统一资源定位符,分为协议、网络地址、资源路径,用于定位互联网上的资源,即网址  </li>
+</ul>
+<h3 id="协议-浏览器和万维网之间的约定"><a href="#协议-浏览器和万维网之间的约定" class="headerlink" title="协议:浏览器和万维网之间的约定"></a>协议:浏览器和万维网之间的约定</h3><ul>
+<li>http:找到网络上资源的协议</li>
+<li>https:对http进行加密的协议</li>
+<li>file:定位本地电脑文件的协议</li>
+<li>ftp:文件的传输协议  </li>
+</ul>
+<h3 id="网络地址-指示连接哪台计算机-可以是域名或者IP地址-可以包括端口号"><a href="#网络地址-指示连接哪台计算机-可以是域名或者IP地址-可以包括端口号" class="headerlink" title="网络地址:指示连接哪台计算机,可以是域名或者IP地址,可以包括端口号"></a>网络地址:指示连接哪台计算机,可以是域名或者IP地址,可以包括端口号</h3><h3 id="资源路径-指示从服务器上获取哪一项资源"><a href="#资源路径-指示从服务器上获取哪一项资源" class="headerlink" title="资源路径:指示从服务器上获取哪一项资源"></a>资源路径:指示从服务器上获取哪一项资源</h3><h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><pre><code>http://www.baidu.com/question/12345/
+协议:http
+网络地址:www.baidu.com
+资源路径:/question/12345/
+</code></pre><h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><ul>
+<li>我们是通过域名访问,浏览器对域名解析成对应IP地址,找到计算机  </li>
+</ul>
+<h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><ul>
+<li>IP地址为互联网上每一个网络和每一台主机分配的一个逻辑地址,如220.181.112.244  </li>
+</ul>
+<h3 id="域名DN-domain-name"><a href="#域名DN-domain-name" class="headerlink" title="域名DN(domain name)"></a>域名DN(domain name)</h3><ul>
+<li>域名是为了识别主机名称和组织机构名称的一种具有分层的名称,如www.baidu.com  </li>
+</ul>
+<h3 id="计算机域名系统DNS-Domain-Name-System-or-Domain-Name-Service"><a href="#计算机域名系统DNS-Domain-Name-System-or-Domain-Name-Service" class="headerlink" title="计算机域名系统DNS(Domain Name System or Domain Name Service)"></a>计算机域名系统DNS(Domain Name System or Domain Name Service)</h3><ul>
+<li>主要是用于保存网络中所有主机的域名和对应IP地址,并具有将域名转换为IP地址功能的服务器,它是由域名解析器和域名服务器组成  </li>
+</ul>
+<h3 id="域名解析的流程-如下"><a href="#域名解析的流程-如下" class="headerlink" title="域名解析的流程,如下"></a>域名解析的流程,如下</h3><ul>
+<li>浏览器缓存——浏览器会缓存DNS记录一段时间</li>
+<li>系统缓存——从Hosts文件查找是否有该域名和对应IP</li>
+<li>路由器缓存——一般路由器也会缓存域名信息</li>
+<li>ISP DNS 缓存——比如到电信的DNS上查找缓存(DNS劫持)</li>
+<li>如果都没有找到,则向根域名服务器查找域名对应IP，根域名服务器把请求转发到下一级，直到找到IP  </li>
+</ul>
+<blockquote>
+<ul>
+<li>域名与 URL 是两个概念:域名是一台或一组服务器的名称,用来确定服务器在 Internet 上的位置；URL 是统一资源定位符,用来确定某一个文件的具体位置,例如，zhihu.com 是 知乎 的域名，根据这个域名可以找到知乎的服务器， zhihu.com/people/Compile 是 URL ,可以根据这个 URL 定位我的知乎主页</li>
+<li>IP 地址与域名不是一一对应的关系:可以把多个提供相同服务的服务器 IP 设置为同一个域名,但在同一时刻一个域名只能解析出一个 IP地址；同时,一个 IP 地址可以绑定多个域名,数量不限</li>
+</ul>
+</blockquote>
+<h2 id="服务器处理请求"><a href="#服务器处理请求" class="headerlink" title="服务器处理请求"></a>服务器处理请求</h2><ul>
+<li>服务器上会有安装用于接收处理请求的应用——web server（常见的webserver产品有apache、nginx等）,并且决定采用哪种方法来处理这个请求</li>
+<li>网页请求是一个单向请求的过程，即是一个主机向服务器请求数据，服务器返回相应的数据的过程。</li>
+<li>web server 担任管控的角色，对于不同用户发送的请求，会结合配置文件，把不同请求委托给服务器上处理对应请求的程序进行处理（例如JSP脚本，服务器端JavaScript等一些服务器端技术），然后返回后台程序处理产生的结果作为响应</li>
+<li>浏览器根据 URL 内容生成 HTTP 请求，请求中包含请求文件的位置、请求文件的方式等</li>
+<li>服务器响应请求，将数据（可能是根据HTML协议组织的网页，包含页面的布局、文字等）返回给浏览器</li>
+<li>如果返回的是一个页面，根据页面里一些外链的URL，例如图片的地址，它会按照之前的步骤以及第二步中忽略的请求部分再次获取</li>
+</ul>
+<h2 id="网站处理响应"><a href="#网站处理响应" class="headerlink" title="网站处理响应"></a>网站处理响应</h2><ul>
+<li>网站处理，就是实际后台处理的工作</li>
+</ul>
+<h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><ul>
+<li>MVC是一种设计模式,模型（model）–视图（view）–控制器（controller）,它们各自处理自己的任务，实现输入、处理和输出的分离</li>
+<li>最上面的一层-视图（view）:视图是直接面向用户的一层，是前端工作的主力部分</li>
+<li>最底下的一层-模型（model）:模型是将实际开发中的业务规则和所涉及的数据格式模型化，应用于模型的代码只需写一次就可以被多个视图重用。在MVC的三个部件中，模型拥有最多的处理任务。一个模型能为多个视图提供数据</li>
+<li>中间的一层-控制器（controller）:它负责根据用户从”视图层”输入的指令，选取”数据层”中的数据，然后对其进行相应的操作，产生最终结果<br><img src="http://oqev4hx8u.bkt.clouddn.com/html-1.png" alt="html-1.png"></li>
+</ul>
+<blockquote>
+<ul>
+<li><p>首先，控制器（controller）接收用户请求，并决定调用哪种模型来进行处理</p>
+</li>
+<li><p>然后，模型（model）用业务逻辑来处理用户的请求并返回数据</p>
+</li>
+<li><p>最后，控制器（controller）用相应的视图格式化模型返回html字符串给浏览器，浏览器呈现网页给用户。这部分完成后，就要开始接下来的浏览器处理部分</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="浏览器处理"><a href="#浏览器处理" class="headerlink" title="浏览器处理"></a>浏览器处理</h2><ul>
+<li>现代浏览器渲染页面的过程是这样的：解析HTML以构建DOM树 –&gt; 构建渲染树 –&gt; 布局渲染树 –&gt; 绘制渲染树</li>
+</ul>
+<h3 id="浏览器渲染步骤"><a href="#浏览器渲染步骤" class="headerlink" title="浏览器渲染步骤"></a>浏览器渲染步骤</h3><h4 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h4><ul>
+<li>浏览器对一个html页面的加载顺序是从上而下的，并在加载过程并行进行解析渲染处理。在这个过程中遇到link标签、image标签、script标签时，浏览器会再次向服务器发送请求获取CSS文件、图片资源、JS文件，并执行JS代码，同步进行加载解析</li>
+</ul>
+<h4 id="解析、渲染"><a href="#解析、渲染" class="headerlink" title="解析、渲染"></a>解析、渲染</h4><ul>
+<li>解析的过程，其实就是生成解析树，即DOM树。DOM树是由DOM元素及属性节点组成，加上CSS解析的样式对象和js解析后的动作实现。而渲染，就是将DOM树进行可视化表示</li>
+</ul>
+<h2 id="网页展示"><a href="#网页展示" class="headerlink" title="网页展示"></a>网页展示</h2><ul>
+<li>浏览器通过上面步骤计算得到渲染树，是DOM树的可视化表示，构建渲染树使页面以正确的顺序绘制出来</li>
+<li>浏览器下载的顺序是从上到下，渲染的顺序也是从上到下，下载和渲染同时进行</li>
+</ul>
+<h3 id="网页展示步骤"><a href="#网页展示步骤" class="headerlink" title="网页展示步骤"></a>网页展示步骤</h3><ul>
+<li>解析html成DOM树</li>
+<li>解析html中的css，构建渲染树。完成后浏览器开始布局渲染树并绘制到屏幕</li>
+<li>解析JavaScript，解析到的时候执行（JS的解析由浏览器中的JS解析引擎完成）</li>
+</ul>
+<h3 id="gt-gt-从URL到页面展现的过程"><a href="#gt-gt-从URL到页面展现的过程" class="headerlink" title="&gt;&gt;从URL到页面展现的过程"></a>&gt;&gt;<a href="http://www.cnblogs.com/xianyulaodi/p/6547807.html" target="_blank" rel="external">从URL到页面展现的过程</a></h3>
       
     </div>
 
@@ -422,8 +552,6 @@
     <footer class="post-footer">
       
         <div class="post-tags">
-          
-            <a href="/tags/node-js/" rel="tag"># node.js</a>
           
             <a href="/tags/php/" rel="tag"># php</a>
           
@@ -499,8 +627,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -637,6 +774,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建Apache与PHP"><span class="nav-number">1.</span> <span class="nav-text">搭建Apache与PHP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gt-gt-xampp下载"><span class="nav-number">1.1.</span> <span class="nav-text">>>xampp下载</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xampp简单配置"><span class="nav-number">2.</span> <span class="nav-text">xampp简单配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gt-gt-PHP教程"><span class="nav-number">2.1.</span> <span class="nav-text">>>PHP教程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的web服务器"><span class="nav-number">3.</span> <span class="nav-text">常见的web服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache"><span class="nav-number">3.1.</span> <span class="nav-text">Apache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">3.2.</span> <span class="nav-text">Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IIS"><span class="nav-number">3.3.</span> <span class="nav-text">IIS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lighttpd"><span class="nav-number">3.4.</span> <span class="nav-text">Lighttpd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-number">3.5.</span> <span class="nav-text">Tomcat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zeus"><span class="nav-number">3.6.</span> <span class="nav-text">Zeus</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从URL到页面展现的过程"><span class="nav-number">4.</span> <span class="nav-text">从URL到页面展现的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">4.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入URL"><span class="nav-number">4.2.</span> <span class="nav-text">输入URL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#协议-浏览器和万维网之间的约定"><span class="nav-number">4.2.1.</span> <span class="nav-text">协议:浏览器和万维网之间的约定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络地址-指示连接哪台计算机-可以是域名或者IP地址-可以包括端口号"><span class="nav-number">4.2.2.</span> <span class="nav-text">网络地址:指示连接哪台计算机,可以是域名或者IP地址,可以包括端口号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源路径-指示从服务器上获取哪一项资源"><span class="nav-number">4.2.3.</span> <span class="nav-text">资源路径:指示从服务器上获取哪一项资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">4.2.4.</span> <span class="nav-text">example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名解析"><span class="nav-number">4.3.</span> <span class="nav-text">域名解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IP地址"><span class="nav-number">4.3.1.</span> <span class="nav-text">IP地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名DN-domain-name"><span class="nav-number">4.3.2.</span> <span class="nav-text">域名DN(domain name)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机域名系统DNS-Domain-Name-System-or-Domain-Name-Service"><span class="nav-number">4.3.3.</span> <span class="nav-text">计算机域名系统DNS(Domain Name System or Domain Name Service)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名解析的流程-如下"><span class="nav-number">4.3.4.</span> <span class="nav-text">域名解析的流程,如下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器处理请求"><span class="nav-number">4.4.</span> <span class="nav-text">服务器处理请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站处理响应"><span class="nav-number">4.5.</span> <span class="nav-text">网站处理响应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC"><span class="nav-number">4.5.1.</span> <span class="nav-text">MVC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器处理"><span class="nav-number">4.6.</span> <span class="nav-text">浏览器处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器渲染步骤"><span class="nav-number">4.6.1.</span> <span class="nav-text">浏览器渲染步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#加载"><span class="nav-number">4.6.1.1.</span> <span class="nav-text">加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析、渲染"><span class="nav-number">4.6.1.2.</span> <span class="nav-text">解析、渲染</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页展示"><span class="nav-number">4.7.</span> <span class="nav-text">网页展示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网页展示步骤"><span class="nav-number">4.7.1.</span> <span class="nav-text">网页展示步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-从URL到页面展现的过程"><span class="nav-number">4.7.2.</span> <span class="nav-text">>>从URL到页面展现的过程</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
