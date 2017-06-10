@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-10T06:47:20.000Z</updated>
+  <updated>2017-06-10T09:06:18.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,20 +20,136 @@
     <link href="http://yoursite.com/2017/06/10/ydnjs/"/>
     <id>http://yoursite.com/2017/06/10/ydnjs/</id>
     <published>2017-06-10T03:40:15.000Z</published>
-    <updated>2017-06-10T06:47:20.000Z</updated>
+    <updated>2017-06-10T09:06:18.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
-<li>这几天看完《你不知道JavaScirpt》系列的书籍,概念和例子真的经典,解决了《高程3》一些模糊的概念,对作用域闭包this对象这些坑一网打尽,让我忍不住想要对这系列的书进行总结,画思维导图,把它变成自己的知识</li>
+<li>这几天看完《你不知道的JavaScirpt》系列的书籍,里面的模拟场景和例子真的经典,解决了《高程3》模糊的概念,对作用域闭包this对象做了深入的讲解,让我忍不住对这系列的书进行总结,画思维导图(提炼关键字,反复代码练习才能实现),变成自己知识<a id="more"></a>
+</li>
 </ul>
 <h1 id="作用域与闭包"><a href="#作用域与闭包" class="headerlink" title="作用域与闭包"></a>作用域与闭包</h1><h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><ul>
 <li>定义如何在某些位置存储变量，以及如何在稍后找到这些变量</li>
+</ul>
+<h3 id="编辑器理论"><a href="#编辑器理论" class="headerlink" title="编辑器理论"></a>编辑器理论</h3><ul>
+<li>JavaScript是一个编译型语言</li>
+<li>在传统的编译型语言处理中，一块儿源代码，你的程序，在它被执行 之前 通常将会经历三个步骤，大致被称为“编译”</li>
+</ul>
+<h4 id="分词-词法分析"><a href="#分词-词法分析" class="headerlink" title="分词/词法分析"></a>分词/词法分析</h4><ul>
+<li>将一连串字符打断成（对于语言来说）有意义的片段，称为 token（记号）;例如将var a = 2;打断成token：var，a，=，2，和 ;</li>
+</ul>
+<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><ul>
+<li>将一个 token 的流（数组）转换为一个嵌套元素的树，它综合地表示了程序的语法结构。这棵树称为“抽象语法树”（AST —— Abstract Syntax Tree）</li>
+</ul>
+<h4 id="代码生成"><a href="#代码生成" class="headerlink" title="代码生成"></a>代码生成</h4><ul>
+<li>这个处理将抽象语法树转换为可执行的代码</li>
+</ul>
+<blockquote>
+<ul>
+<li>编译三个步骤我们不如笼统地说，有一种方法将我们上面描述的 var a = 2; 的抽象语法树转换为机器指令，来实际上 创建 一个称为 a 的变量（包括分配内存等等），然后在 a 中存入一个值</li>
+</ul>
+</blockquote>
+<h3 id="理解作用域"><a href="#理解作用域" class="headerlink" title="理解作用域"></a>理解作用域</h3><ul>
+<li>将采用的学习作用域的方法，是将这个处理过程想象为一场对话</li>
+</ul>
+<h4 id="演员"><a href="#演员" class="headerlink" title="演员"></a>演员</h4><ul>
+<li>引擎：负责从始至终的编译和执行我们的 JavaScript 程序</li>
+<li>编译器：引擎 的朋友之一；处理所有的解析和代码生成的重活儿</li>
+<li>作用域：引擎 的另一个朋友；收集并维护一张所有被声明的标识符（变量）的列表，并对当前执行中的代码如何访问这些变量强制实施一组严格的规则</li>
+</ul>
+<h4 id="反复"><a href="#反复" class="headerlink" title="反复"></a>反复</h4><ul>
+<li>程序 var a = 2;引擎看到两个不同的语句，一个是 编译器 将在编译期间处理的，一个是 引擎 将在执行期间处理的</li>
+</ul>
+<h5 id="分析-引擎-和它的朋友们将如何处理程序-var-a-2"><a href="#分析-引擎-和它的朋友们将如何处理程序-var-a-2" class="headerlink" title="分析 引擎 和它的朋友们将如何处理程序 var a = 2;"></a>分析 引擎 和它的朋友们将如何处理程序 var a = 2;</h5><ul>
+<li>遇到 var a，编译器 让 作用域 去查看对于这个特定的作用域集合，变量 a 是否已经存在了。如果是，编译器 就忽略这个声明并继续前进。否则，编译器 就让 作用域 去为这个作用域集合声明一个称为 a 的新变量</li>
+<li>然后 编译器 为 引擎 生成稍后要执行的代码，来处理赋值 a = 2。引擎 运行的代码首先让 作用域 去查看在当前的作用域集合中是否有一个称为 a 的变量可以访问。如果有，引擎 就使用这个变量。如果没有，引擎 就查看 其他地方;如果 引擎 最终找到一个变量，它就将值 2 赋予它。如果没有，引擎 将会举起它的手并喊出一个错误</li>
+</ul>
+<blockquote>
+<ul>
+<li>总结:对于一个变量赋值，发生了两个不同的动作：第一，编译器声明一个变量（如果先前没有在当前作用域中声明过），第二，当执行时，引擎 在 作用域 中查询这个变量并给它赋值，如果找到的话</li>
+</ul>
+</blockquote>
+<h3 id="编译器术语"><a href="#编译器术语" class="headerlink" title="编译器术语"></a>编译器术语</h3><ul>
+<li>当 引擎 执行 编译器 在第二步为它产生的代码时，它必须查询变量 a 来看它是否已经被声明过了，而且这个查询是咨询 作用域 的。但是 引擎 所实施的查询的类型会影响查询的结果;</li>
+<li>在我们这个例子中，引擎 将会对变量 a 实施一个“LHS”查询。另一种类型的查询称为“RHS”,这两个术语表示“Left-hand Side（左手边）”和“Right-hand Side（右手边）”;换言之，当一个变量出现在赋值操作的左手边时，会进行 LHS 查询，当一个变量出现在赋值操作的右手边时，会进行 RHS 查询</li>
+</ul>
+<h4 id="RHS"><a href="#RHS" class="headerlink" title="RHS"></a>RHS</h4><ul>
+<li>RHS 是难以察觉的，因为它简单地查询某个变量的值</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log( a );</div><div class="line"></div><div class="line">//这个指向 a 的引用是一个 RHS 引用，因为这里没有东西被赋值给 a。而是我们在查询 a 并取得它的值，这样这个值可以被传递进 console.log(..)</div></pre></td></tr></table></figure>
+<h4 id="LHS"><a href="#LHS" class="headerlink" title="LHS"></a>LHS</h4><ul>
+<li>LHS 查询是试着找到变量容器本身，以便它可以赋值</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = 2;</div><div class="line"></div><div class="line">//这里指向 a 的引用是一个 LHS 引用，因为我们实际上不关心当前的值是什么，我们只是想找到这个变量，将它作为 = 2 赋值操作的目标</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>LHS 和 RHS 意味着“赋值的左/右手边”未必像字面上那样意味着“ = 赋值操作符的左/右边”。赋值有几种其他的发生形式，所以最好在概念上将它考虑为：“赋值的目标（LHS）”和“赋值的源（RHS）”</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function foo(a) &#123;</div><div class="line">	console.log( a ); // 2</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo( 2 );</div><div class="line"></div><div class="line">//调用 foo(..) 的最后一行作为一个函数调用要求一个指向 foo 的 RHS 引用，意味着，“去查询 foo 的值，并把它交给我”。另外，(..) 意味着 foo 的值应当被执行，所以它最好实际上是一个函数;</div><div class="line">//这个代码段隐含的 a = 2。它发生在当值 2 作为参数值传递给 foo(..) 函数时，值 2 被赋值 给了参数 a。为了（隐含地）给参数 a 赋值，进行了一个 LHS 查询</div><div class="line">//这里还有一个 a 的值的 RHS 引用，它的结果值被传入 console.log(..)。console.log(..) 需要一个引用来执行。它为 console 对象进行一个 RHS 查询，然后发生一个属性解析来看它是否拥有一个称为 log 的方法</div></pre></td></tr></table></figure>
+<h4 id="引擎-作用域对话"><a href="#引擎-作用域对话" class="headerlink" title="引擎/作用域对话"></a>引擎/作用域对话</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo(a) &#123;</div><div class="line">	console.log( a ); // 2</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo( 2 );</div></pre></td></tr></table></figure>
+<ul>
+<li>处理这个代码段的交互想象为一场对话。这场对话将会有点儿像这样进行</li>
+</ul>
+<blockquote>
+<ul>
+<li>引擎：嘿 作用域，我有一个 foo 的 RHS 引用。听说过它吗</li>
+<li>作用域；啊，是的，听说过。编译器 刚在一秒钟之前声明了它。它是一个函数。给你</li>
+<li>引擎：太棒了，谢谢！好的，我要执行 foo 了</li>
+<li>引擎：嘿，作用域，我得到了一个 a 的 LHS 引用，听说过它吗</li>
+<li>作用域：啊，是的，听说过。编译器 刚才将它声明为 foo 的一个正式参数了。给你。</li>
+<li>引擎：一如既往的给力，作用域。再次感谢你。现在，该把 2 赋值给 a 了</li>
+<li>引擎：嘿，作用域，很抱歉又一次打扰你。我需要 RHS 查询 console。听说过它吗</li>
+<li>作用域：没关系，引擎，这是我一天到晚的工作。是的，我得到 console 了。它是一个内建对象。给你</li>
+<li>引擎：完美。查找 log(..)。好的，很好，它是一个函数</li>
+<li>引擎：嘿，作用域。你能帮我查一下 a 的 RHS 引用吗？我想我记得它，但只是想再次确认一下</li>
+<li>作用域：你是对的，引擎。同一个家伙，没变。给你</li>
+<li>引擎：酷。传递 a 的值，也就是 2，给 log(..)</li>
+</ul>
+</blockquote>
+<h4 id="小测验"><a href="#小测验" class="headerlink" title="小测验"></a>小测验</h4><p>检查你到目前为止的理解。确保你扮演 引擎，并与 作用域 “对话”</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function foo(a) &#123;</div><div class="line">	var b = a;</div><div class="line">	return a + b;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = foo( 2 );</div><div class="line"></div><div class="line">//找到所有的 LHS 查询（有3处！）</div><div class="line">c = .., a = 2（隐含的参数赋值）和 b = ..</div><div class="line">//找到所有的 RHS 查询（有4处！）</div><div class="line">foo(2.., = a;, a + .. 和 .. + b</div></pre></td></tr></table></figure>
+<h3 id="嵌套的作用域"><a href="#嵌套的作用域" class="headerlink" title="嵌套的作用域"></a>嵌套的作用域</h3><ul>
+<li>作用域 是通过标识符名称查询变量的一组规则。但是，通常会有多于一个的 作用域 需要考虑</li>
+<li>如果在直接作用域中找不到一个变量的话，引擎 就会咨询下一个外层作用域，如此继续直到找到这个变量或者到达最外层作用域（也就是全局作用域）</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function foo(a) &#123;</div><div class="line">	console.log( a + b );</div><div class="line">&#125;</div><div class="line"></div><div class="line">var b = 2;</div><div class="line"></div><div class="line">foo( 2 ); // 4</div><div class="line"></div><div class="line">b 的 RHS 引用不能在函数 foo 的内部被解析，但是可以在它的外围 作用域（这个例子中是全局作用域）中解析</div></pre></td></tr></table></figure>
+<ul>
+<li>重返 引擎 和 作用域 的对话</li>
+</ul>
+<blockquote>
+<ul>
+<li>引擎：“嘿，foo 的 作用域，听说过 b 吗？我得到一个它的 RHS 引用。”</li>
+<li>作用域：“没有，从没听说过。问问别人吧。”</li>
+<li>引擎：“嘿，foo 外面的 作用域，哦，你是全局 作用域，好吧，酷。听说过 b 吗？我得到一个它的 RHS 引用。”</li>
+<li>作用域：“是的，当然有。给你。”</li>
+</ul>
+</blockquote>
+<h4 id="建筑的隐喻"><a href="#建筑的隐喻" class="headerlink" title="建筑的隐喻"></a>建筑的隐喻</h4><ul>
+<li>为了将嵌套 作用域 解析的过程可视化，我想让你考虑一下这个高层建筑</li>
+<li>遍历嵌套 作用域 的简单规则：引擎 从当前执行的 作用域 开始，在那里查找变量，如果没有找到，就向上走一级继续查找，如此类推。如果到了最外层的全局作用域，那么查找就会停止，无论它是否找到了变量</li>
+</ul>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/ydkjs-1.png" alt="image"></p>
+<h3 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h3><ul>
+<li>在变量还没有被声明（在所有被查询的 作用域 中都没找到）的情况下，这两种类型的查询的行为不同</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function foo(a) &#123;</div><div class="line">	console.log( a + b );</div><div class="line">	b = a;</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo( 2 );</div><div class="line">//当 b 的 RHS 查询第一次发生时，它是找不到的。它被说成是一个“未声明”的变量，因为它在作用域中找不到</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>RHS查询在嵌套的作用域的任何地方都找不到一个值，这会导致引擎抛出一个eferenceError。必须要注意的是这个错误的类型是 ReferenceError</li>
+</ul>
+</blockquote>
+<h3 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h3><ul>
+<li>作用域是一组规则，它决定了一个变量（标识符）在哪里和如何被查找。这种查询也许是为了向这个变量赋值，这时变量是一个 LHS（左手边）引用，或者是为取得它的值，这时变量是一个 RHS（右手边）引用</li>
+<li>LHS 引用得自赋值操作。作用域 相关的赋值可以通过 = 操作符发生，也可以通过向函数参数传递（赋予）参数值发生</li>
+<li>JavaScript 引擎 在执行代码之前首先会编译它，因此，它将 var a = 2; 这样的语句分割为两个分离的步骤:首先，var a 在当前 作用域 中声明。这是在最开始，代码执行之前实施的;稍后，a=2查找这个变量（LHS引用），并且如果找到就向它赋值</li>
+<li>LHS 和 RHS 引用查询都从当前执行中的 作用域 开始，如果有需要（也就是，它们在这里没能找到它们要找的东西），它们会在嵌套的 作用域中一路向上，一次一个作用域（层）地查找这个标识符，直到它们到达全局作用域（顶层）并停止，既可能找到也可能没找到</li>
+<li>未被满足的 RHS 引用会导致 ReferenceError被抛出。未被满足的LHS引用会导致一个自动的，隐含地创建的同名全局变量（如果不是“Strict模式”[^note-strictmode]），或者一个 ReferenceError（如果是“Strict模式”[^note-strictmode]）</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
       &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;这几天看完《你不知道JavaScirpt》系列的书籍,概念和例子真的经典,解决了《高程3》一些模糊的概念,对作用域闭包this对
+&lt;li&gt;这几天看完《你不知道的JavaScirpt》系列的书籍,里面的模拟场景和例子真的经典,解决了《高程3》模糊的概念,对作用域闭包this对象做了深入的讲解,让我忍不住对这系列的书进行总结,画思维导图(提炼关键字,反复代码练习才能实现),变成自己知识
     
     </summary>
     
