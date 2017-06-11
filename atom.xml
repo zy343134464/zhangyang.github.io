@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-10T13:07:20.000Z</updated>
+  <updated>2017-06-11T04:33:50.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/06/10/ydnjs/"/>
     <id>http://yoursite.com/2017/06/10/ydnjs/</id>
     <published>2017-06-10T03:40:15.000Z</published>
-    <updated>2017-06-10T13:07:20.000Z</updated>
+    <updated>2017-06-11T04:33:50.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
 <li>这几天看完《你不知道的JavaScirpt》系列的书籍,里面的模拟场景和例子真的经典<a id="more"></a>,解决了《高程3》模糊的概念,对作用域闭包this对象做了深入的讲解,让我忍不住对这系列的书进行总结,画思维导图(提炼关键字,反复代码练习才能实现),变成自己知识</li>
@@ -142,6 +142,77 @@
 <li>JavaScript 引擎 在执行代码之前首先会编译它，因此，它将 var a = 2; 这样的语句分割为两个分离的步骤:首先，var a 在当前 作用域 中声明。这是在最开始，代码执行之前实施的;稍后，a=2查找这个变量（LHS引用），并且如果找到就向它赋值</li>
 <li>LHS 和 RHS 引用查询都从当前执行中的 作用域 开始，如果有需要（也就是，它们在这里没能找到它们要找的东西），它们会在嵌套的 作用域中一路向上，一次一个作用域（层）地查找这个标识符，直到它们到达全局作用域（顶层）并停止，既可能找到也可能没找到</li>
 <li>未被满足的 RHS 引用会导致 ReferenceError被抛出。未被满足的LHS引用会导致一个自动的，隐含地创建的同名全局变量（如果不是“Strict模式”[^note-strictmode]），或者一个 ReferenceError（如果是“Strict模式”[^note-strictmode]）</li>
+</ul>
+<h2 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h2><ul>
+<li>作用域的工作方式有两种占统治地位的模型。其中的第一种是最最常见，在绝大多数的编程语言中被使用的。它称为 词法作用域，我们将深入检视它。另一种仍然被一些语言（比如 Bash 脚本，Perl 中的一些模式，等等）使用的模型，称为 动态作用域</li>
+<li>词法作用域是由函数被声明的位置唯一定义的，而且这个位置完全是一个编写时的决定</li>
+</ul>
+<h3 id="词法分析时"><a href="#词法分析时" class="headerlink" title="词法分析时"></a>词法分析时</h3><ul>
+<li>词法分析处理是检查一串源代码字符，并给 token 赋予语法含义作为某种有状态解析的输出</li>
+<li>词法作用域是在词法分析时被定义的作用域</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function foo(a) &#123;</div><div class="line"></div><div class="line">	var b = a * 2;</div><div class="line"></div><div class="line">	function bar(c) &#123;</div><div class="line">		console.log( a, b, c );</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	bar(b * 3);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo( 2 ); // 2 4 12</div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/ydkjs-2.png" alt="image"></p>
+<blockquote>
+<ul>
+<li>气泡1 包围着全局作用域，它里面只有一个标识符：foo</li>
+<li>气泡2 包围着作用域 foo，它含有三个标识符：a，bar 和 b</li>
+<li>气泡3 包围着作用域 bar，它里面只包含一个标识符：c</li>
+</ul>
+</blockquote>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><ul>
+<li>在上面的代码段中，引擎执行语句console.log(..并开始查找三个被引用的变量a，b和c。它首先从最内部的作用域气泡开始，也就是 bar(..)函数的作用域。在这里它找不到a，所以它向上走一层，到外面下一个最近的作用域气泡，foo(..的作用域。它在这里找到了a，于是它就使用这个 a。同样的事情也发生在 b 身上。但是对于 c，它在 bar(..) 内部就找到了</li>
+<li>如果在 bar(..) 内部和 foo(..) 内部都有一个 c，那么 console.log(..) 语句将会找到并使用 bar(..)中的那一个，绝不会到达 foo(..) 中的那一个</li>
+</ul>
+<blockquote>
+<ul>
+<li>一旦找到第一个匹配，作用域查询就停止了</li>
+<li>相同的标识符名称可以在嵌套作用域的多个层中被指定，这称为“遮蔽（shadowing）”（内部的标识符“遮蔽”了外部的标识符</li>
+<li>全局变量也自动地是全局对象（在浏览器中是window，等等）的属性，所以不直接通过全局变量的词法名称，而通过将它作为全局对象的一个属性引用来间接地引用，如window.a,这种技术给出了访问全局变量的方法，没有它全局变量将因为被遮蔽而不可访问</li>
+</ul>
+</blockquote>
+<h3 id="欺骗词法作用域"><a href="#欺骗词法作用域" class="headerlink" title="欺骗词法作用域"></a>欺骗词法作用域</h3><ul>
+<li>JavaScript 有两种这样的机制,通过利用它来在运行时“修改”（也就是，作弊欺骗）词法作用域</li>
+<li>欺骗词法作用域会导致更低下的性能</li>
+</ul>
+<h4 id="eval"><a href="#eval" class="headerlink" title="eval"></a>eval</h4><ul>
+<li>JavaScript 中的 eval(..) 函数接收一个字符串作为参数值，并将这个字符串的内容看作是好像它已经被实际编写在程序的那个位置上;换句话说，你可以用编程的方式在你编写好的代码内部生成代码，而且你可以运行这个生成的代码，就好像它在编写时就已经在那里了一样</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function foo(str, a) &#123;</div><div class="line">	eval( str ); // 作弊！</div><div class="line">	console.log( a, b );</div><div class="line">&#125;</div><div class="line"></div><div class="line">var b = 2;</div><div class="line"></div><div class="line">foo( "var b = 3;", 1 ); // 1 3</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>在 eval(..) 调用的位置上，字符串”varb=3”被看作是一直就存在在那里的代码。因为这个代码恰巧声明了一个新的变量 b，它就修改了现存的 foo(..) 的词法作用域。事实上，就像上面提到的那样，这个代码实际上在 foo(..) 内部创建了变量 b，它遮蔽了声明在外部（全局）作用域中的 b</li>
+</ul>
+</blockquote>
+<ul>
+<li>当eval(..)被用于一个操作它自己的词法作用域的strict模式程序时在eval(..)内部做出的声明不会实际上修改包围它的作用域</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function foo(str) &#123;</div><div class="line">   "use strict";</div><div class="line">   eval( str );</div><div class="line">   console.log( a ); // ReferenceError: a is not defined</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo( "var a = 2" );</div></pre></td></tr></table></figure>
+<h4 id="with"><a href="#with" class="headerlink" title="with"></a>with</h4><ul>
+<li>with 的常见方式是作为一种缩写，来引用一个对象的多个属性，而 不必 每次都重复对象引用本身</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	a: 1,</div><div class="line">	b: 2,</div><div class="line">	c: 3</div><div class="line">&#125;;</div><div class="line"></div><div class="line">//  重复“obj”显得更“繁冗”</div><div class="line">obj.a = 2;</div><div class="line">obj.b = 3;</div><div class="line">obj.c = 4;</div><div class="line"></div><div class="line">// “更简单”的缩写</div><div class="line">with (obj) &#123;</div><div class="line">	a = 3;</div><div class="line">	b = 4;</div><div class="line">	c = 5;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>然而，这里发生的事情要比只是一个对象属性访问的便捷缩写要多得多。考虑如下代码</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function foo(obj) &#123;</div><div class="line">	with (obj) &#123;</div><div class="line">		a = 2;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var o1 = &#123;</div><div class="line">	a: 3</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var o2 = &#123;</div><div class="line">	b: 3</div><div class="line">&#125;;</div><div class="line"></div><div class="line">foo( o1 );</div><div class="line">console.log( o1.a ); // 2</div><div class="line"></div><div class="line">foo( o2 );</div><div class="line">console.log( o2.a ); // undefined</div><div class="line">console.log( a ); // 2 -- 哦，全局作用域被泄漏了！</div></pre></td></tr></table></figure>
+<ul>
+<li>在这个代码示例中，创建了两个对象o1和o2。一个有a属性，而另一个没有。foo(..)函数接收一个对象引用obj作为参数值，并在这个引用上调用with (obj){..}。在with块儿内部，我们制造了一个变量a的看似是普通词法引用的东西，实际上是一个 LHS引用（见第一章），并将值 2 赋予它;当我们传入 o1 时，赋值 a = 2 找到属性 o1.a 并赋予它值 2，正如在后续的 console.log(o1.a)语句中反映出的那样;然而，当我们传入o2，因为它没有a属性，没有这样的属性被创建，所以o2.a还是undefined;但是之后我们注意到一个特别的副作用，赋值 a = 2 创建了一个全局变量 a</li>
+</ul>
+<blockquote>
+<ul>
+<li>如果 eval(..) 函数接收一个含有一个或多个声明的代码字符串，它就会修改现存的词法作用域，而with语句实际上是从你传递给它的对象中凭空制造了一个 全新的词法作用域</li>
+<li>eval(..) 和 with 都受Strict模式的影响（制约）</li>
+</ul>
+</blockquote>
+<h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><ul>
+<li>JavaScript 引擎 在编译阶段期行许多性能优化工作。其中的一些优化原理都归结为实质上在进行词法分析时可以静态地分析代码，并提前决定所有的变量和函数声明都在什么位置，这样在执行期间就可以少花些力气来解析标识符</li>
+<li>在代码的任何地方引入了一个了 eval(..) 或 with。无论引擎将在努力限制这些悲观臆测的副作用上表现得多么聪明，都没有任何办法可以绕过这个事实：没有优化，代码就运行的更慢</li>
+</ul>
+<h3 id="复习-1"><a href="#复习-1" class="headerlink" title="复习"></a>复习</h3><ul>
+<li>词法作用域意味着作用域是由编写时函数被声明的位置的决策定义的。编译器的词法分析阶段实质上可以知道所有的标识符是在哪里和如何声明的，并如此在执行期间预测它们将如何被查询</li>
+<li>在 JavaScript 中有两种机制可以“欺骗”词法作用域：eval(..) 和 with。前者可以通过对一个拥有一个或多个声明的“代码”字符串进行求值，来（在运行时）修改现存的词法作用域。后者实质上是通过将一个对象引用看作一个“作用域”，并将这个对象的属性看作作用域中的标识符，（同样，也是在运行时）创建一个全新的词法作用域</li>
+<li>这些机制的缺点是，它压制了引擎在作用域查询上进行编译期优化的能力，因为引擎不得不悲观地假定这样的优化是无效的。这两种特性的结果就是代码 将 会运行的更慢。不要使用它们</li>
 </ul>
 ]]></content>
     
@@ -1896,7 +1967,7 @@
     <link href="http://yoursite.com/2017/02/23/html/"/>
     <id>http://yoursite.com/2017/02/23/html/</id>
     <published>2017-02-22T17:42:52.000Z</published>
-    <updated>2017-06-10T16:03:38.000Z</updated>
+    <updated>2017-06-11T02:40:38.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="HTML、XML、XHTML的区别"><a href="#HTML、XML、XHTML的区别" class="headerlink" title="HTML、XML、XHTML的区别"></a>HTML、XML、XHTML的区别</h1><a id="more"></a>
 <h2 id="HTML-Hypertext-Markup-language"><a href="#HTML-Hypertext-Markup-language" class="headerlink" title="HTML(Hypertext Markup language)"></a>HTML(Hypertext Markup language)</h2><ul>
@@ -2135,7 +2206,7 @@
 <h1 id="placeholder属性"><a href="#placeholder属性" class="headerlink" title="placeholder属性"></a>placeholder属性</h1><ul>
 <li>提示文本,帮助用户理解要输入什么信息</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"用户名"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入密码"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"用户名"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入密码"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>.</div></pre></td></tr></table></figure>
 <p><img src="http://oqev4hx8u.bkt.clouddn.com/html-6.png" alt="image"></p>
 <h1 id="type-hidden隐藏域"><a href="#type-hidden隐藏域" class="headerlink" title="type=hidden隐藏域"></a>type=hidden隐藏域</h1><ul>
 <li>页面中对于用户是不可见的,在表单中插入隐藏域目的是在于收集或发送信息,便于后端处理数据</li>
