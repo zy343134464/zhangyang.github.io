@@ -1729,7 +1729,7 @@
     <link href="http://yoursite.com/2017/02/25/css/"/>
     <id>http://yoursite.com/2017/02/25/css/</id>
     <published>2017-02-24T17:48:30.000Z</published>
-    <updated>2017-06-15T17:28:52.000Z</updated>
+    <updated>2017-06-16T07:00:34.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h1><ul>
 <li>CSS全称是Cascading Style Sheets,层叠样式表</li>
@@ -2606,7 +2606,114 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">  <span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.layout</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">640px</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#header</span>&#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">5px</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#666</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">2rem</span>;</div><div class="line">  <span class="attribute">font-weight</span>: bold;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">ul</span>,<span class="selector-tag">li</span>&#123;</div><div class="line">  <span class="attribute">list-style</span>: none;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">li</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">float</span>: left;</div><div class="line">  <span class="attribute">margin-left</span>: <span class="number">20px</span>; </div><div class="line">  <span class="attribute">margin-top</span>: <span class="number">20px</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: </div><div class="line">    <span class="number">0</span> <span class="number">8px</span> <span class="number">10px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.2),</div><div class="line">    <span class="number">0</span> <span class="number">16px</span> <span class="number">20px</span> <span class="number">0</span> <span class="built_in">rgba</span>(0, 0, 0, 0.16);</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">ul</span>&#123;</div><div class="line">  <span class="attribute">margin-left</span>: -<span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">li</span> <span class="selector-class">.img</span>&#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2367512334,2722777786&amp;fm=26&amp;gp=0.jpg) ; </div><div class="line">  <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</div><div class="line">  <span class="attribute">background-repeat</span>: no-repeat;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">0.75</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><img src="http://oqev4hx8u.bkt.clouddn.com/css-84.png" alt="image"></p>
-]]></content>
+<h1 id="CSS浏览器兼容性"><a href="#CSS浏览器兼容性" class="headerlink" title="CSS浏览器兼容性"></a>CSS浏览器兼容性</h1><h2 id="CSS-hack"><a href="#CSS-hack" class="headerlink" title="CSS hack"></a>CSS hack</h2><ul>
+<li>同一份代码，有的浏览器效果正常，有的不正常,需要针对不同的浏览器去写不同的CSS，让它能在不同的浏览器中也能得到我们想要的页面效果</li>
+</ul>
+<h3 id="CSS-hack的表现形式"><a href="#CSS-hack的表现形式" class="headerlink" title="CSS hack的表现形式"></a>CSS hack的表现形式</h3><ul>
+<li>CSS属性前缀法(即类内部Hack)</li>
+<li>选择器前缀法(即选择器Hack)</li>
+<li>IE条件注释法（即HTML头部引用if IE）</li>
+</ul>
+<h2 id="处理兼容问题的思路"><a href="#处理兼容问题的思路" class="headerlink" title="处理兼容问题的思路"></a>处理兼容问题的思路</h2><ul>
+<li>产品的需求(产品的受众、受众的浏览器比例、效果优先还是基本功能优先）</li>
+<li>做到什么程度(让哪些浏览器支持哪些效果)</li>
+<li>根据兼容需求选择兼容工具(html5shiv.js、respond.js、css reset、normalize.css、Modernizr、postCSS)</li>
+<li>根据兼容需求选择技术框架/库(Bootstrap (&gt;=ie8)，jQuery 1.~ (&gt;=ie6), jQuery 2.~ (&gt;=ie9) Vue (&gt;= ie9))</li>
+<li>条件注释、CSS Hack、js 能力检测做一些修补</li>
+</ul>
+<h3 id="渐进增强和优雅降级"><a href="#渐进增强和优雅降级" class="headerlink" title="渐进增强和优雅降级"></a>渐进增强和优雅降级</h3><ul>
+<li>渐进增强(progressive enhancement): 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验</li>
+<li>优雅降级 (graceful degradation): 一开始就构建完整的功能，然后再针对低版本浏览器进行兼容</li>
+</ul>
+<h2 id="常见浏览器兼容的写法"><a href="#常见浏览器兼容的写法" class="headerlink" title="常见浏览器兼容的写法"></a>常见浏览器兼容的写法</h2><ul>
+<li>IE条件注释</li>
+<li>属性选择器</li>
+<li>选择器前缀法</li>
+<li>使用兼容工具</li>
+<li>js 修补</li>
+</ul>
+<h3 id="IE条件注释-即HTML条件注释Hack"><a href="#IE条件注释-即HTML条件注释Hack" class="headerlink" title="IE条件注释(即HTML条件注释Hack)"></a>IE条件注释(即HTML条件注释Hack)</h3><ul>
+<li>条件注释 (conditional comment) 是于HTML源码中被IE有条件解释的语句。条件注释可被用来向IE提供及隐藏代码</li>
+<li>IE10+已经不再支持条件注释</li>
+</ul>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/css-85.png" alt="image"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if IE 6]&gt; </span></div><div class="line">  &lt;p&gt;You are using Internet Explorer 6.&lt;/p&gt;</div><div class="line">&lt;![endif]--&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!--[if !IE]&gt;&lt;!--&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">alert(1);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </div><div class="line"><span class="comment">&lt;!--&lt;![endif]--&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--[if IE 8]&gt;</span></div><div class="line"> &lt;link href="ie8only.css" rel="stylesheet"&gt; </div><div class="line">&lt;![endif]--&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 浏览器符合哪一条，那条就生效 --&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="属性选择器-即类内部Hack"><a href="#属性选择器-即类内部Hack" class="headerlink" title="属性选择器(即类内部Hack)"></a>属性选择器(即类内部Hack)</h3><ul>
+<li>IE6能识别下划线”<em>“和星号”<em>“,IE7能识别星号”</em>“,但不能识别下划线”</em>“,IE6~IE10都认识”\9”,但firefox前述三个都不能认识</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">  color: red;</div><div class="line">  _color: blue;        /*ie6*/</div><div class="line">  *color: pink;        /*ie67*/</div><div class="line">  color: yellow\9;     /*ie/edge 6-8*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="选择器前缀法-即选择器Hack"><a href="#选择器前缀法-即选择器Hack" class="headerlink" title="选择器前缀法(即选择器Hack)"></a>选择器前缀法(即选择器Hack)</h3><ul>
+<li>原理与属性前缀法法类似，在选择器前面加下划线或星号，区分开能否识别它们的浏览器;IE6能识别<em>html.class{}，IE7能识别+html .class{}或者</em>:first-child+html .class{}</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">*html *前缀只对IE6生效</div><div class="line">*+html *+前缀只对IE7生效</div><div class="line">@media screen\9&#123;...&#125;只对IE6/7生效</div><div class="line">@media \0screen &#123;body &#123; background: red; &#125;&#125;只对IE8有效</div><div class="line">@media \0screen\,screen\9&#123;body &#123; background: blue; &#125;&#125;只对IE6/7/8有效</div><div class="line">@media screen\0 &#123;body &#123; background: green; &#125;&#125; 只对IE8/9/10有效</div><div class="line">@media screen and (min-width:0\0) &#123;body &#123; background: gray; &#125;&#125; 只对IE9/10有效</div><div class="line">@media screen and (-ms-high-contrast: active), </div><div class="line">  (-ms-high-contrast: none) &#123;body &#123; background: orange; &#125;&#125; 只对IE10有效等等</div></pre></td></tr></table></figure>
+<h3 id="使用兼容工具"><a href="#使用兼容工具" class="headerlink" title="使用兼容工具"></a>使用兼容工具</h3><ul>
+<li>html5shiv.js</li>
+<li>respond.js</li>
+<li>css reset</li>
+<li>normalize.css</li>
+<li>Modernizr</li>
+<li>postCSS</li>
+</ul>
+<h3 id="js-修补"><a href="#js-修补" class="headerlink" title="js 修补"></a>js 修补</h3><ul>
+<li>一些简单的兼容问题，可以自己写一段 js 代码去实现该功能</li>
+</ul>
+<h3 id="其它处理兼容方法-积累"><a href="#其它处理兼容方法-积累" class="headerlink" title="其它处理兼容方法(积累)"></a>其它处理兼容方法(积累)</h3><ul>
+<li>CSS块级兼容</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.target&#123;</div><div class="line">  display: inline-block;</div><div class="line">  *display:inline;</div><div class="line">  *zoom:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>清除浮动</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.clearfix:after&#123;</div><div class="line">  content:"";</div><div class="line">  display:block;</div><div class="line">  clear:both;</div><div class="line"></div><div class="line">.clearfix&#123;</div><div class="line">    *zoom:1;<span class="comment">&lt;!-- 仅对ie67有效 --&gt;</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="浏览器兼容工具-名词"><a href="#浏览器兼容工具-名词" class="headerlink" title="浏览器兼容工具 / 名词"></a>浏览器兼容工具 / 名词</h2><h3 id="条件注释"><a href="#条件注释" class="headerlink" title="条件注释"></a>条件注释</h3><ul>
+<li>是于HTML源码中被IE有条件解释的语句。条件注释可被用来向IE提供及隐藏代码</li>
+</ul>
+<h3 id="IE-Hack"><a href="#IE-Hack" class="headerlink" title="IE Hack"></a>IE Hack</h3><ul>
+<li>IE6能识别下划线”<em>“和星号”<em>“，IE7能识别星号”</em>“，但不能识别下划线”</em>“，IE6~IE10都认识”\9”</li>
+<li>不同版本的 IE 浏览器有各自的 bug，基于这些bug，我们能针对性的写代码</li>
+</ul>
+<h3 id="js-能力检测"><a href="#js-能力检测" class="headerlink" title="js 能力检测"></a>js 能力检测</h3><ul>
+<li>不去看浏览器的版本和种类，而是直接去检测浏览器支不支持该功能，得出结论后再去针对性的解决兼容问题</li>
+</ul>
+<h3 id="html5shiv-js"><a href="#html5shiv-js" class="headerlink" title="html5shiv.js"></a>html5shiv.js</h3><ul>
+<li>IE9以下版本浏览器对HTML5新增标签不识别，并导致CSS不起作用的问题。所以我们在使用过程中，想要让低版本的浏览器，即IE9以下的浏览器支持，可以使用该工具</li>
+</ul>
+<h3 id="respond-js"><a href="#respond-js" class="headerlink" title="respond.js"></a>respond.js</h3><ul>
+<li>IE6-8等老版本的浏览器不支持CSS3的媒体查询功能，那么就可以用这个工具，用 js 去实现响应式</li>
+</ul>
+<h3 id="css-reset"><a href="#css-reset" class="headerlink" title="css reset"></a>css reset</h3><ul>
+<li>对浏览器的默认样式全部重置，全部推倒重来</li>
+</ul>
+<h3 id="normalize-css"><a href="#normalize-css" class="headerlink" title="normalize css"></a>normalize css</h3><ul>
+<li>标准化CSS，让不同浏览器的CSS样式统一</li>
+</ul>
+<h3 id="Modernizr"><a href="#Modernizr" class="headerlink" title="Modernizr"></a>Modernizr</h3><ul>
+<li>Modernizr使你可以方便地为各种情况编写JavaScript和CSS，无论浏览器是否支持这些特性。这是处理渐进增强的完美方案。</li>
+<li>Modernizr会在页面加载后立即检测特性；然后创建一个包含检测结果的 JavaScript 对象，同时在html元素加入方便你调整 CSS的class名</li>
+</ul>
+<h3 id="postCss"><a href="#postCss" class="headerlink" title="postCss"></a>postCss</h3><ul>
+<li>它可以被理解为一个平台，可以让一些插件在上面跑，它提供了一个解析器，可以将CSS解析成抽象语法树，通过PostCSS这个平台，我们能够开发一些插件，来处理CSS。热门插件如autoprefixer，它可以帮我们处理兼容问题，只需正常写CSS，autoprefixer可以帮我的自动生成兼容性代码</li>
+</ul>
+<h2 id="gt-gt-查兼容"><a href="#gt-gt-查兼容" class="headerlink" title="&gt;&gt;查兼容"></a>&gt;&gt;<a href="http://caniuse.com/" target="_blank" rel="external">查兼容</a></h2><h2 id="gt-gt-查hack写法"><a href="#gt-gt-查hack写法" class="headerlink" title="&gt;&gt;查hack写法"></a>&gt;&gt;<a href="http://browserhacks.com/" target="_blank" rel="external">查hack写法</a></h2><h1 id="CSS编码规范"><a href="#CSS编码规范" class="headerlink" title="CSS编码规范"></a>CSS编码规范</h1><h2 id="CSS命名规则"><a href="#CSS命名规则" class="headerlink" title="CSS命名规则"></a>CSS命名规则</h2><ul>
+<li>语义化标签优先</li>
+<li>基于功能命名、基于内容命名、基于表现命名</li>
+<li>简略、明了、无后患</li>
+</ul>
+<h3 id="命名的范例"><a href="#命名的范例" class="headerlink" title="命名的范例"></a>命名的范例</h3><ul>
+<li>语义化标签优先</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 不好  --&gt;</div><div class="line">&lt;div class="article"&gt;</div><div class="line">  &lt;div class="article_title"&gt;编码规范&lt;/div&gt;</div><div class="line">  &lt;div class="the_content"&gt;今天自学的内容是编码规范</div><div class="line">     &lt;div class="darkbold"&gt;小明&lt;/div&gt; @goole&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 好 --&gt;</div><div class="line">&lt;article&gt;</div><div class="line">  &lt;h1&gt;编码规范&lt;/h1&gt;</div><div class="line">  &lt;p&gt;今天讲的内容是编码规范，讲师</div><div class="line">     &lt;b&gt;若愚&lt;/b&gt; @饥人谷&lt;/p&gt;</div><div class="line">&lt;/article&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>基于功能命名、基于内容命名、基于表现命名</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 不好  --&gt;</div><div class="line">&lt;div class="left"&gt;&lt;/div&gt;</div><div class="line">&lt;div class="red"&gt;&lt;/div&gt;</div><div class="line">&lt;div class="s"&gt;&lt;/div&gt;</div><div class="line">&lt;a class="link" href="#"&gt;&lt;/a&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 好 --&gt;</div><div class="line">&lt;div class="success"&gt;&lt;/div&gt;</div><div class="line">&lt;div class="theme-color"&gt;&lt;/div&gt;</div><div class="line">&lt;a class="login" href="#"&gt;&lt;/a&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>简略、明了、无后患</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 不好 --&gt;</div><div class="line">&lt;article class="blue"&gt;...&lt;/article&gt;</div><div class="line">&lt;article class="redBg mt30 bigText"&gt;...&lt;/article&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 好 --&gt;</div><div class="line">&lt;article class="movies"&gt;...&lt;/article&gt;</div><div class="line">&lt;article class="news"&gt;...&lt;/article&gt;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
