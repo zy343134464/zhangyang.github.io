@@ -89,7 +89,7 @@
 
 
 
-<meta name="description" content="vim
+<meta name="description" content="vim命令行基础
 vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.
 
 常用命令入门
@@ -98,15 +98,15 @@ vim是一个操作文本的编辑器,对文本进行添加、删除、复制、�
 <meta property="og:title" content="vim、linus、git命令行">
 <meta property="og:url" content="http://yoursite.com/2017/02/21/gitlinuxvim/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="vim
+<meta property="og:description" content="vim命令行基础
 vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.
 
 常用命令入门
 查看文件：cat test.html">
-<meta property="og:updated_time" content="2017-06-09T02:58:12.000Z">
+<meta property="og:updated_time" content="2017-06-16T21:29:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim、linus、git命令行">
-<meta name="twitter:description" content="vim
+<meta name="twitter:description" content="vim命令行基础
 vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.
 
 常用命令入门
@@ -412,7 +412,7 @@ vim是一个操作文本的编辑器,对文本进行添加、删除、复制、�
       
 
       
-        <h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><ul>
+        <h1 id="vim命令行基础"><a href="#vim命令行基础" class="headerlink" title="vim命令行基础"></a>vim命令行基础</h1><ul>
 <li>vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.</li>
 </ul>
 <h2 id="常用命令入门"><a href="#常用命令入门" class="headerlink" title="常用命令入门"></a>常用命令入门</h2><ul>
@@ -622,6 +622,35 @@ vim是一个操作文本的编辑器,对文本进行添加、删除、复制、�
 </tbody>
 </table>
 <h3 id="gt-gt-简明vim命令行"><a href="#gt-gt-简明vim命令行" class="headerlink" title="&gt;&gt;简明vim命令行"></a>&gt;&gt;<a href="http://www.cnblogs.com/xianyulaodi/p/6547807.html" target="_blank" rel="external">简明vim命令行</a></h3><hr>
+<h1 id="Linux命令行基础"><a href="#Linux命令行基础" class="headerlink" title="Linux命令行基础"></a>Linux命令行基础</h1><h2 id="常用命令行"><a href="#常用命令行" class="headerlink" title="常用命令行"></a>常用命令行</h2><ul>
+<li>pwd 查看当前完整路径</li>
+<li>ls 不包括隐藏文件</li>
+<li>ls -a 查看当前目录下所有文件(包括隐藏文件)</li>
+<li>ls -al # 查看当前目录下所有文件(包括隐藏文件)的详细信息</li>
+<li>cd 切换目录(cd /c/project、cd code、cd ../css、cd ~/Desktop)</li>
+<li>touch 创建文件 (touch readme.md)</li>
+<li>rm 删除文件,不能删除文件夹(rm readme.md)</li>
+<li>rm -rf 删除文件夹(rm -rf node_modules)</li>
+<li>mv 重命名文件(mv readme.md README.md)</li>
+<li>mkdir 创建文件夹(mkdir projects)</li>
+<li>mkdir test; mv test test2; rm -rf test2; 组合操作,分号间隔，若第一个命令错了也会依次执行后面的命令</li>
+<li>mkdir test &amp;&amp; mv test test2 组合操作，&amp;&amp;间隔，若第一个命令错了则不会执行后面的命令</li>
+<li>cp 复制，复制文件用法cp a b(两个参数)；复制文件夹用法cp -r test test2</li>
+<li>echo 1 &gt; test.txt 表示在test.txt输入1，但是后续再次输入会将上一次的覆盖</li>
+<li>cat 把文件内容输出出来，用法cat test.txt； cat test.txt | less 可以一页页的看，K往上看，G往下看，Q退出</li>
+<li>head 显示文本的前几行，要确定是前几行的用法为head -n 3 test.txt，这是显示文本的前三行</li>
+<li>tail 与head相反，是显示文本的后几行</li>
+<li>du 显示目录大小</li>
+<li>du -sh 总的大小</li>
+<li>-xxx –help xxx -h man xxx 查看帮助文档</li>
+<li>which xxx 表示命令在哪里</li>
+</ul>
+<h2 id="文件路径"><a href="#文件路径" class="headerlink" title="文件路径"></a>文件路径</h2><ul>
+<li>cd / 根目录</li>
+<li>cd ~ 家目录</li>
+<li>cd books(cd ./books) 当前目录</li>
+<li>cd ..(cd ../css) 上级目录</li>
+</ul>
 
       
     </div>
@@ -878,7 +907,7 @@ vim是一个操作文本的编辑器,对文本进行添加、删除、复制、�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim"><span class="nav-number">1.</span> <span class="nav-text">vim</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令入门"><span class="nav-number">1.1.</span> <span class="nav-text">常用命令入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令基础"><span class="nav-number">1.2.</span> <span class="nav-text">常用命令基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#光标移动"><span class="nav-number">1.2.1.</span> <span class="nav-text">光标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑"><span class="nav-number">1.2.2.</span> <span class="nav-text">编辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入模式"><span class="nav-number">1.2.3.</span> <span class="nav-text">插入模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出"><span class="nav-number">1.2.4.</span> <span class="nav-text">退出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#剪切-赋值"><span class="nav-number">1.2.5.</span> <span class="nav-text">剪切/赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-简明vim命令行"><span class="nav-number">1.2.6.</span> <span class="nav-text">>>简明vim命令行</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim命令行基础"><span class="nav-number">1.</span> <span class="nav-text">vim命令行基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令入门"><span class="nav-number">1.1.</span> <span class="nav-text">常用命令入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令基础"><span class="nav-number">1.2.</span> <span class="nav-text">常用命令基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#光标移动"><span class="nav-number">1.2.1.</span> <span class="nav-text">光标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑"><span class="nav-number">1.2.2.</span> <span class="nav-text">编辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入模式"><span class="nav-number">1.2.3.</span> <span class="nav-text">插入模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出"><span class="nav-number">1.2.4.</span> <span class="nav-text">退出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#剪切-赋值"><span class="nav-number">1.2.5.</span> <span class="nav-text">剪切/赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gt-gt-简明vim命令行"><span class="nav-number">1.2.6.</span> <span class="nav-text">>>简明vim命令行</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux命令行基础"><span class="nav-number">2.</span> <span class="nav-text">Linux命令行基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令行"><span class="nav-number">2.1.</span> <span class="nav-text">常用命令行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件路径"><span class="nav-number">2.2.</span> <span class="nav-text">文件路径</span></a></li></ol></li></ol></div>
             
 
           </div>
