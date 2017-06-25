@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/04/10/js/</loc>
+    
+    <lastmod>2017-06-25T15:31:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/03/25/javascript/</loc>
     
-    <lastmod>2017-06-24T16:22:58.000Z</lastmod>
+    <lastmod>2017-06-25T12:55:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/03/10/cs/</loc>
+    
+    <lastmod>2017-06-25T12:50:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/04/27/html5/</loc>
+    
+    <lastmod>2017-06-25T12:49:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/04/30/css3/</loc>
+    
+    <lastmod>2017-06-25T12:48:34.000Z</lastmod>
     
   </url>
   
@@ -12,13 +40,6 @@
     <loc>http://yoursite.com/2017/02/25/css/</loc>
     
     <lastmod>2017-06-23T03:48:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/03/10/cs/</loc>
-    
-    <lastmod>2017-06-22T16:47:44.000Z</lastmod>
     
   </url>
   
@@ -107,30 +128,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/04/10/js/</loc>
-    
-    <lastmod>2017-06-04T15:44:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/04/08/object/</loc>
     
     <lastmod>2017-06-04T15:44:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/30/css3/</loc>
-    
-    <lastmod>2017-06-04T15:43:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/27/html5/</loc>
-    
-    <lastmod>2017-06-04T15:43:20.000Z</lastmod>
     
   </url>
   

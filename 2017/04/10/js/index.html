@@ -89,16 +89,18 @@
 
 
 
-<meta name="description" content="Learning and Doing">
+<meta name="description" content="tab切换效果代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原生js造轮子">
 <meta property="og:url" content="http://yoursite.com/2017/04/10/js/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="Learning and Doing">
-<meta property="og:updated_time" content="2017-06-04T15:44:46.000Z">
+<meta property="og:description" content="tab切换效果代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/js-demo-4.gif">
+<meta property="og:updated_time" content="2017-06-25T15:31:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生js造轮子">
-<meta name="twitter:description" content="Learning and Doing">
+<meta name="twitter:description" content="tab切换效果代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910">
+<meta name="twitter:image" content="http://oqev4hx8u.bkt.clouddn.com/js-demo-4.gif">
 
 
 
@@ -400,7 +402,9 @@
       
 
       
-        
+        <h1 id="tab切换效果"><a href="#tab切换效果" class="headerlink" title="tab切换效果"></a>tab切换效果</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width-device-width,initial-scale=1.0"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge,chrome=1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS Bin<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">    * &#123;</div><div class="line">      <span class="attribute">box-sizing</span>: border-box;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">      <span class="attribute">content</span>: <span class="string">''</span>;</div><div class="line">      <span class="attribute">display</span>:block;</div><div class="line">      <span class="attribute">clear</span>: both;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-tag">ul</span>,</div><div class="line">    <span class="selector-tag">li</span> &#123;</div><div class="line">      <span class="attribute">list-style</span>: none;</div><div class="line">      <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">      <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-id">#tab</span> &#123;</div><div class="line">      <span class="attribute">width</span>: <span class="number">600px</span>;</div><div class="line">      <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">      <span class="attribute">border-radius</span>: <span class="number">5px</span>;</div><div class="line">      <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">      <span class="attribute">margin-top</span>: <span class="number">20px</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.tab-header</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;</div><div class="line">      <span class="attribute">float</span>: left;</div><div class="line">      <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</div><div class="line">      <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">      <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">      <span class="attribute">cursor</span>: pointer;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.tab-header</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-class">.active</span> &#123;</div><div class="line">      <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.tab-content</span> &#123;</div><div class="line">      <span class="attribute">width</span>: <span class="number">600px</span>;</div><div class="line">      <span class="attribute">height</span>: <span class="number">400px</span>;</div><div class="line">      <span class="attribute">background-color</span>: <span class="number">#eee</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.tab-content</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;</div><div class="line">      <span class="attribute">display</span>:none;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.tab-content</span>&gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &gt; <span class="selector-tag">img</span> &#123;</div><div class="line">      <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">      <span class="attribute">height</span>: <span class="number">400px</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.tab-content</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-class">.current</span> &#123;</div><div class="line">      <span class="attribute">display</span>: block</div><div class="line">    &#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"tab"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-header"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span>狗狗<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>猫咪<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>兔子<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"current"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://oqev4hx8u.bkt.clouddn.com/js-demo-1.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://oqev4hx8u.bkt.clouddn.com/js-demo-2.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://oqev4hx8u.bkt.clouddn.com/js-demo-3.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(str);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> tabHeader = $(<span class="string">'.tab-header &gt; ul'</span>);</div><div class="line">    <span class="keyword">var</span> tabCt = $(<span class="string">'.tab-content &gt; ul'</span>);</div><div class="line"></div><div class="line">    tabHeader.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">      <span class="keyword">if</span>(e.target.tagName.toLowerCase() === <span class="string">'li'</span>)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; tabHeader.children.length;i++)&#123;</div><div class="line">          tabHeader.children[i].classList.remove(<span class="string">'active'</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        e.target.classList.add(<span class="string">'active'</span>);</div><div class="line"></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; tabCt.children.length;i++)&#123;</div><div class="line">          tabCt.children[i].classList.remove(<span class="string">'current'</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> index = [].indexOf.call(tabHeader.children,e.target); <span class="comment">// 将点击的导航li的序号存到变量index</span></div><div class="line">        tabCt.children[index].classList.add(<span class="string">'current'</span>); <span class="comment">// 根据变量index来对应的给图片li添加class</span></div><div class="line">      &#125;  </div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/js-demo-4.gif" alt="image"></p>
+
       
     </div>
 
@@ -495,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -520,7 +533,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -529,7 +542,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -633,6 +646,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tab切换效果"><span class="nav-number">1.</span> <span class="nav-text">tab切换效果</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果"><span class="nav-number">1.2.</span> <span class="nav-text">效果</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
