@@ -554,7 +554,62 @@
       
         
           
-            
+            <h1 id="媒体查询-Media-Queries"><a href="#媒体查询-Media-Queries" class="headerlink" title="媒体查询(Media Queries)"></a>媒体查询(Media Queries)</h1><ul>
+<li>可以针对不同的媒体类型或不同的屏幕尺寸定义不同的样式，媒体类型，包括PC、平板、手机、打印机、电视、屏幕阅读器</li>
+</ul>
+<h2 id="媒体查询的引入"><a href="#媒体查询的引入" class="headerlink" title="媒体查询的引入"></a>媒体查询的引入</h2><h3 id="link方法引入"><a href="#link方法引入" class="headerlink" title="link方法引入"></a>link方法引入</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">herf</span> = <span class="string">"responsive.css"</span>  <span class="attr">media</span>=<span class="string">"mediatype and | not | only (media feature)"</span>&gt;</span><span class="tag">&lt;/<span class="name">link</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 举例 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">media</span>=<span class="string">"screen and (max-width: 600px)"</span> <span class="attr">href</span>=<span class="string">"small.css"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="style方法引入"><a href="#style方法引入" class="headerlink" title="style方法引入"></a>style方法引入</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">@media screen and (max-width: 500px)&#123;</div><div class="line">  body&#123;</div><div class="line">    background: red;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>screen：一种媒体类型</li>
+<li>and：逻辑操作符，与其相似的还有not,only</li>
+<li>(max-width:600px):这个就是媒体特性，说得通俗一点就是媒体条件</li>
+</ul>
+</blockquote>
+<h2 id="媒体查询语法"><a href="#媒体查询语法" class="headerlink" title="媒体查询语法"></a>媒体查询语法</h2><ul>
+<li>逻辑操作符</li>
+<li>媒体类型(Media Type)</li>
+<li>媒体属性(Media Query)</li>
+</ul>
+<h3 id="逻辑操作符"><a href="#逻辑操作符" class="headerlink" title="逻辑操作符"></a>逻辑操作符</h3><ul>
+<li>not、and、only和逗号(,)</li>
+</ul>
+<h4 id="and"><a href="#and" class="headerlink" title="and"></a>and</h4><ul>
+<li>and操作符用来把多个媒体属性组合起来，合并到同一条媒体查询中。只有当每个属性都为真时，这条查询的结果才为真</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 满足横屏以及最小宽度为700px的条件应用样式表 --&gt;</span></div><div class="line">@media all and (min-width: 700px) and (orientation: landscape) &#123; ... &#125;</div><div class="line"><span class="comment">&lt;!-- 由于不使用not或only操作符的情况下，媒体类型是可选的，默认为 all，所以可以简写为 --&gt;</span></div><div class="line">@media (min-width: 700px) and (orientation: landscape) &#123; ... &#125;</div></pre></td></tr></table></figure>
+<h4 id="逗号"><a href="#逗号" class="headerlink" title="逗号(,)"></a>逗号(,)</h4><ul>
+<li>效果等同于or逻辑操作符，这要有其中一个查询条件为真，则查询返回真</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 满足最小宽度为700像素或是横屏的手持设备应用样式表 --&gt;</span></div><div class="line">@media (min-width: 700px), handheld and (orientation: landscape) &#123; ... &#125;</div></pre></td></tr></table></figure>
+<h4 id="not"><a href="#not" class="headerlink" title="not"></a>not</h4><ul>
+<li>操作符应用于整个媒体查询并对结果取反</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- not关键字仅能应用于整个查询，而不能单独应用于一个独立的查询 --&gt;</span></div><div class="line">@media not all and (monochrome) &#123; ... &#125;</div><div class="line">//等价于</div><div class="line">@media not (all and (monochrome)) &#123; ... &#125;</div></pre></td></tr></table></figure>
+<h4 id="only"><a href="#only" class="headerlink" title="only"></a>only</h4><ul>
+<li>only操作符表示仅在媒体查询匹配成功时应用指定样式。可以通过它让选中的样式在老式浏览器中不被应用</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media only screen &#123; ... &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>实际上，only、not、and和or(用逗号表示)这四种逻辑中，只有and比较常用</li>
+</ul>
+</blockquote>
+<h3 id="媒体类型-Media-Type"><a href="#媒体类型-Media-Type" class="headerlink" title="媒体类型(Media Type)"></a>媒体类型(Media Type)</h3><ul>
+<li>media属性用于为不同的媒介类型规定不同的样式</li>
+<li>all：所有设备</li>
+<li>screen： 计算机屏幕、平板和手机</li>
+<li>print：打印设备</li>
+<li>speech：屏幕阅读器</li>
+</ul>
+<h3 id="媒体属性-Media-Query"><a href="#媒体属性-Media-Query" class="headerlink" title="媒体属性(Media Query)"></a>媒体属性(Media Query)</h3><ul>
+<li>多数媒体属性带有“min-”和“max-”前缀，用于表达“小于等于”和“大于等于”</li>
+<li>设备宽高（设备屏幕区域）：device-width | device-height | max-device-width | min-device-height；</li>
+<li>宽高（渲染区域）：width | height |max-width | min-height；</li>
+<li>设备方向：(orientation){portrait | landscape}</li>
+<li>分辨率：(resolution:300dpi){}</li>
+</ul>
+
           
         
       
@@ -1788,7 +1843,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
