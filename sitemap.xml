@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/07/01/es6/</loc>
+    
+    <lastmod>2017-07-01T07:35:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/03/25/javascript/</loc>
+    
+    <lastmod>2017-07-01T06:37:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/06/04/phone/</loc>
     
     <lastmod>2017-06-30T18:15:56.000Z</lastmod>
@@ -16,16 +30,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/03/25/javascript/</loc>
-    
-    <lastmod>2017-06-30T09:45:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/04/10/js/</loc>
     
-    <lastmod>2017-06-25T17:17:34.000Z</lastmod>
+    <lastmod>2017-06-25T17:18:24.000Z</lastmod>
     
   </url>
   
@@ -33,6 +40,13 @@
     <loc>http://yoursite.com/2017/03/10/cs/</loc>
     
     <lastmod>2017-06-25T12:50:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/04/08/object/</loc>
+    
+    <lastmod>2017-06-25T12:49:42.000Z</lastmod>
     
   </url>
   
@@ -47,6 +61,20 @@
     <loc>http://yoursite.com/2017/04/30/css3/</loc>
     
     <lastmod>2017-06-25T12:48:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/05/15/boostrap/</loc>
+    
+    <lastmod>2017-06-25T12:48:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/04/15/http/</loc>
+    
+    <lastmod>2017-06-20T15:17:30.000Z</lastmod>
     
   </url>
   
@@ -107,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/05/15/boostrap/</loc>
-    
-    <lastmod>2017-06-04T15:45:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/05/07/webpack/</loc>
     
     <lastmod>2017-06-04T15:45:46.000Z</lastmod>
@@ -128,13 +149,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/04/08/object/</loc>
-    
-    <lastmod>2017-06-04T15:44:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/04/25/gulp/</loc>
     
     <lastmod>2017-06-04T15:43:10.000Z</lastmod>
@@ -145,13 +159,6 @@
     <loc>http://yoursite.com/2017/04/18/modular/</loc>
     
     <lastmod>2017-06-04T15:43:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/15/http/</loc>
-    
-    <lastmod>2017-06-04T15:42:52.000Z</lastmod>
     
   </url>
   
