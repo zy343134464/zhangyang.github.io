@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/04/13/jq/</loc>
+    
+    <lastmod>2017-07-03T14:42:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/03/30/jquery/</loc>
     
-    <lastmod>2017-07-03T07:37:58.000Z</lastmod>
+    <lastmod>2017-07-03T12:30:30.000Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2017/04/30/css3/</loc>
     
     <lastmod>2017-07-01T07:39:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/13/jq/</loc>
-    
-    <lastmod>2017-07-01T07:38:34.000Z</lastmod>
     
   </url>
   
