@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CMD,AMD,Common.js,requer.js,r.js," />
+  <meta name="keywords" content="CMD,AMD,Common.js,r.js,requere.js," />
 
 
 
@@ -89,16 +89,37 @@
 
 
 
-<meta name="description" content="Learning and Doing">
+<meta name="description" content="模块化的写法
+一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块
+
+原始写法
+只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块
+缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系
+
+12345678// 函数m1()和m2()，组成一个模块。使用的时候，直接调用就行了function">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模块化基础">
 <meta property="og:url" content="http://yoursite.com/2017/04/18/modular/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="Learning and Doing">
-<meta property="og:updated_time" content="2017-06-04T15:43:06.000Z">
+<meta property="og:description" content="模块化的写法
+一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块
+
+原始写法
+只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块
+缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系
+
+12345678// 函数m1()和m2()，组成一个模块。使用的时候，直接调用就行了function">
+<meta property="og:updated_time" content="2017-07-06T14:35:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模块化基础">
-<meta name="twitter:description" content="Learning and Doing">
+<meta name="twitter:description" content="模块化的写法
+一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块
+
+原始写法
+只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块
+缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系
+
+12345678// 函数m1()和m2()，组成一个模块。使用的时候，直接调用就行了function">
 
 
 
@@ -400,7 +421,31 @@
       
 
       
-        
+        <h1 id="模块化的写法"><a href="#模块化的写法" class="headerlink" title="模块化的写法"></a>模块化的写法</h1><ul>
+<li>一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块</li>
+</ul>
+<h2 id="原始写法"><a href="#原始写法" class="headerlink" title="原始写法"></a>原始写法</h2><ul>
+<li>只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块</li>
+<li>缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 函数m1()和m2()，组成一个模块。使用的时候，直接调用就行了</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  statement</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  statement</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="对象写法"><a href="#对象写法" class="headerlink" title="对象写法"></a>对象写法</h2><ul>
+<li>为了解决上面的缺点，可以把模块写成一个对象，所有的模块成员都放到这个对象里面</li>
+<li>这样避免了变量污染，只要保证模块名唯一即可，同时同一模块内的成员也有了关系</li>
+<li>缺点:外部可以随意修改内部成员,例如myModel.var1 = 100;</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 函数m1()和m2(），都封装在myModule对象里。使用的时候，就是调用这个对象的属性</span></div><div class="line"><span class="keyword">var</span> myModule = &#123;</div><div class="line">  <span class="attr">var1</span>: <span class="number">1</span>,</div><div class="line">  <span class="attr">var2</span>: <span class="number">2</span>,</div><div class="line"></div><div class="line">  <span class="attr">fn1</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="attr">fn2</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 使用的时候，就是调用这个对象的属性</span></div><div class="line">myModule.fn2();</div></pre></td></tr></table></figure>
+<h2 id="立即执行函数写法"><a href="#立即执行函数写法" class="headerlink" title="立即执行函数写法"></a>立即执行函数写法</h2><ul>
+<li>使用”立即执行函数”（Immediately-Invoked Function Expression，IIFE），可以达到不暴露私有成员的目的</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 这样在模块外部无法修改我们没有暴露出来的变量、函数</span></div><div class="line"><span class="keyword">var</span> myModule = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> var1 = <span class="number">1</span>;</div><div class="line">    <span class="keyword">var</span> var2 = <span class="number">2</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">fn1</span>: fn1,</div><div class="line">        <span class="attr">fn2</span>: fn2</div><div class="line">    &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>上述做法就是我们模块化的基础，目前，通行的JavaScript模块规范主要有两种：CommonJS和AMD</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h1>
       
     </div>
 
@@ -429,9 +474,9 @@
           
             <a href="/tags/Common-js/" rel="tag"># Common.js</a>
           
-            <a href="/tags/requer-js/" rel="tag"># requer.js</a>
-          
             <a href="/tags/r-js/" rel="tag"># r.js</a>
+          
+            <a href="/tags/requere-js/" rel="tag"># requere.js</a>
           
         </div>
       
@@ -503,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -537,7 +591,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -641,6 +695,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#模块化的写法"><span class="nav-number">1.</span> <span class="nav-text">模块化的写法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原始写法"><span class="nav-number">1.1.</span> <span class="nav-text">原始写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象写法"><span class="nav-number">1.2.</span> <span class="nav-text">对象写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#立即执行函数写法"><span class="nav-number">1.3.</span> <span class="nav-text">立即执行函数写法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CommonJS"><span class="nav-number">2.</span> <span class="nav-text">CommonJS</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
