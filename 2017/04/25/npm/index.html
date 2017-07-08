@@ -89,16 +89,43 @@
 
 
 
-<meta name="description" content="Learning and Doing">
+<meta name="description" content="npm
+NPM(node package manager)通常称为node包管理器
+主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布
+
+npm的安装
+安装node后，npm会自动被安装
+
+12345678// 查看node版本node -v// 查看npm版本npm -v// 更新npm的版本sudo npm install npm -g
+npm包管理
+本地安装：package">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npm-npmscript-gulp-webpack">
 <meta property="og:url" content="http://yoursite.com/2017/04/25/npm/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="Learning and Doing">
-<meta property="og:updated_time" content="2017-07-08T01:09:46.000Z">
+<meta property="og:description" content="npm
+NPM(node package manager)通常称为node包管理器
+主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布
+
+npm的安装
+安装node后，npm会自动被安装
+
+12345678// 查看node版本node -v// 查看npm版本npm -v// 更新npm的版本sudo npm install npm -g
+npm包管理
+本地安装：package">
+<meta property="og:updated_time" content="2017-07-08T13:17:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm-npmscript-gulp-webpack">
-<meta name="twitter:description" content="Learning and Doing">
+<meta name="twitter:description" content="npm
+NPM(node package manager)通常称为node包管理器
+主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布
+
+npm的安装
+安装node后，npm会自动被安装
+
+12345678// 查看node版本node -v// 查看npm版本npm -v// 更新npm的版本sudo npm install npm -g
+npm包管理
+本地安装：package">
 
 
 
@@ -400,7 +427,34 @@
       
 
       
-        
+        <h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><ul>
+<li>NPM(node package manager)通常称为node包管理器</li>
+<li>主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布</li>
+</ul>
+<h2 id="npm的安装"><a href="#npm的安装" class="headerlink" title="npm的安装"></a>npm的安装</h2><ul>
+<li>安装node后，npm会自动被安装</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 查看node版本</span></div><div class="line">node -v</div><div class="line"></div><div class="line"><span class="comment">// 查看npm版本</span></div><div class="line">npm -v</div><div class="line"></div><div class="line"><span class="comment">// 更新npm的版本</span></div><div class="line">sudo npm install npm -g</div></pre></td></tr></table></figure>
+<h2 id="npm包管理"><a href="#npm包管理" class="headerlink" title="npm包管理"></a>npm包管理</h2><ul>
+<li>本地安装：package会被下载到当前所在目录，也只能在当前目录下使用</li>
+<li>全局安装：package会被下载到到特定的系统目录下，安装的package能够在所有目录下使用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 本地安装</span></div><div class="line">npm install grunt-cli</div><div class="line"></div><div class="line"><span class="comment">// 全局安装</span></div><div class="line">npm install -g grunt-cli</div><div class="line"><span class="comment">// 如果下载速度比较慢，可以使用淘宝的镜像</span></div><div class="line"><span class="comment">//先执行下面命令</span></div><div class="line"><span class="comment">//以后安装就用 cnpm 代替 npm</span></div><div class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></div><div class="line">cnpm install -g grunt-cli</div><div class="line"></div><div class="line"><span class="comment">// 卸载安装</span></div><div class="line">npm uninstall grunt-cli</div></pre></td></tr></table></figure>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><ul>
+<li>npm init 可以初始化生成一个package.json</li>
+<li>package.json 是一个 json 格式的文件，用来记录当前的 npm 包的相关信息</li>
+<li>name：包的名字</li>
+<li>version：版本号</li>
+<li>description：描述</li>
+<li>main：包的入口文件</li>
+<li>script： 运行脚本命令的npm命令行缩写</li>
+<li>author: 作者</li>
+<li>license: 版权信息</li>
+<li>dependencies：项目运行依赖，发布的时候，不需要发布依赖的包，只要发布其名字，别人下载的时候，会自动下载依赖的包</li>
+<li>devDependencies：开发依赖，只有自己本地开发时候用的依赖包，发布以后别人用不到</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="string">"name"</span>: <span class="string">"packageName"</span>, </div><div class="line"><span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line"><span class="string">"description"</span>: <span class="string">""</span>,</div><div class="line"><span class="string">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"author"</span>: <span class="string">"cg"</span>,</div><div class="line"><span class="string">"license"</span>: <span class="string">"ISC"</span>,</div><div class="line"><span class="string">"dependencies"</span>: &#123;&#125;,</div><div class="line"><span class="string">"devDependencies"</span>: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="npm-install-–save-app-与-npm-install-–save-dev-app"><a href="#npm-install-–save-app-与-npm-install-–save-dev-app" class="headerlink" title="npm install –save app 与 npm install –save-dev app"></a>npm install –save app 与 npm install –save-dev app</h2>
       
     </div>
 
@@ -503,8 +557,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -641,6 +704,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#npm"><span class="nav-number">1.</span> <span class="nav-text">npm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npm的安装"><span class="nav-number">1.1.</span> <span class="nav-text">npm的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm包管理"><span class="nav-number">1.2.</span> <span class="nav-text">npm包管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#package-json"><span class="nav-number">1.3.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-install-–save-app-与-npm-install-–save-dev-app"><span class="nav-number">1.4.</span> <span class="nav-text">npm install –save app 与 npm install –save-dev app</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

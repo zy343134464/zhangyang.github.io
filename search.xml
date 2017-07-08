@@ -47,7 +47,7 @@
     <entry>
       <title><![CDATA[npm-npmscript-gulp-webpack]]></title>
       <url>%2F2017%2F04%2F25%2Fnpm%2F</url>
-      <content type="text"></content>
+      <content type="text"><![CDATA[npm NPM(node package manager)通常称为node包管理器 主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布 npm的安装 安装node后，npm会自动被安装 12345678// 查看node版本node -v// 查看npm版本npm -v// 更新npm的版本sudo npm install npm -g npm包管理 本地安装：package会被下载到当前所在目录，也只能在当前目录下使用 全局安装：package会被下载到到特定的系统目录下，安装的package能够在所有目录下使用 12345678910111213// 本地安装npm install grunt-cli// 全局安装npm install -g grunt-cli// 如果下载速度比较慢，可以使用淘宝的镜像//先执行下面命令//以后安装就用 cnpm 代替 npmnpm install -g cnpm --registry=https://registry.npm.taobao.orgcnpm install -g grunt-cli// 卸载安装npm uninstall grunt-cli package.json npm init 可以初始化生成一个package.json package.json 是一个 json 格式的文件，用来记录当前的 npm 包的相关信息 name：包的名字 version：版本号 description：描述 main：包的入口文件 script： 运行脚本命令的npm命令行缩写 author: 作者 license: 版权信息 dependencies：项目运行依赖，发布的时候，不需要发布依赖的包，只要发布其名字，别人下载的时候，会自动下载依赖的包 devDependencies：开发依赖，只有自己本地开发时候用的依赖包，发布以后别人用不到 12345678910111213&#123;"name": "packageName", "version": "1.0.0","description": "","main": "index.js","scripts": &#123; "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"&#125;,"author": "cg","license": "ISC","dependencies": &#123;&#125;,"devDependencies": &#123;&#125;&#125; npm install –save app 与 npm install –save-dev app]]></content>
     </entry>
 
     
