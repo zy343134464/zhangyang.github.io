@@ -356,60 +356,6 @@
   </entry>
   
   <entry>
-    <title>boostrap基础</title>
-    <link href="http://yoursite.com/2017/05/15/boostrap/"/>
-    <id>http://yoursite.com/2017/05/15/boostrap/</id>
-    <published>2017-05-15T15:16:03.000Z</published>
-    <updated>2017-06-25T12:48:16.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="boostrap" scheme="http://yoursite.com/tags/boostrap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>webpack</title>
-    <link href="http://yoursite.com/2017/05/07/webpack/"/>
-    <id>http://yoursite.com/2017/05/07/webpack/</id>
-    <published>2017-05-07T15:14:59.000Z</published>
-    <updated>2017-06-04T15:45:46.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>less</title>
-    <link href="http://yoursite.com/2017/05/05/less/"/>
-    <id>http://yoursite.com/2017/05/05/less/</id>
-    <published>2017-05-05T15:14:51.000Z</published>
-    <updated>2017-06-04T15:45:42.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="less" scheme="http://yoursite.com/tags/less/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSS3基础</title>
     <link href="http://yoursite.com/2017/04/30/css3/"/>
     <id>http://yoursite.com/2017/04/30/css3/</id>
@@ -446,11 +392,11 @@
   </entry>
   
   <entry>
-    <title>node.js、npm、gulp、brower-sync</title>
-    <link href="http://yoursite.com/2017/04/25/gulp/"/>
-    <id>http://yoursite.com/2017/04/25/gulp/</id>
+    <title>npm-npmscript-gulp-webpack</title>
+    <link href="http://yoursite.com/2017/04/25/npm/"/>
+    <id>http://yoursite.com/2017/04/25/npm/</id>
     <published>2017-04-25T15:13:19.000Z</published>
-    <updated>2017-06-04T15:43:10.000Z</updated>
+    <updated>2017-07-08T01:09:46.000Z</updated>
     
     <summary type="html">
     
@@ -465,7 +411,9 @@
     
       <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
     
-      <category term="brower-sync" scheme="http://yoursite.com/tags/brower-sync/"/>
+      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
+    
+      <category term="npmscript" scheme="http://yoursite.com/tags/npmscript/"/>
     
   </entry>
   
@@ -474,7 +422,7 @@
     <link href="http://yoursite.com/2017/04/18/modular/"/>
     <id>http://yoursite.com/2017/04/18/modular/</id>
     <published>2017-04-18T15:14:17.000Z</published>
-    <updated>2017-07-07T05:13:24.000Z</updated>
+    <updated>2017-07-07T16:14:54.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模块化的写法"><a href="#模块化的写法" class="headerlink" title="模块化的写法"></a>模块化的写法</h1><ul>
 <li>一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块<a id="more"></a>
@@ -628,7 +576,9 @@
 <li>如果要加载它们的话，必须先定义它们的特征</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// shim属性，专门用来配置不兼容的模块。具体来说，每个模块要定义</span></div><div class="line">（<span class="number">1</span>）exports值（输出的变量名），表明这个模块外部调用时的名称</div><div class="line">（<span class="number">2</span>）deps数组，表明该模块的依赖性</div><div class="line"><span class="built_in">require</span>.config(&#123;</div><div class="line">　　<span class="attr">shim</span>: &#123;</div><div class="line"></div><div class="line">　　　　<span class="string">'underscore'</span>:&#123;</div><div class="line">　　　　　　<span class="attr">exports</span>: <span class="string">'_'</span></div><div class="line">　　　　&#125;,</div><div class="line">　　　　<span class="string">'backbone'</span>: &#123;</div><div class="line">　　　　　　<span class="attr">deps</span>: [<span class="string">'underscore'</span>, <span class="string">'jquery'</span>],</div><div class="line">　　　　　　<span class="attr">exports</span>: <span class="string">'Backbone'</span></div><div class="line">　　　　&#125;</div><div class="line">　　&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// jQuery的插件可以这样定义</span></div><div class="line">shim: &#123;</div><div class="line">　　<span class="string">'jquery.scroll'</span>: &#123;</div><div class="line">　　　　<span class="attr">deps</span>: [<span class="string">'jquery'</span>],</div><div class="line">　　　　<span class="attr">exports</span>: <span class="string">'jQuery.fn.scroll'</span></div><div class="line">　　&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">// index.html</div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">data-main</span>=<span class="string">"app"</span> <span class="attr">src</span>=<span class="string">"lib/require.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line">// app.js</div><div class="line">requirejs.config(&#123;</div><div class="line">    baseUrl: 'lib',</div><div class="line">    paths: &#123;</div><div class="line">        app: '../app'</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// Start loading the main app file. Put all of</div><div class="line">// your application logic in there.</div><div class="line">requirejs(['app/main']);</div><div class="line"></div><div class="line">// app/main.js</div><div class="line">define(function (require) &#123;</div><div class="line"></div><div class="line">    var messages = require('./messages');</div><div class="line"></div><div class="line">    var print = require('print');</div><div class="line"></div><div class="line">    print(messages.getHello());</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// app/message.js</div><div class="line">define(function () &#123;</div><div class="line">    return &#123;</div><div class="line">        getHello: function () &#123;</div><div class="line">            return 'Hello World';</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// lib/print.js</div><div class="line">define(function () &#123;</div><div class="line">    return function print(msg) &#123;</div><div class="line">        console.log(msg);</div><div class="line">    &#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>]]></content>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// index.html</span></div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;script data-main="app" src="lib/require.js"&gt;&lt;/script&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;h1&gt;Hello World&lt;/h1&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div><div class="line"></div><div class="line"><span class="comment">// app.js</span></div><div class="line">requirejs.config(&#123;</div><div class="line">    <span class="attr">baseUrl</span>: <span class="string">'lib'</span>, <span class="comment">//基目录</span></div><div class="line">    paths: &#123;</div><div class="line">        <span class="attr">app</span>: <span class="string">'../app'</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Start loading the main app file. Put all of</span></div><div class="line"><span class="comment">// your application logic in there.</span></div><div class="line">requirejs([<span class="string">'app/main'</span>]);</div><div class="line"></div><div class="line"><span class="comment">// app/main.js</span></div><div class="line">define([<span class="string">"./messages"</span>,<span class="string">"../lib/print"</span>],<span class="function"><span class="keyword">function</span> (<span class="params">messages,print</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> print(messages.getHello());</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// app/message.js</span></div><div class="line">define(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">getHello</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="string">'Hello World'</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// lib/print.js</span></div><div class="line">define(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params">msg</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(msg);</div><div class="line">    &#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="r-js工具打包"><a href="#r-js工具打包" class="headerlink" title="r.js工具打包"></a>r.js工具打包</h1>]]></content>
     
     <summary type="html">
     
@@ -4117,6 +4067,725 @@
     
     
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML基础</title>
+    <link href="http://yoursite.com/2017/02/23/html/"/>
+    <id>http://yoursite.com/2017/02/23/html/</id>
+    <published>2017-02-22T17:42:52.000Z</published>
+    <updated>2017-06-12T14:41:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="HTML、XML、XHTML的区别"><a href="#HTML、XML、XHTML的区别" class="headerlink" title="HTML、XML、XHTML的区别"></a>HTML、XML、XHTML的区别</h1><a id="more"></a>
+<h2 id="HTML-Hypertext-Markup-language"><a href="#HTML-Hypertext-Markup-language" class="headerlink" title="HTML(Hypertext Markup language)"></a>HTML(Hypertext Markup language)</h2><ul>
+<li>超文本标记语言,语法较为松散的、字母大小写可以混用、标签不闭合、浏览器都能以自己的方式读取(有可能误解),不会出现报错</li>
+</ul>
+<h2 id="XML-Extensible-Markup-Language"><a href="#XML-Extensible-Markup-Language" class="headerlink" title="XML(Extensible Markup Language)"></a>XML(Extensible Markup Language)</h2><ul>
+<li>可扩展标记语言,是用来存储数据结构的语言,它是严格的语言,书写标签需要按规范,否则存储的数据就会出问题</li>
+</ul>
+<h2 id="XHTML-Extensible-Hypertext-Markup-language"><a href="#XHTML-Extensible-Hypertext-Markup-language" class="headerlink" title="XHTML(Extensible Hypertext Markup language)"></a>XHTML(Extensible Hypertext Markup language)</h2><ul>
+<li>可扩展超文本标记语言,它类似HTML语言,不过它的语法是严格的,书写更加规范</li>
+</ul>
+<h1 id="HTML语义化"><a href="#HTML语义化" class="headerlink" title="HTML语义化"></a>HTML语义化</h1><ul>
+<li>根据内容接过话,选择适合的标签</li>
+<li>便于开发者阅读和写出更优雅的代码</li>
+<li>便于浏览器的爬虫和机器很好的解析</li>
+</ul>
+<h1 id="内容、样式、行为分离原则"><a href="#内容、样式、行为分离原则" class="headerlink" title="内容、样式、行为分离原则"></a>内容、样式、行为分离原则</h1><ul>
+<li>内容(HTML):页面的内容与结构,不管样式</li>
+<li>样式(CSS):负责页面的样式,通过修改一个CSS代码来控制整个页面的样式,更加合理高效</li>
+<li>行为(JavaScirpt):控制页面的行为</li>
+</ul>
+<h1 id="常见的meta标签"><a href="#常见的meta标签" class="headerlink" title="常见的meta标签"></a>常见的meta标签</h1><ul>
+<li>meta标签用于描述HTML的元数据,它不会显示在网上,但是机器可以识别</li>
+</ul>
+<h2 id="lt-meta-charset-”uft-8”-gt"><a href="#lt-meta-charset-”uft-8”-gt" class="headerlink" title="&lt;meta charset=”uft-8”&gt;"></a>&lt;meta charset=”uft-8”&gt;</h2><ul>
+<li>声明文档的使用的字符编码</li>
+</ul>
+<h2 id="lt-meta-http-equiv-”X-UA-Compatible”-content-”IE-edge-chrome-1”-gt"><a href="#lt-meta-http-equiv-”X-UA-Compatible”-content-”IE-edge-chrome-1”-gt" class="headerlink" title="&lt;meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1”&gt;"></a>&lt;meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1”&gt;</h2><ul>
+<li>IE内核,用最新的标准渲染</li>
+<li>chrome内核,用chrome标准渲染</li>
+</ul>
+<h3 id="http-equiv属性"><a href="#http-equiv属性" class="headerlink" title="http-equiv属性"></a>http-equiv属性</h3><ul>
+<li>相当于http的文件头作用,向浏览器传送html文档时先传递特定的信息以辅助页面显示;</li>
+<li>对应的有content属性进行说明</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=gb_2312-80"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Language"</span> <span class="attr">content</span>=<span class="string">"zh-CN"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Refresh"</span> <span class="attr">content</span>=<span class="string">"n;url=http://yourlink"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Expires"</span> <span class="attr">content</span>=<span class="string">"Mon,12 May 2001 00:20:00 GMT"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"set-cookie"</span> <span class="attr">content</span>=<span class="string">"Mon,12 May 2001 00:20:00 GMT"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"windows-Target"</span> <span class="attr">content</span>=<span class="string">"_top"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="lt-meta-name-”viewport”-content-”width-device-width-initial-scale-1-maximum-scale-1-minimum-scale-1-user-scalable-no”-gt"><a href="#lt-meta-name-”viewport”-content-”width-device-width-initial-scale-1-maximum-scale-1-minimum-scale-1-user-scalable-no”-gt" class="headerlink" title="&lt;meta name=”viewport” content=”width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no”&gt;"></a>&lt;meta name=”viewport” content=”width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no”&gt;</h2><ul>
+<li>当页面需要在移动端展示的时候,加上这条标签,移动端展示就能正常</li>
+<li>device-width:设备的宽度</li>
+<li>initial-scale:初始的缩放比例</li>
+<li>maximum-scale:允许用户缩放到最大的比例</li>
+<li>minimum-scale:允许用户缩放到最小的比例</li>
+<li>user-scalable:用户是否可以手动缩放</li>
+</ul>
+<h2 id="lt-meta-name-”keywords”-content-”谷歌-浏览器”-gt"><a href="#lt-meta-name-”keywords”-content-”谷歌-浏览器”-gt" class="headerlink" title="&lt;meta name=”keywords” content=”谷歌 浏览器”&gt;"></a>&lt;meta name=”keywords” content=”谷歌 浏览器”&gt;</h2><ul>
+<li>告诉浏览器我的页面关键字是谷歌 浏览器,这对搜索引擎优化(SEO)有帮助</li>
+</ul>
+<h2 id="lt-meta-name-”description”-content-”最好的浏览器是谷歌”-gt"><a href="#lt-meta-name-”description”-content-”最好的浏览器是谷歌”-gt" class="headerlink" title="&lt;meta name=”description” content=”最好的浏览器是谷歌”&gt;"></a>&lt;meta name=”description” content=”最好的浏览器是谷歌”&gt;</h2><ul>
+<li>对我的页面进行一个描述,这对搜索引擎优化(SEO)有帮助</li>
+</ul>
+<h3 id="name属性"><a href="#name属性" class="headerlink" title="name属性"></a>name属性</h3><ul>
+<li>元数据的名称</li>
+<li>对应的有content属性进行说明</li>
+</ul>
+<h1 id="文档声明的作用、严格模式和混杂模式、-lt-doctype-html-gt-的作用"><a href="#文档声明的作用、严格模式和混杂模式、-lt-doctype-html-gt-的作用" class="headerlink" title="文档声明的作用、严格模式和混杂模式、&lt;!doctype html&gt;的作用"></a>文档声明的作用、严格模式和混杂模式、&lt;!doctype html&gt;的作用</h1><h2 id="文档声明的作用"><a href="#文档声明的作用" class="headerlink" title="文档声明的作用"></a>文档声明的作用</h2><ul>
+<li>告诉浏览器该文档的类型,以哪种方式解析文档</li>
+</ul>
+<h2 id="严格模式和混杂模式"><a href="#严格模式和混杂模式" class="headerlink" title="严格模式和混杂模式"></a>严格模式和混杂模式</h2><ul>
+<li>严格模式是指浏览器按照W3C标准来解析网页,发生在加文档声明的情况</li>
+<li>混杂模式指浏览器给网页提供了相对宽松的方式来解析页面,发生在不加文档声明的情况</li>
+</ul>
+<h2 id="lt-doctype-html-gt"><a href="#lt-doctype-html-gt" class="headerlink" title="&lt;!doctype html&gt;"></a>&lt;!doctype html&gt;</h2><ul>
+<li>告诉浏览器,这是HTML5的文档类型</li>
+</ul>
+<h1 id="浏览器乱码"><a href="#浏览器乱码" class="headerlink" title="浏览器乱码"></a>浏览器乱码</h1><ul>
+<li>原因:没有&lt;meta charset=”utf-8”&gt;;浏览器解析时使用的编码和保存文档时使用的编码不匹配</li>
+<li>解决方法:加&lt;meta charset=”utf-8”&gt;</li>
+</ul>
+<h1 id="常见浏览器及内核"><a href="#常见浏览器及内核" class="headerlink" title="常见浏览器及内核"></a>常见浏览器及内核</h1><table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>内核</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IE</td>
+<td>Trident</td>
+</tr>
+<tr>
+<td>Mozilla FireFox</td>
+<td>Gecko </td>
+</tr>
+<tr>
+<td>Google Chrome</td>
+<td>Webkit</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>Webkit</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>Presto</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常见的标签及使用场景"><a href="#常见的标签及使用场景" class="headerlink" title="常见的标签及使用场景"></a>常见的标签及使用场景</h1><table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;！DOCTYPE&gt;</td>
+<td>定义文档类型</td>
+</tr>
+<tr>
+<td>&lt;html&gt;</td>
+<td>定义一个HTML文档</td>
+</tr>
+<tr>
+<td>&lt;title&gt;</td>
+<td>为文档定义一个标题</td>
+</tr>
+<tr>
+<td>&lt;body&gt;</td>
+<td>定义文档的主体</td>
+</tr>
+<tr>
+<td>&lt;h1&gt;~&lt;h6&gt;</td>
+<td>定义HTML标题</td>
+</tr>
+<tr>
+<td>&lt;p&gt;</td>
+<td>定义一个段落</td>
+</tr>
+<tr>
+<td>&lt;br&gt;</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>&lt;hr&gt;</td>
+<td>定义水平线</td>
+</tr>
+<tr>
+<td>&lt;!–注释–&gt;</td>
+<td>定义一个注释</td>
+</tr>
+<tr>
+<td>&lt;a href=”#”&gt;</td>
+<td>定义一个链接</td>
+</tr>
+<tr>
+<td>&lt;img src=”#”&gt;</td>
+<td>定义一个图片</td>
+</tr>
+<tr>
+<td>&lt;ul&gt;</td>
+<td>定义一个无序列表</td>
+</tr>
+<tr>
+<td>&lt;ol&gt;</td>
+<td>定义一个有序列表</td>
+</tr>
+<tr>
+<td>&lt;li&gt;</td>
+<td>定义一个列表项</td>
+</tr>
+<tr>
+<td>&lt;dl&gt;</td>
+<td>自定义列表</td>
+</tr>
+<tr>
+<td>&lt;dt&gt;</td>
+<td>自定义列表项</td>
+</tr>
+<tr>
+<td>&lt;dd&gt;</td>
+<td>自定义列表描述</td>
+</tr>
+<tr>
+<td>&lt;table&gt;</td>
+<td>定义一个表格</td>
+</tr>
+<tr>
+<td>&lt;th&gt;</td>
+<td>定义表格的表头单元格（table head）</td>
+</tr>
+<tr>
+<td>&lt;tr&gt;</td>
+<td>定义表格中的行</td>
+</tr>
+<tr>
+<td>&lt;td&gt;</td>
+<td>定义表格的中的单元内容（table data）</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">   <span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>,<span class="selector-tag">h4</span>,<span class="selector-tag">h5</span>,<span class="selector-tag">h6</span>&#123;</div><div class="line">     <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">     <span class="attribute">padding</span>:<span class="number">0</span>;</div><div class="line">   &#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h4</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h5</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h6</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h6</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="comment">&lt;!-- 你好 --&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://note.youdao.com/favicon.ico"</span> <span class="attr">alt</span>=<span class="string">"图片"</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>苹果<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>香蕉<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>西瓜<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">ol</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>苹果<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>香蕉<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>西瓜<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">cellpadding</span>=<span class="string">"4"</span> <span class="attr">cellspacing</span>=<span class="string">"10"</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">width</span>=<span class="string">"100%"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">caption</span>&gt;</span>Table<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">colgroup</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">col</span> <span class="attr">span</span>=<span class="string">"2"</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">col</span> <span class="attr">align</span>=<span class="string">"right"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>A<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>B<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>C<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"right"</span>&gt;</span>00<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">valign</span>=<span class="string">"bottom"</span>&gt;</span>01<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>02<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>10<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tfoot</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>20<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>21<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>22<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tfoot</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-2.png" alt="image"></p>
+<h1 id="HTML表单"><a href="#HTML表单" class="headerlink" title="HTML表单"></a>HTML表单</h1><h2 id="form表单"><a href="#form表单" class="headerlink" title="form表单"></a>form表单</h2><ul>
+<li>用来采集用户输入的信息,提交到服务器,实现页面的交互</li>
+<li>表单用&lt;form&gt;…&lt;/form&gt;标签包起来,这样浏览器才能通过标签界定要上传的表单内容</li>
+</ul>
+<h2 id="常见input标签"><a href="#常见input标签" class="headerlink" title="常见input标签"></a>常见input标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--  输入单行文本 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"用户名"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    </div><div class="line">    <span class="comment">&lt;!--  输入密码 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入密码"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">    <span class="comment">&lt;!--  输入多选框 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"read"</span> <span class="attr">checked</span>&gt;</span>阅读</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"sport"</span>&gt;</span>运动</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"music"</span>&gt;</span>音乐<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">    <span class="comment">&lt;!-- 输入单选框 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"male"</span> <span class="attr">checked</span>&gt;</span>男</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span>女<span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">    </div><div class="line">    <span class="comment">&lt;!-- 输入下拉列表 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"city"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"beijing"</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"shanghai"</span>&gt;</span>上海<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ningbo"</span> <span class="attr">selected</span>&gt;</span>宁波<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"wuxi"</span>&gt;</span>无锡<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    </div><div class="line">    <span class="comment">&lt;!--  输入文本域 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"article"</span> <span class="attr">cols</span>=<span class="string">"30"</span> <span class="attr">rows</span>=<span class="string">"10"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">    <span class="comment">&lt;!-- 按钮 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮"</span>&gt;</span></div><div class="line">  </div><div class="line">    <span class="comment">&lt;!-- 提交 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></div><div class="line">      </div><div class="line">    <span class="comment">&lt;!-- 重置 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span> <span class="attr">value</span>=<span class="string">"重置"</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line">  </div><div class="line">    </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-3.png" alt="image"></p>
+<h1 id="get、post方式"><a href="#get、post方式" class="headerlink" title="get、post方式"></a>get、post方式</h1><ul>
+<li>创建表单的时候选择的两种传输数据的方式</li>
+</ul>
+<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><ul>
+<li>传输方式是把收集的信息组合成一个URL,向后端发送</li>
+<li>多用于向后台得到数据,不会修改数据库</li>
+<li>本质上是URL的拼接,受URL长度的限制,保密性差,输送信息小</li>
+<li>得到的结果对应一个URL,结果页面会被浏览器缓存</li>
+<li>只能向服务器发送ASCII字符</li>
+</ul>
+<h2 id="post"><a href="#post" class="headerlink" title="post"></a>post</h2><ul>
+<li>传输方式是把数据放着HTTP包里传输的,信息不会显示在URL上</li>
+<li>多用于向后台输入数据,会修改数据库</li>
+<li>保密性相对好,输送信息相对大</li>
+<li>不会有浏览器缓存</li>
+<li>可以向服务器发送整个IS0-10646的字符</li>
+</ul>
+<blockquote>
+<ul>
+<li>保密性来说，post比get好</li>
+<li>数据安全来说，get比post好</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="name属性-1"><a href="#name属性-1" class="headerlink" title="name属性"></a>name属性</h1><ul>
+<li>对于前端来说,可以区分同一个name是同一组数据</li>
+<li>对于后端来说，只有设置name的元素才能提交它们相对应的值,对发送过来的数据进行归类,从而在数据库获取数据</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"read"</span> <span class="attr">checked</span>&gt;</span>阅读</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"sport"</span>&gt;</span>运动</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"music"</span>&gt;</span>音乐</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-4.png" alt="image"></p>
+<h1 id="radio属性"><a href="#radio属性" class="headerlink" title="radio属性"></a>radio属性</h1><ul>
+<li>name属性的值相同是一组</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"male"</span> <span class="attr">checked</span>&gt;</span>男</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span>女</div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">value</span>=<span class="string">"adult"</span> <span class="attr">checked</span>&gt;</span>已成年</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">value</span>=<span class="string">"child"</span>&gt;</span>未成年</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-5.png" alt="image"></p>
+<h1 id="placeholder属性"><a href="#placeholder属性" class="headerlink" title="placeholder属性"></a>placeholder属性</h1><ul>
+<li>提示文本,帮助用户理解要输入什么信息</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"用户名"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入密码"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>.</div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-6.png" alt="image"></p>
+<h1 id="type-hidden隐藏域"><a href="#type-hidden隐藏域" class="headerlink" title="type=hidden隐藏域"></a>type=hidden隐藏域</h1><ul>
+<li>页面中对于用户是不可见的,在表单中插入隐藏域目的是在于收集或发送信息,便于后端处理数据</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"#"</span> <span class="attr">value</span>=<span class="string">"#"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="表单的用法"><a href="#表单的用法" class="headerlink" title="表单的用法"></a>表单的用法</h1><ul>
+<li>单行文本</li>
+<li>输入密码</li>
+<li>单选框</li>
+<li>多选框</li>
+<li>文本域</li>
+<li>下拉菜单</li>
+<li>提交按钮</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS Bin<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"login"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"username"</span>&gt;</span>姓名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"用户名"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"password"</span>&gt;</span>密码：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入密码"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sex"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>性别：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex1"</span> <span class="attr">value</span>=<span class="string">"male"</span>&gt;</span> 男</div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex1"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span> 女</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span> </div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"orientation"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>取向：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex2"</span> <span class="attr">value</span>=<span class="string">"male"</span>&gt;</span> 男</div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex2"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span> 女</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hobby"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>爱好：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"dota"</span>&gt;</span> dota</div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"tour"</span>&gt;</span> 旅游</div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"pet"</span>&gt;</span> 宠物</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"textarea"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>评论：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">textarea</span>&gt;</span></div><div class="line"></div><div class="line">      <span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mycar"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>我的car：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"car"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"BENZ"</span>&gt;</span>奔驰<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"BMW"</span>&gt;</span>宝马<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"FORD"</span>&gt;</span>福特<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"SB"</span> <span class="attr">selected</span>&gt;</span>萨博<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-7.png" alt="image"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;HTML、XML、XHTML的区别&quot;&gt;&lt;a href=&quot;#HTML、XML、XHTML的区别&quot; class=&quot;headerlink&quot; title=&quot;HTML、XML、XHTML的区别&quot;&gt;&lt;/a&gt;HTML、XML、XHTML的区别&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
+    
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim、linus、git命令行</title>
+    <link href="http://yoursite.com/2017/02/21/gitlinuxvim/"/>
+    <id>http://yoursite.com/2017/02/21/gitlinuxvim/</id>
+    <published>2017-02-20T17:58:48.000Z</published>
+    <updated>2017-06-17T18:50:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vim命令行基础"><a href="#vim命令行基础" class="headerlink" title="vim命令行基础"></a>vim命令行基础</h1><ul>
+<li>vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.</li>
+</ul>
+<h2 id="常用命令入门"><a href="#常用命令入门" class="headerlink" title="常用命令入门"></a>常用命令入门</h2><ul>
+<li>查看文件：<strong>cat test.html</strong>  <a id="more"></a></li>
+<li>查看并编辑：<strong>vim test.html</strong> ,按下 <strong>i</strong> 会发现左下角出现 –INSERT– 表示可以输入内容</li>
+<li>保存文件：按 <strong>esc</strong> , <strong>shift +</strong> : ,左下角出现 : ,输入 <strong>w</strong> 表示保存 ,输入 <strong>q</strong> 表示退出 ,输入 <strong>wq</strong> 表示保存退出</li>
+<li>光标操作：按 <strong>esc</strong> ,使用 <strong>k</strong> 上一行, <strong>j</strong> 下一行 , <strong>h</strong> 向前, <strong>l</strong> 向后,也可以使用键盘箭头键来实现</li>
+<li>删除内容：按 <strong>esc</strong> ,使用光标移动到想要删除的位置 <strong>dd</strong> 删除当前行, <strong>x</strong> 删除当前一个, <strong>5x</strong>删除后面5个, <strong>5X</strong> 删除前面5个, <strong>u</strong> 恢复前一次操作  </li>
+<li>快速翻页：按 <strong>ctrl + d</strong> 向下滚动半屏, <strong>ctrl + u</strong> 向上滚动半屏, <strong>ctrl + f</strong> 向下滚动一屏, <strong>ctrl + d</strong> 向上滚动半屏</li>
+<li>给文本添加行号: 按 <strong>esc</strong> ,输入 <strong>:set nu</strong> , <strong>ctrl + g</strong> 显示此时光标所在位置的行号和总列数,输入 <strong>:set nonu</strong>取消行号,快速切换行号按 <strong>esc</strong> ,输入 <strong>: 0</strong> 切换到头部,例如输入<strong>:20</strong>光标切换到20行号位置.</li>
+<li>跳转段落结尾: 按 <strong>esc</strong> , <strong>shift + (</strong> 跳转到上一段落, <strong>shift +)</strong> 跳转到后一段落 </li>
+<li>实现复制和粘贴: 按 <strong>esc</strong> ,在光标所在位置按下 <strong>yy</strong> 表示复制当前行 , <strong>p</strong> 表示粘贴    </li>
+<li>查找某个字符串: 按<strong>esc</strong> , 输入<strong>:/foo</strong> 表示搜索字符串foo</li>
+</ul>
+<h2 id="常用命令基础"><a href="#常用命令基础" class="headerlink" title="常用命令基础"></a>常用命令基础</h2><h3 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h,j,k,l</td>
+<td>分别表示左,下,右,上</td>
+</tr>
+<tr>
+<td>ctrl + f</td>
+<td>上一页</td>
+</tr>
+<tr>
+<td>ctrl + b</td>
+<td>下一页</td>
+</tr>
+<tr>
+<td>o</td>
+<td>开启新的一行</td>
+</tr>
+<tr>
+<td>^</td>
+<td>一行的开始</td>
+</tr>
+<tr>
+<td>$</td>
+<td>一行的结尾</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>文档的第一行</td>
+</tr>
+<tr>
+<td>[N]G</td>
+<td>文档的第N行或者最后一行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>分别表示左,下,右,上</td>
+</tr>
+<tr>
+<td>J</td>
+<td>合并下一行到上一行</td>
+</tr>
+<tr>
+<td>s</td>
+<td>删除光标所在的一个字符,光标还在当行</td>
+</tr>
+<tr>
+<td>S</td>
+<td>删除光标所在的一行,光标还在当行,不同于dd</td>
+</tr>
+<tr>
+<td>u</td>
+<td>撤销上一步操作</td>
+</tr>
+<tr>
+<td>ctrl + r</td>
+<td>恢复上一步操作</td>
+</tr>
+<tr>
+<td>.</td>
+<td>重复最后一个命令 </td>
+</tr>
+<tr>
+<td>~</td>
+<td>变换为大写</td>
+</tr>
+</tbody>
+</table>
+<h3 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>插入到光标前面</td>
+</tr>
+<tr>
+<td>I</td>
+<td>插入到行的开始位置</td>
+</tr>
+<tr>
+<td>a</td>
+<td>插入到光标的后面</td>
+</tr>
+<tr>
+<td>A</td>
+<td>插入到行的最后位置</td>
+</tr>
+<tr>
+<td>o,O</td>
+<td>新开一行</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>关闭插入模式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:w</td>
+<td>保存</td>
+</tr>
+<tr>
+<td>:wq</td>
+<td>保存并关闭</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>关闭(已保存)</td>
+</tr>
+<tr>
+<td>:q!</td>
+<td>强制关闭</td>
+</tr>
+</tbody>
+</table>
+<h3 id="剪切-赋值"><a href="#剪切-赋值" class="headerlink" title="剪切/赋值"></a>剪切/赋值</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v</td>
+<td>选中一个或多个字符</td>
+</tr>
+<tr>
+<td>V</td>
+<td>选中一行</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除一行</td>
+</tr>
+<tr>
+<td>dw</td>
+<td>删除一个单词</td>
+</tr>
+<tr>
+<td>x</td>
+<td>删除后一个字符</td>
+</tr>
+<tr>
+<td>X</td>
+<td>删除前一个字符</td>
+</tr>
+<tr>
+<td>D</td>
+<td>删除一行最后一个字符</td>
+</tr>
+<tr>
+<td>[N]yy</td>
+<td>复制一行或者N行</td>
+</tr>
+<tr>
+<td>yw</td>
+<td>复制一个单词</td>
+</tr>
+<tr>
+<td>p</td>
+<td>粘贴</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gt-gt-简明vim命令行"><a href="#gt-gt-简明vim命令行" class="headerlink" title="&gt;&gt;简明vim命令行"></a>&gt;&gt;<a href="http://www.cnblogs.com/xianyulaodi/p/6547807.html" target="_blank" rel="external">简明vim命令行</a></h3><hr>
+<h1 id="Linux命令行基础"><a href="#Linux命令行基础" class="headerlink" title="Linux命令行基础"></a>Linux命令行基础</h1><h2 id="常用命令行"><a href="#常用命令行" class="headerlink" title="常用命令行"></a>常用命令行</h2><ul>
+<li>pwd 查看当前完整路径</li>
+<li>ls 不包括隐藏文件</li>
+<li>ls -a 查看当前目录下所有文件(包括隐藏文件)</li>
+<li>ls -al 查看当前目录下所有文件(包括隐藏文件)的详细信息</li>
+<li>cd 切换目录(cd /c/project、cd code、cd ../css、cd ~/Desktop)</li>
+<li>touch 创建文件 (touch readme.md)</li>
+<li>rm 删除文件,不能删除文件夹(rm readme.md)</li>
+<li>rm -rf 删除文件夹(rm -rf node_modules)</li>
+<li>mv 重命名文件(mv readme.md README.md)</li>
+<li>mkdir 创建文件夹(mkdir projects)</li>
+<li>mkdir test; mv test test2; rm -rf test2; 组合操作,分号间隔，若第一个命令错了也会依次执行后面的命令</li>
+<li>mkdir test &amp;&amp; mv test test2 组合操作，&amp;&amp;间隔，若第一个命令错了则不会执行后面的命令</li>
+<li>cp 复制，复制文件用法cp a b(两个参数)；复制文件夹用法cp -r test test2</li>
+<li>echo 1 &gt; test.txt 表示在test.txt输入1，但是后续再次输入会将上一次的覆盖</li>
+<li>cat 把文件内容输出出来，用法cat test.txt； cat test.txt | less 可以一页页的看，K往上看，G往下看，Q退出</li>
+<li>head 显示文本的前几行，要确定是前几行的用法为head -n 3 test.txt，这是显示文本的前三行</li>
+<li>tail 与head相反，是显示文本的后几行</li>
+<li>du 显示目录大小</li>
+<li>du -sh 总的大小</li>
+<li>-xxx –help xxx -h man xxx 查看帮助文档</li>
+<li>which xxx 表示命令在哪里</li>
+</ul>
+<h2 id="文件路径"><a href="#文件路径" class="headerlink" title="文件路径"></a>文件路径</h2><ul>
+<li>cd / 根目录</li>
+<li>cd ~ 家目录</li>
+<li>cd books(cd ./books) 当前目录</li>
+<li>cd ..(cd ../css) 上级目录</li>
+</ul>
+<hr>
+<h1 id="Git命令行基础"><a href="#Git命令行基础" class="headerlink" title="Git命令行基础"></a>Git命令行基础</h1><ul>
+<li>Git是一款免费、开源的分布式版本控制系统(CVS)，用于敏捷高效地处理任何或小或大的项目</li>
+</ul>
+<h2 id="建立公钥与私钥的练习"><a href="#建立公钥与私钥的练习" class="headerlink" title="建立公钥与私钥的练习"></a>建立公钥与私钥的练习</h2><ul>
+<li>本地库与远程库需要配置,才能正常链接</li>
+</ul>
+<h3 id="gt-gt-ssh配置"><a href="#gt-gt-ssh配置" class="headerlink" title="&gt;&gt;ssh配置"></a>&gt;&gt;<a href="https://segmentfault.com/a/1190000002645623" target="_blank" rel="external">ssh配置</a></h3><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>git config user.name 用户名（加–global表示以后都不用再输入了）</li>
+<li>git config user.email 电子邮箱（加–global表示以后都不用再输入了）</li>
+<li>git init 在本地生成库</li>
+<li>git add xxx 将xxx文件添加进缓存区</li>
+<li>git add . 将所有的文件都添加进缓存区</li>
+<li>git commit -am “代码提交信息” 提交代码至本地仓库，并产生版本号</li>
+<li>git clone git@github.com:someonexxxx.git 将代码仓库clone到本地</li>
+<li>git status -sb 查看文件状态</li>
+<li>git push origin master(本地分支名):master(远程分支名) 推送到远程仓库</li>
+<li>git pull origin master 同步github库的内容</li>
+<li>git remote add origin xxxxx 在本地添加远程仓库</li>
+<li>git branch xxx 创建新分支并命名</li>
+<li>git branch 查看有多少分支</li>
+<li>git checkout xxx 移动到xxx分支上</li>
+<li>git merge 合并分支</li>
+<li>git branch -d xxx 删除分支</li>
+<li>git reset commit 回滚到指定的commit(后面的信息删除)</li>
+<li>git revert commit 撤销指定的commit(只是增加一个信息撤销)</li>
+</ul>
+<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><ul>
+<li>github必须先新建一个空仓库</li>
+</ul>
+<h3 id="基本概念（四个区）"><a href="#基本概念（四个区）" class="headerlink" title="基本概念（四个区）"></a>基本概念（四个区）</h3><ul>
+<li>工作文件夹：不加入缓冲区git不管</li>
+<li>暂存区 Stage：纳入git管理记录</li>
+<li>本地仓库 Local：纳入版本控制（是本地的库，其他人不生效）</li>
+<li>远程仓库 Remote：在远程服务器，可使用ssh/git/https协议</li>
+</ul>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ul>
+<li>已修改(modified) 修改了某个文件，但还没有提交保存(touch a.md、echo “hello” &gt; a.md)</li>
+<li>已暂存(staged) 把已修改的文件放在下次提交时要保存的清单中(git add a.md、git add .)</li>
+<li>已提交(mommitted) 该文件已经被安全地保存在本地数据库中了(commit add -am “add a.md”)</li>
+</ul>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/gitlinuxvim-1.png" alt="image"></p>
+<h3 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h3><ul>
+<li>初次使用需要设置姓名和邮箱</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name "你的姓名"</div><div class="line">git config --global user.email johndoe@example.com</div></pre></td></tr></table></figure>
+<h3 id="clone-项目"><a href="#clone-项目" class="headerlink" title="clone 项目"></a>clone 项目</h3><ul>
+<li>用于把一个GitHub是的项目clone(下载)到本地变为本地仓库</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone git@github.com:jirengu/blog.git</div><div class="line"></div><div class="line">cd blog</div></pre></td></tr></table></figure>
+<h3 id="新增文件并写入内容"><a href="#新增文件并写入内容" class="headerlink" title="新增文件并写入内容"></a>新增文件并写入内容</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 创建文件</div><div class="line">touch a.md</div><div class="line"># 在文件里写入一个字符串  </div><div class="line">echo "hello" &gt; a.md</div><div class="line"># 查看文件状态</div><div class="line">git status</div></pre></td></tr></table></figure>
+<h3 id="保存文件到缓存区"><a href="#保存文件到缓存区" class="headerlink" title="保存文件到缓存区"></a>保存文件到缓存区</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 把当前目录下的新增和修改的文件添加到暂存区</div><div class="line">git add .</div><div class="line"># 查看文件状态</div><div class="line">git status</div></pre></td></tr></table></figure>
+<h3 id="提交到本地库"><a href="#提交到本地库" class="headerlink" title="提交到本地库"></a>提交到本地库</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># 把暂存区的更新提交到本地库</div><div class="line">git commit -am "add file"</div><div class="line">git status</div></pre></td></tr></table></figure>
+<h3 id="推送到远程库"><a href="#推送到远程库" class="headerlink" title="推送到远程库"></a>推送到远程库</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 把当前本地库里的改动推送到远程库(origin)的master 分支</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+<h3 id="修改删除文件"><a href="#修改删除文件" class="headerlink" title="修改删除文件"></a>修改删除文件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"># 把远程仓库的变动更新合并到本地仓库</div><div class="line">git pull</div><div class="line"></div><div class="line"># 修改文件</div><div class="line">vim a.md</div><div class="line">git add .</div><div class="line"></div><div class="line"># 这里需要注意，如果提交消息包含大量字符串，提交参数不用加 m</div><div class="line"># 此时会进入 vim 界面，按下i进入编辑状态，进行编辑</div><div class="line"># 编辑完成后按下 esc 进入命令态， 输入 :wq 保存退出 vim</div><div class="line">git commit -a</div><div class="line"></div><div class="line">git push origin master</div><div class="line"></div><div class="line">rm -rf a.md</div><div class="line">git add .(git rm a.md)</div><div class="line">git commit -am "删除a.md"</div><div class="line"></div><div class="line"># 如果之前已经git push origin master 过，后面可以直接简化成 git push</div><div class="line">git push</div></pre></td></tr></table></figure>
+<h2 id="复杂使用"><a href="#复杂使用" class="headerlink" title="复杂使用"></a>复杂使用</h2><ul>
+<li>本地创建一个 git 项目推送到远程空仓库</li>
+</ul>
+<h3 id="新建文件夹初始化git仓库-增加文件并写入内容-保存到缓存区-并提交到本地库"><a href="#新建文件夹初始化git仓库-增加文件并写入内容-保存到缓存区-并提交到本地库" class="headerlink" title="新建文件夹初始化git仓库,增加文件并写入内容,保存到缓存区,并提交到本地库"></a>新建文件夹初始化git仓库,增加文件并写入内容,保存到缓存区,并提交到本地库</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">mkdir newProject</div><div class="line">cd new Project</div><div class="line"></div><div class="line"># 把一个文件夹初始化成一个本地 git 仓库</div><div class="line"># 注意 仓库和文件夹的区别在于仓库下有一个隐藏的 .git文件夹，里面有一些信息</div><div class="line"># 对于一个仓库，删除.git文件夹，就变成一个普通文件夹了</div><div class="line">git init</div><div class="line"></div><div class="line">touch index.html</div><div class="line">echo "hello" &gt; index.html</div><div class="line"></div><div class="line">git add .</div><div class="line">git commit -am "init"</div></pre></td></tr></table></figure>
+<h3 id="查远程库地址-给远程库地址添加标签-推送本地库到远程库"><a href="#查远程库地址-给远程库地址添加标签-推送本地库到远程库" class="headerlink" title="查远程库地址,给远程库地址添加标签,推送本地库到远程库"></a>查远程库地址,给远程库地址添加标签,推送本地库到远程库</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 查看本地库里记录的远程库地址，还没有建立联系</div><div class="line">git remote -v</div><div class="line"></div><div class="line"># 这里把远程库的地址添加个标签叫origin</div><div class="line">git remote add origin git@github.com:jirengu/blog2.git</div><div class="line"># 推送到远程库地址</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+<h3 id="增、删、改远程库的标签及对应地址"><a href="#增、删、改远程库的标签及对应地址" class="headerlink" title="增、删、改远程库的标签及对应地址"></a>增、删、改远程库的标签及对应地址</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">#慎用，这样会强制推送，会覆盖别人的代码</div><div class="line">git push -f origin master </div><div class="line"></div><div class="line"># 在添加一个远程库的标签</div><div class="line">git remote add gitlab git@gitlab.com:abc/blog.git</div><div class="line"></div><div class="line"># 推送到gitlab标签的地址上</div><div class="line">git push gitlab master</div><div class="line"></div><div class="line"># 删除gitlab 标签</div><div class="line">git remote remove gitlab</div><div class="line"></div><div class="line"># 修改origin标签对应的地址</div><div class="line">git remote set-url origin git@github.com:jirengu/blog3.git</div><div class="line"></div><div class="line"># 把 gitlab 标签改名为coding</div><div class="line">git remote rename gitlab coding</div></pre></td></tr></table></figure>
+<h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 创建本地库dev 分支</div><div class="line">git branch dev</div><div class="line"></div><div class="line"># 切换到dev 分支</div><div class="line">git checkout dev</div><div class="line"></div><div class="line">touch b.md</div><div class="line">git add .</div><div class="line">git commit -am "add b.md"</div><div class="line"></div><div class="line"># 推送到origin地址的dev分支上</div><div class="line">git push origin dev</div></pre></td></tr></table></figure>
+<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git checkout master</div><div class="line"></div><div class="line"># 把 dev 分支上的内容合并到当前分支(master) 上</div><div class="line">git merge dev</div></pre></td></tr></table></figure>
+<h3 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h3><ul>
+<li>当自己和别人改同一个文件的同一个地方,在执行gitpull时更新本地合并时会出现冲突</li>
+</ul>
+<h4 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h4><ul>
+<li>修改冲突文件</li>
+<li>重新提交</li>
+</ul>
+<h2 id="模拟多人操作"><a href="#模拟多人操作" class="headerlink" title="模拟多人操作"></a>模拟多人操作</h2><ul>
+<li>前提先在github手动创建一个仓库test</li>
+</ul>
+<h3 id="新建本地文件与远程仓库联系"><a href="#新建本地文件与远程仓库联系" class="headerlink" title="新建本地文件与远程仓库联系"></a>新建本地文件与远程仓库联系</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># 新建文件夹test,查找test,新建文件readme.md</div><div class="line">midir test</div><div class="line">cd test</div><div class="line">touch readme.md</div><div class="line"></div><div class="line"># 初始化暂存库,将所有修改添加到缓存区</div><div class="line">git init</div><div class="line">git add .</div><div class="line"></div><div class="line"># 提交缓存区到本地库</div><div class="line">git commit -am "add readme"</div><div class="line"></div><div class="line"># 为远程库添加标签,并将本地库推送到远程库</div><div class="line">git remote add origin git@github.com:zy343134464/test.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+<h3 id="第一个人的操作"><a href="#第一个人的操作" class="headerlink" title="第一个人的操作"></a>第一个人的操作</h3><ul>
+<li>在master上拉一个分支来增加新功能</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"># 查看本地分支和远程分支</div><div class="line">git branch -a</div><div class="line"></div><div class="line"># 更新本地当前同名分支的代码(防止远程同名分支有修改,同一个分支的更新)</div><div class="line">git pull (origin master)</div><div class="line"></div><div class="line"># 创建并切换分支dev</div><div class="line">git branch dev</div><div class="line">git checkout dev</div><div class="line"></div><div class="line"># 将当前分支推送到远程仓库并命名dev分支</div><div class="line">git push -u origin dev</div><div class="line"></div><div class="line"># 切换到dev分支并更新下当地分支dev</div><div class="line">git checkout dev</div><div class="line">git pull(origin dev) 更新dev分支防止有人在远程库修改</div><div class="line"></div><div class="line"># 增加文件index.html并修改readme.md</div><div class="line">touch index.html</div><div class="line">vim readme.md</div><div class="line"></div><div class="line"># 将修改新增文件添加缓存区,缓存区提交到本地库</div><div class="line">git add .</div><div class="line">git commit -am "new index.html,modift readme"</div><div class="line"></div><div class="line"># 本地库推送到远程库dev分支</div><div class="line">git push -u origin dev</div><div class="line"></div><div class="line"># 当dev已经完成,要最后的发布,先将远程master合并到本地dev</div><div class="line">git merge master(将最新的远程master合并到你的本地dev,这时候dev是最新)</div><div class="line"></div><div class="line"># 最后的发布</div><div class="line">git push -u origin dev</div><div class="line"></div><div class="line"># 本地切换到master,将远程的dev合并到本地的master,发布最新版的master</div><div class="line">git checkout master</div><div class="line">git merge dev</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+<h3 id="第二个人的操作"><a href="#第二个人的操作" class="headerlink" title="第二个人的操作"></a>第二个人的操作</h3><ul>
+<li>再第二个人开发完后已经合并master的分支上拉一个分支</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"># 查看本地分支和远程分支</div><div class="line">git branch -a</div><div class="line"></div><div class="line"># 更新本地当前同名分支的代码(防止远程同名分支有修改,同一个分支的更新)</div><div class="line">git pull (origin master)</div><div class="line"></div><div class="line"># 创建并切换分支branch-test</div><div class="line">git branch-test</div><div class="line">git checkout branch-test</div><div class="line"></div><div class="line"># 将当前分支推送到远程仓库并命名branch-test分支</div><div class="line">git push -u origin branch-test</div><div class="line"></div><div class="line"># 切换到dev分支并更新下当地分支branch-test</div><div class="line">git checkout branch-test</div><div class="line">git pull(origin branch-test) 更新branch-test分支防止有人在远程库修改</div><div class="line"></div><div class="line"># 修改readme.md</div><div class="line">vim readme.md</div><div class="line"></div><div class="line"># 将修改新增文件添加缓存区,缓存区提交到本地库</div><div class="line">git add .</div><div class="line">git commit -am "modify readme"</div><div class="line"></div><div class="line"># 本地库推送到远程库branch-test分支</div><div class="line">git push -u origin branch-test</div><div class="line"></div><div class="line"># 当branch-test已经完成,要最后的发布,先将远程master合并到本地branch-test</div><div class="line">git merge master(将最新的远程master合并到你的本地branch-test,最新版本)</div><div class="line"></div><div class="line"># 出现了冲突,原因是readme.md文件第一个人也修改了,git不知道听谁</div><div class="line"># 解决冲突,找到readme.md,商量要留哪部分,保留要的部分</div><div class="line"># 并将修改添加到缓存库,提交到本地库，发布到远程库</div><div class="line">git add . </div><div class="line">git commit -am "merge master"</div><div class="line">git push -u origin branch-test</div><div class="line"></div><div class="line"># 本地切换到master,将远程的branch-test合并到本地的master,发布最新版的master</div><div class="line">git checkout master</div><div class="line">git merge branch-test</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+<h2 id="查看代码提交记录-回溯代码"><a href="#查看代码提交记录-回溯代码" class="headerlink" title="查看代码提交记录,回溯代码"></a>查看代码提交记录,回溯代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 查看前三次操作的信息</div><div class="line">git log -l 3</div><div class="line"></div><div class="line"># 回溯到指定的commit(回到commit,删除commit之后的所有操作信息)</div><div class="line">git reset --hard bcfe87a4e61076324a58a96af3e6e9cc87eddfec</div><div class="line"></div><div class="line"># -f强制提交</div><div class="line">git push -f -u origin dev</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 查看前三次操作的信息</div><div class="line">git log -l 3</div><div class="line"></div><div class="line"># 回溯到指定的commit(只是撤销指定的commit,增加一版本删除指定的commit)</div><div class="line">git revert bcfe87a4e61076324a58a96af3e6e9cc87eddfec</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;vim命令行基础&quot;&gt;&lt;a href=&quot;#vim命令行基础&quot; class=&quot;headerlink&quot; title=&quot;vim命令行基础&quot;&gt;&lt;/a&gt;vim命令行基础&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;vim是一个操作文本的编辑器,对文本进行添加、删除、复制、粘贴.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;常用命令入门&quot;&gt;&lt;a href=&quot;#常用命令入门&quot; class=&quot;headerlink&quot; title=&quot;常用命令入门&quot;&gt;&lt;/a&gt;常用命令入门&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;查看文件：&lt;strong&gt;cat test.html&lt;/strong&gt;
+    
+    </summary>
+    
+      <category term="命令行" scheme="http://yoursite.com/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+    
+      <category term="vim" scheme="http://yoursite.com/tags/vim/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自学准备工作</title>
+    <link href="http://yoursite.com/2017/02/20/web/"/>
+    <id>http://yoursite.com/2017/02/20/web/</id>
+    <published>2017-02-19T17:39:17.000Z</published>
+    <updated>2017-06-09T04:53:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="web前端开发职能"><a href="#web前端开发职能" class="headerlink" title="web前端开发职能"></a>web前端开发职能</h1><h2 id="职能"><a href="#职能" class="headerlink" title="职能"></a>职能</h2><ul>
+<li>web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.<a id="more"></a>  
+</li>
+</ul>
+<h2 id="常见简称"><a href="#常见简称" class="headerlink" title="常见简称"></a>常见简称</h2><ul>
+<li>PM：项目经理  </li>
+<li>PD：产品经理</li>
+<li>UE：交互设计师、视觉设计师  </li>
+<li>RD：后端工程师、前端工程师、无线工程师  </li>
+<li>QA：测试工程师  </li>
+<li>OP：运维工程师</li>
+</ul>
+<h2 id="互联网公司产品流程"><a href="#互联网公司产品流程" class="headerlink" title="互联网公司产品流程"></a>互联网公司产品流程</h2><ul>
+<li>项目经理提出需求,开会审核</li>
+<li>设计定稿</li>
+<li>前端工程师和后端工程师进行开发</li>
+<li>进行自测、联调、测试（满足冒烟测试、回归测试）</li>
+<li>上线</li>
+<li>上线观察—项目总结</li>
+</ul>
+<hr>
+<h1 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h1><ul>
+<li>sublime编辑器</li>
+</ul>
+<h2 id="gt-gt-sublime使用"><a href="#gt-gt-sublime使用" class="headerlink" title="&gt;&gt;sublime使用"></a>&gt;&gt;<a href="http://www.jb51.net/softjc/87907.html" target="_blank" rel="external">sublime使用</a></h2><hr>
+<h1 id="markdowm常用语法"><a href="#markdowm常用语法" class="headerlink" title="markdowm常用语法"></a>markdowm常用语法</h1><ul>
+<li>Markdown是一种轻量级的「标记语言」而且轻松的导出 HTML、PDF 和本身的 .md 文件，用起来非常方便。  </li>
+<li>常用语法</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="section"># 一级标题 h1</span></div><div class="line"><span class="section">## 二级标题 h2</span></div><div class="line"><span class="section">### 三级标题 h3</span></div><div class="line"><span class="section">#### 四级标题 h4</span></div><div class="line"><span class="section">##### 五级标题 h5</span></div><div class="line"></div><div class="line">这是段落 p</div><div class="line"></div><div class="line"><span class="bullet">- </span>无序列表</div><div class="line"><span class="bullet">- </span>无序列表</div><div class="line"><span class="bullet">- </span>无序列表</div><div class="line"></div><div class="line"><span class="bullet">1. </span>有序列表</div><div class="line"><span class="bullet">2. </span>有序列表</div><div class="line"><span class="bullet">3. </span>有序列表</div><div class="line"></div><div class="line"><span class="code">`var a = 1`</span></div><div class="line"></div><div class="line">[<span class="string">链接文字</span>](<span class="link">http://www.baidu.com</span>)</div><div class="line"></div><div class="line">![](http://www.baidu.com/imgs/a.png)</div><div class="line"></div><div class="line"><span class="quote">&gt; 引用</span></div><div class="line"></div><div class="line">| 表头 | 表头 | 表头 |</div><div class="line">| --- | --- | ---  |</div><div class="line">| 内容 | 内容 | 内容 |</div><div class="line">| 内容 | 内容 | 内容 |</div></pre></td></tr></table></figure>
+<h2 id="gt-gt-markdowm官网"><a href="#gt-gt-markdowm官网" class="headerlink" title="&gt;&gt;markdowm官网"></a>&gt;&gt;<a href="http://wowubuntu.com/markdown/#p" target="_blank" rel="external">markdowm官网</a></h2><hr>
+<h1 id="GitHub-hexo-博客"><a href="#GitHub-hexo-博客" class="headerlink" title="GitHub+hexo(博客)"></a>GitHub+hexo(博客)</h1><h2 id="本博客"><a href="#本博客" class="headerlink" title="本博客"></a>本博客</h2><h3 id="gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客"><a href="#gt-gt-手把手教你用Hexo-Github-搭建属于自己的博客" class="headerlink" title="&gt;&gt;手把手教你用Hexo+Github 搭建属于自己的博客"></a>&gt;&gt;<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">手把手教你用Hexo+Github 搭建属于自己的博客</a></h3><hr>
+<h1 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h1><h2 id="Green"><a href="#Green" class="headerlink" title="Green"></a>Green</h2><h3 id="gt-gt-Green官网"><a href="#gt-gt-Green官网" class="headerlink" title="&gt;&gt;Green官网"></a>&gt;&gt;<a href="https://www.greenjsq.me" target="_blank" rel="external">Green官网</a></h3><hr>
+<h1 id="编程基础"><a href="#编程基础" class="headerlink" title="编程基础"></a>编程基础</h1><h2 id="二进制的单位"><a href="#二进制的单位" class="headerlink" title="二进制的单位"></a>二进制的单位</h2><ul>
+<li>1位(bit):0或1</li>
+<li>1字节(byte):00000000-11111111(例如十进制0-9转化字节就是00000000-99999999)</li>
+<li>1KB(kilobyte):1024byte</li>
+<li>1MB(Megabyte):1024byte x 1024byte</li>
+</ul>
+<h2 id="计算机存数据"><a href="#计算机存数据" class="headerlink" title="计算机存数据"></a>计算机存数据</h2><ul>
+<li>123(原文)</li>
+<li>495051(编码)</li>
+<li>001100010011001000110011(二进制)</li>
+<li>313233(十六进制)</li>
+</ul>
+<h2 id="键盘上的字符"><a href="#键盘上的字符" class="headerlink" title="键盘上的字符"></a>键盘上的字符</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-1.png" alt="web-1.png"></p>
+<h2 id="字符集-简单的ASCII"><a href="#字符集-简单的ASCII" class="headerlink" title="字符集-简单的ASCII"></a>字符集-简单的ASCII</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-2.png" alt="web-2.png"></p>
+<h2 id="字符集-容纳全球语言的字符集Unicode"><a href="#字符集-容纳全球语言的字符集Unicode" class="headerlink" title="字符集-容纳全球语言的字符集Unicode"></a>字符集-容纳全球语言的字符集Unicode</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-3.png" alt="web-3.png"></p>
+<h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h3><ul>
+<li><p>如何才能区别Unicode和ASCII？<br>计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢</p>
+</li>
+<li><p>资源浪费<br>英文字母只用一个字节表示就够了，如果Unicode统一规定，每个符号用四个字节表示，那么每个英文字母前都必然有3个字节是0，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍</p>
+</li>
+</ul>
+<h3 id="解决办法-字符编码"><a href="#解决办法-字符编码" class="headerlink" title="解决办法-字符编码"></a>解决办法-字符编码</h3><ul>
+<li>字符集只规定了字符对应的数字，却没有规定如何存储</li>
+<li>字符编码是字符集的存储方式</li>
+</ul>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/web-4.png" alt="web-4.png"></p>
+<h4 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h4><blockquote>
+<ul>
+<li>已知”严”的unicode是4E25（100111000100101）</li>
+<li>根据上表，格式是”1110xxxx 10xxxxxx 10xxxxxx”</li>
+<li>从后向前填入格式中的x，多出的位补0</li>
+<li>得到了”严”的UTF-8编码是”11100100 10111000 10100101”，转换成十六进制就是E4B8A5 </li>
+</ul>
+</blockquote>
+<h1 id="思维导图总结"><a href="#思维导图总结" class="headerlink" title="思维导图总结"></a>思维导图总结</h1><p><img src="http://oqev4hx8u.bkt.clouddn.com/web-siwei-1.png" alt="web-siwei-1.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;web前端开发职能&quot;&gt;&lt;a href=&quot;#web前端开发职能&quot; class=&quot;headerlink&quot; title=&quot;web前端开发职能&quot;&gt;&lt;/a&gt;web前端开发职能&lt;/h1&gt;&lt;h2 id=&quot;职能&quot;&gt;&lt;a href=&quot;#职能&quot; class=&quot;headerlink&quot; title=&quot;职能&quot;&gt;&lt;/a&gt;职能&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;web前端工程师主要是 利用HTML CSS 及JS等WBE技术及与后端配合，实现网页页面的呈现、具备交互的功能以满足用户的需求.
+    
+    </summary>
+    
+      <category term="自学准备" scheme="http://yoursite.com/categories/%E8%87%AA%E5%AD%A6%E5%87%86%E5%A4%87/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   

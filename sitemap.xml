@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/04/25/npm/</loc>
+    
+    <lastmod>2017-07-08T01:09:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/04/18/modular/</loc>
     
-    <lastmod>2017-07-07T05:13:24.000Z</lastmod>
+    <lastmod>2017-07-07T16:14:54.000Z</lastmod>
     
   </url>
   
@@ -86,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/05/15/boostrap/</loc>
-    
-    <lastmod>2017-06-25T12:48:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/04/15/http/</loc>
     
     <lastmod>2017-06-20T15:17:30.000Z</lastmod>
@@ -138,27 +138,6 @@
     <loc>http://yoursite.com/2017/05/25/vue/</loc>
     
     <lastmod>2017-06-04T15:46:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/05/07/webpack/</loc>
-    
-    <lastmod>2017-06-04T15:45:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/05/05/less/</loc>
-    
-    <lastmod>2017-06-04T15:45:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/25/gulp/</loc>
-    
-    <lastmod>2017-06-04T15:43:10.000Z</lastmod>
     
   </url>
   
