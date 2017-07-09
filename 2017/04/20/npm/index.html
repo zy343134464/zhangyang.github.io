@@ -1,0 +1,1030 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="node.js,npm,npmscript,gulp,webpack," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Learning and Doing" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="npm
+NPM(node package manager)通常称为node包管理器
+主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm-npmscript-gulp-webpack">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/npm/index.html">
+<meta property="og:site_name" content="Learning and Doing">
+<meta property="og:description" content="npm
+NPM(node package manager)通常称为node包管理器
+主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布">
+<meta property="og:updated_time" content="2017-07-09T02:35:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="npm-npmscript-gulp-webpack">
+<meta name="twitter:description" content="npm
+NPM(node package manager)通常称为node包管理器
+主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/20/npm/"/>
+
+
+
+
+
+  <title> npm-npmscript-gulp-webpack | Learning and Doing </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Learning and Doing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/20/npm/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zhang Yang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Learning and Doing">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Learning and Doing" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                npm-npmscript-gulp-webpack
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-20T23:13:19+08:00">
+                2017-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><ul>
+<li>NPM(node package manager)通常称为node包管理器</li>
+<li>主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布<a id="more"></a>
+<h2 id="npm的安装"><a href="#npm的安装" class="headerlink" title="npm的安装"></a>npm的安装</h2></li>
+<li>安装node后，npm会自动被安装</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 查看node版本</span></div><div class="line">node -v</div><div class="line"></div><div class="line"><span class="comment">// 查看npm版本</span></div><div class="line">npm -v</div><div class="line"></div><div class="line"><span class="comment">// 更新npm的版本</span></div><div class="line">sudo npm install npm -g</div></pre></td></tr></table></figure>
+<h2 id="npm包管理"><a href="#npm包管理" class="headerlink" title="npm包管理"></a>npm包管理</h2><ul>
+<li>本地安装：package会被下载到当前所在目录，也只能在当前目录下使用</li>
+<li>全局安装：package会被下载到到特定的系统目录下，安装的package能够在所有目录下使用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 本地安装</span></div><div class="line">npm install grunt-cli</div><div class="line"></div><div class="line"><span class="comment">// 全局安装</span></div><div class="line">npm install -g grunt-cli</div><div class="line"><span class="comment">// 如果下载速度比较慢，可以使用淘宝的镜像</span></div><div class="line"><span class="comment">//先执行下面命令</span></div><div class="line"><span class="comment">//以后安装就用 cnpm 代替 npm</span></div><div class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></div><div class="line">cnpm install -g grunt-cli</div><div class="line"></div><div class="line"><span class="comment">// 卸载安装</span></div><div class="line">npm uninstall grunt-cli</div></pre></td></tr></table></figure>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><ul>
+<li>npm init 可以初始化生成一个package.json</li>
+<li>package.json 是一个 json 格式的文件，用来记录当前的 npm 包的相关信息</li>
+<li>name：包的名字</li>
+<li>version：版本号</li>
+<li>description：描述</li>
+<li>main：包的入口文件</li>
+<li>script： 运行脚本命令的npm命令行缩写</li>
+<li>author: 作者</li>
+<li>license: 版权信息</li>
+<li>dependencies：项目运行依赖，发布的时候，不需要发布依赖的包，只要发布其名字，别人下载的时候，会自动下载依赖的包</li>
+<li>devDependencies：开发依赖，只有自己本地开发时候用的依赖包，发布以后别人用不到</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="string">"name"</span>: <span class="string">"packageName"</span>, </div><div class="line"><span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line"><span class="string">"description"</span>: <span class="string">""</span>,</div><div class="line"><span class="string">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"author"</span>: <span class="string">"cg"</span>,</div><div class="line"><span class="string">"license"</span>: <span class="string">"ISC"</span>,</div><div class="line"><span class="string">"dependencies"</span>: &#123;&#125;,</div><div class="line"><span class="string">"devDependencies"</span>: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="npm-install-–save-app-与-npm-install-–save-dev-app"><a href="#npm-install-–save-app-与-npm-install-–save-dev-app" class="headerlink" title="npm install –save app 与 npm install –save-dev app"></a>npm install –save app 与 npm install –save-dev app</h2><h3 id="npm-install-–save-app"><a href="#npm-install-–save-app" class="headerlink" title="npm install –save app"></a>npm install –save app</h3><ul>
+<li>项目运行依赖：安装名为 app 的包，并在package.json中添加到dependencies项目运行依赖中去，发布以后别人会自动下载app 依赖</li>
+</ul>
+<h3 id="npm-install-–save-dev-app"><a href="#npm-install-–save-dev-app" class="headerlink" title="npm install –save-dev app"></a>npm install –save-dev app</h3><ul>
+<li>开发依赖：安装名为app的包，并在package.json中添加到devDependencies开发依赖中去，这个app包依赖只有开发者自己使用，发布后别人用不到</li>
+</ul>
+<h2 id="nodule-modules的查找路径"><a href="#nodule-modules的查找路径" class="headerlink" title="nodule_modules的查找路径"></a>nodule_modules的查找路径</h2><ul>
+<li>从文件所在目录下的 nodule_modules 开始，逐级向上查找，直到找到根目录，如果还找不到，就会报错</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/e/xiaoming/senior/s5/webpack2-tutorial/node_modules</div><div class="line">/e/xiaoming/senior/s5/node_modules</div><div class="line">/e/xiaoming/senior/node_modules</div><div class="line">/e/xiaoming/node_modules</div><div class="line">/e/node_modules</div><div class="line">/node_modules</div></pre></td></tr></table></figure>
+<h2 id="npm2和npm3"><a href="#npm2和npm3" class="headerlink" title="npm2和npm3"></a>npm2和npm3</h2><h3 id="npm2"><a href="#npm2" class="headerlink" title="npm2"></a>npm2</h3><ul>
+<li>npm2 把每个依赖的包放在自己的子目录里</li>
+<li>优点：目录结构清楚</li>
+<li>缺点：可能会有重复冗余的依赖包：如下面示意里 a1 ，重复下载了</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">|- a          <span class="comment">//包</span></div><div class="line">|- |- a1         <span class="comment">//依赖</span></div><div class="line">|- |- a2         <span class="comment">//依赖</span></div><div class="line">|</div><div class="line">|- b          <span class="comment">//包            </span></div><div class="line">|- |- a1         <span class="comment">//依赖</span></div><div class="line">|- |- b2         <span class="comment">//依赖</span></div></pre></td></tr></table></figure>
+<h3 id="npm3"><a href="#npm3" class="headerlink" title="npm3"></a>npm3</h3><ul>
+<li>npm3 把每个依赖的包放同级目录下，这样就可以减少包的重复下载</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">|— a        <span class="comment">//包</span></div><div class="line">|- a1          <span class="comment">//依赖</span></div><div class="line">|- a2          <span class="comment">//依赖</span></div><div class="line">|— b        <span class="comment">//包</span></div><div class="line">|- b2          <span class="comment">//依赖</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="npm-script"><a href="#npm-script" class="headerlink" title="npm script"></a>npm script</h1><ul>
+<li>package.json 文件有一个 scripts 字段，可以用于指定脚本命令，供 npm 直接调用</li>
+<li>npm 内置了两个简写的命令：npm test 和 npm start，其它命令要写成 npm run xxx 形式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"build"</span>: <span class="string">"node build.js"</span>,</div><div class="line">  <span class="string">"test"</span>: <span class="string">"cd desktop"</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">$ npm run build</div><div class="line">等同于执行</div><div class="line">$ node build.js</div><div class="line"></div><div class="line">$ npm test</div><div class="line">等同于执行</div><div class="line">$ cd desktop</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h1><ul>
+<li>一款 nodejs 的应用</li>
+<li>用来构建前端自动化工作流</li>
+<li>可以实现实现代码的打包、压缩、合并、转译等</li>
+<li>拥有很丰富的插件系统</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g gulp</div><div class="line"></div><div class="line">如果报错：Error: EACCES, open '/Users/xxx/xxx.lock</div><div class="line">先执行：sudo chown -R $(whoami) $HOME/.npm 开启管理员权限</div></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//安装插件</span></div><div class="line">npm install gulp-imagemin --save-dev <span class="comment">//图片压缩</span></div><div class="line">npm install gulp-cssnano --save-dev <span class="comment">//css压缩</span></div><div class="line">npm install uglify --save-dev <span class="comment">//js压缩</span></div><div class="line">npm install gulp-jshint --save-dev <span class="comment">//js规范检查</span></div><div class="line">npm install gulp-concat --save-dev <span class="comment">//文件合并</span></div><div class="line">npm install gulp-rename --save-dev <span class="comment">//重命名</span></div><div class="line"></div><div class="line"><span class="comment">//gulpfile.js</span></div><div class="line"><span class="comment">//引入插件</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    cssnano = <span class="built_in">require</span>(<span class="string">'gulp-cssnano'</span>),</div><div class="line">    concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>),</div><div class="line">    jshint = <span class="built_in">require</span>(<span class="string">'gulp-jshint'</span>),</div><div class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</div><div class="line">    imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>),</div><div class="line">    rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>),</div><div class="line"></div><div class="line">  <span class="comment">//css合并压缩</span></div><div class="line">  gulp.task(<span class="string">'build:css'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      gulp.src(<span class="string">'./src/css/*.css'</span>)</div><div class="line">        .pipe(concat(<span class="string">'merge.css'</span>))</div><div class="line">        .pipe(rename(&#123;</div><div class="line">            <span class="attr">suffix</span>: <span class="string">'.min'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(cssnano())</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css/'</span>));</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">//js合并压缩</span></div><div class="line">   gulp.task(<span class="string">'build:js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      gulp.src(<span class="string">'src/js/*.js'</span>)</div><div class="line">        .pipe(jshint())</div><div class="line">        .pipe(jshint.reporter(<span class="string">'default'</span>))</div><div class="line">        .pipe(concat(<span class="string">'merge.js'</span>))</div><div class="line">        .pipe(rename(&#123;</div><div class="line">          <span class="attr">suffix</span>: <span class="string">'.min'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(uglify())</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js/'</span>));</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">//图片压缩</span></div><div class="line">  gulp.task(<span class="string">'build:image'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      gulp.src(<span class="string">'src/imgs/*'</span>)</div><div class="line">        .pipe(imagemin())</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/imgs/'</span>));</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'build'</span>, [<span class="string">'build:css'</span>, <span class="string">'build:js'</span>, <span class="string">'build:image'</span>]);</div><div class="line"></div><div class="line"><span class="comment">//命令行</span></div><div class="line">gulp build</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h1><ul>
+<li>webpack是一款模块加载器兼打包工具，它能把各种资源JS/CSS/图片等都作为模块来使用和处理</li>
+<li>用 commonJS 来书写，对 AMD/CMD 支持也很全面</li>
+<li>方便其他模块也兼容使用，扩展性强，插件机制完善，能被模块化处理的资源多</li>
+<li>开发便捷，能替代部分 grunt/gulp 的工作，比如打包，压缩</li>
+<li>webpack 支持 AMD 和commonJS 和 ES modules</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/node-js/" rel="tag"># node.js</a>
+          
+            <a href="/tags/npm/" rel="tag"># npm</a>
+          
+            <a href="/tags/npmscript/" rel="tag"># npmscript</a>
+          
+            <a href="/tags/gulp/" rel="tag"># gulp</a>
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/18/modular/" rel="next" title="模块化基础">
+                <i class="fa fa-chevron-left"></i> 模块化基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/25/jsproject/" rel="prev" title="前端设计模式">
+                前端设计模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Zhang Yang" />
+          <p class="site-author-name" itemprop="name">Zhang Yang</p>
+           
+              <p class="site-description motion-element" itemprop="description">Learning and Doing</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zy343134464" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:zy343134464@163.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-phone"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-yang-72-78-25" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/153127314" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rubylouvre/" title="司徒正美" target="_blank">司徒正美</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.evanyou.me/" title="尤小溪" target="_blank">尤小溪</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://caibaojian.com/lifesinger" title="玉伯" target="_blank">玉伯</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://winter-cn.cnblogs.com/" title="winter" target="_blank">winter</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#npm"><span class="nav-number">1.</span> <span class="nav-text">npm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npm的安装"><span class="nav-number">1.1.</span> <span class="nav-text">npm的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm包管理"><span class="nav-number">1.2.</span> <span class="nav-text">npm包管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#package-json"><span class="nav-number">1.3.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-install-–save-app-与-npm-install-–save-dev-app"><span class="nav-number">1.4.</span> <span class="nav-text">npm install –save app 与 npm install –save-dev app</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-install-–save-app"><span class="nav-number">1.4.1.</span> <span class="nav-text">npm install –save app</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-install-–save-dev-app"><span class="nav-number">1.4.2.</span> <span class="nav-text">npm install –save-dev app</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodule-modules的查找路径"><span class="nav-number">1.5.</span> <span class="nav-text">nodule_modules的查找路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm2和npm3"><span class="nav-number">1.6.</span> <span class="nav-text">npm2和npm3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm2"><span class="nav-number">1.6.1.</span> <span class="nav-text">npm2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm3"><span class="nav-number">1.6.2.</span> <span class="nav-text">npm3</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#npm-script"><span class="nav-number">2.</span> <span class="nav-text">npm script</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gulp"><span class="nav-number">3.</span> <span class="nav-text">gulp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack"><span class="nav-number">4.</span> <span class="nav-text">webpack</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Yang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
