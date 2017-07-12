@@ -378,11 +378,11 @@
     <link href="http://yoursite.com/2017/04/27/html5/"/>
     <id>http://yoursite.com/2017/04/27/html5/</id>
     <published>2017-04-27T15:14:31.000Z</published>
-    <updated>2017-07-12T15:52:08.000Z</updated>
+    <updated>2017-07-12T15:58:28.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="HTML5简介"><a href="#HTML5简介" class="headerlink" title="HTML5简介"></a>HTML5简介</h1><ul>
 <li>HTML5 是超文本标记语言的第五次重大修改，2014年制定完成的</li>
-<li>设计目的是为了在移动设备上支持多媒体</li>
+<li>设计目的是为了在移动设备上支持多媒体<a id="more"></a></li>
 <li>增加了更多语义化的标签，赋予网页更好的意义和结构</li>
 </ul>
 <h2 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a>HTML5新特性</h2><ul>
@@ -588,30 +588,6 @@
 <h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><table>
 <thead>
 <tr>
-<th>header 1</th>
-<th>header 2</th>
-<th>header 1</th>
-<th>header 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>row 1 col 1</td>
-<td>row 1 col 2</td>
-<td>row 1 col 1</td>
-<td>row 1 col 2</td>
-</tr>
-<tr>
-<td>row 2 col 1</td>
-<td>row 2 col 2</td>
-<td>row 1 col 1</td>
-<td>row 1 col 2</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
 <th>特性</th>
 <th>Cookie</th>
 <th>localStorage</th>
@@ -645,13 +621,18 @@
 </tr>
 </tbody>
 </table>
-]]></content>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><ul>
+<li>数据保存在 Cookie、localStorage、sessionStorage 都要注意 XSS 漏洞的风险。（XSS 漏洞是渲染的文本内有 <script> 标签，浏览器将之解析成 JavaScript 脚本执行 ）</li>
+</ul>
+<h2 id="localStorage-存储删除数据"><a href="#localStorage-存储删除数据" class="headerlink" title="localStorage 存储删除数据"></a>localStorage 存储删除数据</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">localStorage.setItem(<span class="string">'name'</span>, <span class="string">'liqi'</span>);<span class="comment">//存储</span></div><div class="line">localStorage.getItem(<span class="string">"name"</span>); <span class="comment">//获取</span></div><div class="line">localStorage.removeItem(<span class="string">"name"</span>);<span class="comment">//删除</span></div><div class="line">localStorage.clear(); <span class="comment">//删除所有数据</span></div></pre></td></tr></table></figure>
+<p>例子未完待续……</p>
+</script></li></ul>]]></content>
     
     <summary type="html">
     
       &lt;h1 id=&quot;HTML5简介&quot;&gt;&lt;a href=&quot;#HTML5简介&quot; class=&quot;headerlink&quot; title=&quot;HTML5简介&quot;&gt;&lt;/a&gt;HTML5简介&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;HTML5 是超文本标记语言的第五次重大修改，2014年制定完成的&lt;/li&gt;
-&lt;li&gt;设
+&lt;li&gt;设计目的是为了在移动设备上支持多媒体
     
     </summary>
     

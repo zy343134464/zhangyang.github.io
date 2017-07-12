@@ -91,38 +91,20 @@
 
 <meta name="description" content="HTML5简介
 HTML5 是超文本标记语言的第五次重大修改，2014年制定完成的
-设计目的是为了在移动设备上支持多媒体
-增加了更多语义化的标签，赋予网页更好的意义和结构
-
-HTML5新特性
-语义特性:引入了更多语义化的标签
-本地存储特性:基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度
-设备兼容特性:外部设备可以直接与内部数据相连，比如视频影音可以直接和 microphones">
+设计目的是为了在移动设备上支持多媒体">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML5基础">
 <meta property="og:url" content="http://yoursite.com/2017/04/27/html5/index.html">
 <meta property="og:site_name" content="Learning and Doing">
 <meta property="og:description" content="HTML5简介
 HTML5 是超文本标记语言的第五次重大修改，2014年制定完成的
-设计目的是为了在移动设备上支持多媒体
-增加了更多语义化的标签，赋予网页更好的意义和结构
-
-HTML5新特性
-语义特性:引入了更多语义化的标签
-本地存储特性:基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度
-设备兼容特性:外部设备可以直接与内部数据相连，比如视频影音可以直接和 microphones">
-<meta property="og:updated_time" content="2017-07-12T15:52:08.000Z">
+设计目的是为了在移动设备上支持多媒体">
+<meta property="og:updated_time" content="2017-07-12T15:58:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5基础">
 <meta name="twitter:description" content="HTML5简介
 HTML5 是超文本标记语言的第五次重大修改，2014年制定完成的
-设计目的是为了在移动设备上支持多媒体
-增加了更多语义化的标签，赋予网页更好的意义和结构
-
-HTML5新特性
-语义特性:引入了更多语义化的标签
-本地存储特性:基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度
-设备兼容特性:外部设备可以直接与内部数据相连，比如视频影音可以直接和 microphones">
+设计目的是为了在移动设备上支持多媒体">
 
 
 
@@ -426,7 +408,7 @@ HTML5新特性
       
         <h1 id="HTML5简介"><a href="#HTML5简介" class="headerlink" title="HTML5简介"></a>HTML5简介</h1><ul>
 <li>HTML5 是超文本标记语言的第五次重大修改，2014年制定完成的</li>
-<li>设计目的是为了在移动设备上支持多媒体</li>
+<li>设计目的是为了在移动设备上支持多媒体<a id="more"></a></li>
 <li>增加了更多语义化的标签，赋予网页更好的意义和结构</li>
 </ul>
 <h2 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a>HTML5新特性</h2><ul>
@@ -632,30 +614,6 @@ HTML5新特性
 <h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><table>
 <thead>
 <tr>
-<th>header 1</th>
-<th>header 2</th>
-<th>header 1</th>
-<th>header 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>row 1 col 1</td>
-<td>row 1 col 2</td>
-<td>row 1 col 1</td>
-<td>row 1 col 2</td>
-</tr>
-<tr>
-<td>row 2 col 1</td>
-<td>row 2 col 2</td>
-<td>row 1 col 1</td>
-<td>row 1 col 2</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
 <th>特性</th>
 <th>Cookie</th>
 <th>localStorage</th>
@@ -689,7 +647,12 @@ HTML5新特性
 </tr>
 </tbody>
 </table>
-
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><ul>
+<li>数据保存在 Cookie、localStorage、sessionStorage 都要注意 XSS 漏洞的风险。（XSS 漏洞是渲染的文本内有 <script> 标签，浏览器将之解析成 JavaScript 脚本执行 ）</li>
+</ul>
+<h2 id="localStorage-存储删除数据"><a href="#localStorage-存储删除数据" class="headerlink" title="localStorage 存储删除数据"></a>localStorage 存储删除数据</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">localStorage.setItem(<span class="string">'name'</span>, <span class="string">'liqi'</span>);<span class="comment">//存储</span></div><div class="line">localStorage.getItem(<span class="string">"name"</span>); <span class="comment">//获取</span></div><div class="line">localStorage.removeItem(<span class="string">"name"</span>);<span class="comment">//删除</span></div><div class="line">localStorage.clear(); <span class="comment">//删除所有数据</span></div></pre></td></tr></table></figure>
+<p>例子未完待续……</p>
+</script></li></ul>
       
     </div>
 
@@ -941,7 +904,7 @@ HTML5新特性
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML5简介"><span class="nav-number">1.</span> <span class="nav-text">HTML5简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5新特性"><span class="nav-number">1.1.</span> <span class="nav-text">HTML5新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新增元素"><span class="nav-number">1.2.</span> <span class="nav-text">新增元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#低版本IE支持HTML5"><span class="nav-number">1.3.</span> <span class="nav-text">低版本IE支持HTML5</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#input新增类型"><span class="nav-number">2.</span> <span class="nav-text">input新增类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cookie、localStorage、sessionStorage"><span class="nav-number">3.</span> <span class="nav-text">Cookie、localStorage、sessionStorage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie"><span class="nav-number">3.1.</span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#localStorage"><span class="nav-number">3.2.</span> <span class="nav-text">localStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sessionStorage"><span class="nav-number">3.3.</span> <span class="nav-text">sessionStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区别"><span class="nav-number">3.4.</span> <span class="nav-text">区别</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML5简介"><span class="nav-number">1.</span> <span class="nav-text">HTML5简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5新特性"><span class="nav-number">1.1.</span> <span class="nav-text">HTML5新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新增元素"><span class="nav-number">1.2.</span> <span class="nav-text">新增元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#低版本IE支持HTML5"><span class="nav-number">1.3.</span> <span class="nav-text">低版本IE支持HTML5</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#input新增类型"><span class="nav-number">2.</span> <span class="nav-text">input新增类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cookie、localStorage、sessionStorage"><span class="nav-number">3.</span> <span class="nav-text">Cookie、localStorage、sessionStorage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie"><span class="nav-number">3.1.</span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#localStorage"><span class="nav-number">3.2.</span> <span class="nav-text">localStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sessionStorage"><span class="nav-number">3.3.</span> <span class="nav-text">sessionStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区别"><span class="nav-number">3.4.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全性"><span class="nav-number">3.5.</span> <span class="nav-text">安全性</span></a></li></ol></li></ol></div>
             
 
           </div>
