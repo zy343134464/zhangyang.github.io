@@ -1000,11 +1000,12 @@
 <li>渐变</li>
 <li>2D/3D 转换</li>
 <li>过渡和动画</li>
+<li>字体(与字体图标结合)</li>
 <li>字体图标(CSS已经总结)</li>
-<li>响应式(响应式已经总结)</li>
-<li>多列布局(响应式已经总结)</li>
+<li>响应式(媒体查询已经总结)</li>
+<li>多列布局(栅格系统已经总结)</li>
 <li>用户界面</li>
-<li>flex布局(响应式已经总结)</li>
+<li>flex布局(flex布局已经总结)</li>
 </ul>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
 <li>background-size</li>
@@ -1205,6 +1206,28 @@
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"> </span></div><div class="line">div</div><div class="line">&#123;</div><div class="line">width:100px;</div><div class="line">height:100px;</div><div class="line">background:red;</div><div class="line">position:relative;</div><div class="line">animation:myfirst 5s;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@keyframes myfirst</div><div class="line">&#123;</div><div class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</div><div class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</div><div class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</div><div class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</div><div class="line">100% &#123;background:red; left:0px; top:0px;&#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>注释：<span class="tag">&lt;/<span class="name">b</span>&gt;</span>本例在 Internet Explorer 中无效。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><img src="http://oqev4hx8u.bkt.clouddn.com/css3-19.gif" alt="image"></p>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><ul>
+<li>@font-face</li>
+<li>自定义字体的能力，我们可以把字体文件像图片一样放在服务器或者CDN，然后在页面通过CSS指定下载到客户端，这样客户端就可以使用</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"> </span></div><div class="line">@font-face</div><div class="line">&#123;</div><div class="line">font-family: myFirstFont;</div><div class="line">src: url('/example/css3/Sansation_Light.ttf')</div><div class="line">&#125;</div><div class="line"></div><div class="line">div</div><div class="line">&#123;</div><div class="line">font-family:myFirstFont;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">With CSS3, websites can finally use fonts other than the pre-selected "web-safe" fonts.</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>注释：<span class="tag">&lt;/<span class="name">b</span>&gt;</span>Internet Explorer 9+ 支持新的 @font-face 规则。Internet Explorer 8 以及更早的版本不支持新的 @font-face 规则。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/css3-20.png" alt="image"></p>
+<h3 id="字体格式"><a href="#字体格式" class="headerlink" title="字体格式"></a>字体格式</h3><ul>
+<li>WOFF:支持这种字体的浏览器有【IE9+,Firefox3.5+,Chrome6+,Safari3.6+,Opera11.1+】</li>
+<li>SVG / SVGZ:支持这种字体的浏览器有【Chrome4+,Safari3.1+,Opera10.0+,iOS Mobile Safari3.2+】</li>
+<li>EOT:只在IE6/IE8里使用</li>
+<li>OTF:支持这种字体的浏览器有【IE9+,Firefox3.5+,Chrome4+,Safari3+,Opera10+,iOS Mobile Safari4.2+】</li>
+<li>TTF:支持这种字体的浏览器有【Firefox3.5+,Chrome4.0+,Safari3.1+,Opera10.0+,iOS Mobile Safari4.2+】</li>
+</ul>
+<h3 id="书写方式"><a href="#书写方式" class="headerlink" title="书写方式"></a>书写方式</h3><ul>
+<li>为了让各多的浏览器支持</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@font-face &#123;</div><div class="line">    font-family: 'YourWebFontName';</div><div class="line">    src: url('YourWebFontName.eot'); /* IE9 Compat Modes */</div><div class="line">    src: url('YourWebFontName.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */</div><div class="line">             url('YourWebFontName.woff') format('woff'), /* Modern Browsers */</div><div class="line">             url('YourWebFontName.ttf')  format('truetype'), /* Safari, Android, iOS */</div><div class="line">             url('YourWebFontName.svg#YourWebFontName') format('svg'); /* Legacy iOS */</div><div class="line">&#125;</div><div class="line"></div><div class="line">body&#123;</div><div class="line">    font-family: 'YourWebFontName';</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>直接下载字体图标自带各种配置</li>
+</ul>
+</blockquote>
 
           
         
