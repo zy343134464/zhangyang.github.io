@@ -422,7 +422,7 @@
     <link href="http://yoursite.com/2017/04/30/css3/"/>
     <id>http://yoursite.com/2017/04/30/css3/</id>
     <published>2017-04-30T15:14:44.000Z</published>
-    <updated>2017-07-21T15:55:52.000Z</updated>
+    <updated>2017-07-21T16:00:40.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CSS3简介"><a href="#CSS3简介" class="headerlink" title="CSS3简介"></a>CSS3简介</h1><ul>
 <li>CSS3是最新的CSS标准</li>
@@ -433,10 +433,14 @@
 <li>背景</li>
 <li>边框</li>
 <li>文本效果</li>
+<li>渐变</li>
 <li>2D/3D 转换</li>
 <li>动画</li>
-<li>多列布局</li>
+<li>字体图标(CSS已经总结)</li>
+<li>响应式(响应式已经总结)</li>
+<li>多列布局(响应式已经总结)</li>
 <li>用户界面</li>
+<li>flex布局(响应式已经总结)</li>
 </ul>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
 <li>background-size</li>
