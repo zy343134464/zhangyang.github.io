@@ -422,11 +422,14 @@
     <link href="http://yoursite.com/2017/04/30/css3/"/>
     <id>http://yoursite.com/2017/04/30/css3/</id>
     <published>2017-04-30T15:14:44.000Z</published>
-    <updated>2017-07-21T18:41:42.000Z</updated>
+    <updated>2017-07-21T19:04:22.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CSS3简介"><a href="#CSS3简介" class="headerlink" title="CSS3简介"></a>CSS3简介</h1><ul>
 <li>CSS3是最新的CSS标准<a id="more"></a>
-<h1 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a>CSS3新特性</h1></li>
+</li>
+</ul>
+<hr>
+<h1 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a>CSS3新特性</h1><ul>
 <li>选择器(CSS已经总结)</li>
 <li>盒模型(CSS已经总结)</li>
 <li>背景</li>
@@ -681,7 +684,23 @@
 <li>column-width和column-count是相互配合的，两个都设置，按照后者优先</li>
 </ul>
 </blockquote>
-]]></content>
+<h2 id="用户界面"><a href="#用户界面" class="headerlink" title="用户界面"></a>用户界面</h2><ul>
+<li>新的用户界面特性包括重设元素尺寸、盒尺寸以及轮廓</li>
+<li>appearance:允许您将元素设置为标准用户界面元素的外观</li>
+<li>box-sizing:允许您以确切的方式定义适应某个区域的具体内容</li>
+<li>icon:为创作者提供使用图标化等价物来设置元素样式的能力</li>
+<li>nav-down:规定在使用 arrow-down 导航键时向何处导航</li>
+<li>nav-index:设置元素的 tab 键控制次序</li>
+<li>nav-left:规定在使用 arrow-left 导航键时向何处导航</li>
+<li>nav-right:规定在使用 arrow-right 导航键时向何处导航</li>
+<li>nav-up:规定在使用 arrow-up 导航键时向何处导航</li>
+<li>outline-offset:对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓</li>
+<li>resize:规定是否可由用户对元素的尺寸进行调整</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"> </span></div><div class="line">div</div><div class="line">&#123;</div><div class="line">border:2px solid;</div><div class="line">padding:10px 40px; </div><div class="line">width:300px;</div><div class="line">resize:both;</div><div class="line">overflow:auto;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>resize 属性规定是否可由用户调整元素尺寸。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>注释：<span class="tag">&lt;/<span class="name">b</span>&gt;</span> Firefox 4+、Safari 以及 Chrome 支持 resize 属性。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/css3-22.png" alt="image"></p>
+<hr>
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><h2 id="CSS3效果的简单事例"><a href="#CSS3效果的简单事例" class="headerlink" title="CSS3效果的简单事例"></a>CSS3效果的简单事例</h2><h2 id="全屏图加过渡色的效果"><a href="#全屏图加过渡色的效果" class="headerlink" title="全屏图加过渡色的效果"></a>全屏图加过渡色的效果</h2><h2 id="loading-动画效果"><a href="#loading-动画效果" class="headerlink" title="loading 动画效果"></a>loading 动画效果</h2>]]></content>
     
     <summary type="html">
     
