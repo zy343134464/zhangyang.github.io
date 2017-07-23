@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/05/25/vue/</loc>
+    
+    <lastmod>2017-07-23T10:53:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/06/04/phone/</loc>
     
     <lastmod>2017-07-22T14:19:38.000Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>http://yoursite.com/2017/02/20/web/</loc>
     
     <lastmod>2017-06-09T04:53:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/05/25/vue/</loc>
-    
-    <lastmod>2017-06-04T15:46:04.000Z</lastmod>
     
   </url>
   
