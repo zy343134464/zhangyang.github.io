@@ -99,7 +99,7 @@ Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组�
 Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/vue-1.png">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/vue-2.png">
-<meta property="og:updated_time" content="2017-07-23T10:53:28.000Z">
+<meta property="og:updated_time" content="2017-07-23T17:51:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue.js">
 <meta name="twitter:description" content="vue.js简介
@@ -427,6 +427,21 @@ Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组�
 <li>从Model侧看，当我们更新Model中的数据时，Data Bindings工具会帮我们更新页面中的DOM元素</li>
 </ul>
 <p><img src="http://oqev4hx8u.bkt.clouddn.com/vue-2.png" alt="image"></p>
+<hr>
+<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><ul>
+<li>官网写得实在是不要太详细简明了,这里只是总结语法,最后来个demo</li>
+<li>所有例子都要按MVVM模型想就可以快速理解</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- view层 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  &#123;&#123; message &#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- model层 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">var data = &#123;</div><div class="line">  message: 'Hello Vue!'</div><div class="line">&#125;</div><div class="line"></div><div class="line">// viewModel层(Vue实例),将view层和model层建立连接</div><div class="line">var app = new Vue(&#123;</div><div class="line">  el: '#app',</div><div class="line">  data: data</div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="引入方式"><a href="#引入方式" class="headerlink" title="引入方式"></a>引入方式</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/vue"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><ul>
+<li>指令带有前缀 v-，以表示它们是 Vue 提供的特殊属性(将这个元素节点的 title 属性和 Vue 实例的 message 属性保持一致)</li>
+<li>v-bind:title=”message”–&gt;title的数据绑定，message从实例的data中获取。简写:title=”message”</li>
+<li>v-if=”seen”–&gt;控制切换一个元素的显示,seen从实例的data中获取,如果为true显示,否则隐藏</li>
+<li>v-for=”v-for=”todo in todos”–&gt;遍历数组todos,todo从实例的todos中获取</li>
+<li>v-on:click=”reverseMessage”–&gt;给元素增加事件,reverseMessage从实例的methods中获取</li>
+<li>v-model=”message”–&gt;实现表单输入和应用状态之间的双向绑定</li>
+</ul>
 
       
     </div>
@@ -683,7 +698,7 @@ Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vue-js简介"><span class="nav-number">1.</span> <span class="nav-text">vue.js简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC模式"><span class="nav-number">1.1.</span> <span class="nav-text">MVC模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM模式"><span class="nav-number">1.2.</span> <span class="nav-text">MVVM模式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vue-js简介"><span class="nav-number">1.</span> <span class="nav-text">vue.js简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC模式"><span class="nav-number">1.1.</span> <span class="nav-text">MVC模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM模式"><span class="nav-number">1.2.</span> <span class="nav-text">MVVM模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引入方式"><span class="nav-number">2.1.</span> <span class="nav-text">引入方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令"><span class="nav-number">2.2.</span> <span class="nav-text">指令</span></a></li></ol></li></ol></div>
             
 
           </div>
