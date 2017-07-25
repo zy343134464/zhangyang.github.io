@@ -596,7 +596,7 @@
     <link href="http://yoursite.com/2017/05/25/vue/"/>
     <id>http://yoursite.com/2017/05/25/vue/</id>
     <published>2017-05-25T15:16:41.000Z</published>
-    <updated>2017-07-23T17:51:56.000Z</updated>
+    <updated>2017-07-24T03:52:46.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="vue-js简介"><a href="#vue-js简介" class="headerlink" title="vue.js简介"></a>vue.js简介</h1><ul>
 <li>Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的<a id="more"></a></li>
@@ -633,6 +633,10 @@
 <li>v-for=”v-for=”todo in todos”–&gt;遍历数组todos,todo从实例的todos中获取</li>
 <li>v-on:click=”reverseMessage”–&gt;给元素增加事件,reverseMessage从实例的methods中获取</li>
 <li>v-model=”message”–&gt;实现表单输入和应用状态之间的双向绑定</li>
+</ul>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
+<li>组件系统是Vue.js其中一个重要的概念，它提供了一种抽象，让我们可以使用独立可复用的小组件来构建大型应用，任意类型的应用界面都可以抽象为一个组件树</li>
+<li>组件可以扩展HTML元素，封装可重用的HTML代码，我们可以将组件看作自定义的HTML元素</li>
 </ul>
 ]]></content>
     
