@@ -4006,7 +4006,7 @@
     <link href="http://yoursite.com/2017/02/25/css/"/>
     <id>http://yoursite.com/2017/02/25/css/</id>
     <published>2017-02-24T17:48:30.000Z</published>
-    <updated>2017-07-10T10:32:58.000Z</updated>
+    <updated>2017-07-28T14:47:50.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h1><ul>
 <li>CSS全称是Cascading Style Sheets,层叠样式表</li>
@@ -4021,8 +4021,7 @@
 <li>查看设置样式</li>
 <li>查看html结构<br><img src="http://oqev4hx8u.bkt.clouddn.com/css-2.png" alt="css-2.png"></li>
 </ul>
-<h2 id="CSS书写规范"><a href="#CSS书写规范" class="headerlink" title="CSS书写规范"></a>CSS书写规范</h2><h3 id="gt-gt-CSS书写规范"><a href="#gt-gt-CSS书写规范" class="headerlink" title="&gt;&gt;CSS书写规范"></a>&gt;&gt;<a href="https://github.com/fex-team/styleguide/blob/master/css.md" target="_blank" rel="external">CSS书写规范</a></h3><h2 id="思维导图总结"><a href="#思维导图总结" class="headerlink" title="思维导图总结"></a>思维导图总结</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/css-siwei-1.png" alt="images"></p>
-<hr>
+<h2 id="CSS书写规范"><a href="#CSS书写规范" class="headerlink" title="CSS书写规范"></a>CSS书写规范</h2><h3 id="gt-gt-CSS书写规范"><a href="#gt-gt-CSS书写规范" class="headerlink" title="&gt;&gt;CSS书写规范"></a>&gt;&gt;<a href="https://github.com/fex-team/styleguide/blob/master/css.md" target="_blank" rel="external">CSS书写规范</a></h3><hr>
 <h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><h2 id="link和-import"><a href="#link和-import" class="headerlink" title="link和@import"></a>link和@import</h2><ul>
 <li>这两种方式都是为了加载CSS文件<blockquote>
 <ul>
@@ -4348,7 +4347,8 @@
 <li>蓝色背景：样式里面设置了first-of-type，也就是第一个类型的元素将应用为蓝色背景，而第一个类型就是p和h3，h3有2个，取第一个</li>
 <li>红色字：first-child是指后代中第一个子元素，第一个子元素是p，所以只是p应用了红色字</li>
 </ul>
-<h2 id="思维导图总结-1"><a href="#思维导图总结-1" class="headerlink" title="思维导图总结"></a>思维导图总结</h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://oqev4hx8u.bkt.clouddn.com/css-siwei-2.png" alt="images"></h2><h1 id="CSS常见样式"><a href="#CSS常见样式" class="headerlink" title="CSS常见样式"></a>CSS常见样式</h1><h2 id="块级元素和行内元素"><a href="#块级元素和行内元素" class="headerlink" title="块级元素和行内元素"></a>块级元素和行内元素</h2><table>
+<hr>
+<h1 id="CSS常见样式"><a href="#CSS常见样式" class="headerlink" title="CSS常见样式"></a>CSS常见样式</h1><h2 id="块级元素和行内元素"><a href="#块级元素和行内元素" class="headerlink" title="块级元素和行内元素"></a>块级元素和行内元素</h2><table>
 <thead>
 <tr>
 <th>块级元素（block-level）</th>
@@ -4614,7 +4614,8 @@
 <li>iconfont.css</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">@<span class="keyword">font-face</span> &#123;<span class="attribute">font-family</span>: <span class="string">"iconfont"</span>;</div><div class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'iconfont.eot?t=1497433469729'</span>); <span class="comment">/* IE9*/</span></div><div class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'iconfont.eot?t=1497433469729#iefix'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>), <span class="comment">/* IE6-IE8 */</span></div><div class="line">  <span class="built_in">url</span>(<span class="string">'iconfont.woff?t=1497433469729'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>), <span class="comment">/* chrome, firefox */</span></div><div class="line">  <span class="built_in">url</span>(<span class="string">'iconfont.ttf?t=1497433469729'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>), <span class="comment">/* chrome, firefox, opera, Safari, Android, iOS 4.2+*/</span></div><div class="line">  <span class="built_in">url</span>(<span class="string">'iconfont.svg?t=1497433469729#iconfont'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>); <span class="comment">/* iOS 4.1- */</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.iconfont</span> &#123;</div><div class="line">  <span class="attribute">font-family</span>:<span class="string">"iconfont"</span> <span class="meta">!important</span>;</div><div class="line">  <span class="attribute">font-size</span>:<span class="number">16px</span>;</div><div class="line">  <span class="attribute">font-style</span>:normal;</div><div class="line">  <span class="attribute">-webkit-font-smoothing</span>: antialiased;</div><div class="line">  <span class="attribute">-moz-osx-font-smoothing</span>: grayscale;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.icon-airplane</span><span class="selector-pseudo">:before</span> &#123; <span class="attribute">content</span>: <span class="string">"\e73d"</span>; &#125;</div><div class="line"></div><div class="line"><span class="selector-class">.icon-bus</span><span class="selector-pseudo">:before</span> &#123; <span class="attribute">content</span>: <span class="string">"\e73e"</span>; &#125;</div><div class="line"></div><div class="line"><span class="selector-class">.icon-subway</span><span class="selector-pseudo">:before</span> &#123; <span class="attribute">content</span>: <span class="string">"\e73f"</span>; &#125;</div><div class="line"></div><div class="line"><span class="selector-class">.icon-train</span><span class="selector-pseudo">:before</span> &#123; <span class="attribute">content</span>: <span class="string">"\e740"</span>; &#125;</div></pre></td></tr></table></figure>
-<h2 id="思维导图总结-2"><a href="#思维导图总结-2" class="headerlink" title="思维导图总结"></a>思维导图总结</h2><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="http://oqev4hx8u.bkt.clouddn.com/css-siwei-3.png" alt="images"></h2><h1 id="CSS浮动、定位"><a href="#CSS浮动、定位" class="headerlink" title="CSS浮动、定位"></a>CSS浮动、定位</h1><h2 id="CSS浮动元素"><a href="#CSS浮动元素" class="headerlink" title="CSS浮动元素"></a>CSS浮动元素</h2><h3 id="浮动的特征"><a href="#浮动的特征" class="headerlink" title="浮动的特征"></a>浮动的特征</h3><ul>
+<hr>
+<h1 id="CSS浮动、定位"><a href="#CSS浮动、定位" class="headerlink" title="CSS浮动、定位"></a>CSS浮动、定位</h1><h2 id="CSS浮动元素"><a href="#CSS浮动元素" class="headerlink" title="CSS浮动元素"></a>CSS浮动元素</h2><h3 id="浮动的特征"><a href="#浮动的特征" class="headerlink" title="浮动的特征"></a>浮动的特征</h3><ul>
 <li>浮动元素脱离文档流,根据设置的float的属性值而向左或向右移动,直到它的border外边距撞到父容器的内边缘为止</li>
 <li>任何元素都可以浮动,行内元素浮动后可以设置宽高和内外边距等等块级元素的特征(默认是不能设置的)</li>
 <li>不管块级元素或者行内元素,浮动之后的宽高都是由内容撑起来的(默认块级元素宽是撑满父亲,行内元素是由内容撑起来)</li>
