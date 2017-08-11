@@ -1690,7 +1690,7 @@
     <link href="http://yoursite.com/2017/04/08/object/"/>
     <id>http://yoursite.com/2017/04/08/object/</id>
     <published>2017-04-08T15:13:02.000Z</published>
-    <updated>2017-07-16T17:39:30.000Z</updated>
+    <updated>2017-08-11T03:09:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul>
 <li>改善可读性</li>
@@ -1704,7 +1704,6 @@
 <h2 id="要素"><a href="#要素" class="headerlink" title="要素"></a>要素</h2><ul>
 <li>封装</li>
 <li>继承</li>
-<li>多态</li>
 </ul>
 <h2 id="实例化对象"><a href="#实例化对象" class="headerlink" title="实例化对象"></a>实例化对象</h2><ul>
 <li>var object = new Object()</li>
