@@ -97,7 +97,7 @@ ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为�
 <meta property="og:site_name" content="Learning and Doing">
 <meta property="og:description" content="ES6的简介
 ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015">
-<meta property="og:updated_time" content="2017-08-14T04:21:22.000Z">
+<meta property="og:updated_time" content="2017-08-14T04:28:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6/ES2015核心">
 <meta name="twitter:description" content="ES6的简介
@@ -414,7 +414,14 @@ ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为�
 <h1 id="最常用的ES6特性"><a href="#最常用的ES6特性" class="headerlink" title="最常用的ES6特性"></a>最常用的ES6特性</h1><ul>
 <li>let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments,这些是ES6最常用的几个语法</li>
 </ul>
-<h2 id="let-const"><a href="#let-const" class="headerlink" title="let, const"></a>let, const</h2><p>- </p>
+<h2 id="let-const"><a href="#let-const" class="headerlink" title="let, const"></a>let, const</h2><ul>
+<li>这两个的用途与var类似，都是用来声明变量的，但在实际运用中他俩都有各自的特殊用途</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用var 两次输出都是obama，这是因为ES5只有全局作用域和函数作用域，没有块级作用域</span></div><div class="line"><span class="keyword">var</span> name = <span class="string">'zy'</span>;</div><div class="line"></div><div class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</div><div class="line">  <span class="keyword">var</span> name = <span class="string">'zyh'</span>;</div><div class="line">  <span class="built_in">console</span>.log(name); <span class="comment">// 'zyh'</span></div><div class="line">  <span class="keyword">break</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name); <span class="comment">// 'zyh'</span></div></pre></td></tr></table></figure>
+<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><ul>
+<li>let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 用它所声明的变量，只在let命令所在的代码块内有效</span></div><div class="line"><span class="keyword">var</span> name = <span class="string">'zy'</span>;</div><div class="line"></div><div class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</div><div class="line">  <span class="keyword">let</span> name = <span class="string">'zyh'</span>;</div><div class="line">  <span class="built_in">console</span>.log(name); <span class="comment">// 'zyh'</span></div><div class="line">  <span class="keyword">break</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name); <span class="comment">// 'zy'</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -665,7 +672,7 @@ ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6的简介"><span class="nav-number">1.</span> <span class="nav-text">ES6的简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Babel"><span class="nav-number">2.</span> <span class="nav-text">Babel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最常用的ES6特性"><span class="nav-number">3.</span> <span class="nav-text">最常用的ES6特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#let-const"><span class="nav-number">3.1.</span> <span class="nav-text">let, const</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6的简介"><span class="nav-number">1.</span> <span class="nav-text">ES6的简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Babel"><span class="nav-number">2.</span> <span class="nav-text">Babel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最常用的ES6特性"><span class="nav-number">3.</span> <span class="nav-text">最常用的ES6特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#let-const"><span class="nav-number">3.1.</span> <span class="nav-text">let, const</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#let"><span class="nav-number">3.1.1.</span> <span class="nav-text">let</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
