@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-14T04:28:26.000Z</updated>
+  <updated>2017-08-14T04:33:40.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/07/01/es6/"/>
     <id>http://yoursite.com/2017/07/01/es6/</id>
     <published>2017-07-01T07:33:44.000Z</published>
-    <updated>2017-08-14T04:28:26.000Z</updated>
+    <updated>2017-08-14T04:33:40.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="ES6的简介"><a href="#ES6的简介" class="headerlink" title="ES6的简介"></a>ES6的简介</h1><ul>
 <li>ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015<a id="more"></a>
@@ -41,7 +41,14 @@
 <li>let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 用它所声明的变量，只在let命令所在的代码块内有效</span></div><div class="line"><span class="keyword">var</span> name = <span class="string">'zy'</span>;</div><div class="line"></div><div class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</div><div class="line">  <span class="keyword">let</span> name = <span class="string">'zyh'</span>;</div><div class="line">  <span class="built_in">console</span>.log(name); <span class="comment">// 'zyh'</span></div><div class="line">  <span class="keyword">break</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name); <span class="comment">// 'zy'</span></div></pre></td></tr></table></figure>
-]]></content>
+<ul>
+<li>另外一个var带来的不合理场景就是用来计数的循环变量泄露为全局变量</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 变量i是var声明的，在全局范围内都有效。所以每一次循环，新的i值都会覆盖旧值，导致最后输出的是最后一轮的i的值</span></div><div class="line"><span class="keyword">var</span> a = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">  a[i] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">a[<span class="number">6</span>](); <span class="comment">// 10</span></div><div class="line"></div><div class="line"><span class="comment">// 使用let则不会出现这个问题</span></div><div class="line"><span class="keyword">var</span> a = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">  a[i] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">a[<span class="number">6</span>](); <span class="comment">// 6</span></div></pre></td></tr></table></figure>
+<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><ul>
+<li>const也用来声明变量，但是声明的是常量。一旦声明，常量的值就不能改变</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 当我们尝试去改变用const声明的常量时，浏览器就会报错</span></div><div class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI</div><div class="line">PI = <span class="number">23</span> <span class="comment">//Module build failed: SyntaxError: /es6/app.js: "PI" is read-only</span></div><div class="line"></div><div class="line"><span class="comment">// const有一个很好的应用场景，就是当我们引用第三方库的时声明的变量，用const来声明可以避免未来不小心重命名而导致出现bug</span></div><div class="line"><span class="keyword">const</span> monent = <span class="built_in">require</span>(<span class="string">'moment'</span>);</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
