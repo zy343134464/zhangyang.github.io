@@ -89,16 +89,19 @@
 
 
 
-<meta name="description" content="Learning and Doing">
+<meta name="description" content="ES6的简介
+ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6/ES2015核心">
 <meta property="og:url" content="http://yoursite.com/2017/07/01/es6/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="Learning and Doing">
-<meta property="og:updated_time" content="2017-07-01T07:35:34.000Z">
+<meta property="og:description" content="ES6的简介
+ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015">
+<meta property="og:updated_time" content="2017-08-14T04:21:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6/ES2015核心">
-<meta name="twitter:description" content="Learning and Doing">
+<meta name="twitter:description" content="ES6的简介
+ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015">
 
 
 
@@ -400,7 +403,19 @@
       
 
       
-        
+        <h1 id="ES6的简介"><a href="#ES6的简介" class="headerlink" title="ES6的简介"></a>ES6的简介</h1><ul>
+<li>ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015<a id="more"></a>
+</li>
+</ul>
+<h1 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h1><ul>
+<li>Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 转码前</span></div><div class="line">input.map(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="comment">// 转码后</span></div><div class="line">input.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> item + <span class="number">1</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h1 id="最常用的ES6特性"><a href="#最常用的ES6特性" class="headerlink" title="最常用的ES6特性"></a>最常用的ES6特性</h1><ul>
+<li>let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments,这些是ES6最常用的几个语法</li>
+</ul>
+<h2 id="let-const"><a href="#let-const" class="headerlink" title="let, const"></a>let, const</h2><p>- </p>
+
       
     </div>
 
@@ -493,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -631,6 +655,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6的简介"><span class="nav-number">1.</span> <span class="nav-text">ES6的简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Babel"><span class="nav-number">2.</span> <span class="nav-text">Babel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最常用的ES6特性"><span class="nav-number">3.</span> <span class="nav-text">最常用的ES6特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#let-const"><span class="nav-number">3.1.</span> <span class="nav-text">let, const</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

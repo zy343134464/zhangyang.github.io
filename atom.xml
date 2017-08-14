@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-01T07:35:34.000Z</updated>
+  <updated>2017-08-14T04:21:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,26 @@
     <link href="http://yoursite.com/2017/07/01/es6/"/>
     <id>http://yoursite.com/2017/07/01/es6/</id>
     <published>2017-07-01T07:33:44.000Z</published>
-    <updated>2017-07-01T07:35:34.000Z</updated>
+    <updated>2017-08-14T04:21:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ES6的简介"><a href="#ES6的简介" class="headerlink" title="ES6的简介"></a>ES6的简介</h1><ul>
+<li>ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015<a id="more"></a>
+</li>
+</ul>
+<h1 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h1><ul>
+<li>Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 转码前</span></div><div class="line">input.map(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="comment">// 转码后</span></div><div class="line">input.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> item + <span class="number">1</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h1 id="最常用的ES6特性"><a href="#最常用的ES6特性" class="headerlink" title="最常用的ES6特性"></a>最常用的ES6特性</h1><ul>
+<li>let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments,这些是ES6最常用的几个语法</li>
+</ul>
+<h2 id="let-const"><a href="#let-const" class="headerlink" title="let, const"></a>let, const</h2><p>- </p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;ES6的简介&quot;&gt;&lt;a href=&quot;#ES6的简介&quot; class=&quot;headerlink&quot; title=&quot;ES6的简介&quot;&gt;&lt;/a&gt;ES6的简介&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015
     
     </summary>
     
