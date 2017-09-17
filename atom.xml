@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-27T15:48:14.000Z</updated>
+  <updated>2017-09-17T05:30:18.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/08/22/angular/"/>
     <id>http://yoursite.com/2017/08/22/angular/</id>
     <published>2017-08-22T15:16:41.000Z</published>
-    <updated>2017-08-27T15:48:14.000Z</updated>
+    <updated>2017-09-17T05:30:18.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="AngularJS-简介"><a href="#AngularJS-简介" class="headerlink" title="AngularJS 简介"></a>AngularJS 简介</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul>
 <li>ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的”所有者”  </div></li>
@@ -105,7 +105,7 @@
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-app</span>=<span class="string">""</span> <span class="attr">ng-init</span>=<span class="string">"firstName='John'"</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">p</span>&gt;</span>在输入框中尝试输入：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">p</span>&gt;</span>姓名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"firstName"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">p</span>&gt;</span>你输入的为： &#123;&#123; firstName &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h3><ul>
-<li> 表达式是一个 AngularJS 数据绑定表达式</li>
+<li> 表达式是一个 AngularJS 数据绑定表达</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-app</span>=<span class="string">""</span> <span class="attr">ng-init</span>=<span class="string">"quantity=1;price=5"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>价格计算器<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"> </div><div class="line">数量： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">ng-model</span>=<span class="string">"quantity"</span>&gt;</span></div><div class="line">价格： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">ng-model</span>=<span class="string">"price"</span>&gt;</span></div><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>总价：<span class="tag">&lt;/<span class="name">b</span>&gt;</span> &#123;&#123; quantity * price &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"> </div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="重复-HTML-元素"><a href="#重复-HTML-元素" class="headerlink" title="重复 HTML 元素"></a>重复 HTML 元素</h3><ul>
