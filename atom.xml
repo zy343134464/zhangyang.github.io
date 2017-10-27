@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-25T14:33:02.000Z</updated>
+  <updated>2017-10-27T14:17:32.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bootstrap</title>
+    <link href="http://yoursite.com/2017/10/27/bootstrap/"/>
+    <id>http://yoursite.com/2017/10/27/bootstrap/</id>
+    <published>2017-10-27T14:16:41.000Z</published>
+    <updated>2017-10-27T14:17:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="bootstrap-简介"><a href="#bootstrap-简介" class="headerlink" title="bootstrap 简介"></a>bootstrap 简介</h2><pre><code>var a == 1;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;bootstrap-简介&quot;&gt;&lt;a href=&quot;#bootstrap-简介&quot; class=&quot;headerlink&quot; title=&quot;bootstrap 简介&quot;&gt;&lt;/a&gt;bootstrap 简介&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;var a == 1;
+&lt;/code&gt;&lt;/p
+    
+    </summary>
+    
+      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="bootstrap" scheme="http://yoursite.com/tags/bootstrap/"/>
+    
+  </entry>
   
   <entry>
     <title>angular.js</title>
@@ -5720,282 +5744,6 @@
     
     
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML基础</title>
-    <link href="http://yoursite.com/2017/02/23/html/"/>
-    <id>http://yoursite.com/2017/02/23/html/</id>
-    <published>2017-02-22T17:42:52.000Z</published>
-    <updated>2017-07-28T09:30:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="HTML、XML、XHTML的区别"><a href="#HTML、XML、XHTML的区别" class="headerlink" title="HTML、XML、XHTML的区别"></a>HTML、XML、XHTML的区别</h1><a id="more"></a>
-<h2 id="HTML-Hypertext-Markup-language"><a href="#HTML-Hypertext-Markup-language" class="headerlink" title="HTML(Hypertext Markup language)"></a>HTML(Hypertext Markup language)</h2><ul>
-<li>超文本标记语言,语法较为松散的、字母大小写可以混用、标签不闭合、浏览器都能以自己的方式读取(有可能误解),不会出现报错</li>
-</ul>
-<h2 id="XML-Extensible-Markup-Language"><a href="#XML-Extensible-Markup-Language" class="headerlink" title="XML(Extensible Markup Language)"></a>XML(Extensible Markup Language)</h2><ul>
-<li>可扩展标记语言,是用来存储数据结构的语言,它是严格的语言,书写标签需要按规范,否则存储的数据就会出问题</li>
-</ul>
-<h2 id="XHTML-Extensible-Hypertext-Markup-language"><a href="#XHTML-Extensible-Hypertext-Markup-language" class="headerlink" title="XHTML(Extensible Hypertext Markup language)"></a>XHTML(Extensible Hypertext Markup language)</h2><ul>
-<li>可扩展超文本标记语言,它类似HTML语言,不过它的语法是严格的,书写更加规范</li>
-</ul>
-<h1 id="HTML语义化"><a href="#HTML语义化" class="headerlink" title="HTML语义化"></a>HTML语义化</h1><ul>
-<li>根据内容结构化,选择适合的标签</li>
-<li>便于开发者阅读和写出更优雅的代码</li>
-<li>便于浏览器的爬虫和机器很好的解析</li>
-</ul>
-<h1 id="内容、样式、行为分离原则"><a href="#内容、样式、行为分离原则" class="headerlink" title="内容、样式、行为分离原则"></a>内容、样式、行为分离原则</h1><ul>
-<li>内容(HTML):页面的内容与结构,不管样式</li>
-<li>样式(CSS):负责页面的样式,通过修改一个CSS代码来控制整个页面的样式,更加合理高效</li>
-<li>行为(JavaScirpt):控制页面的行为</li>
-</ul>
-<h1 id="常见的meta标签"><a href="#常见的meta标签" class="headerlink" title="常见的meta标签"></a>常见的meta标签</h1><ul>
-<li>meta标签用于描述HTML的元数据,它不会显示在网上,但是机器可以识别</li>
-</ul>
-<h2 id="meta-charset-”uft-8”"><a href="#meta-charset-”uft-8”" class="headerlink" title="meta charset=”uft-8”;"></a>meta charset=”uft-8”;</h2><ul>
-<li>声明文档的使用的字符编码</li>
-</ul>
-<h2 id="meta-http-equiv-”X-UA-Compatible”-content-”IE-edge-chrome-1”"><a href="#meta-http-equiv-”X-UA-Compatible”-content-”IE-edge-chrome-1”" class="headerlink" title="meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1”;"></a>meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1”;</h2><ul>
-<li>IE内核,用最新的标准渲染</li>
-<li>chrome内核,用chrome标准渲染</li>
-</ul>
-<h3 id="http-equiv属性"><a href="#http-equiv属性" class="headerlink" title="http-equiv属性"></a>http-equiv属性</h3><ul>
-<li>相当于http的文件头作用,向浏览器传送html文档时先传递特定的信息以辅助页面显示;</li>
-<li>对应的有content属性进行说明</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=gb_2312-80"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Language"</span> <span class="attr">content</span>=<span class="string">"zh-CN"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Refresh"</span> <span class="attr">content</span>=<span class="string">"n;url=http://yourlink"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Expires"</span> <span class="attr">content</span>=<span class="string">"Mon,12 May 2001 00:20:00 GMT"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"set-cookie"</span> <span class="attr">content</span>=<span class="string">"Mon,12 May 2001 00:20:00 GMT"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"windows-Target"</span> <span class="attr">content</span>=<span class="string">"_top"</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="meta-name-”viewport”-content-”width-device-width-initial-scale-1-maximum-scale-1-minimum-scale-1-user-scalable-no”-gt"><a href="#meta-name-”viewport”-content-”width-device-width-initial-scale-1-maximum-scale-1-minimum-scale-1-user-scalable-no”-gt" class="headerlink" title="meta name=”viewport” content=”width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no”&gt;"></a>meta name=”viewport” content=”width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no”&gt;</h2><ul>
-<li>当页面需要在移动端展示的时候,加上这条标签,移动端展示就能正常</li>
-<li>device-width:设备的宽度</li>
-<li>initial-scale:初始的缩放比例</li>
-<li>maximum-scale:允许用户缩放到最大的比例</li>
-<li>minimum-scale:允许用户缩放到最小的比例</li>
-<li>user-scalable:用户是否可以手动缩放</li>
-</ul>
-<h2 id="meta-name-”keywords”-content-”谷歌-浏览器”"><a href="#meta-name-”keywords”-content-”谷歌-浏览器”" class="headerlink" title="meta name=”keywords” content=”谷歌 浏览器”"></a>meta name=”keywords” content=”谷歌 浏览器”</h2><ul>
-<li>告诉浏览器我的页面关键字是谷歌 浏览器,这对搜索引擎优化(SEO)有帮助</li>
-</ul>
-<h2 id="meta-name-”description”-content-”最好的浏览器是谷歌”"><a href="#meta-name-”description”-content-”最好的浏览器是谷歌”" class="headerlink" title="meta name=”description” content=”最好的浏览器是谷歌”"></a>meta name=”description” content=”最好的浏览器是谷歌”</h2><ul>
-<li>对我的页面进行一个描述,这对搜索引擎优化(SEO)有帮助</li>
-</ul>
-<h3 id="name属性"><a href="#name属性" class="headerlink" title="name属性"></a>name属性</h3><ul>
-<li>元数据的名称</li>
-<li>对应的有content属性进行说明</li>
-</ul>
-<h1 id="文档声明的作用、严格模式和混杂模式、-lt-doctype-html-gt-的作用"><a href="#文档声明的作用、严格模式和混杂模式、-lt-doctype-html-gt-的作用" class="headerlink" title="文档声明的作用、严格模式和混杂模式、&lt;!doctype html&gt;的作用"></a>文档声明的作用、严格模式和混杂模式、&lt;!doctype html&gt;的作用</h1><h2 id="文档声明的作用"><a href="#文档声明的作用" class="headerlink" title="文档声明的作用"></a>文档声明的作用</h2><ul>
-<li>告诉浏览器该文档的类型,以哪种方式解析文档</li>
-</ul>
-<h2 id="严格模式和混杂模式"><a href="#严格模式和混杂模式" class="headerlink" title="严格模式和混杂模式"></a>严格模式和混杂模式</h2><ul>
-<li>严格模式是指浏览器按照W3C标准来解析网页,发生在加文档声明的情况</li>
-<li>混杂模式指浏览器给网页提供了相对宽松的方式来解析页面,发生在不加文档声明的情况</li>
-</ul>
-<h2 id="doctype-html"><a href="#doctype-html" class="headerlink" title="!doctype html"></a>!doctype html</h2><ul>
-<li>告诉浏览器,这是HTML5的文档类型</li>
-</ul>
-<h1 id="浏览器乱码"><a href="#浏览器乱码" class="headerlink" title="浏览器乱码"></a>浏览器乱码</h1><ul>
-<li>原因:没有&lt;meta charset=”utf-8”&gt;;浏览器解析时使用的编码和保存文档时使用的编码不匹配</li>
-<li>解决方法:加&lt;meta charset=”utf-8”&gt;</li>
-</ul>
-<h1 id="常见浏览器及内核"><a href="#常见浏览器及内核" class="headerlink" title="常见浏览器及内核"></a>常见浏览器及内核</h1><table>
-<thead>
-<tr>
-<th>浏览器</th>
-<th>内核</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IE</td>
-<td>Trident</td>
-</tr>
-<tr>
-<td>Mozilla FireFox</td>
-<td>Gecko </td>
-</tr>
-<tr>
-<td>Google Chrome</td>
-<td>Webkit</td>
-</tr>
-<tr>
-<td>Safari</td>
-<td>Webkit</td>
-</tr>
-<tr>
-<td>Opera</td>
-<td>Presto</td>
-</tr>
-</tbody>
-</table>
-<h1 id="常见的标签及使用场景"><a href="#常见的标签及使用场景" class="headerlink" title="常见的标签及使用场景"></a>常见的标签及使用场景</h1><table>
-<thead>
-<tr>
-<th>标签</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&lt;！DOCTYPE&gt;</td>
-<td>定义文档类型</td>
-</tr>
-<tr>
-<td>&lt;html&gt;</td>
-<td>定义一个HTML文档</td>
-</tr>
-<tr>
-<td>&lt;title&gt;</td>
-<td>为文档定义一个标题</td>
-</tr>
-<tr>
-<td>&lt;body&gt;</td>
-<td>定义文档的主体</td>
-</tr>
-<tr>
-<td>&lt;h1&gt;~&lt;h6&gt;</td>
-<td>定义HTML标题</td>
-</tr>
-<tr>
-<td>&lt;p&gt;</td>
-<td>定义一个段落</td>
-</tr>
-<tr>
-<td>&lt;br&gt;</td>
-<td>换行</td>
-</tr>
-<tr>
-<td>&lt;hr&gt;</td>
-<td>定义水平线</td>
-</tr>
-<tr>
-<td>&lt;!–注释–&gt;</td>
-<td>定义一个注释</td>
-</tr>
-<tr>
-<td>&lt;a href=”#”&gt;</td>
-<td>定义一个链接</td>
-</tr>
-<tr>
-<td>&lt;img src=”#”&gt;</td>
-<td>定义一个图片</td>
-</tr>
-<tr>
-<td>&lt;ul&gt;</td>
-<td>定义一个无序列表</td>
-</tr>
-<tr>
-<td>&lt;ol&gt;</td>
-<td>定义一个有序列表</td>
-</tr>
-<tr>
-<td>&lt;li&gt;</td>
-<td>定义一个列表项</td>
-</tr>
-<tr>
-<td>&lt;dl&gt;</td>
-<td>自定义列表</td>
-</tr>
-<tr>
-<td>&lt;dt&gt;</td>
-<td>自定义列表项</td>
-</tr>
-<tr>
-<td>&lt;dd&gt;</td>
-<td>自定义列表描述</td>
-</tr>
-<tr>
-<td>&lt;table&gt;</td>
-<td>定义一个表格</td>
-</tr>
-<tr>
-<td>&lt;th&gt;</td>
-<td>定义表格的表头单元格（table head）</td>
-</tr>
-<tr>
-<td>&lt;tr&gt;</td>
-<td>定义表格中的行</td>
-</tr>
-<tr>
-<td>&lt;td&gt;</td>
-<td>定义表格的中的单元内容（table data）</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">   h1,h2,h3,h4,h5,h6&#123;</div><div class="line">     margin: 0;</div><div class="line">     padding:0;</div><div class="line">   &#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h4</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h5</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h6</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">h6</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="comment">&lt;!-- 你好 --&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>你好<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://note.youdao.com/favicon.ico"</span> <span class="attr">alt</span>=<span class="string">"图片"</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>苹果<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>香蕉<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>西瓜<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">ol</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>苹果<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>香蕉<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>西瓜<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">cellpadding</span>=<span class="string">"4"</span> <span class="attr">cellspacing</span>=<span class="string">"10"</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">width</span>=<span class="string">"100%"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">caption</span>&gt;</span>Table<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">colgroup</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">col</span> <span class="attr">span</span>=<span class="string">"2"</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">col</span> <span class="attr">align</span>=<span class="string">"right"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>A<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>B<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>C<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">align</span>=<span class="string">"right"</span>&gt;</span>00<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">valign</span>=<span class="string">"bottom"</span>&gt;</span>01<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>02<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>10<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tfoot</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>20<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>21<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>22<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tfoot</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-2.png" alt="image"></p>
-<h1 id="HTML表单"><a href="#HTML表单" class="headerlink" title="HTML表单"></a>HTML表单</h1><h2 id="form表单"><a href="#form表单" class="headerlink" title="form表单"></a>form表单</h2><ul>
-<li>用来采集用户输入的信息,提交到服务器,实现页面的交互</li>
-<li>表单用&lt;form&gt;…&lt;/form&gt;标签包起来,这样浏览器才能通过标签界定要上传的表单内容</li>
-</ul>
-<h2 id="常见input标签"><a href="#常见input标签" class="headerlink" title="常见input标签"></a>常见input标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--  输入单行文本 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"用户名"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    </div><div class="line">    <span class="comment">&lt;!--  输入密码 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入密码"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">    <span class="comment">&lt;!--  输入多选框 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"read"</span> <span class="attr">checked</span>&gt;</span>阅读</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"sport"</span>&gt;</span>运动</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"music"</span>&gt;</span>音乐<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">    <span class="comment">&lt;!-- 输入单选框 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"male"</span> <span class="attr">checked</span>&gt;</span>男</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span>女<span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">    </div><div class="line">    <span class="comment">&lt;!-- 输入下拉列表 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"city"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"beijing"</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"shanghai"</span>&gt;</span>上海<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ningbo"</span> <span class="attr">selected</span>&gt;</span>宁波<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"wuxi"</span>&gt;</span>无锡<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    </div><div class="line">    <span class="comment">&lt;!--  输入文本域 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"article"</span> <span class="attr">cols</span>=<span class="string">"30"</span> <span class="attr">rows</span>=<span class="string">"10"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  </div><div class="line">    <span class="comment">&lt;!-- 按钮 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮"</span>&gt;</span></div><div class="line">  </div><div class="line">    <span class="comment">&lt;!-- 提交 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></div><div class="line">      </div><div class="line">    <span class="comment">&lt;!-- 重置 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span> <span class="attr">value</span>=<span class="string">"重置"</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line">  </div><div class="line">    </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-3.png" alt="image"></p>
-<h2 id="get、post方式"><a href="#get、post方式" class="headerlink" title="get、post方式"></a>get、post方式</h2><ul>
-<li>创建表单的时候选择的两种传输数据的方式</li>
-</ul>
-<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><ul>
-<li>传输方式是把收集的信息组合成一个URL,向后端发送</li>
-<li>多用于向后台得到数据,不会修改数据库</li>
-<li>本质上是URL的拼接,受URL长度的限制,保密性差,输送信息小</li>
-<li>得到的结果对应一个URL,结果页面会被浏览器缓存</li>
-<li>只能向服务器发送ASCII字符</li>
-</ul>
-<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><ul>
-<li>传输方式是把数据放着HTTP包里传输的,信息不会显示在URL上</li>
-<li>多用于向后台输入数据,会修改数据库</li>
-<li>保密性相对好,输送信息相对大</li>
-<li>不会有浏览器缓存</li>
-<li>可以向服务器发送整个IS0-10646的字符</li>
-</ul>
-<blockquote>
-<ul>
-<li>保密性来说，post比get好</li>
-<li>数据安全来说，get比post好</li>
-</ul>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="name属性-1"><a href="#name属性-1" class="headerlink" title="name属性"></a>name属性</h2><ul>
-<li>对于前端来说,可以区分同一个name是同一组数据</li>
-<li>对于后端来说，只有设置name的元素才能提交它们相对应的值,对发送过来的数据进行归类,从而在数据库获取数据</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"read"</span> <span class="attr">checked</span>&gt;</span>阅读</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"sport"</span>&gt;</span>运动</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"music"</span>&gt;</span>音乐</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-4.png" alt="image"></p>
-<h2 id="radio属性"><a href="#radio属性" class="headerlink" title="radio属性"></a>radio属性</h2><ul>
-<li>name属性的值相同是一组</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"male"</span> <span class="attr">checked</span>&gt;</span>男</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span>女</div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">value</span>=<span class="string">"adult"</span> <span class="attr">checked</span>&gt;</span>已成年</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">value</span>=<span class="string">"child"</span>&gt;</span>未成年</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-5.png" alt="image"></p>
-<h2 id="placeholder属性"><a href="#placeholder属性" class="headerlink" title="placeholder属性"></a>placeholder属性</h2><ul>
-<li>提示文本,帮助用户理解要输入什么信息</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"用户名"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入密码"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>.</div></pre></td></tr></table></figure>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-6.png" alt="image"></p>
-<h2 id="type-hidden隐藏域"><a href="#type-hidden隐藏域" class="headerlink" title="type=hidden隐藏域"></a>type=hidden隐藏域</h2><ul>
-<li>页面中对于用户是不可见的,在表单中插入隐藏域目的是在于收集或发送信息,便于后端处理数据</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"#"</span> <span class="attr">value</span>=<span class="string">"#"</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="表单的用法"><a href="#表单的用法" class="headerlink" title="表单的用法"></a>表单的用法</h2><ul>
-<li>单行文本</li>
-<li>输入密码</li>
-<li>单选框</li>
-<li>多选框</li>
-<li>文本域</li>
-<li>下拉菜单</li>
-<li>提交按钮</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS Bin<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"login"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"username"</span>&gt;</span>姓名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"用户名"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"password"</span>&gt;</span>密码：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"输入密码"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sex"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>性别：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex1"</span> <span class="attr">value</span>=<span class="string">"male"</span>&gt;</span> 男</div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex1"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span> 女</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span> </div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"orientation"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>取向：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex2"</span> <span class="attr">value</span>=<span class="string">"male"</span>&gt;</span> 男</div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex2"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span> 女</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hobby"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>爱好：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"dota"</span>&gt;</span> dota</div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"tour"</span>&gt;</span> 旅游</div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"pet"</span>&gt;</span> 宠物</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"textarea"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>评论：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">textarea</span>&gt;</span></div><div class="line"></div><div class="line">      <span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mycar"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">label</span>&gt;</span>我的car：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"car"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"BENZ"</span>&gt;</span>奔驰<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"BMW"</span>&gt;</span>宝马<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"FORD"</span>&gt;</span>福特<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"SB"</span> <span class="attr">selected</span>&gt;</span>萨博<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/html-7.png" alt="image"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;HTML、XML、XHTML的区别&quot;&gt;&lt;a href=&quot;#HTML、XML、XHTML的区别&quot; class=&quot;headerlink&quot; title=&quot;HTML、XML、XHTML的区别&quot;&gt;&lt;/a&gt;HTML、XML、XHTML的区别&lt;/h1&gt;
-    
-    </summary>
-    
-      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
-    
-    
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
   </entry>
   
