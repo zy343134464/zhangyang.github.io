@@ -159,11 +159,11 @@
     <link href="http://yoursite.com/2017/08/22/angular/"/>
     <id>http://yoursite.com/2017/08/22/angular/</id>
     <published>2017-08-22T15:16:41.000Z</published>
-    <updated>2017-11-04T07:22:22.000Z</updated>
+    <updated>2017-11-04T07:23:20.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="AngularJS-简介"><a href="#AngularJS-简介" class="headerlink" title="AngularJS 简介"></a>AngularJS 简介</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul>
 <li>ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的”所有者”  </div></li>
-<li>ng-model 指令把输入域的值绑定到应用程序变量 nam  <a id="more"></a>
+<li>ng-model 指令把输入域的值绑定到应用程序变量 name  <a id="more"></a>
 </li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-app</span>=<span class="string">""</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">p</span>&gt;</span>名字 : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello &#123;&#123;name&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -734,7 +734,7 @@
     
       &lt;h2 id=&quot;AngularJS-简介&quot;&gt;&lt;a href=&quot;#AngularJS-简介&quot; class=&quot;headerlink&quot; title=&quot;AngularJS 简介&quot;&gt;&lt;/a&gt;AngularJS 简介&lt;/h2&gt;&lt;h3 id=&quot;指令&quot;&gt;&lt;a href=&quot;#指令&quot; class=&quot;headerlink&quot; title=&quot;指令&quot;&gt;&lt;/a&gt;指令&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;ng-app 指令告诉 AngularJS，&lt;div&gt; 元素是 AngularJS 应用程序 的”所有者”  &lt;/li&gt;
-&lt;li&gt;ng-model 指令把输入域的值绑定到应用程序变量 nam
+&lt;li&gt;ng-model 指令把输入域的值绑定到应用程序变量 name
     
     </summary>
     
