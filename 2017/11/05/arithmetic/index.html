@@ -89,16 +89,16 @@
 
 
 
-<meta name="description" content="待总结">
+<meta name="description" content="算法简介">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法">
 <meta property="og:url" content="http://yoursite.com/2017/11/05/arithmetic/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="待总结">
-<meta property="og:updated_time" content="2017-11-07T14:55:56.000Z">
+<meta property="og:description" content="算法简介">
+<meta property="og:updated_time" content="2017-11-10T15:02:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法">
-<meta name="twitter:description" content="待总结">
+<meta name="twitter:description" content="算法简介">
 
 
 
@@ -400,8 +400,23 @@
       
 
       
-        <p>待总结</p>
-
+        <h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><a id="more"></a>
+<p>以下是高德纳在他的著作《计算机程序设计艺术》里对算法的特征归纳：</p>
+<p>输入：一个算法必须有零个或以上输入量。</p>
+<p>输出：一个算法应有一个或以上输出量，输出量是算法计算的结果。<br>明确性：算法的描述必须无歧义，以保证算法的实际执行结果是精确地匹配要求或期望，通常要求实际运行结果是确定的。</p>
+<p>有限性：依据图灵的定义，一个算法是能够被任何图灵完备系统模拟的一串运算，而图灵机只有有限个状态、有限个输入符号和有限个转移函数（指令）。而一些定义更规定算法必须在有限个步骤内完成任务。</p>
+<p>有效性：又称可行性。能够实现，算法中描述的操作都是可以通过已经实现的基本运算执行有限次来实现。</p>
+<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>中国学生学不好排序算法主要是因为这些算法的名字是外国人取的</p>
+<p>体育委员两两摸头法（冒泡排序）</p>
+<p>体育老师一指禅法（选择排序）</p>
+<p>起扑克牌法（插入排序）</p>
+<p>强迫症收扑克牌法（基数排序）</p>
+<p>快排</p>
+<p>归并排序</p>
+<p>堆排序</p>
+<p>排序可视化：<a href="https://visualgo.net/bn/sorting" target="_blank" rel="external">https://visualgo.net/bn/sorting</a></p>
+<p>伪代码：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">a &lt;- &#123;</div><div class="line">    <span class="string">'0'</span>:<span class="number">4</span>,</div><div class="line">    <span class="string">'1'</span>:<span class="number">6</span>,</div><div class="line">    <span class="string">'2'</span>:<span class="number">3</span>,</div><div class="line">    <span class="string">'3'</span>:<span class="number">2</span>,</div><div class="line">    <span class="string">'4'</span>:<span class="number">1</span>,</div><div class="line">    <span class="string">'length'</span>: <span class="number">5</span></div><div class="line">&#125;</div><div class="line">轮数 = <span class="number">1</span></div><div class="line">左手指向的下标 </div><div class="line"></div><div class="line"><span class="built_in">while</span>(轮数 &lt; a[<span class="string">'length'</span>])</div><div class="line">    左手指向的下标 = <span class="number">0</span></div><div class="line">    <span class="built_in">while</span>(左手指向的下标 &lt;= a[<span class="string">'length'</span>] - <span class="number">1</span> - 轮数)</div><div class="line">        <span class="built_in">if</span> a[左手指向的下标] &lt; a[左手指向的下标+<span class="number">1</span>]</div><div class="line">            <span class="comment">// 什么也不做</span></div><div class="line">        <span class="built_in">else</span></div><div class="line">            <span class="comment">// 交换左右的位置</span></div><div class="line">            t &lt;- a[左手指向的下标]</div><div class="line">            a[左手指向的下标] &lt;- a[左手指向的下标+<span class="number">1</span>]</div><div class="line">            a[左手指向的下标+<span class="number">1</span>] &lt;- t</div><div class="line">        <span class="built_in">end</span></div><div class="line">        左手指向的下标 &lt;- 左手指向的下标+<span class="number">1</span></div><div class="line">    <span class="built_in">end</span></div><div class="line">    轮数 &lt;- 轮数 + <span class="number">1</span></div><div class="line"><span class="built_in">end</span></div><div class="line"><span class="built_in">print</span> a</div><div class="line"><span class="comment">/////////</span></div><div class="line"></div><div class="line">轮数  左手指向的下标最大值（从<span class="number">0</span>开始）</div><div class="line"><span class="number">1</span>        <span class="number">3</span></div><div class="line"><span class="number">2</span>       <span class="number">2</span></div><div class="line"><span class="number">3</span>       <span class="number">1</span></div><div class="line"><span class="number">4</span>       <span class="number">0</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -492,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -630,6 +654,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法简介"><span class="nav-number">1.</span> <span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序算法"><span class="nav-number">2.</span> <span class="nav-text">排序算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
