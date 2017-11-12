@@ -89,16 +89,26 @@
 
 
 
-<meta name="description" content="基础">
+<meta name="description" content="目录
+WWW（万维网）的来历
+URI 是什么">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP基础">
 <meta property="og:url" content="http://yoursite.com/2017/04/15/http/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="基础">
-<meta property="og:updated_time" content="2017-07-30T13:15:58.000Z">
+<meta property="og:description" content="目录
+WWW（万维网）的来历
+URI 是什么">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/4-1.jpg">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/4-2.jpg">
+<meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/4-3.jpg">
+<meta property="og:updated_time" content="2017-11-12T05:11:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP基础">
-<meta name="twitter:description" content="基础">
+<meta name="twitter:description" content="目录
+WWW（万维网）的来历
+URI 是什么">
+<meta name="twitter:image" content="http://oqev4hx8u.bkt.clouddn.com/4-1.jpg">
 
 
 
@@ -400,7 +410,176 @@
       
 
       
-        <p>基础</p>
+        <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li>WWW（万维网）的来历</li>
+<li>URI 是什么<a id="more"></a></li>
+<li>DNS</li>
+<li>Server + Client + HTTP</li>
+<li>请求示例</li>
+<li>用 Chrome 发请求</li>
+<li>响应</li>
+<li>响应示例</li>
+<li>响应的格式</li>
+</ul>
+<hr>
+<h2 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h2><p>万维网（World Wide Web）出生的年份1990年</p>
+<p>Tim Berners-Lee 发明了用网址就能访问网页的办法，他发明了第一个网页、第一个浏览器和第一个服务器</p>
+<p>主要包含三个概念</p>
+<p>URI，俗称网址</p>
+<p>HTTP，两个电脑之间传输内容的协议</p>
+<p>HTML，超级文本，主要用来做页面跳转</p>
+<p>这是一个简单而完美的系统</p>
+<p>李爵士除了发明了这些概念，还付诸了行动：</p>
+<p>发明了第一个服务器</p>
+<p>发明了第一个浏览器</p>
+<p>写出了第一个网页</p>
+<h2 id="URI-是什么"><a href="#URI-是什么" class="headerlink" title="URI 是什么"></a>URI 是什么</h2><p>URI 分为 URL 和 URN，我们一般使用 URL 作为网址</p>
+<p>1.URN</p>
+<p>ISBN: 9787115275790 就是一个 URN，通过 URN 你可以确定一个「唯一的」资源，ISBN: 9787115275790 对应的资源的是《JavaScript 高级程序设计（第三版）》这本书。你去是介绍任何一个图书馆、书店，他们都知道是这本书。</p>
+<p>2.URL</p>
+<p><a href="https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5" target="_blank" rel="external">https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5</a> 就是一个 URL，通过 URL 你可以确定一个「唯一的」地址（网址）</p>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/4-1.jpg" alt="image"></p>
+<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>输入域名</p>
+<p>输出 IP</p>
+<pre><code>nslookup baidu.com
+
+ping baidu.com
+</code></pre><h2 id="Server-Client-HTTP"><a href="#Server-Client-HTTP" class="headerlink" title="Server + Client + HTTP"></a>Server + Client + HTTP</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/4-2.jpg" alt="image"></p>
+<pre><code>浏览器负责发起请求
+
+服务器在 80 端口接收请求
+
+服务器负责返回内容（响应）
+
+浏览器负责下载响应内容
+</code></pre><p>HTTP 的作用就是指导浏览器和服务器如何进行沟通</p>
+<h2 id="请求示例"><a href="#请求示例" class="headerlink" title="请求示例"></a>请求示例</h2><p>curl -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a>“</p>
+<p><img src="http://oqev4hx8u.bkt.clouddn.com/4-3.jpg" alt="image"></p>
+<p>请求的内容为</p>
+<pre><code>GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: curl/7.54.0
+Accept: */*
+Frank: xxx
+</code></pre><p>curl -X POST -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a>“</p>
+<p>请求的内容为</p>
+<pre><code>POST / HTTP/1.1
+Host: www.baidu.com
+User-Agent: curl/7.54.0
+Accept: */*
+Frank: xxx
+</code></pre><p>curl -X POST -d “1234567890” -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a>“</p>
+<p>请求的内容为</p>
+<pre><code>POST / HTTP/1.1
+Host: www.baidu.com
+User-Agent: curl/7.54.0
+Accept: */*
+Frank: xxx
+Content-Length: 10
+Content-Type: application/x-www-form-urlencoded
+
+1234567890
+</code></pre><p>请求的格式</p>
+<pre><code>1 动词 路径 协议/版本
+2 Key1: value1
+2 Key2: value2
+2 Key3: value3
+2 Content-Type: application/x-www-form-urlencoded
+2 Host: www.baidu.com
+2 User-Agent: curl/7.54.0
+3 
+4 要上传的数据
+</code></pre><p>请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）</p>
+<p>第三部分永远都是一个回车（\n）</p>
+<p>动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等</p>
+<p>这里的路径包括「查询参数」，但不包括「锚点」</p>
+<p>如果你没有写路径，那么路径默认为 /</p>
+<p>第 2 部分中的 Content-Type 标注了第 4 部分的格式</p>
+<h2 id="用-Chrome-发请求"><a href="#用-Chrome-发请求" class="headerlink" title="用 Chrome 发请求"></a>用 Chrome 发请求</h2><p>打开 Network</p>
+<p>地址栏输入网址</p>
+<p>在 Network 点击，查看 request，点击「view source」</p>
+<p>可以看到请求的前三部分了</p>
+<p>如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到</p>
+<h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><p>请求了之后，应该都能得到一个响应，除非断网了，或者服务器宕机了</p>
+<h2 id="响应示例"><a href="#响应示例" class="headerlink" title="响应示例"></a>响应示例</h2><p>上面三个请求示例，前两个请求对应的响应分别为</p>
+<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform
+Connection: Keep-Alive
+Content-Length: 2443
+Content-Type: text/html
+Date: Tue, 10 Oct 2017 09:14:05 GMT
+Etag: &quot;5886041d-98b&quot;
+Last-Modified: Mon, 23 Jan 2017 13:24:45 GMT
+Pragma: no-cache
+Server: bfe/1.0.8.18
+Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/
+
+&lt;!DOCTYPE html&gt;
+&lt;!--STATUS OK--&gt;&lt;html&gt; &lt;head&gt; 后面太长，省略了……
+
+HTTP/1.1 302 Found
+Connection: Keep-Alive
+Content-Length: 17931
+Content-Type: text/html
+Date: Tue, 10 Oct 2017 09:19:47 GMT
+Etag: &quot;54d9749e-460b&quot;
+Server: bfe/1.0.8.18
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt; 后面太长，省略了……
+</code></pre><p>上面三个请求示例，前两个请求对应的响应分别为</p>
+<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform
+Connection: Keep-Alive
+Content-Length: 2443
+Content-Type: text/html
+Date: Tue, 10 Oct 2017 09:14:05 GMT
+Etag: &quot;5886041d-98b&quot;
+Last-Modified: Mon, 23 Jan 2017 13:24:45 GMT
+Pragma: no-cache
+Server: bfe/1.0.8.18
+Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/
+
+&lt;!DOCTYPE html&gt;
+&lt;!--STATUS OK--&gt;&lt;html&gt; &lt;head&gt; 后面太长，省略了……
+HTTP/1.1 302 Found
+Connection: Keep-Alive
+Content-Length: 17931
+Content-Type: text/html
+Date: Tue, 10 Oct 2017 09:19:47 GMT
+Etag: &quot;54d9749e-460b&quot;
+Server: bfe/1.0.8.18
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt; 后面太长，省略了……
+</code></pre><p>GET 请求和 POST 请求对应的响应可以一样，也可以不一样</p>
+<p>响应的第四部分可以很长很长很长</p>
+<h2 id="响应的格式"><a href="#响应的格式" class="headerlink" title="响应的格式"></a>响应的格式</h2><pre><code>1 协议/版本号 状态码 状态解释
+2 Key1: value1
+2 Key2: value2
+2 Content-Length: 17931
+2 Content-Type: text/html
+3
+4 要下载的内容
+</code></pre><p>状态码要背，是服务器对浏览器说的话</p>
+<pre><code>1xx 不常用
+2xx 表示成功
+3xx 表示滚吧
+4xx 表示你丫错了
+5xx 表示好吧，我错了
+</code></pre><p>状态解释没什么用</p>
+<h2 id="用-Chrome-查看响应"><a href="#用-Chrome-查看响应" class="headerlink" title="用 Chrome 查看响应"></a>用 Chrome 查看响应</h2><p>打开 Network</p>
+<p>输入网址</p>
+<p>选中第一个响应</p>
+<p>查看 Response Headers，点击「view source」，点击「view source」，点击「view source」</p>
+<p>你会看到响应的前两部分</p>
+<p>查看 Response 或者 Preview，你会看到响应的第 4 部分</p>
+<p>第 2 部分中的 Content-Type 标注了第 4 部分的格式</p>
+<p>第 2 部分中的 Content-Type 遵循 MIME 规范</p>
 
       
     </div>
@@ -496,8 +675,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -634,6 +822,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#万维网"><span class="nav-number">1.1.</span> <span class="nav-text">万维网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URI-是什么"><span class="nav-number">1.2.</span> <span class="nav-text">URI 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS"><span class="nav-number">1.3.</span> <span class="nav-text">DNS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Server-Client-HTTP"><span class="nav-number">1.4.</span> <span class="nav-text">Server + Client + HTTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求示例"><span class="nav-number">1.5.</span> <span class="nav-text">请求示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用-Chrome-发请求"><span class="nav-number">1.6.</span> <span class="nav-text">用 Chrome 发请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应"><span class="nav-number">1.7.</span> <span class="nav-text">响应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应示例"><span class="nav-number">1.8.</span> <span class="nav-text">响应示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应的格式"><span class="nav-number">1.9.</span> <span class="nav-text">响应的格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用-Chrome-查看响应"><span class="nav-number">1.10.</span> <span class="nav-text">用 Chrome 查看响应</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
