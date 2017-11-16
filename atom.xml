@@ -2459,9 +2459,9 @@
     <link href="http://yoursite.com/2017/04/15/http/"/>
     <id>http://yoursite.com/2017/04/15/http/</id>
     <published>2017-04-15T15:13:10.000Z</published>
-    <updated>2017-11-14T14:52:50.000Z</updated>
+    <updated>2017-11-16T13:20:46.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h2><p>万维网（World Wide Web）出生的年份1990年<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<h2 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h2><p>万维网（World Wide Web）出生的年份1990<br><a id="more"></a></p>
 <p>Tim Berners-Lee 发明了用网址就能访问网页的办法，他发明了第一个网页、第一个浏览器和第一个服务器</p>
 <p>主要包含三个概念</p>
 <p>URI，俗称网址</p>
@@ -2623,7 +2623,7 @@ Server: bfe/1.0.8.18
     
     <summary type="html">
     
-      &lt;h2 id=&quot;万维网&quot;&gt;&lt;a href=&quot;#万维网&quot; class=&quot;headerlink&quot; title=&quot;万维网&quot;&gt;&lt;/a&gt;万维网&lt;/h2&gt;&lt;p&gt;万维网（World Wide Web）出生的年份1990年&lt;br&gt;
+      &lt;h2 id=&quot;万维网&quot;&gt;&lt;a href=&quot;#万维网&quot; class=&quot;headerlink&quot; title=&quot;万维网&quot;&gt;&lt;/a&gt;万维网&lt;/h2&gt;&lt;p&gt;万维网（World Wide Web）出生的年份1990&lt;br&gt;
     
     </summary>
     
