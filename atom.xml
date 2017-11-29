@@ -2461,7 +2461,7 @@
     <link href="http://yoursite.com/2017/04/15/http/"/>
     <id>http://yoursite.com/2017/04/15/http/</id>
     <published>2017-04-15T15:13:10.000Z</published>
-    <updated>2017-11-21T13:45:06.000Z</updated>
+    <updated>2017-11-29T12:09:44.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h2><p>万维网（World Wide Web）出生的年份1990<br><a id="more"></a></p>
 <p>Tim Berners-Lee 发明了用网址就能访问网页的办法，他发明了第一个网页、第一个浏览器和第一个服务</p>
@@ -2621,7 +2621,7 @@ Server: bfe/1.0.8.18
 <p>查看 Response 或者 Preview，你会看到响应的第 4 部分</p>
 <p>第 2 部分中的 Content-Type 标注了第 4 部分的格式</p>
 <p>第 2 部分中的 Content-Type 遵循 MIME 规范</p>
-]]></content>
+<h2 id="常见状态码"><a href="#常见状态码" class="headerlink" title="常见状态码"></a>常见状态码</h2><figure class="highlight basic"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">200 </span>正常</div><div class="line"><span class="symbol">301 </span>永久重定向</div><div class="line"><span class="symbol">302 </span>暂时重定向</div><div class="line"><span class="symbol">304 </span><span class="keyword">not</span> modified</div><div class="line"><span class="symbol">403 </span>forbidden 不给你看</div><div class="line"><span class="symbol">404 </span>nof found</div><div class="line"><span class="symbol">414 </span>URI too long</div><div class="line"><span class="symbol">500 </span>服务器内部错误</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
