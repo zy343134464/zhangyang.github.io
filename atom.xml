@@ -1469,15 +1469,24 @@
     <link href="http://yoursite.com/2017/05/25/vue/"/>
     <id>http://yoursite.com/2017/05/25/vue/</id>
     <published>2017-05-25T15:16:41.000Z</published>
-    <updated>2017-11-29T16:58:30.000Z</updated>
+    <updated>2017-11-29T17:12:40.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Vue简介"><a href="#Vue简介" class="headerlink" title="Vue简介"></a>Vue简介</h1><pre><code>Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式
-</code></pre>]]></content>
+    <content type="html"><![CDATA[<h1 id="Vue简介"><a href="#Vue简介" class="headerlink" title="Vue简介"></a>Vue简介</h1><ul>
+<li>Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式</li>
+</ul>
+<h1 id="Vue引入"><a href="#Vue引入" class="headerlink" title="Vue引入"></a>Vue引入</h1><ul>
+<li>BootCDN（国内）: <a href="https://cdn.bootcss.com/vue/2.2.2/vue.min.js" target="_blank" rel="external">https://cdn.bootcss.com/vue/2.2.2/vue.min.js</a></li>
+<li>npm install vue</li>
+</ul>
+<h2 id="Vue-cli"><a href="#Vue-cli" class="headerlink" title="Vue-cli"></a>Vue-cli</h2><p>&gt;<br>全局安装 vue-cli<br>cnpm install –global vue-cli<br>创建一个基于 webpack 模板的新项目<br>vue init webpack my-project<br>这里需要进行一些配置，默认回车即可</p>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Vue简介&quot;&gt;&lt;a href=&quot;#Vue简介&quot; class=&quot;headerlink&quot; title=&quot;Vue简介&quot;&gt;&lt;/a&gt;Vue简介&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式
-&lt;/code&gt;&lt;/pre&gt;
+      &lt;h1 id=&quot;Vue简介&quot;&gt;&lt;a href=&quot;#Vue简介&quot; class=&quot;headerlink&quot; title=&quot;Vue简介&quot;&gt;&lt;/a&gt;Vue简介&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;
     
     </summary>
     
