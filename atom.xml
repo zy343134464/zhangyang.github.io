@@ -1465,70 +1465,28 @@
   </entry>
   
   <entry>
-    <title>vue.js</title>
+    <title>Vue.js</title>
     <link href="http://yoursite.com/2017/05/25/vue/"/>
     <id>http://yoursite.com/2017/05/25/vue/</id>
     <published>2017-05-25T15:16:41.000Z</published>
-    <updated>2017-11-28T09:21:16.000Z</updated>
+    <updated>2017-11-29T16:58:30.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vue-js简介"><a href="#vue-js简介" class="headerlink" title="vue.js简介"></a>vue.js简介</h1><ul>
-<li>Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的<a id="more"></a></li>
-<li>Vue.js是数据驱动的，你无需手动操作DOM。它通过一些特殊的HTML语法，将DOM和数据绑定起来。一旦你创建了绑定，DOM将和数据保持同步，每当变更了数据，DOM也会相应地更新</li>
-</ul>
-<h2 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h2><ul>
-<li>Model-View-Controller</li>
-<li>视图（View）：用户界面.带有数据的 HTML</li>
-<li>控制器（Controller）：业务逻辑.Controller监听Model变化，Model一变，Controller就会去更新View;Controller监听用户交互，用户点了提交或修改按钮，Controller 就要去更新 Model</li>
-<li>模型（Model）：数据保存.数据相关的操作就都放到这个 model 上</li>
-<li>MVC的一般流程是这样的：View（界面）事件通知–》Controller（业务）数据更新–》Model（数据）get/post–》Sever（服务器）返回JSON–》Model（数据）事件通知–》Controller（业务）更新DOM –》View(界面) </li>
-<li>MVC里面最复杂的部分是Controller，它做了太多机械的、繁琐的事情，比如绑定事件、更新DOM、更新数据，后续MVVM正式解决这一问题而出现</li>
-</ul>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/vue-1.png" alt="image"></p>
-<h2 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h2><ul>
-<li>Model-View-ViewModel</li>
-<li>ViewModel是Vue.js的核心，它是一个Vue实例。Vue实例是作用于某一个HTML元素上的，这个元素可以是HTML的body元素，也可以是指定了id的某个元素</li>
-<li>DOM Listeners和Data Bindings看作两个工具，它们是实现双向绑定的关键</li>
-<li>从View侧看，ViewModel中的DOM Listeners工具会帮我们监测页面上DOM元素的变化，如果有变化，则更改Model中的数据</li>
-<li>从Model侧看，当我们更新Model中的数据时，Data Bindings工具会帮我们更新页面中的DOM元素</li>
-</ul>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/vue-2.png" alt="image"></p>
-<hr>
-<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><ul>
-<li>官网写得实在是不要太详细简明了,这里只是总结语法,最后来个demo</li>
-<li>所有例子都要按MVVM模型想就可以快速理解</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- view层 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  &#123;&#123; message &#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- model层 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">var data = &#123;</div><div class="line">  message: 'Hello Vue!'</div><div class="line">&#125;</div><div class="line"></div><div class="line">// viewModel层(Vue实例),将view层和model层建立连接</div><div class="line">var app = new Vue(&#123;</div><div class="line">  el: '#app',</div><div class="line">  data: data</div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="引入方式"><a href="#引入方式" class="headerlink" title="引入方式"></a>引入方式</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/vue"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><ul>
-<li>指令带有前缀 v-，以表示它们是 Vue 提供的特殊属性(将这个元素节点的 title 属性和 Vue 实例的 message 属性保持一致)</li>
-<li>v-bind:title=”message”–&gt;title的数据绑定，message从实例的data中获取。简写:title=”message”</li>
-<li>v-if=”seen”–&gt;控制切换一个元素的显示,seen从实例的data中获取,如果为true显示,否则隐藏</li>
-<li>v-for=”v-for=”todo in todos”–&gt;遍历数组todos,todo从实例的todos中获取</li>
-<li>v-on:click=”reverseMessage”–&gt;给元素增加事件,reverseMessage从实例的methods中获取</li>
-<li>v-model=”message”–&gt;实现表单输入和应用状态之间的双向绑定</li>
-</ul>
-<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
-<li>组件系统是Vue.js其中一个重要的概念，它提供了一种抽象，让我们可以使用独立可复用的小组件来构建大型应用，任意类型的应用界面都可以抽象为一个组件树</li>
-<li>组件可以扩展HTML元素，封装可重用的HTML代码，我们可以将组件看作自定义的HTML元素</li>
-</ul>
-<p>继续</p>
-]]></content>
+    <content type="html"><![CDATA[<h1 id="Vue简介"><a href="#Vue简介" class="headerlink" title="Vue简介"></a>Vue简介</h1><pre><code>Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式
+</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;vue-js简介&quot;&gt;&lt;a href=&quot;#vue-js简介&quot; class=&quot;headerlink&quot; title=&quot;vue.js简介&quot;&gt;&lt;/a&gt;vue.js简介&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Vue.js是当下很火的一个JavaScript MVVM库，它是以数据驱动和组件化的思想构建的
+      &lt;h1 id=&quot;Vue简介&quot;&gt;&lt;a href=&quot;#Vue简介&quot; class=&quot;headerlink&quot; title=&quot;Vue简介&quot;&gt;&lt;/a&gt;Vue简介&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
       <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
     
     
-      <category term="vue.js" scheme="http://yoursite.com/tags/vue-js/"/>
-    
-      <category term="MVC" scheme="http://yoursite.com/tags/MVC/"/>
-    
       <category term="MVVM" scheme="http://yoursite.com/tags/MVVM/"/>
+    
+      <category term="Vue.js" scheme="http://yoursite.com/tags/Vue-js/"/>
     
   </entry>
   
