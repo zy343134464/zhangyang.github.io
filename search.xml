@@ -68,7 +68,7 @@
     <entry>
       <title><![CDATA[Vue.js]]></title>
       <url>%2F2017%2F05%2F25%2Fvue%2F</url>
-      <content type="text"><![CDATA[Vue简介 Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式 Vue引入 BootCDN（国内）: https://cdn.bootcss.com/vue/2.2.2/vue.min.js npm install vue Vue-cli&gt;全局安装 vue-clicnpm install –global vue-cli创建一个基于 webpack 模板的新项目vue init webpack my-project这里需要进行一些配置，默认回车即可]]></content>
+      <content type="text"><![CDATA[Vue简介 Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式 Vue引入 BootCDN（国内）: https://cdn.bootcss.com/vue/2.2.2/vue.min.js npm install vue Vue-cli 全局安装 vue-clicnpm install –global vue-cli创建一个基于 webpack 模板的新项目vue init webpack my-project这里需要进行一些配置，默认回车即可]]></content>
     </entry>
 
     
