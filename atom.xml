@@ -1469,7 +1469,7 @@
     <link href="http://yoursite.com/2017/05/25/vue/"/>
     <id>http://yoursite.com/2017/05/25/vue/</id>
     <published>2017-05-25T15:16:41.000Z</published>
-    <updated>2017-11-29T17:14:10.000Z</updated>
+    <updated>2017-11-29T17:21:48.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Vue简介"><a href="#Vue简介" class="headerlink" title="Vue简介"></a>Vue简介</h1><ul>
 <li>Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式</li>
@@ -1478,8 +1478,21 @@
 <li>BootCDN（国内）: <a href="https://cdn.bootcss.com/vue/2.2.2/vue.min.js" target="_blank" rel="external">https://cdn.bootcss.com/vue/2.2.2/vue.min.js</a></li>
 <li>npm install vue</li>
 </ul>
-<h2 id="Vue-cli"><a href="#Vue-cli" class="headerlink" title="Vue-cli"></a>Vue-cli</h2><blockquote>
+<h2 id="Vue-cli"><a href="#Vue-cli" class="headerlink" title="Vue-cli"></a>Vue-cli</h2><ul>
+<li>Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用</li>
+</ul>
+<blockquote>
 <p>全局安装 vue-cli<br>cnpm install –global vue-cli<br>创建一个基于 webpack 模板的新项目<br>vue init webpack my-project<br>这里需要进行一些配置，默认回车即可</p>
+</blockquote>
+<ul>
+<li>运行项目</li>
+</ul>
+<blockquote>
+<p>cd my-project<br>npm install<br>cnpm run dev</p>
+</blockquote>
+<h1 id="Vue目录结构"><a href="#Vue目录结构" class="headerlink" title="Vue目录结构"></a>Vue目录结构</h1><p><img src="http://www.runoob.com/wp-content/uploads/2017/01/B6E593E3-F284-4C58-A610-94C6ACDAD485.jpg" alt="image"></p>
+<blockquote>
+<p>build    最终发布的代码存放位置<br>config    配置目录，包括端口号等<br>node_modules    npm 加载的项目依赖模块<br>src    这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件<br>assets: 放置一些图片，如logo等<br>components: 目录里面放了一个组件文件，可以不用<br>App.vue: 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录<br>main.js: 项目的核心文件<br>static    静态资源目录，如图片、字体等<br>test    初始测试目录，可删除<br>.xxxx文件    这些是一些配置文件，包括语法配置，git配置等<br>index.html    首页入口文件，你可以添加一些 meta 信息或同统计代码啥的<br>package.json    项目配置文件<br>README.md    项目的说明文档，markdown 格式</p>
 </blockquote>
 ]]></content>
     
