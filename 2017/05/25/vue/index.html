@@ -90,49 +90,19 @@
 
 
 <meta name="description" content="Vue简介
-Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式
-
-Vue引入
-BootCDN（国内）: https://cdn.bootcss.com/vue/2.2.2/vue.min.js
-npm install vue
-
-Vue-cli
-Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用
-
-
-全局安装 vue-clicnpm install –global vue">
+Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue.js">
 <meta property="og:url" content="http://yoursite.com/2017/05/25/vue/index.html">
 <meta property="og:site_name" content="Learning and Doing">
 <meta property="og:description" content="Vue简介
-Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式
-
-Vue引入
-BootCDN（国内）: https://cdn.bootcss.com/vue/2.2.2/vue.min.js
-npm install vue
-
-Vue-cli
-Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用
-
-
-全局安装 vue-clicnpm install –global vue">
+Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式">
 <meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2017/01/B6E593E3-F284-4C58-A610-94C6ACDAD485.jpg">
-<meta property="og:updated_time" content="2017-11-29T17:21:48.000Z">
+<meta property="og:updated_time" content="2017-11-29T18:08:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js">
 <meta name="twitter:description" content="Vue简介
-Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式
-
-Vue引入
-BootCDN（国内）: https://cdn.bootcss.com/vue/2.2.2/vue.min.js
-npm install vue
-
-Vue-cli
-Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用
-
-
-全局安装 vue-clicnpm install –global vue">
+Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式">
 <meta name="twitter:image" content="http://www.runoob.com/wp-content/uploads/2017/01/B6E593E3-F284-4C58-A610-94C6ACDAD485.jpg">
 
 
@@ -436,9 +406,8 @@ Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应�
 
       
         <h1 id="Vue简介"><a href="#Vue简介" class="headerlink" title="Vue简介"></a>Vue简介</h1><ul>
-<li>Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式</li>
-</ul>
-<h1 id="Vue引入"><a href="#Vue引入" class="headerlink" title="Vue引入"></a>Vue引入</h1><ul>
+<li>Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式<a id="more"></a>
+<h1 id="Vue引入"><a href="#Vue引入" class="headerlink" title="Vue引入"></a>Vue引入</h1></li>
 <li>BootCDN（国内）: <a href="https://cdn.bootcss.com/vue/2.2.2/vue.min.js" target="_blank" rel="external">https://cdn.bootcss.com/vue/2.2.2/vue.min.js</a></li>
 <li>npm install vue</li>
 </ul>
@@ -458,7 +427,24 @@ Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应�
 <blockquote>
 <p>build    最终发布的代码存放位置<br>config    配置目录，包括端口号等<br>node_modules    npm 加载的项目依赖模块<br>src    这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件<br>assets: 放置一些图片，如logo等<br>components: 目录里面放了一个组件文件，可以不用<br>App.vue: 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录<br>main.js: 项目的核心文件<br>static    静态资源目录，如图片、字体等<br>test    初始测试目录，可删除<br>.xxxx文件    这些是一些配置文件，包括语法配置，git配置等<br>index.html    首页入口文件，你可以添加一些 meta 信息或同统计代码啥的<br>package.json    项目配置文件<br>README.md    项目的说明文档，markdown 格式</p>
 </blockquote>
-
+<h1 id="Vue-js-模板语法"><a href="#Vue-js-模板语法" class="headerlink" title="Vue.js 模板语法"></a>Vue.js 模板语法</h1><ul>
+<li>Vue.js 使用了基于 HTML 的模版语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据</li>
+</ul>
+<h2 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h2><pre><code>数据绑定最常见的形式就是使用 {{...}}（双大括号）的文本插值
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Vue 测试实例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/vue/2.4.2/vue.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">new Vue(&#123;</div><div class="line">  el: '#app',</div><div class="line">  data: &#123;</div><div class="line">    message: 'Hello Vue.js!'</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>使用 v-html 指令用于输出 html 代码</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Vue 测试实例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/vue/2.2.2/vue.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-html</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	</div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">new Vue(&#123;</div><div class="line">  el: '#app',</div><div class="line">  data: &#123;</div><div class="line">    message: '<span class="tag">&lt;<span class="name">h1</span>&gt;</span>测试实例<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>'</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>HTML 属性中的值应使用 v-bind 指令</li>
+<li>以下实例判断 class1 的值，如果为 true 使用 class1 类的样式，否则不使用该类</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Vue 测试实例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">.class1&#123;</div><div class="line">  background: #444;</div><div class="line">  color: #eee;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/vue/2.2.2/vue.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"r1"</span>&gt;</span>修改颜色<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"class1"</span> <span class="attr">id</span>=<span class="string">"r1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123;'class1': class1&#125;"</span>&gt;</span></div><div class="line">    directiva v-bind:class</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	</div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">new Vue(&#123;</div><div class="line">	el: '#app',</div><div class="line">  data:&#123;</div><div class="line">  	class1: false</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ul>
+<li>Vue.js 都提供了完全的 JavaScript 表达式支持</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Vue 测试实例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/vue/2.2.2/vue.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">	&#123;&#123;5+5&#125;&#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">	&#123;&#123; ok ? 'YES' : 'NO' &#125;&#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">	&#123;&#123; message.split('').reverse().join('') &#125;&#125;</div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"'list-' + id"</span>&gt;</span>测试实例<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	</div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">new Vue(&#123;</div><div class="line">  el: '#app',</div><div class="line">  data: &#123;</div><div class="line">	ok: true,</div><div class="line">    message: 'RUNOOB',</div><div class="line">	id : 1</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -712,7 +698,7 @@ Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue简介"><span class="nav-number">1.</span> <span class="nav-text">Vue简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue引入"><span class="nav-number">2.</span> <span class="nav-text">Vue引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-cli"><span class="nav-number">2.1.</span> <span class="nav-text">Vue-cli</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue目录结构"><span class="nav-number">3.</span> <span class="nav-text">Vue目录结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue简介"><span class="nav-number">1.</span> <span class="nav-text">Vue简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue引入"><span class="nav-number">2.</span> <span class="nav-text">Vue引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-cli"><span class="nav-number">2.1.</span> <span class="nav-text">Vue-cli</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue目录结构"><span class="nav-number">3.</span> <span class="nav-text">Vue目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-js-模板语法"><span class="nav-number">4.</span> <span class="nav-text">Vue.js 模板语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#插值"><span class="nav-number">4.1.</span> <span class="nav-text">插值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式"><span class="nav-number">4.2.</span> <span class="nav-text">表达式</span></a></li></ol></li></ol></div>
             
 
           </div>
