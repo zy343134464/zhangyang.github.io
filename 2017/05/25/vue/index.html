@@ -98,7 +98,7 @@ Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式">
 <meta property="og:description" content="Vue简介
 Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式">
 <meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2017/01/B6E593E3-F284-4C58-A610-94C6ACDAD485.jpg">
-<meta property="og:updated_time" content="2017-11-30T13:54:26.000Z">
+<meta property="og:updated_time" content="2017-12-01T13:39:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js">
 <meta name="twitter:description" content="Vue简介
@@ -451,6 +451,31 @@ Vue.js是一套构建用户界面的渐进式框架,遵循MVVM设计模式">
 <li>指令是带有 v- 前缀的特殊属性</li>
 <li>指令用于在表达式的值改变时，将某些行为应用到 DOM 上</li>
 </ul>
+<p>学习中var http = require(‘http’)<br>var fs = require(‘fs’)<br>var url = require(‘url’)<br>var querystring = require(‘querystring’) //用于解析POST请求</p>
+<p>//console.log(Object.keys(http))<br>var port = process.env.PORT || 8888;</p>
+<p>var server = http.createServer(function(request, response){</p>
+<p>  var temp = url.parse(request.url, true)<br>  var path = temp.pathname<br>  var query = temp.query<br>  var method = request.method</p>
+<p>  //从这里开始看，上面不要看<br>  if (method === ‘GET’) {<br>    if(path === ‘/‘){  // 如果用户请求的是 / 路径<br>      var string = fs.readFileSync(‘./index.html’, ‘utf8’)<br>      response.setHeader(‘Content-Type’, ‘text/html;charset=utf-8’)<br>      response.end(string)<br>    }else{<br>      response.statusCode = 404<br>      response.setHeader(‘Content-Type’, ‘text/html;charset=utf-8’)<br>      response.end(‘找不到对应的路径，你需要自行修改 index.js’)<br>    }<br>  }else if (method === “POST”) {<br>    if(path === ‘/‘){  // 如果用户请求的是 / 路径<br>      var payload = “”;</p>
+<pre><code>  request.addListener(&quot;data&quot;,function(chunk){
+    payload += chunk;
+  })
+
+  //POST结束输出结果
+
+  request.addListener(&quot;end&quot;,function(){
+    var params = querystring.parse(payload);
+    console.log(params)
+    response.setHeader(&apos;Content-Type&apos;, &apos;text/html;charset=utf-8&apos;) 
+    response.end(&apos;这是POST返回的页面&apos;)
+  })
+
+}else{  
+  response.statusCode = 404
+  response.setHeader(&apos;Content-Type&apos;, &apos;text/html;charset=utf-8&apos;) 
+  response.end(&apos;找不到对应的路径，你需要自行修改 index.js&apos;)
+}
+</code></pre><p>  }<br>  // 代码结束，下面不要看<br>  console.log(method + ‘ ‘ + request.url)<br>})</p>
+<p>server.listen(port)<br>console.log(‘监听 ‘ + port + ‘ 成功，请用打开 <a href="http://localhost" target="_blank" rel="external">http://localhost</a>:’ + port)</p>
 
       
     </div>
