@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/03/21/plugin/</loc>
+    
+    <lastmod>2018-03-21T15:01:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/11/11/node-server/</loc>
     
-    <lastmod>2018-01-01T10:53:42.000Z</lastmod>
+    <lastmod>2018-01-01T10:55:14.000Z</lastmod>
     
   </url>
   
