@@ -2,27 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/03/21/database/</loc>
-    
-    <lastmod>2018-03-21T15:13:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/03/22/c#/</loc>
-    
-    <lastmod>2018-03-21T15:12:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/03/21/plugin/</loc>
-    
-    <lastmod>2018-03-21T15:04:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/11/11/node-server/</loc>
     
     <lastmod>2018-01-01T10:55:14.000Z</lastmod>
@@ -96,13 +75,6 @@
     <loc>http://yoursite.com/2017/04/25/jsproject/</loc>
     
     <lastmod>2017-11-20T14:47:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/11/10/datastructure/</loc>
-    
-    <lastmod>2017-11-11T17:22:00.000Z</lastmod>
     
   </url>
   
