@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-31T13:15:38.000Z</updated>
+  <updated>2018-05-31T13:28:20.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://yoursite.com/2018/03/11/2017summary/"/>
     <id>http://yoursite.com/2018/03/11/2017summary/</id>
     <published>2018-03-10T16:40:15.000Z</published>
-    <updated>2018-05-31T13:15:38.000Z</updated>
+    <updated>2018-05-31T13:28:20.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://www.pkstep.com/wp-content/uploads/2017/12/fb_2017%E5%B9%B4%E5%BA%A6%E5%9B%9E%E9%A1%A71.png" alt="image"></p>
-<p>人生如寄,遇见的都是旅人<br><a id="more"></a><br>2017年过得比任何一年都快,每天都沉浸在代码”柳暗花明又一村”的喜悦中,并很幸运的开始另一个职业工作规划中</p>
+<p>人生如寄,遇见的只是旅人<br><a id="more"></a><br>2017年过得比任何一年都快,每天都沉浸在代码”柳暗花明又一村”的喜悦中,并很幸运的转到另一种职业规划中</p>
 <p>这一年经历有点多,要叙述一个复杂的故事,从简单的时间轴是最好的方法</p>
 <h1 id="时间轴"><a href="#时间轴" class="headerlink" title="时间轴"></a>时间轴</h1><p>1月初,辞职后立马到厦门去玩了几天</p>
-<p>1月份中,辞职后我貌似解脱多久的痛苦,内心完全释怀,看着小胖子推荐《CSS权威指南》和《JavaScript高级程序设计》,demo一遍一遍练习,踽踽独行，时感孤单</p>
+<p>1月份中,辞职后解脱沉寂内心许久的痛苦,内心完全释怀,看着小胖子推荐《CSS权威指南》和《JavaScript高级程序设计》,demo一遍一遍练习,踽踽独行，时感孤单</p>
 <p>2月份中旬过年,躲在家里撸代码,只参加少量同学聚会</p>
 <p>3月份,小胖子给我准备了四个项目完成后,3个月的日夜技术积累,从一个完全零基础的小白,到独立完成4个简单的练手项目</p>
 <p>4月份,准备简历,到广州面试,拿到3个offer,成功入职</p>
@@ -40,17 +40,17 @@
 <p>从喜欢看娱乐节目转美国电影及传记电影</p>
 <p>戒除游戏,真浪费时间和精力,去TM的王者荣耀去荣耀去</p>
 <p>开始自己煮饭及锻炼身体及内心开始变得强大,努力成为一个超级个体</p>
-<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>把前端入门书籍其它杂七杂八的书都看了一遍,接下来准备复习巩固,不下20本,不再一一列出</p>
-<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>电影院最新出的都看</p>
+<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>把前端入门书籍其它杂七杂八的书都看了一遍,接下来准备复习巩固,不下50本,不再一一列出</p>
+<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>电影院最新出的都看过(浪费钱)</p>
 <h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>FM102.5及各种乱七八杂(古典音乐、哲学等等),不再一一列出</p>
 <h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>1.徒步</p>
 <p>2.把公司业务都看完</p>
-<p>3.入股深圳创业的大学同学公司提供技术支持</p>
-<p>4.兼职专利代理(机械),和汕头朋友一起考专利代理人并接单提供专利服务</p>
+<p>3.入股大学同学初创的公司(深圳)提供建站技术支持</p>
+<p>4.兼职专利代理(机械),和汕头朋友一起考专利代理人并接单提供专利服务(这行竞争不多,来钱比编程还可怕)</p>
 <p>5.保持学习的劲头,坚持每天运动,提高表达能力及沟通能力</p>
 <p>6.学后端PHP兼职整个建站服务,玩下C#、Java</p>
 <p>7.坚持一周三天广州图书馆看it、电商、专利、文学书籍</p>
-<p>8.坚持开始写新进阶技术文章迭代之前的基础技术文章,每月总结自己</p>
+<p>8.坚持开始写新进阶技术文章迭代之前的基础技术文章,每天写博客总结,每月月度博客总结自己</p>
 <p>9.不要立flag、不要立flag、不要立flag,行动起来</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
 <li>自信提升30%效率</li>
@@ -67,7 +67,7 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://www.pkstep.com/wp-content/uploads/2017/12/fb_2017%E5%B9%B4%E5%BA%A6%E5%9B%9E%E9%A1%A71.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;p&gt;人生如寄,遇见的都是旅人&lt;br&gt;
+&lt;p&gt;人生如寄,遇见的只是旅人&lt;br&gt;
     
     </summary>
     
