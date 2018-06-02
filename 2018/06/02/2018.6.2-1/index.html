@@ -99,7 +99,7 @@
 <meta property="og:description" content="为什么现在的前端学JavaScript要学那么多的版本,并且一年一大更,半年一小更,还要用到很多js的库、模块化工具
 就是因为JavaScript的设计缺陷
 这篇主要是参考《JavaScript语言精髓》（JavaScript: The Good Parts）,总结的非常到位">
-<meta property="og:updated_time" content="2018-06-01T18:26:40.000Z">
+<meta property="og:updated_time" content="2018-06-02T05:59:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript的10个设计缺陷">
 <meta name="twitter:description" content="为什么现在的前端学JavaScript要学那么多的版本,并且一年一大更,半年一小更,还要用到很多js的库、模块化工具
@@ -413,57 +413,14 @@
 <h1 id="标准库小"><a href="#标准库小" class="headerlink" title="标准库小"></a>标准库小</h1><p>Javascript提供的标准函数库非常小，只能完成一些基本操作</p>
 <h1 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h1><p>传说是道格拉斯喝醉酒的时候,重复了发明了这两个数据类型,null和undefined可以认为是一样的</p>
 <h1 id="全局变量神出鬼没"><a href="#全局变量神出鬼没" class="headerlink" title="全局变量神出鬼没"></a>全局变量神出鬼没</h1><p>函数内部可以生成全局变量</p>
-<pre><code>a = 1;
-(function(){
-    b=2;
-    alert(a);
-})(); // 1
-alert(b); //2
-</code></pre><h1 id="行尾分号自动加"><a href="#行尾分号自动加" class="headerlink" title="行尾分号自动加"></a>行尾分号自动加</h1><p>Javascript的所有语句，都可以不用以分号结尾</p>
-<p>比如，下面这个函数根本无法达到预期的结果，返回值不是一个对象，而是undefined</p>
-<pre><code>function(){
-    return
-    {
-        i=1
-    };
-}
-</code></pre><p>原因是解释器自动在return语句后面加上了分号</p>
-<pre><code>function(){
-    return;
-    {
-        i=1
-    };
-}
-</code></pre><h1 id="加号运算符"><a href="#加号运算符" class="headerlink" title="加号运算符"></a>加号运算符</h1><p>+号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接</p>
-<pre><code>alert(1+10); // 11
-alert(&quot;1&quot;+&quot;10&quot;); // 110
-</code></pre><h1 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h1><p>NaN是一种数字，表示超出了解释器的极限。它有一些很奇怪的特性</p>
-<pre><code>NaN === NaN; //false
-</code></pre><h1 id="数组和对象的区分"><a href="#数组和对象的区分" class="headerlink" title="数组和对象的区分"></a>数组和对象的区分</h1><p>数组也是对象,要确认对象是不是数组比较麻烦</p>
-<pre><code>if ( arr &amp;&amp; 
-typeof arr === &apos;object&apos; &amp;&amp;
-typeof arr.length === &apos;number&apos; &amp;&amp;
-!arr.propertyIsEnumerable(&apos;length&apos;)){
-    alert(&quot;arr is an array&quot;);
-}
-</code></pre><h1 id="和"><a href="#和" class="headerlink" title="== 和 ==="></a>== 和 ===</h1><p>==会自动转换数据类型,得到的直觉不符合常理</p>
-<pre><code>&quot;&quot; == &quot;0&quot; // false
-0 == &quot;&quot; // true
-0 == &quot;0&quot; // true
-false == &quot;false&quot; // false
-false == &quot;0&quot; // true
-false == undefined // false
-false == null // false
-null == undefined // true
-&quot; \t\r\n&quot; == 0 // true
-</code></pre><h1 id="基本类型的包装对象"><a href="#基本类型的包装对象" class="headerlink" title="基本类型的包装对象"></a>基本类型的包装对象</h1><p>Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象</p>
-<pre><code>new Boolean(false);
-new Number(1234);
-new String(&quot;Hello World&quot;);
-</code></pre><p>与基本数据类型对应的对象类型，作用很小，造成的混淆却很大</p>
-<pre><code>alert( typeof 1234); // number
-alert( typeof new Number(1234)); // object
-</code></pre><blockquote>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">a = <span class="number">1</span>;</div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span><span class="comment">&#123;</span></span></div><div class="line">    b=2;</div><div class="line">    alert(a);</div><div class="line">&#125;)<span class="params">()</span>; <span class="comment">// 1</span></div><div class="line">alert(b); <span class="comment">//2</span></div><div class="line">```   </div><div class="line"></div><div class="line"># 行尾分号自动加</div><div class="line"></div><div class="line">Javascript的所有语句，都可以不用以分号结尾</div><div class="line"></div><div class="line">比如，下面这个函数根本无法达到预期的结果，返回值不是一个对象，而是undefined</div></pre></td></tr></table></figure>
+<p>function(){<br>    return<br>    {<br>        i=1<br>    };<br>}<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">原因是解释器自动在<span class="keyword">return</span>语句后面加上了分号</div></pre></td></tr></table></figure></p>
+<p>function(){<br>    return;<br>    {<br>        i=1<br>    };<br>}<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta"># 加号运算符</span></div><div class="line"></div><div class="line">+号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接</div><div class="line"></div><div class="line">    alert(<span class="number">1</span>+<span class="number">10</span>); <span class="comment">// 11</span></div><div class="line">    alert(<span class="string">"1"</span>+<span class="string">"10"</span>); <span class="comment">// 110</span></div><div class="line">    </div><div class="line"><span class="meta"># NaN</span></div><div class="line"></div><div class="line">NaN是一种数字，表示超出了解释器的极限。它有一些很奇怪的特性</div><div class="line"></div><div class="line">    NaN === NaN; <span class="comment">//false</span></div><div class="line">    </div><div class="line"><span class="meta"># 数组和对象的区分</span></div><div class="line"></div><div class="line">数组也是对象,要确认对象是不是数组比较麻烦</div></pre></td></tr></table></figure></p>
+<p>if ( arr &amp;&amp;<br>typeof arr === ‘object’ &amp;&amp;<br>typeof arr.length === ‘number’ &amp;&amp;<br>!arr.propertyIsEnumerable(‘length’)){<br>    alert(“arr is an array”);<br>}<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line"><span class="meta"># == 和 ===</span></div><div class="line"></div><div class="line">==会自动转换数据类型,得到的直觉不符合常理</div></pre></td></tr></table></figure></p>
+<p>“” == “0” // false<br>0 == “” // true<br>0 == “0” // true<br>false == “false” // false<br>false == “0” // true<br>false == undefined // false<br>false == null // false<br>null == undefined // true<br>“ \t\r\n” == 0 // true<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line"><span class="meta"># 基本类型的包装对象</span></div><div class="line"></div><div class="line">Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象</div></pre></td></tr></table></figure></p>
+<p>new Boolean(false);<br>new Number(1234);<br>new String(“Hello World”);<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">与基本数据类型对应的对象类型，作用很小，造成的混淆却很大</div></pre></td></tr></table></figure></p>
+<p>alert( typeof 1234); // number<br>alert( typeof new Number(1234)); // object<br>```</p>
+<blockquote>
 <p>虽然JavaScript缺陷很多,但是ES6及很多库已经很多解决了这些缺陷的问题,完善了不少。并且JavaScript是浏览器唯一的编程语言,将来一定是随着时代发展不断进步</p>
 </blockquote>
 
@@ -714,7 +671,7 @@ alert( typeof new Number(1234)); // object
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#大型程序不宜"><span class="nav-number">1.</span> <span class="nav-text">大型程序不宜</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准库小"><span class="nav-number">2.</span> <span class="nav-text">标准库小</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null和undefined"><span class="nav-number">3.</span> <span class="nav-text">null和undefined</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局变量神出鬼没"><span class="nav-number">4.</span> <span class="nav-text">全局变量神出鬼没</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#行尾分号自动加"><span class="nav-number">5.</span> <span class="nav-text">行尾分号自动加</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加号运算符"><span class="nav-number">6.</span> <span class="nav-text">加号运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NaN"><span class="nav-number">7.</span> <span class="nav-text">NaN</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组和对象的区分"><span class="nav-number">8.</span> <span class="nav-text">数组和对象的区分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#和"><span class="nav-number">9.</span> <span class="nav-text">== 和 ===</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本类型的包装对象"><span class="nav-number">10.</span> <span class="nav-text">基本类型的包装对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#大型程序不宜"><span class="nav-number">1.</span> <span class="nav-text">大型程序不宜</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准库小"><span class="nav-number">2.</span> <span class="nav-text">标准库小</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null和undefined"><span class="nav-number">3.</span> <span class="nav-text">null和undefined</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局变量神出鬼没"><span class="nav-number">4.</span> <span class="nav-text">全局变量神出鬼没</span></a></li></ol></div>
             
 
           </div>
