@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -89,15 +89,28 @@
 
 
 
-<meta name="description" content="Learning and Doing">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Learning and Doing">
-<meta property="og:url" content="http://yoursite.com/categories/JavaScript/index.html">
+<meta name="description" content="JavaScript的执行环境是单线程,只能一次完成一件任务
+坏处: 浏览器无响应、JavaScript代码死循环
+Javascript语言将任务的执行模式分成两种：同步和异步
+解决方法:异步
+异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript实现异步">
+<meta property="og:url" content="http://yoursite.com/2018/06/04/2018.6.4/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="Learning and Doing">
+<meta property="og:description" content="JavaScript的执行环境是单线程,只能一次完成一件任务
+坏处: 浏览器无响应、JavaScript代码死循环
+Javascript语言将任务的执行模式分成两种：同步和异步
+解决方法:异步
+异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的">
+<meta property="og:updated_time" content="2018-06-07T13:11:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Learning and Doing">
-<meta name="twitter:description" content="Learning and Doing">
+<meta name="twitter:title" content="JavaScript实现异步">
+<meta name="twitter:description" content="JavaScript的执行环境是单线程,只能一次完成一件任务
+坏处: 浏览器无响应、JavaScript代码死循环
+Javascript语言将任务的执行模式分成两种：同步和异步
+解决方法:异步
+异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的">
 
 
 
@@ -125,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/JavaScript/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/04/2018.6.4/"/>
 
 
 
 
 
-  <title> 分类: JavaScript | Learning and Doing </title>
+  <title> JavaScript实现异步 | Learning and Doing </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +169,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -292,303 +305,197 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        JavaScript
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/04/2018.6.4/" itemprop="url">
-              
-                <span itemprop="name">JavaScript实现异步</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-04T13:40:15+08:00"
-              content="2018-06-04" >
-          06-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/02/2018.6.2-1/" itemprop="url">
-              
-                <span itemprop="name">JavaScript的10个设计缺陷</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-02T02:40:15+08:00"
-              content="2018-06-02" >
-          06-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/05/jquerydemo/" itemprop="url">
-              
-                <span itemprop="name">初探jquery代码</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-05T22:16:41+08:00"
-              content="2017-11-05" >
-          11-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/27/bootstrap/" itemprop="url">
-              
-                <span itemprop="name">bootstrap</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-27T22:16:41+08:00"
-              content="2017-10-27" >
-          10-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/22/angular/" itemprop="url">
-              
-                <span itemprop="name">angular.js</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-22T23:16:41+08:00"
-              content="2017-08-22" >
-          08-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/01/es6/" itemprop="url">
-              
-                <span itemprop="name">ES6核心</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-01T15:33:44+08:00"
-              content="2017-07-01" >
-          07-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/10/ydnjs/" itemprop="url">
-              
-                <span itemprop="name">你不知道的JS</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-10T11:40:15+08:00"
-              content="2017-06-10" >
-          06-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/25/vue/" itemprop="url">
-              
-                <span itemprop="name">Vue.js</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-25T23:16:41+08:00"
-              content="2017-05-25" >
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/25/jsproject/" itemprop="url">
-              
-                <span itemprop="name">前端设计模式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-25T23:13:19+08:00"
-              content="2017-04-25" >
-          04-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/18/modular/" itemprop="url">
-              
-                <span itemprop="name">模块化基础</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-18T23:14:17+08:00"
-              content="2017-04-18" >
-          04-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/categories/JavaScript/page/2/">2</a><a class="extend next" rel="next" href="/categories/JavaScript/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/04/2018.6.4/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zhang Yang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Learning and Doing">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Learning and Doing" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript实现异步
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-04T13:40:15+08:00">
+                2018-06-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
 
 
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>JavaScript的执行环境是单线程,只能一次完成一件任务</p>
+<p>坏处: 浏览器无响应、JavaScript代码死循环</p>
+<p>Javascript语言将任务的执行模式分成两种：同步和异步</p>
+<p>解决方法:异步</p>
+<p>异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的<br><a id="more"></a></p>
+<h1 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h1><p>普通函数f1和f2,后者等待前者的执行结果</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">f1</span><span class="params">()</span></span></div><div class="line"><span class="function"><span class="title">f2</span><span class="params">()</span></span></div><div class="line">```  </div><div class="line">    </div><div class="line">改写f1，把f2写成f1的回调函数,两个函数异步执行</div></pre></td></tr></table></figure>
+<p>function f1(callback) {<br>    setTimeout(function () {<br>        // f1的任务代码<br>        callback();<br>    }, 1000);<br>}</p>
+<p>f1(f2);<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">优点:简单、容易理解和部署，缺点:不利于代码的阅读和维护</div><div class="line"></div><div class="line"># 事件监听</div><div class="line"></div><div class="line">任务的执行不取决于代码的顺序，而取决于某个事件是否发生</div><div class="line"></div><div class="line">为<span class="built_in">f1</span>绑定一个事件,当<span class="built_in">f1</span>发生done事件，就执行<span class="built_in">f2</span></div></pre></td></tr></table></figure></p>
+<p>f1.on(‘done’, f2);<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">f1.trigger(<span class="string">'done'</span>)表示，执行完成后，立即触发<span class="keyword">done</span>事件，从而开始执行f2</div></pre></td></tr></table></figure></p>
+<p>function f1() {<br>    setTimeout(function () {<br>        // f1的任务代码<br>        f1.trigger(‘done’);<br>    }, 1000);<br>}<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">优点:比较容易理解，可以绑定多个事件,有利于实现模块化，缺点：整个程序都要变成事件驱动型，运行流程会变得很不清晰</div><div class="line"></div><div class="line"><span class="meta"># 发布/订阅</span></div><div class="line"></div><div class="line">发布一个信号，其他任务向信号中心订阅这个信号，从而知道什么时候自己可以开始执行。这就叫做发布/订阅模式</div><div class="line"></div><div class="line">f2向<span class="string">"信号中心"</span>jQuery订阅<span class="string">"done"</span>信号</div></pre></td></tr></table></figure></p>
+<p>jQuery.subscribe(“done”, f2);<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="symbol">jQuery.publish</span>(<span class="string">"done"</span>)的意思是，<span class="built_in">f1</span>执行完成后，向<span class="string">"信号中心"</span>jQuery发布<span class="string">"done"</span>信号，从而引发<span class="built_in">f2</span>的执行</div></pre></td></tr></table></figure></p>
+<p>function f1() {<br>    setTimeout(function () {<br>        // f1的任务代码<br>        jQuery.publish(“done”);<br>    }, 1000);<br>}<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">f2完成执行后，也可以取消订阅</div></pre></td></tr></table></figure></p>
+<p>jQuery.unsubscribe(“done”, f2);<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Promises对象</span></div><div class="line"></div><div class="line">每一个异步任务返回一个Promise对象，该对象有一个<span class="keyword">then</span>方法，允许指定回调函数</div><div class="line"></div><div class="line">f1的回调函数f2</div></pre></td></tr></table></figure></p>
+<p>f1().then(f2);<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">f1要进行如下改写</div></pre></td></tr></table></figure></p>
+<p>function f1() {<br>    var dfd = $.Deferred();<br>    setTimeout(function () {<br>        // f1的任务代码<br>        dfd.resolve();<br>    }, 500);<br>    return dfd.promise;<br>}<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">指定多个回调函数</div></pre></td></tr></table></figure></p>
+<p>f1().then(f2).then(f3);<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">指定发生错误时的回调函数</div></pre></td></tr></table></figure></p>
+<p>f1().then(f2).fail(f3);<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta"># Ajax</span></div><div class="line"></div><div class="line"><span class="meta">## 同步的写法</span></div><div class="line">    </div><div class="line">taskC 一定要等 taskB 执行完了才能执行，这就是同步</div></pre></td></tr></table></figure></p>
+<p>function taskB(){<br>  var response = $.ajax({<br>    url:”/data.json”,<br>    async: false // 注意这里 async 为 false，表示是同步<br>  })<br>  return response // 十秒钟后，返回 response<br>}</p>
+<p>taskA()<br>taskB()<br>taskC()</p>
+<p>执行顺序<br>A -&gt; B -&gt; AJAX 请求 -&gt; C —————————<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">## 异步的写法</div></pre></td></tr></table></figure></p>
+<p>function taskB(){<br>  var result = $.ajax({<br>    url:”/data.json”,<br>    async: true // 异步<br>  })<br>  return result // 一定要注意，现在的 result 不是上面的 response<br>}<br>taskA()<br>taskB()<br>taskC()</p>
+<p>执行顺序<br>A -&gt; B -&gt; C —————————————<br>       -&gt; AJAX 请求 ——————————–<br>```</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/02/2018.6.2-1/" rel="next" title="JavaScript的10个设计缺陷">
+                <i class="fa fa-chevron-left"></i> JavaScript的10个设计缺陷
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -596,6 +503,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -615,8 +526,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -754,6 +674,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#回调函数"><span class="nav-number">1.</span> <span class="nav-text">回调函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -859,6 +795,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
