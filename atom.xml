@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-07T13:27:00.000Z</updated>
+  <updated>2018-06-07T14:43:44.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript的this值</title>
+    <link href="http://yoursite.com/2018/06/08/2018.6.8/"/>
+    <id>http://yoursite.com/2018/06/08/2018.6.8/</id>
+    <published>2018-06-08T05:40:15.000Z</published>
+    <updated>2018-06-07T14:43:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="this面试题"><a href="#this面试题" class="headerlink" title="this面试题"></a>this面试题</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">var</span> obj = &#123;</div><div class="line">  foo: function()&#123;</div><div class="line">    console.log(this)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">var</span> bar = obj<span class="selector-class">.foo</span></div><div class="line">obj.foo() <span class="comment">// 打印出的 this 是 obj</span></div><div class="line"><span class="function"><span class="title">bar</span><span class="params">()</span></span> <span class="comment">// 打印出的 this 是 window</span></div></pre></td></tr></table></figure>
+<a id="more"></a> 
+<h1 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h1><p>JS（ES5）里面有三种函数调用形式</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span><span class="params">(p1, p2)</span> </span></div><div class="line">obj.<span class="keyword">func</span>(p1, p2)</div><div class="line"><span class="function"><span class="keyword">func</span>.<span class="title">call</span><span class="params">(context, p1, p2)</span></span></div></pre></td></tr></table></figure>
+<p>第三种调用形式，才是正常调用形式</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span>.<span class="title">call</span><span class="params">(context, p1, p2)</span></span></div></pre></td></tr></table></figure>
+<p>其他两种等价地变为 call 形式</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span><span class="params">(p1, p2)</span> 等价于</span></div><div class="line"><span class="function"><span class="keyword">func</span>.<span class="title">call</span><span class="params">(undefined, p1, p2)</span></span></div><div class="line"></div><div class="line">obj.<span class="keyword">func</span>(p1, p2) 等价于</div><div class="line">obj.<span class="keyword">func</span>.<span class="built_in">call</span>(obj, p1, p2)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>this一个函数时传的context</p>
+</blockquote>
+<h1 id="实例一"><a href="#实例一" class="headerlink" title="实例一"></a>实例一</h1><p>传的 context 就 null 或者 undefined，那么 window 对象就是默认的 context,<br>打印结果是window</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function <span class="function"><span class="keyword">func</span><span class="params">()</span>&#123;</span></div><div class="line">  console.<span class="built_in">log</span>(this)</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">func</span><span class="params">()</span></span></div><div class="line"></div><div class="line">// 等价于</div><div class="line">function <span class="function"><span class="keyword">func</span><span class="params">()</span>&#123;</span></div><div class="line">  console.<span class="built_in">log</span>(this)</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">func</span>.<span class="title">call</span><span class="params">(undefined)</span> // 可以简写为 <span class="title">func</span>.<span class="title">call</span><span class="params">()</span></span></div></pre></td></tr></table></figure>
+<p>希望这里的 this 不是 window,修改为</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span>.<span class="title">call</span><span class="params">(obj)</span></span> <span class="comment">// 那么里面的 this 就是 obj 对象了</span></div></pre></td></tr></table></figure>
+<h1 id="实例二"><a href="#实例二" class="headerlink" title="实例二"></a>实例二</h1><p>this 就是 obj</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">foo</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>)</div><div class="line">  &#125;</div><div class="line">&#125; </div><div class="line">obj.foo() </div><div class="line"></div><div class="line"><span class="comment">// 按照「转换代码」，我们将 obj.foo() 转换为</span></div><div class="line">obj.foo.call(obj)</div></pre></td></tr></table></figure>
+<h1 id="面试题答案"><a href="#面试题答案" class="headerlink" title="面试题答案"></a>面试题答案</h1><pre><code>var obj = {
+  foo: function(){
+    console.log(this)
+  }
+}
+
+var bar = obj.foo
+obj.foo() // 转换为 obj.foo.call(obj)，this 就是 obj
+bar() 
+// 转换为 bar.call()
+// 由于没有传 context
+// 所以 this 就是 undefined
+// 最后浏览器给你一个默认的 this —— window 对象
+</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>this 就是你 call 一个函数时，传入的第一个参数</li>
+<li>如果你的函数调用形式不是 call 形式，请按照「转换代码」将其转换为 call 形式</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;this面试题&quot;&gt;&lt;a href=&quot;#this面试题&quot; class=&quot;headerlink&quot; title=&quot;this面试题&quot;&gt;&lt;/a&gt;this面试题&lt;/h1&gt;&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;var&lt;/span&gt; obj = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  foo: function()&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(this)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;var&lt;/span&gt; bar = obj&lt;span class=&quot;selector-class&quot;&gt;.foo&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;obj.foo() &lt;span class=&quot;comment&quot;&gt;// 打印出的 this 是 obj&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// 打印出的 this 是 window&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>前端MVC设计模式</title>
@@ -2752,186 +2808,6 @@
       <category term="r.js" scheme="http://yoursite.com/tags/r-js/"/>
     
       <category term="require.js" scheme="http://yoursite.com/tags/require-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP基础</title>
-    <link href="http://yoursite.com/2017/04/15/http/"/>
-    <id>http://yoursite.com/2017/04/15/http/</id>
-    <published>2017-04-15T15:13:10.000Z</published>
-    <updated>2018-05-30T12:23:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h2><p>万维网（World Wide Web）出生的年份1990<br><a id="more"></a></p>
-<p>Tim Berners-Lee 发明了用网址就能访问网页的办法，他发明了第一个网页、第一个浏览器和第一个服务</p>
-<p>主要包含三个概念</p>
-<p>URI，俗称网址</p>
-<p>HTTP，两个电脑之间传输内容的协议</p>
-<p>HTML，超级文本，主要用来做页面跳转</p>
-<p>这是一个简单而完美的系统</p>
-<p>李爵士除了发明了这些概念，还付诸了行动：</p>
-<p>发明了第一个服务器</p>
-<p>发明了第一个浏览器</p>
-<p>写出了第一个网页</p>
-<h2 id="URI-是什么"><a href="#URI-是什么" class="headerlink" title="URI 是什么"></a>URI 是什么</h2><p>URI 分为 URL 和 URN，我们一般使用 URL 作为网址</p>
-<p>1.URN</p>
-<p>ISBN: 9787115275790 就是一个 URN，通过 URN 你可以确定一个「唯一的」资源，ISBN: 9787115275790 对应的资源的是《JavaScript 高级程序设计（第三版）》这本书。你去是介绍任何一个图书馆、书店，他们都知道是这本书。</p>
-<p>2.URL</p>
-<p><a href="https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5" target="_blank" rel="external">https://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5</a> 就是一个 URL，通过 URL 你可以确定一个「唯一的」地址（网址）</p>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/4-1.jpg" alt="image"></p>
-<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>输入域名</p>
-<p>输出 IP</p>
-<pre><code>nslookup baidu.com
-
-ping baidu.com
-</code></pre><h2 id="Server-Client-HTTP"><a href="#Server-Client-HTTP" class="headerlink" title="Server + Client + HTTP"></a>Server + Client + HTTP</h2><p><img src="http://oqev4hx8u.bkt.clouddn.com/4-2.jpg" alt="image"></p>
-<pre><code>浏览器负责发起请求
-
-服务器在 80 端口接收请求
-
-服务器负责返回内容（响应）
-
-浏览器负责下载响应内容
-</code></pre><p>HTTP 的作用就是指导浏览器和服务器如何进行沟通</p>
-<h2 id="请求示例"><a href="#请求示例" class="headerlink" title="请求示例"></a>请求示例</h2><p>curl -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a>“</p>
-<p><img src="http://oqev4hx8u.bkt.clouddn.com/4-3.jpg" alt="image"></p>
-<p>请求的内容为</p>
-<pre><code>GET / HTTP/1.1
-Host: www.baidu.com
-User-Agent: curl/7.54.0
-Accept: */*
-Frank: xxx
-</code></pre><p>curl -X POST -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a>“</p>
-<p>请求的内容为</p>
-<pre><code>POST / HTTP/1.1
-Host: www.baidu.com
-User-Agent: curl/7.54.0
-Accept: */*
-Frank: xxx
-</code></pre><p>curl -X POST -d “1234567890” -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a>“</p>
-<p>请求的内容为</p>
-<pre><code>POST / HTTP/1.1
-Host: www.baidu.com
-User-Agent: curl/7.54.0
-Accept: */*
-Frank: xxx
-Content-Length: 10
-Content-Type: application/x-www-form-urlencoded
-
-1234567890
-</code></pre><p>请求的格式</p>
-<pre><code>1 动词 路径 协议/版本
-2 Key1: value1
-2 Key2: value2
-2 Key3: value3
-2 Content-Type: application/x-www-form-urlencoded
-2 Host: www.baidu.com
-2 User-Agent: curl/7.54.0
-3 
-4 要上传的数据
-</code></pre><p>请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）</p>
-<p>第三部分永远都是一个回车（\n）</p>
-<p>动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等</p>
-<p>这里的路径包括「查询参数」，但不包括「锚点」</p>
-<p>如果你没有写路径，那么路径默认为 /</p>
-<p>第 2 部分中的 Content-Type 标注了第 4 部分的格式</p>
-<h2 id="用-Chrome-发请求"><a href="#用-Chrome-发请求" class="headerlink" title="用 Chrome 发请求"></a>用 Chrome 发请求</h2><p>打开 Network</p>
-<p>地址栏输入网址</p>
-<p>在 Network 点击，查看 request，点击「view source」</p>
-<p>可以看到请求的前三部分了</p>
-<p>如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到</p>
-<h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><p>请求了之后，应该都能得到一个响应，除非断网了，或者服务器宕机了</p>
-<h2 id="响应示例"><a href="#响应示例" class="headerlink" title="响应示例"></a>响应示例</h2><p>上面三个请求示例，前两个请求对应的响应分别为</p>
-<pre><code>HTTP/1.1 200 OK
-Accept-Ranges: bytes
-Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform
-Connection: Keep-Alive
-Content-Length: 2443
-Content-Type: text/html
-Date: Tue, 10 Oct 2017 09:14:05 GMT
-Etag: &quot;5886041d-98b&quot;
-Last-Modified: Mon, 23 Jan 2017 13:24:45 GMT
-Pragma: no-cache
-Server: bfe/1.0.8.18
-Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/
-
-&lt;!DOCTYPE html&gt;
-&lt;!--STATUS OK--&gt;&lt;html&gt; &lt;head&gt; 后面太长，省略了……
-
-HTTP/1.1 302 Found
-Connection: Keep-Alive
-Content-Length: 17931
-Content-Type: text/html
-Date: Tue, 10 Oct 2017 09:19:47 GMT
-Etag: &quot;54d9749e-460b&quot;
-Server: bfe/1.0.8.18
-
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt; 后面太长，省略了……
-</code></pre><p>上面三个请求示例，前两个请求对应的响应分别为</p>
-<pre><code>HTTP/1.1 200 OK
-Accept-Ranges: bytes
-Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform
-Connection: Keep-Alive
-Content-Length: 2443
-Content-Type: text/html
-Date: Tue, 10 Oct 2017 09:14:05 GMT
-Etag: &quot;5886041d-98b&quot;
-Last-Modified: Mon, 23 Jan 2017 13:24:45 GMT
-Pragma: no-cache
-Server: bfe/1.0.8.18
-Set-Cookie: BDORZ=27315; max-age=86400; domain=.baidu.com; path=/
-
-&lt;!DOCTYPE html&gt;
-&lt;!--STATUS OK--&gt;&lt;html&gt; &lt;head&gt; 后面太长，省略了……
-HTTP/1.1 302 Found
-Connection: Keep-Alive
-Content-Length: 17931
-Content-Type: text/html
-Date: Tue, 10 Oct 2017 09:19:47 GMT
-Etag: &quot;54d9749e-460b&quot;
-Server: bfe/1.0.8.18
-
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt; 后面太长，省略了……
-</code></pre><p>GET 请求和 POST 请求对应的响应可以一样，也可以不一样</p>
-<p>响应的第四部分可以很长很长很长</p>
-<h2 id="响应的格式"><a href="#响应的格式" class="headerlink" title="响应的格式"></a>响应的格式</h2><pre><code>1 协议/版本号 状态码 状态解释
-2 Key1: value1
-2 Key2: value2
-2 Content-Length: 17931
-2 Content-Type: text/html
-3
-4 要下载的内容
-</code></pre><p>状态码要背，是服务器对浏览器说的话</p>
-<pre><code>1xx 不常用
-2xx 表示成功
-3xx 表示滚吧
-4xx 表示你丫错了
-5xx 表示好吧，我错了
-</code></pre><p>状态解释没什么用</p>
-<h2 id="用-Chrome-查看响应"><a href="#用-Chrome-查看响应" class="headerlink" title="用 Chrome 查看响应"></a>用 Chrome 查看响应</h2><p>打开 Network</p>
-<p>输入网址</p>
-<p>选中第一个响应</p>
-<p>查看 Response Headers，点击「view source」，点击「view source」，点击「view source」</p>
-<p>你会看到响应的前两部分</p>
-<p>查看 Response 或者 Preview，你会看到响应的第 4 部分</p>
-<p>第 2 部分中的 Content-Type 标注了第 4 部分的格式</p>
-<p>第 2 部分中的 Content-Type 遵循 MIME 规范</p>
-<h2 id="常见状态码"><a href="#常见状态码" class="headerlink" title="常见状态码"></a>常见状态码</h2><figure class="highlight basic"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">200 </span>正常</div><div class="line"><span class="symbol">301 </span>永久重定向</div><div class="line"><span class="symbol">302 </span>暂时重定向</div><div class="line"><span class="symbol">304 </span><span class="keyword">not</span> modified</div><div class="line"><span class="symbol">403 </span>forbidden 不给你看</div><div class="line"><span class="symbol">404 </span>nof found</div><div class="line"><span class="symbol">414 </span>URI too long</div><div class="line"><span class="symbol">500 </span>服务器内部错误</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;万维网&quot;&gt;&lt;a href=&quot;#万维网&quot; class=&quot;headerlink&quot; title=&quot;万维网&quot;&gt;&lt;/a&gt;万维网&lt;/h2&gt;&lt;p&gt;万维网（World Wide Web）出生的年份1990&lt;br&gt;
-    
-    </summary>
-    
-      <category term="others" scheme="http://yoursite.com/categories/others/"/>
-    
-    
-      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
     
   </entry>
   
