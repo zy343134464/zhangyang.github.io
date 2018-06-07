@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-07T13:17:08.000Z</updated>
+  <updated>2018-06-07T13:27:00.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://yoursite.com/2018/06/07/2018.6.7/"/>
     <id>http://yoursite.com/2018/06/07/2018.6.7/</id>
     <published>2018-06-07T05:40:15.000Z</published>
-    <updated>2018-06-07T13:17:08.000Z</updated>
+    <updated>2018-06-07T13:27:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h1><p>一个页面分为两部分，浏览器上面的工作交给前端做，服务器上面的工作交给后端做</p>
-<h1 id="页面开发流程"><a href="#页面开发流程" class="headerlink" title="页面开发流程"></a>页面开发流程</h1><h2 id="浏览器第一次加载的页面只是一个占位符"><a href="#浏览器第一次加载的页面只是一个占位符" class="headerlink" title="浏览器第一次加载的页面只是一个占位符"></a>浏览器第一次加载的页面只是一个占位符</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">app</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
+<h1 id="页面开发流程"><a href="#页面开发流程" class="headerlink" title="页面开发流程"></a>页面开发流程</h1><a id="more"></a>
+<h2 id="浏览器第一次加载的页面只是一个占位符"><a href="#浏览器第一次加载的页面只是一个占位符" class="headerlink" title="浏览器第一次加载的页面只是一个占位符"></a>浏览器第一次加载的页面只是一个占位符</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">app</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="前端将其他-HTML-和从服务器获取的数据填到占位符里"><a href="#前端将其他-HTML-和从服务器获取的数据填到占位符里" class="headerlink" title="前端将其他 HTML 和从服务器获取的数据填到占位符里"></a>前端将其他 HTML 和从服务器获取的数据填到占位符里</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$.get(<span class="string">'/user/1'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;</div><div class="line">  template = (</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">  )</div><div class="line">  content = template.replace(<span class="string">'&#123;&#123; name &#125;&#125;'</span>, user.name)</div><div class="line">  $app.html(content)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h2 id="用户提交数据时，前端用-AJAX-提交异步请求"><a href="#用户提交数据时，前端用-AJAX-提交异步请求" class="headerlink" title="用户提交数据时，前端用 AJAX 提交异步请求"></a>用户提交数据时，前端用 AJAX 提交异步请求</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$form.on(<span class="string">'submit'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  $.post(<span class="string">'/user/1'</span>, $form.serialize()).then(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    alert(<span class="string">'提交成功'</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h1 id="前端MVC模式"><a href="#前端MVC模式" class="headerlink" title="前端MVC模式"></a>前端MVC模式</h1><h2 id="Model-封装数据操作"><a href="#Model-封装数据操作" class="headerlink" title="Model-封装数据操作"></a>Model-封装数据操作</h2><p>对用户的增删改成其实都是异步请求,数据相关的操作就都放到这个 model 上</p>
@@ -51,7 +51,7 @@
     <summary type="html">
     
       &lt;h1 id=&quot;前后端分离&quot;&gt;&lt;a href=&quot;#前后端分离&quot; class=&quot;headerlink&quot; title=&quot;前后端分离&quot;&gt;&lt;/a&gt;前后端分离&lt;/h1&gt;&lt;p&gt;一个页面分为两部分，浏览器上面的工作交给前端做，服务器上面的工作交给后端做&lt;/p&gt;
-&lt;h1 id=&quot;页面开发流程&quot;&gt;&lt;a href=&quot;#页面开发流程&quot; class=&quot;headerlink&quot; title=&quot;页面开发流程&quot;&gt;&lt;/a&gt;页面开发流程&lt;/h1&gt;&lt;h2 id=&quot;浏览器第一次加载的页面只是一个占位符&quot;&gt;&lt;a href=&quot;#浏览器第一次加载的页面只是一个占位符&quot; class=&quot;headerlink&quot; title=&quot;浏览器第一次加载的页面只是一个占位符&quot;&gt;&lt;/a&gt;浏览器第一次加载的页面只是一个占位符&lt;/h2&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;app&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;页面开发流程&quot;&gt;&lt;a href=&quot;#页面开发流程&quot; class=&quot;headerlink&quot; title=&quot;页面开发流程&quot;&gt;&lt;/a&gt;页面开发流程&lt;/h1&gt;
     
     </summary>
     
@@ -69,13 +69,12 @@
     <link href="http://yoursite.com/2018/06/04/2018.6.4/"/>
     <id>http://yoursite.com/2018/06/04/2018.6.4/</id>
     <published>2018-06-04T05:40:15.000Z</published>
-    <updated>2018-06-07T13:18:24.000Z</updated>
+    <updated>2018-06-07T13:27:06.000Z</updated>
     
     <content type="html"><![CDATA[<p>JavaScript的执行环境是单线程,只能一次完成一件任务</p>
 <p>坏处: 浏览器无响应、JavaScript代码死循环</p>
-<p>Javascript语言将任务的执行模式分成两种：同步和异步</p>
-<p>解决方法:异步</p>
-<p>异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的<br><a id="more"></a></p>
+<p>Javascript语言将任务的执行模式分成两种：同步和异步<br><a id="more"></a><br>解决方法:异步</p>
+<p>异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的</p>
 <h1 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h1><p>普通函数f1和f2,后者等待前者的执行结果</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">f1</span><span class="params">()</span></span></div><div class="line"><span class="function"><span class="title">f2</span><span class="params">()</span></span></div></pre></td></tr></table></figure>
 <p>改写f1，把f2写成f1的回调函数,两个函数异步执行</p>
@@ -111,9 +110,7 @@
     
       &lt;p&gt;JavaScript的执行环境是单线程,只能一次完成一件任务&lt;/p&gt;
 &lt;p&gt;坏处: 浏览器无响应、JavaScript代码死循环&lt;/p&gt;
-&lt;p&gt;Javascript语言将任务的执行模式分成两种：同步和异步&lt;/p&gt;
-&lt;p&gt;解决方法:异步&lt;/p&gt;
-&lt;p&gt;异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的&lt;br&gt;
+&lt;p&gt;Javascript语言将任务的执行模式分成两种：同步和异步&lt;br&gt;
     
     </summary>
     

@@ -91,26 +91,20 @@
 
 <meta name="description" content="JavaScript的执行环境是单线程,只能一次完成一件任务
 坏处: 浏览器无响应、JavaScript代码死循环
-Javascript语言将任务的执行模式分成两种：同步和异步
-解决方法:异步
-异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的">
+Javascript语言将任务的执行模式分成两种：同步和异步">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript实现异步">
 <meta property="og:url" content="http://yoursite.com/2018/06/04/2018.6.4/index.html">
 <meta property="og:site_name" content="Learning and Doing">
 <meta property="og:description" content="JavaScript的执行环境是单线程,只能一次完成一件任务
 坏处: 浏览器无响应、JavaScript代码死循环
-Javascript语言将任务的执行模式分成两种：同步和异步
-解决方法:异步
-异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的">
-<meta property="og:updated_time" content="2018-06-07T13:18:24.000Z">
+Javascript语言将任务的执行模式分成两种：同步和异步">
+<meta property="og:updated_time" content="2018-06-07T13:27:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript实现异步">
 <meta name="twitter:description" content="JavaScript的执行环境是单线程,只能一次完成一件任务
 坏处: 浏览器无响应、JavaScript代码死循环
-Javascript语言将任务的执行模式分成两种：同步和异步
-解决方法:异步
-异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的">
+Javascript语言将任务的执行模式分成两种：同步和异步">
 
 
 
@@ -414,9 +408,8 @@ Javascript语言将任务的执行模式分成两种：同步和异步
       
         <p>JavaScript的执行环境是单线程,只能一次完成一件任务</p>
 <p>坏处: 浏览器无响应、JavaScript代码死循环</p>
-<p>Javascript语言将任务的执行模式分成两种：同步和异步</p>
-<p>解决方法:异步</p>
-<p>异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的<br><a id="more"></a></p>
+<p>Javascript语言将任务的执行模式分成两种：同步和异步<br><a id="more"></a><br>解决方法:异步</p>
+<p>异步:每一个任务有一个或多个回调函数,前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的</p>
 <h1 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h1><p>普通函数f1和f2,后者等待前者的执行结果</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">f1</span><span class="params">()</span></span></div><div class="line"><span class="function"><span class="title">f2</span><span class="params">()</span></span></div></pre></td></tr></table></figure>
 <p>改写f1，把f2写成f1的回调函数,两个函数异步执行</p>
