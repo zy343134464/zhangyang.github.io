@@ -56,11 +56,81 @@
   </entry>
   
   <entry>
+    <title>CSS动画简介</title>
+    <link href="http://yoursite.com/2018/06/15/2018.6.15/"/>
+    <id>http://yoursite.com/2018/06/15/2018.6.15/</id>
+    <published>2018-06-15T04:40:15.000Z</published>
+    <updated>2018-06-20T14:58:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>CSS动画的两大组成部分：transition和animation</p>
+<h1 id="CSS3Transition"><a href="#CSS3Transition" class="headerlink" title="CSS3Transition"></a>CSS3Transition</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>当鼠标放置于缩略图之上,缩略图会迅速变大,缩略图的变大是瞬间实现的<br><a id="more"></a><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">height</span>:<span class="number">15px</span>;</div><div class="line">    <span class="attribute">width</span>:<span class="number">15px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">img</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">450px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">450px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>transition的作用在于，指定状态变化所需要的时间</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">transition</span>: <span class="number">1s</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>指定transition适用的属性，只有height的变化需要1秒实现，其他变化（主要是width）依然瞬间实现</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">transition</span>: <span class="number">1s</span> height;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="transition-delay"><a href="#transition-delay" class="headerlink" title="transition-delay"></a>transition-delay</h2><p>同一行transition语句中，可以分别指定多个属性,height和width的变化是同时进行的，跟不指定它们没有差别</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">transition</span>: <span class="number">1s</span> height, <span class="number">1s</span> width;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>让height先发生变化，等结束以后，再让width发生变化。实现这一点很容易，就是为width指定一个delay参数,width在1秒之后，再开始变化，也就是延迟（delay）1秒</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">transition</span>: <span class="number">1s</span> height, <span class="number">1s</span> <span class="number">1s</span> width;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="transition-timing-function"><a href="#transition-timing-function" class="headerlink" title="transition-timing-function"></a>transition-timing-function</h2><p>transition的状态变化速度，默认不是匀速的，而是逐渐放慢，这叫做ease</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">transition</span>: <span class="number">1s</span> ease;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>除了ease以外，其他模式还包括</p>
+<p>1.linear：匀速</p>
+<p>2.ease-in：加速</p>
+<p>3.ease-out：减速</p>
+<p>4.cubic-bezier函数：自定义速度模式</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// cubic-bezier，可以使用工具网站来定制,会产生一个最后阶段放大过度、然后回缩的效果</span></div><div class="line">img&#123;</div><div class="line">    transition: <span class="number">1</span>s <span class="built_in">height</span> cubic-<span class="built_in">bezier</span>(<span class="number">.83</span>,<span class="number">.97</span>,<span class="number">.05</span>,<span class="number">1.44</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="transition的各项属性"><a href="#transition的各项属性" class="headerlink" title="transition的各项属性"></a>transition的各项属性</h2><p>transition的完整写法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">transition</span>: <span class="number">1s</span> <span class="number">1s</span> height ease;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这其实是一个简写形式，可以单独定义成各个属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">transition-property</span>: height;</div><div class="line">    <span class="attribute">transition-duration</span>: <span class="number">1s</span>;</div><div class="line">    <span class="attribute">transition-delay</span>: <span class="number">1s</span>;</div><div class="line">    <span class="attribute">transition-timing-function</span>: ease;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="CSS3Animation"><a href="#CSS3Animation" class="headerlink" title="CSS3Animation"></a>CSS3Animation</h1><h2 id="基本用法-1"><a href="#基本用法-1" class="headerlink" title="基本用法"></a>基本用法</h2><p>CSS Animation需要指定动画一个周期持续的时间，以及动画效果的名称</p>
+<p>当鼠标悬停在div元素上时，会产生名为rainbow的动画效果，持续时间为1秒。为此，我们还需要用keyframes关键字，定义rainbow效果</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">animation</span>: <span class="number">1s</span> rainbow;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">keyframes</span> rainbow &#123;</div><div class="line">  0% &#123; <span class="attribute">background</span>: <span class="number">#c00</span>; &#125;</div><div class="line">  50% &#123; <span class="attribute">background</span>: orange; &#125;</div><div class="line">  100% &#123; <span class="attribute">background</span>: yellowgreen; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>默认情况下，动画只播放一次。加入infinite关键字，可以让动画无限次播放</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">animation</span>: <span class="number">1s</span> rainbow infinite;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>指定动画具体播放的次数，比如3次</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">animation</span>: <span class="number">1s</span> rainbow <span class="number">3</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="animation-fill-mode"><a href="#animation-fill-mode" class="headerlink" title="animation-fill-mode"></a>animation-fill-mode</h2><p>动画结束以后，会立即从结束状态跳回到起始状态。forwards表示让动画停留在结束状态</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">animation</span>: <span class="number">1s</span> rainbow forwards;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>animation-fill-mode还可以使用下列值</p>
+<p>1.none：默认值，回到动画没开始时的状态</p>
+<p>2.backwards：让动画回到第一帧的状态</p>
+<p>3.both: 根据animation-direction（见后）轮流应用forwards和backwards规则</p>
+<h2 id="animation-direction"><a href="#animation-direction" class="headerlink" title="animation-direction"></a>animation-direction</h2><p>动画循环播放时，每次都是从结束状态跳回到起始状态，再开始播放。animation-direction属性，可以改变这种行为</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@keyframes rainbow &#123;</div><div class="line">  0% &#123; <span class="attribute">background-color</span>: yellow; &#125;</div><div class="line">  100% &#123; <span class="attribute">background</span>: blue; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 默认情况是，animation-direction等于normal</span></div><div class="line"><span class="comment">// 可以等于取alternate、reverse、alternate-reverse等值</span></div><div class="line"><span class="selector-tag">div</span>:hover &#123;</div><div class="line">  <span class="attribute">animation</span>: <span class="number">1s</span> rainbow <span class="number">3</span> normal;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="animation的各项属性"><a href="#animation的各项属性" class="headerlink" title="animation的各项属性"></a>animation的各项属性</h2><p>animation也是一个简写形式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">animation</span>: <span class="number">1s</span> <span class="number">1s</span> rainbow linear <span class="number">3</span> forwards normal;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这是一个简写形式，可以分解成各个单独的属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">animation-name</span>: rainbow;</div><div class="line">  <span class="attribute">animation-duration</span>: <span class="number">1s</span>;</div><div class="line">  <span class="attribute">animation-timing-function</span>: linear;</div><div class="line">  <span class="attribute">animation-delay</span>: <span class="number">1s</span>;</div><div class="line">  <span class="attribute">animation-fill-mode</span>:forwards;</div><div class="line">  <span class="attribute">animation-direction</span>: normal;</div><div class="line">  <span class="attribute">animation-iteration-count</span>: <span class="number">3</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="keyframes的写法"><a href="#keyframes的写法" class="headerlink" title="keyframes的写法"></a>keyframes的写法</h2><p>keyframes关键字用来定义动画的各个状态</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@keyframes</span> rainbow &#123;</div><div class="line">  <span class="selector-tag">0%</span> &#123; <span class="attribute">background</span>: <span class="number">#c00</span> &#125;</div><div class="line">  <span class="selector-tag">50%</span> &#123; <span class="attribute">background</span>: orange &#125;</div><div class="line">  <span class="selector-tag">100%</span> &#123; <span class="attribute">background</span>: yellowgreen &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 0%可以用from代表，100%可以用to代表，等价于</span></div><div class="line"><span class="keyword">@keyframes</span> rainbow &#123;</div><div class="line">  <span class="selector-tag">from</span> &#123; <span class="attribute">background</span>: <span class="number">#c00</span> &#125;</div><div class="line">  <span class="selector-tag">50%</span> &#123; <span class="attribute">background</span>: orange &#125;</div><div class="line">  <span class="selector-tag">to</span> &#123; <span class="attribute">background</span>: yellowgreen &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>浏览器从一个状态向另一个状态过渡，是平滑过渡。steps函数可以实现分步过渡</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">animation</span>: <span class="number">1s</span> rainbow infinite <span class="built_in">steps</span>(10);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="animation-play-state"><a href="#animation-play-state" class="headerlink" title="animation-play-state"></a>animation-play-state</h2><p>动画播放过程中，会突然停止。这时，默认行为是跳回到动画的开始状态</p>
+<p>如果想让动画保持突然终止时的状态，就要使用animation-play-state属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">animation</span>: spin <span class="number">1s</span> linear infinite;</div><div class="line">    <span class="attribute">animation-play-state</span>: paused;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">animation-play-state</span>: running;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CSS动画的两大组成部分：transition和animation&lt;/p&gt;
+&lt;h1 id=&quot;CSS3Transition&quot;&gt;&lt;a href=&quot;#CSS3Transition&quot; class=&quot;headerlink&quot; title=&quot;CSS3Transition&quot;&gt;&lt;/a&gt;CSS3Transition&lt;/h1&gt;&lt;h2 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot; title=&quot;基本用法&quot;&gt;&lt;/a&gt;基本用法&lt;/h2&gt;&lt;p&gt;当鼠标放置于缩略图之上,缩略图会迅速变大,缩略图的变大是瞬间实现的&lt;br&gt;
+    
+    </summary>
+    
+      <category term="HTML/CSS" scheme="http://yoursite.com/categories/HTML-CSS/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>最好的学习方法</title>
     <link href="http://yoursite.com/2018/06/12/2018.6.12/"/>
     <id>http://yoursite.com/2018/06/12/2018.6.12/</id>
     <published>2018-06-12T04:40:15.000Z</published>
-    <updated>2018-06-20T14:54:30.000Z</updated>
+    <updated>2018-06-20T14:58:14.000Z</updated>
     
     <content type="html"><![CDATA[<p>前几天看了连岳的《最好的学习方法》，此文观点我非常认同;既最好的学习方法是复述。看完一本书，你能把要点转述给听众，基本上就掌握了,好处如下<br><a id="more"></a><br>1、教别人的时候，自己的知识不仅不会失去，还可以更精进</p>
 <p>2、可以上升到更重要的阶层。是的，任何一个群体最后都会形成等级。一个聪明的、愿意传授知识的人，一定会在上等阶层</p>
@@ -504,33 +574,6 @@
   </entry>
   
   <entry>
-    <title>初探jquery代码</title>
-    <link href="http://yoursite.com/2017/11/05/jquerydemo/"/>
-    <id>http://yoursite.com/2017/11/05/jquerydemo/</id>
-    <published>2017-11-05T14:16:41.000Z</published>
-    <updated>2018-05-30T12:32:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="jQuery源码设计"><a href="#jQuery源码设计" class="headerlink" title="jQuery源码设计"></a>jQuery源码设计</h1><p>看完jquery源代码,开始自己脑补了api的实现</p>
-<a id="more"></a>
-<h2 id="jQuery的DOM代码需求设计"><a href="#jQuery的DOM代码需求设计" class="headerlink" title="jQuery的DOM代码需求设计"></a>jQuery的DOM代码需求设计</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">let <span class="keyword">items</span> = $(<span class="string">'li'</span>)</div><div class="line"></div><div class="line"><span class="keyword">items</span>.on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>()&#123;</span></div><div class="line">  console.<span class="built_in">log</span>(<span class="string">'click'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">items</span>.addClass(<span class="string">'hi'</span>).removeClass(<span class="string">'error'</span>)</div><div class="line"></div><div class="line"><span class="keyword">items</span>.<span class="keyword">text</span>(<span class="string">'你好'</span>)</div><div class="line"></div><div class="line"><span class="keyword">items</span>.<span class="built_in">get</span>(<span class="number">0</span>)</div><div class="line"></div><div class="line"><span class="number">1.</span> <span class="keyword">item</span> 没有 siblings 方法</div><div class="line"><span class="number">2.</span> 需求要有 xxx.siblings 方法</div><div class="line"><span class="number">3.</span> $<span class="keyword">item</span> = $(<span class="keyword">item</span>)   $<span class="keyword">item</span>.siblings() 返回 <span class="keyword">item</span> 的兄弟</div><div class="line"></div><div class="line"><span class="number">1.</span> $<span class="keyword">item</span>.siblings() 没有 addClass 方法</div><div class="line"><span class="number">2.</span> 需求要有  $<span class="keyword">item</span>.siblings().addClass</div><div class="line"><span class="number">3.</span> $<span class="keyword">item</span>.siblings() 的结果是 $(<span class="string">'li'</span>) 类似的东西</div><div class="line"></div><div class="line">$<span class="keyword">item</span>.siblings().removeClass(<span class="string">'active'</span>).<span class="keyword">end</span>()</div><div class="line">  .addClass(<span class="string">'active'</span>)</div></pre></td></tr></table></figure>
-<h2 id="jQuery的DOM源代码设计实现"><a href="#jQuery的DOM源代码设计实现" class="headerlink" title="jQuery的DOM源代码设计实现"></a>jQuery的DOM源代码设计实现</h2><figure class="highlight zephir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// $ 接收一个字符串或元素或元素列表</span></div><div class="line"><span class="comment">// 返回一个新的数组</span></div><div class="line"><span class="comment">// 这个数组有  on  addClass removeClass ... API</span></div><div class="line">window.$ = <span class="function"><span class="keyword">function</span><span class="params">(selectorOrNode)</span></span>&#123;</div><div class="line">    <span class="keyword">let</span> <span class="keyword">array</span> = []</div><div class="line">    <span class="keyword">if</span>(typeof selectorOrNode === <span class="string">'string'</span>)&#123;</div><div class="line">        <span class="keyword">let</span> items = document.querySelectorAll(selectorOrNode)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;items.length; i++)&#123;</div><div class="line">            <span class="keyword">array</span>.push(items[i])</div><div class="line">        &#125;</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(selectorOrNode <span class="keyword">instanceof</span> Element)&#123;</div><div class="line">        <span class="keyword">array</span>.push(selectorOrNode)</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(selectorOrNode <span class="keyword">instanceof</span> <span class="keyword">Array</span>)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;selectorOrNode.length; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(!(selectorOrNode[i] <span class="keyword">instanceof</span> Element))&#123;</div><div class="line">                <span class="keyword">continue</span></div><div class="line">            &#125;</div><div class="line">            <span class="keyword">array</span>.push(selectorOrNode[i])</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    </div><div class="line">    <span class="keyword">array</span>.on = <span class="function"><span class="keyword">function</span><span class="params">(eventType, fn)</span></span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">            <span class="keyword">array</span>[i].addEventListener(eventType, fn)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">array</span>.addClass = <span class="function"><span class="keyword">function</span><span class="params">(className)</span></span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">            <span class="keyword">array</span>[i].classList.add(className)</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">array</span>.removeClass = <span class="function"><span class="keyword">function</span><span class="params">(className)</span></span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">            <span class="keyword">array</span>[i].classList.remove(className)</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">array</span>.text = <span class="function"><span class="keyword">function</span><span class="params">(value)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(value !== undefined)&#123;</div><div class="line">          <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">            <span class="keyword">array</span>[i].textContent = value</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">return</span> <span class="keyword">array</span>  </div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">let</span> result = []</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">              result.push(<span class="keyword">array</span>[i].textContent)</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> result</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    <span class="keyword">array</span>.get = <span class="function"><span class="keyword">function</span><span class="params">(index)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span>[index]</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">array</span>.end = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span>.previousSelection</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">array</span>.siblings = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">let</span> children = <span class="keyword">array</span>[<span class="number">0</span>].parentNode.children</div><div class="line">        <span class="keyword">let</span> resultArray = []</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;children.length; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(children[i] !== <span class="keyword">array</span>[<span class="number">0</span>])&#123;</div><div class="line">                resultArray.push(children[i])</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">let</span> items = $(resultArray)</div><div class="line">        items.previousSelection = <span class="keyword">array</span></div><div class="line">        <span class="keyword">return</span> items</div><div class="line">                                                           </div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">array</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="jQuery的BOM代码需求设计"><a href="#jQuery的BOM代码需求设计" class="headerlink" title="jQuery的BOM代码需求设计"></a>jQuery的BOM代码需求设计</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">http://xxx.com/index.html?a=1</div><div class="line">$.bom.search('a')  </div><div class="line"></div><div class="line">$.bom.search('a', 'xxx')</div><div class="line">http://xxx.com/index.html?a=xxx</div></pre></td></tr></table></figure>
-<h2 id="jQuery的BOM源代码设计实现"><a href="#jQuery的BOM源代码设计实现" class="headerlink" title="jQuery的BOM源代码设计实现"></a>jQuery的BOM源代码设计实现</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">window.$ = function()&#123;</div><div class="line">  let array = []</div><div class="line">  return array</div><div class="line">&#125;</div><div class="line"></div><div class="line">$.bom = &#123;</div><div class="line">  openAtCenter: function(width, height, url)&#123;</div><div class="line">    window.open(url, '_blank', `</div><div class="line">      width=$&#123;width&#125;px,height=$&#123;height&#125;px,</div><div class="line">      screenX=$&#123;screen.width/2 - width/2&#125;px,</div><div class="line">      screenY=$&#123;screen.height/2 - height/2&#125;px</div><div class="line">    `)</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  search: function(name, value)&#123;</div><div class="line">    let searchAll = function()&#123;</div><div class="line">      let result = &#123;&#125;</div><div class="line">      let search = window.location.search</div><div class="line">      // 去掉?</div><div class="line">      if(search[0] === '?')&#123;</div><div class="line">        search = search.slice(1)</div><div class="line">      &#125;</div><div class="line">      // 用 &amp; 分隔成数组</div><div class="line">      let searchArray = search.split('&amp;')</div><div class="line">      // 遍历数组</div><div class="line">      for(var i =0;i<span class="tag">&lt;<span class="name">searchArray.length;</span> <span class="attr">i</span>++)&#123;</span></div><div class="line">        <span class="attr">let</span> <span class="attr">parts</span> = <span class="string">searchArray[i].split(</span>'=<span class="string">')</span></div><div class="line">        result[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1] || '')</div><div class="line">      &#125;</div><div class="line">      <span class="attr">return</span> <span class="attr">result</span></div><div class="line">    &#125;</div><div class="line">    <span class="attr">let</span> <span class="attr">result</span> = <span class="string">searchAll()</span></div><div class="line">    <span class="attr">if</span>(<span class="attr">value</span> === <span class="string">undefined)&#123;</span></div><div class="line">      <span class="attr">return</span> <span class="attr">result</span>[<span class="attr">name</span>]</div><div class="line">    &#125;<span class="attr">else</span>&#123;</div><div class="line">      <span class="attr">if</span>(<span class="attr">result</span>[<span class="attr">name</span>] === <span class="string">undefined)&#123;</span></div><div class="line">        <span class="attr">location.search</span> += `&amp;$&#123;<span class="attr">encodeURIComponent</span>(<span class="attr">name</span>)&#125;=<span class="string">$&#123;encodeURIComponent(value)&#125;</span>`</div><div class="line">      &#125;<span class="attr">else</span>&#123;</div><div class="line">        <span class="attr">result</span>[<span class="attr">name</span>] = <span class="string">encodeURIComponent(value)</span></div><div class="line">        <span class="attr">let</span> <span class="attr">newSearch</span> = <span class="string">'?'</span></div><div class="line">        <span class="attr">for</span>(<span class="attr">let</span> <span class="attr">key</span> <span class="attr">in</span> <span class="attr">result</span>)&#123;</div><div class="line">          <span class="attr">newSearch</span> += `$&#123;<span class="attr">encodeURIComponent</span>(<span class="attr">key</span>)&#125;=<span class="string">$&#123;encodeURIComponent(result[key])&#125;&amp;</span>`</div><div class="line">        &#125;</div><div class="line">        <span class="attr">location.search</span> = <span class="string">newSearch</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;jQuery源码设计&quot;&gt;&lt;a href=&quot;#jQuery源码设计&quot; class=&quot;headerlink&quot; title=&quot;jQuery源码设计&quot;&gt;&lt;/a&gt;jQuery源码设计&lt;/h1&gt;&lt;p&gt;看完jquery源代码,开始自己脑补了api的实现&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
-    
-    
-      <category term="Jquery" scheme="http://yoursite.com/tags/Jquery/"/>
-    
-  </entry>
-  
-  <entry>
     <title>算法</title>
     <link href="http://yoursite.com/2017/11/05/arithmetic/"/>
     <id>http://yoursite.com/2017/11/05/arithmetic/</id>
@@ -569,6 +612,33 @@
     
     
       <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初探jquery代码</title>
+    <link href="http://yoursite.com/2017/11/05/jquerydemo/"/>
+    <id>http://yoursite.com/2017/11/05/jquerydemo/</id>
+    <published>2017-11-05T14:16:41.000Z</published>
+    <updated>2018-05-30T12:32:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="jQuery源码设计"><a href="#jQuery源码设计" class="headerlink" title="jQuery源码设计"></a>jQuery源码设计</h1><p>看完jquery源代码,开始自己脑补了api的实现</p>
+<a id="more"></a>
+<h2 id="jQuery的DOM代码需求设计"><a href="#jQuery的DOM代码需求设计" class="headerlink" title="jQuery的DOM代码需求设计"></a>jQuery的DOM代码需求设计</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">let <span class="keyword">items</span> = $(<span class="string">'li'</span>)</div><div class="line"></div><div class="line"><span class="keyword">items</span>.on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>()&#123;</span></div><div class="line">  console.<span class="built_in">log</span>(<span class="string">'click'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">items</span>.addClass(<span class="string">'hi'</span>).removeClass(<span class="string">'error'</span>)</div><div class="line"></div><div class="line"><span class="keyword">items</span>.<span class="keyword">text</span>(<span class="string">'你好'</span>)</div><div class="line"></div><div class="line"><span class="keyword">items</span>.<span class="built_in">get</span>(<span class="number">0</span>)</div><div class="line"></div><div class="line"><span class="number">1.</span> <span class="keyword">item</span> 没有 siblings 方法</div><div class="line"><span class="number">2.</span> 需求要有 xxx.siblings 方法</div><div class="line"><span class="number">3.</span> $<span class="keyword">item</span> = $(<span class="keyword">item</span>)   $<span class="keyword">item</span>.siblings() 返回 <span class="keyword">item</span> 的兄弟</div><div class="line"></div><div class="line"><span class="number">1.</span> $<span class="keyword">item</span>.siblings() 没有 addClass 方法</div><div class="line"><span class="number">2.</span> 需求要有  $<span class="keyword">item</span>.siblings().addClass</div><div class="line"><span class="number">3.</span> $<span class="keyword">item</span>.siblings() 的结果是 $(<span class="string">'li'</span>) 类似的东西</div><div class="line"></div><div class="line">$<span class="keyword">item</span>.siblings().removeClass(<span class="string">'active'</span>).<span class="keyword">end</span>()</div><div class="line">  .addClass(<span class="string">'active'</span>)</div></pre></td></tr></table></figure>
+<h2 id="jQuery的DOM源代码设计实现"><a href="#jQuery的DOM源代码设计实现" class="headerlink" title="jQuery的DOM源代码设计实现"></a>jQuery的DOM源代码设计实现</h2><figure class="highlight zephir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// $ 接收一个字符串或元素或元素列表</span></div><div class="line"><span class="comment">// 返回一个新的数组</span></div><div class="line"><span class="comment">// 这个数组有  on  addClass removeClass ... API</span></div><div class="line">window.$ = <span class="function"><span class="keyword">function</span><span class="params">(selectorOrNode)</span></span>&#123;</div><div class="line">    <span class="keyword">let</span> <span class="keyword">array</span> = []</div><div class="line">    <span class="keyword">if</span>(typeof selectorOrNode === <span class="string">'string'</span>)&#123;</div><div class="line">        <span class="keyword">let</span> items = document.querySelectorAll(selectorOrNode)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;items.length; i++)&#123;</div><div class="line">            <span class="keyword">array</span>.push(items[i])</div><div class="line">        &#125;</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(selectorOrNode <span class="keyword">instanceof</span> Element)&#123;</div><div class="line">        <span class="keyword">array</span>.push(selectorOrNode)</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(selectorOrNode <span class="keyword">instanceof</span> <span class="keyword">Array</span>)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;selectorOrNode.length; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(!(selectorOrNode[i] <span class="keyword">instanceof</span> Element))&#123;</div><div class="line">                <span class="keyword">continue</span></div><div class="line">            &#125;</div><div class="line">            <span class="keyword">array</span>.push(selectorOrNode[i])</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    </div><div class="line">    <span class="keyword">array</span>.on = <span class="function"><span class="keyword">function</span><span class="params">(eventType, fn)</span></span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">            <span class="keyword">array</span>[i].addEventListener(eventType, fn)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">array</span>.addClass = <span class="function"><span class="keyword">function</span><span class="params">(className)</span></span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">            <span class="keyword">array</span>[i].classList.add(className)</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">array</span>.removeClass = <span class="function"><span class="keyword">function</span><span class="params">(className)</span></span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">            <span class="keyword">array</span>[i].classList.remove(className)</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">array</span>.text = <span class="function"><span class="keyword">function</span><span class="params">(value)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(value !== undefined)&#123;</div><div class="line">          <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">            <span class="keyword">array</span>[i].textContent = value</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">return</span> <span class="keyword">array</span>  </div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">let</span> result = []</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">array</span>.length;i++)&#123;</div><div class="line">              result.push(<span class="keyword">array</span>[i].textContent)</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> result</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    <span class="keyword">array</span>.get = <span class="function"><span class="keyword">function</span><span class="params">(index)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span>[index]</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">array</span>.end = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span>.previousSelection</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">array</span>.siblings = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">let</span> children = <span class="keyword">array</span>[<span class="number">0</span>].parentNode.children</div><div class="line">        <span class="keyword">let</span> resultArray = []</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;children.length; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(children[i] !== <span class="keyword">array</span>[<span class="number">0</span>])&#123;</div><div class="line">                resultArray.push(children[i])</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">let</span> items = $(resultArray)</div><div class="line">        items.previousSelection = <span class="keyword">array</span></div><div class="line">        <span class="keyword">return</span> items</div><div class="line">                                                           </div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">array</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="jQuery的BOM代码需求设计"><a href="#jQuery的BOM代码需求设计" class="headerlink" title="jQuery的BOM代码需求设计"></a>jQuery的BOM代码需求设计</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">http://xxx.com/index.html?a=1</div><div class="line">$.bom.search('a')  </div><div class="line"></div><div class="line">$.bom.search('a', 'xxx')</div><div class="line">http://xxx.com/index.html?a=xxx</div></pre></td></tr></table></figure>
+<h2 id="jQuery的BOM源代码设计实现"><a href="#jQuery的BOM源代码设计实现" class="headerlink" title="jQuery的BOM源代码设计实现"></a>jQuery的BOM源代码设计实现</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">window.$ = function()&#123;</div><div class="line">  let array = []</div><div class="line">  return array</div><div class="line">&#125;</div><div class="line"></div><div class="line">$.bom = &#123;</div><div class="line">  openAtCenter: function(width, height, url)&#123;</div><div class="line">    window.open(url, '_blank', `</div><div class="line">      width=$&#123;width&#125;px,height=$&#123;height&#125;px,</div><div class="line">      screenX=$&#123;screen.width/2 - width/2&#125;px,</div><div class="line">      screenY=$&#123;screen.height/2 - height/2&#125;px</div><div class="line">    `)</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  search: function(name, value)&#123;</div><div class="line">    let searchAll = function()&#123;</div><div class="line">      let result = &#123;&#125;</div><div class="line">      let search = window.location.search</div><div class="line">      // 去掉?</div><div class="line">      if(search[0] === '?')&#123;</div><div class="line">        search = search.slice(1)</div><div class="line">      &#125;</div><div class="line">      // 用 &amp; 分隔成数组</div><div class="line">      let searchArray = search.split('&amp;')</div><div class="line">      // 遍历数组</div><div class="line">      for(var i =0;i<span class="tag">&lt;<span class="name">searchArray.length;</span> <span class="attr">i</span>++)&#123;</span></div><div class="line">        <span class="attr">let</span> <span class="attr">parts</span> = <span class="string">searchArray[i].split(</span>'=<span class="string">')</span></div><div class="line">        result[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1] || '')</div><div class="line">      &#125;</div><div class="line">      <span class="attr">return</span> <span class="attr">result</span></div><div class="line">    &#125;</div><div class="line">    <span class="attr">let</span> <span class="attr">result</span> = <span class="string">searchAll()</span></div><div class="line">    <span class="attr">if</span>(<span class="attr">value</span> === <span class="string">undefined)&#123;</span></div><div class="line">      <span class="attr">return</span> <span class="attr">result</span>[<span class="attr">name</span>]</div><div class="line">    &#125;<span class="attr">else</span>&#123;</div><div class="line">      <span class="attr">if</span>(<span class="attr">result</span>[<span class="attr">name</span>] === <span class="string">undefined)&#123;</span></div><div class="line">        <span class="attr">location.search</span> += `&amp;$&#123;<span class="attr">encodeURIComponent</span>(<span class="attr">name</span>)&#125;=<span class="string">$&#123;encodeURIComponent(value)&#125;</span>`</div><div class="line">      &#125;<span class="attr">else</span>&#123;</div><div class="line">        <span class="attr">result</span>[<span class="attr">name</span>] = <span class="string">encodeURIComponent(value)</span></div><div class="line">        <span class="attr">let</span> <span class="attr">newSearch</span> = <span class="string">'?'</span></div><div class="line">        <span class="attr">for</span>(<span class="attr">let</span> <span class="attr">key</span> <span class="attr">in</span> <span class="attr">result</span>)&#123;</div><div class="line">          <span class="attr">newSearch</span> += `$&#123;<span class="attr">encodeURIComponent</span>(<span class="attr">key</span>)&#125;=<span class="string">$&#123;encodeURIComponent(result[key])&#125;&amp;</span>`</div><div class="line">        &#125;</div><div class="line">        <span class="attr">location.search</span> = <span class="string">newSearch</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;jQuery源码设计&quot;&gt;&lt;a href=&quot;#jQuery源码设计&quot; class=&quot;headerlink&quot; title=&quot;jQuery源码设计&quot;&gt;&lt;/a&gt;jQuery源码设计&lt;/h1&gt;&lt;p&gt;看完jquery源代码,开始自己脑补了api的实现&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="Jquery" scheme="http://yoursite.com/tags/Jquery/"/>
     
   </entry>
   
@@ -2293,276 +2363,6 @@
     
     
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML5基础</title>
-    <link href="http://yoursite.com/2017/04/27/html5/"/>
-    <id>http://yoursite.com/2017/04/27/html5/</id>
-    <published>2017-04-27T15:14:31.000Z</published>
-    <updated>2018-05-30T12:20:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="HTML5简介"><a href="#HTML5简介" class="headerlink" title="HTML5简介"></a>HTML5简介</h1><ul>
-<li>HTML5 是超文本标记语言的第五次重大修改，2014年制定完成的</li>
-<li>设计目的是为了在移动设备上支持多媒体<a id="more"></a></li>
-<li>增加了更多语义化的标签，赋予网页更好的意义和结构</li>
-</ul>
-<h2 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a>HTML5新特性</h2><ul>
-<li>语义特性:引入了更多语义化的标签</li>
-<li>本地存储特性:基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度</li>
-<li>设备兼容特性:外部设备可以直接与内部数据相连，比如视频影音可以直接和 microphones 和摄像头相连</li>
-<li>连接特性:提高了连接效率，实现了在线视频聊天，优化了页游</li>
-<li>网页多媒体特性:支持网页端的Audio、Video等多媒体功能,三维、图形及特效特性,基于SVG、Canvas、WebGL及CSS3的3D功能</li>
-<li>性能与集成特性:HTML5会通过XMLHttpRequest2等技术，解决以前的跨域等问题</li>
-<li>CSS3 特性:CSS3 提供了更多酷炫了样式，比如阴影、动画、3D效果</li>
-</ul>
-<h2 id="新增元素"><a href="#新增元素" class="headerlink" title="新增元素"></a>新增元素</h2><table>
-<thead>
-<tr>
-<th>元素</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>canvas</td>
-<td>标签定义图形，比如图表和其他图像。该标签基于 JavaScript 的绘图 API</td>
-</tr>
-<tr>
-<td>audio</td>
-<td>定义音频内容</td>
-</tr>
-<tr>
-<td>video</td>
-<td>定义视频（video 或者 movie）</td>
-</tr>
-<tr>
-<td>source</td>
-<td>定义多媒体资源 video 和audio</td>
-</tr>
-<tr>
-<td>embed</td>
-<td>定义嵌入的内容，比如插件</td>
-</tr>
-<tr>
-<td>track</td>
-<td>为诸如 video 和 audio 元素之类的媒介规定外部文本轨道</td>
-</tr>
-<tr>
-<td>datalist</td>
-<td>定义选项列表。与 input 元素配合使用该元素，来定义 input 可能的值</td>
-</tr>
-<tr>
-<td>keygen</td>
-<td>规定用于表单的密钥对生成器字段</td>
-</tr>
-<tr>
-<td>output</td>
-<td>定义不同类型的输出，比如脚本的输出</td>
-</tr>
-<tr>
-<td>article</td>
-<td>定义页面正文内容</td>
-</tr>
-<tr>
-<td>aside</td>
-<td>定义页面内容之外的内容</td>
-</tr>
-<tr>
-<td>bdi</td>
-<td>设置一段文本，使其脱离其父元素的文本方向设置</td>
-</tr>
-<tr>
-<td>command</td>
-<td>定义命令按钮，比如单选按钮、复选框或按钮</td>
-</tr>
-<tr>
-<td>details</td>
-<td>用于描述文档或文档某个部分的细节</td>
-</tr>
-<tr>
-<td>dialog</td>
-<td>定义对话框，比如提示框</td>
-</tr>
-<tr>
-<td>summary</td>
-<td>标签包含 details 元素的标题</td>
-</tr>
-<tr>
-<td>figure</td>
-<td>规定独立的流内容（图像、图表、照片、代码等等）</td>
-</tr>
-<tr>
-<td>figcaption</td>
-<td>定义 figure 元素的标题</td>
-</tr>
-<tr>
-<td>footer</td>
-<td>定义 section 或 document 的页脚</td>
-</tr>
-<tr>
-<td>header</td>
-<td>定义了文档的头部区域</td>
-</tr>
-<tr>
-<td>mark</td>
-<td>定义带有记号的文本</td>
-</tr>
-<tr>
-<td>meter</td>
-<td>定义度量衡。仅用于已知最大和最小值的度量</td>
-</tr>
-<tr>
-<td>nav</td>
-<td>导航</td>
-</tr>
-<tr>
-<td>progress</td>
-<td>定义任何类型的任务的进度</td>
-</tr>
-<tr>
-<td>ruby</td>
-<td>定义 ruby 注释（中文注音或字符）</td>
-</tr>
-<tr>
-<td>rt</td>
-<td>定义字符（中文注音或字符）的解释或发音</td>
-</tr>
-<tr>
-<td>rp</td>
-<td>在 ruby 注释中使用，定义不支持 ruby 元素的浏览器所显示的内容</td>
-</tr>
-<tr>
-<td>section</td>
-<td>定义文档中的节（section、区段）</td>
-</tr>
-<tr>
-<td>time</td>
-<td>定义日期或时间</td>
-</tr>
-<tr>
-<td>wbr</td>
-<td>规定在文本中的何处适合添加换行符</td>
-</tr>
-</tbody>
-</table>
-<h2 id="低版本IE支持HTML5"><a href="#低版本IE支持HTML5" class="headerlink" title="低版本IE支持HTML5"></a>低版本IE支持HTML5</h2><ul>
-<li>使用 html5shiv ，把 HTML5 的新标签转化成低版本IE认识的内容。方法是在 head 中加入代码</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--if lt IE 9]&gt;</span></div><div class="line">&lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li>必须把这段代码加载head头部，因为要在解析 HTML 之前就识别新标签，才能起作用</li>
-<li>另外，要在CSS中加上以下代码，不然可能会出现莫名其妙的问题</li>
-</ul>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">header,nav,article,section,aside,footer &#123;</div><div class="line">  display: block;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>例子未完待续……</p>
-<hr>
-<h1 id="input新增类型"><a href="#input新增类型" class="headerlink" title="input新增类型"></a>input新增类型</h1><ul>
-<li>email:用于应该包含 e-mail 地址的输入域</li>
-<li>url:用于应该包含 URL 地址的输入域</li>
-<li>number:用于应该包含数值的输入域</li>
-<li>range:用于应该包含一定范围内数字值的输入域(显示为滑动条)</li>
-<li>Date pickers:拥有多个可供选取日期和时间的新输入类型</li>
-<li><ul>
-<li>date:选取日、月、年</li>
-</ul>
-</li>
-<li><ul>
-<li>month:选取月、年</li>
-</ul>
-</li>
-<li><ul>
-<li>week:选取周和年</li>
-</ul>
-</li>
-<li><ul>
-<li>time:选取时间（小时和分钟）</li>
-</ul>
-</li>
-<li><ul>
-<li>datetime:选取时间、日、月、年（UTC 时间）</li>
-</ul>
-</li>
-<li><ul>
-<li>datetime-local:选取时间、日、月、年（本地时间）</li>
-</ul>
-</li>
-<li>search:用于搜索域，比如站点搜索或 Google 搜索</li>
-<li>color:用在input字段主要用于选取颜色</li>
-</ul>
-<p>例子未完待续……</p>
-<hr>
-<h1 id="Cookie、localStorage、sessionStorage"><a href="#Cookie、localStorage、sessionStorage" class="headerlink" title="Cookie、localStorage、sessionStorage"></a>Cookie、localStorage、sessionStorage</h1><ul>
-<li>在客户端存储数据</li>
-<li>HTML5数据不是由每个服务器请求传递的，而是只有在请求时使用数据</li>
-</ul>
-<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><ul>
-<li>Cookie 的翻译是“小甜饼”，可想而知，Cookie 是一个非常小的数据（4K左右），主要用来保存用户的登陆信息，这样用户在同一域名下的页面不用再重复登陆了。“记住密码”功能就是保存在了Cookie中</li>
-</ul>
-<h2 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h2><ul>
-<li>localStorage 是 HTML5 标准新加的技术，用来本地存储数据，它比Cookie大的多（5M左右），除非主动去清除，否则永久保存。当然，如果保存的东西满了，就会报错。localStorage 接替了部分 Cookie 的工作，比如管理购物车</li>
-</ul>
-<h2 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h2><ul>
-<li>sessionStorage 与 localStorage 接口类似，但是数据的生命周期不同。session 的翻译是“会话”，意味着数据只在当前会话中保存着，刷新页面数据依旧存在，但是关闭页面数据就会被清空。应用是：内容特别多的表单，为了用户体验，拆分成多个子页面，每个页面的信息就可以临时保存在 sessionStorage 中了</li>
-</ul>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><table>
-<thead>
-<tr>
-<th>特性</th>
-<th>Cookie</th>
-<th>localStorage</th>
-<th>sessionStorage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数据生命周期</td>
-<td>一般由服务器生成，可设置失效时间，如果在浏览器中生成，默认是关闭浏览器后失效</td>
-<td>除非主动清空，否则永久保存</td>
-<td>仅当前会话下有效，关闭页面或浏览器就会删除</td>
-</tr>
-<tr>
-<td>存放数据大小</td>
-<td>4K左右</td>
-<td>5M左右</td>
-<td>5M左右</td>
-</tr>
-<tr>
-<td>与服务器端的通信</td>
-<td>每次都会携带在 http 头中， 所以 Cookie 过多，会带来性能问题</td>
-<td>仅在客户端（浏览器）中保存，不参与服务器的通信</td>
-<td>仅在客户端（浏览器）中保存，不参与服务器的通信</td>
-</tr>
-<tr>
-<td>应用</td>
-<td>记住密码</td>
-<td>管理购物车</td>
-<td>临时保存表单信息</td>
-</tr>
-</tbody>
-</table>
-<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><ul>
-<li>数据保存在 Cookie、localStorage、sessionStorage 都要注意 XSS 漏洞的风险。（XSS 漏洞是渲染的文本内有 <script> 标签，浏览器将之解析成 JavaScript 脚本执行 ）</li>
-</ul>
-<h2 id="localStorage-存储删除数据"><a href="#localStorage-存储删除数据" class="headerlink" title="localStorage 存储删除数据"></a>localStorage 存储删除数据</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">localStorage.setItem(<span class="string">'name'</span>, <span class="string">'liqi'</span>);<span class="comment">//存储</span></div><div class="line">localStorage.getItem(<span class="string">"name"</span>); <span class="comment">//获取</span></div><div class="line">localStorage.removeItem(<span class="string">"name"</span>);<span class="comment">//删除</span></div><div class="line">localStorage.clear(); <span class="comment">//删除所有数据</span></div></pre></td></tr></table></figure>
-<p>例子未完待续……</p>
-</script></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;HTML5简介&quot;&gt;&lt;a href=&quot;#HTML5简介&quot; class=&quot;headerlink&quot; title=&quot;HTML5简介&quot;&gt;&lt;/a&gt;HTML5简介&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;HTML5 是超文本标记语言的第五次重大修改，2014年制定完成的&lt;/li&gt;
-&lt;li&gt;设计目的是为了在移动设备上支持多媒体
-    
-    </summary>
-    
-      <category term="HTML/CSS" scheme="http://yoursite.com/categories/HTML-CSS/"/>
-    
-    
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
   </entry>
   
