@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[【总结】2018年6月份个人总结]]></title>
+      <url>%2F2018%2F06%2F28%2F2018.6summary%2F</url>
+      <content type="text"><![CDATA[是谁来自山川湖海,又囿于昼夜,厨房与爱 这个六月,跟往常不太一样,重新一段几乎全新的生活,没有任何的不适,走了几个地方,认识几个朋友,人幽默很nice,我已经习惯这边的生活 念过往,畏将来,冥冥中这是我唯一要走的路。我是个喜欢怀旧的人，但我不想回到过去任何一个时间点，因为即使重来我还是会选择现在走过的路 我向往大厂的技术及工资,并会不断努力达到进入要求。与在头条的老妹每次通话,都深知,高工资高成长的大厂,是每天起早贪黑的工作及学习,并要牺牲很多业余时间的代价 所以我现在非常珍惜单纯快乐的时光，不需要考虑吃穿住行，不需要考虑家庭压力和责任，这样的日子也许是未来最美好的一段回忆。所以以更积极向上的姿态去拥抱生活,投资自己]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[JavaScript语言精粹]]></title>
       <url>%2F2018%2F06%2F25%2F2018.6.25%2F</url>
       <content type="text"><![CDATA[JavaScript蝴蝶书,详细分析了Javascript中哪些部分是精粹，哪些部分是糟粕和鸡肋 列出了11种应该避免使用的Javascript语法 ==永远只使用===和!==。因为==默认会进行类型转换，规则十分难记。 with解释器会首先判断obj.b和obj.d是否存在，如果不存在的话，再判断全局变量b和d是否存在 这样就导致了低效率，而且可能会导致意外，因此最好不要使用with语句 12345678obj.a = obj.b;obj.c = obj.d;// 可以简写成with(obj) &#123; a = b; c = d;&#125; evaleval用来直接执行一个字符串,性能差 eval能够做到的事情，不用它也能做到 1234eval("myValue = myObject." + myKey + ";");// 可以直接写成myValue = myObject[myKey]; continue这条命令的作用是返回到循环的头部，但是循环本来就会返回到头部 避免使用这条命令，使得效率得到改善 switch 贯穿switch结构中的case语句，默认是顺序执行，除非遇到break，return和throw 12345switch(n) &#123; case 1: case 2: break;&#125; 建议避免switch贯穿，凡是有case的地方，一律加上break 123456switch(n) &#123; case 1: break; case 2: break;&#125; 单行的块结构if、while、do和for，都是块结构语句，但是也可以接受单行命令,如 1if (ok) t = true; 不管是否只有一行命令，都一律加上大括号 123if (ok)&#123; t = true;&#125; ++和–递增运算符++和递减运算符–,实际上会让代码看上去更复杂,为了代码的整洁性和易读性，不用为好 位运算符Javascript内部，所有数字都保存为双精度浮点数。如果使用它们的话，Javascript不得不将运算数先转为整数，然后再进行运算，这样就降低了速度 function语句前一种写法会被解析器自动提升到代码的头部，因此违背了函数应该先定义后使用的要求，所以建议定义函数时，全部采用后一种写法 1234function foo() &#123;&#125;// 等价于var foo = function () &#123;&#125; 基本数据类型的包装对象Javascript的基本数据类型包括字符串、数字、布尔值，它们都有对应的包装对象String、Number和Boolean,这样写完全没有必要 123new String("Hello World");new Number(2000);new Boolean(false); void在Javascript中，void是一个运算符，接受一个运算数，并返回undefined,这个命令没什么用,避免使用 1void 0; // undefined]]></content>
