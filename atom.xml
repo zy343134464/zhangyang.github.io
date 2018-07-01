@@ -709,7 +709,7 @@
     <link href="http://yoursite.com/2018/05/11/node-server/"/>
     <id>http://yoursite.com/2018/05/11/node-server/</id>
     <published>2018-05-11T14:16:41.000Z</published>
-    <updated>2018-07-01T06:11:44.000Z</updated>
+    <updated>2018-07-01T06:21:58.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><a id="more"></a>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">本地开启服务器</div><div class="line">根据路径mock数据</div><div class="line">读取静态文件</div><div class="line">支持模板引擎渲染</div></pre></td></tr></table></figure>
@@ -731,7 +731,7 @@
       <category term="Node.js" scheme="http://yoursite.com/categories/Node-js/"/>
     
     
-      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
     
   </entry>
   
@@ -740,7 +740,7 @@
     <link href="http://yoursite.com/2018/04/05/jquerydemo/"/>
     <id>http://yoursite.com/2018/04/05/jquerydemo/</id>
     <published>2018-04-05T14:16:41.000Z</published>
-    <updated>2018-07-01T06:17:12.000Z</updated>
+    <updated>2018-07-01T06:20:56.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="jQuery源码设计"><a href="#jQuery源码设计" class="headerlink" title="jQuery源码设计"></a>jQuery源码设计</h1><p>看完jquery源代码,开始自己脑补了api的实现</p>
 <a id="more"></a>
@@ -758,7 +758,7 @@
       <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
     
     
-      <category term="Jquery" scheme="http://yoursite.com/tags/Jquery/"/>
+      <category term="jquery" scheme="http://yoursite.com/tags/jquery/"/>
     
   </entry>
   
@@ -1000,7 +1000,7 @@
     <link href="http://yoursite.com/2017/10/04/angular/"/>
     <id>http://yoursite.com/2017/10/04/angular/</id>
     <published>2017-10-04T15:16:41.000Z</published>
-    <updated>2018-07-01T06:17:36.000Z</updated>
+    <updated>2018-07-01T06:20:24.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="AngularJS-简介"><a href="#AngularJS-简介" class="headerlink" title="AngularJS 简介"></a>AngularJS 简介</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul>
 <li>ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的”所有者”  </div></li>
