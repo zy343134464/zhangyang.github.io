@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/05/11/node-server/</loc>
+    <loc>http://yoursite.com/2018/04/05/jquerydemo/</loc>
     
-    <lastmod>2018-07-01T06:21:58.000Z</lastmod>
+    <lastmod>2018-07-01T06:29:58.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/05/jquerydemo/</loc>
+    <loc>http://yoursite.com/2017/10/04/angular/</loc>
     
-    <lastmod>2018-07-01T06:20:56.000Z</lastmod>
+    <lastmod>2018-07-01T06:28:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/05/11/node-server/</loc>
+    
+    <lastmod>2018-07-01T06:28:46.000Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2017/05/30/jq/</loc>
     
     <lastmod>2018-07-01T06:20:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/10/04/angular/</loc>
-    
-    <lastmod>2018-07-01T06:20:24.000Z</lastmod>
     
   </url>
   
