@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/10/04/angular/</loc>
+    
+    <lastmod>2018-07-01T05:22:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/04/29/javascript/</loc>
     
-    <lastmod>2018-07-01T05:20:48.000Z</lastmod>
+    <lastmod>2018-07-01T05:22:28.000Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>http://yoursite.com/2017/11/05/bootstrap/</loc>
     
     <lastmod>2018-06-30T17:24:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/10/04/angular/</loc>
-    
-    <lastmod>2018-06-30T17:24:22.000Z</lastmod>
     
   </url>
   
