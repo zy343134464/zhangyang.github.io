@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-12T13:15:03.858Z</updated>
+  <updated>2018-07-12T14:02:28.011Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>React Router</title>
+    <title>Redux</title>
     <link href="http://yoursite.com/2018/07/11/2018.7.11/"/>
     <id>http://yoursite.com/2018/07/11/2018.7.11/</id>
     <published>2018-07-11T15:16:41.000Z</published>
-    <updated>2018-07-12T13:15:03.858Z</updated>
+    <updated>2018-07-12T14:02:28.011Z</updated>
     
     <summary type="html">
     
