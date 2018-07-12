@@ -4,8 +4,15 @@
     
     <entry>
       <title><![CDATA[React Router]]></title>
-      <url>%2F2018%2F07%2F08%2F2018.7.8%2F</url>
+      <url>%2F2018%2F07%2F11%2F2018.7.11%2F</url>
       <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[React Router]]></title>
+      <url>%2F2018%2F07%2F08%2F2018.7.8%2F</url>
+      <content type="text"><![CDATA[React 体系的一个重要部分：路由库React-Router,通过管理 URL，实现组件的切换和状态的变化 React Router中文教程 React Router英文教程]]></content>
     </entry>
 
     
