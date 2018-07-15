@@ -89,14 +89,12 @@
 
 
 
-<meta name="description" content="flex布局
-Flex 是 Flexible Box 的缩写，意为”弹性布局”">
+<meta name="description" content="Flex 是 Flexible Box 的缩写，意为”弹性布局”">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flex布局">
 <meta property="og:url" content="http://yoursite.com/2017/08/18/ydnjs/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="flex布局
-Flex 是 Flexible Box 的缩写，意为”弹性布局”">
+<meta property="og:description" content="Flex 是 Flexible Box 的缩写，意为”弹性布局”">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/phone-8.png">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/phone-10.png">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/phone-9.png">
@@ -126,11 +124,10 @@ Flex 是 Flexible Box 的缩写，意为”弹性布局”">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/phone-34.png">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/phone-35.png">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/phone-36.png">
-<meta property="og:updated_time" content="2018-07-15T09:37:14.979Z">
+<meta property="og:updated_time" content="2018-07-15T09:44:02.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flex布局">
-<meta name="twitter:description" content="flex布局
-Flex 是 Flexible Box 的缩写，意为”弹性布局”">
+<meta name="twitter:description" content="Flex 是 Flexible Box 的缩写，意为”弹性布局”">
 <meta name="twitter:image" content="http://oqev4hx8u.bkt.clouddn.com/phone-8.png">
 
 
@@ -433,7 +430,7 @@ Flex 是 Flexible Box 的缩写，意为”弹性布局”">
       
 
       
-        <h1 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h1><ul>
+        <ul>
 <li>Flex 是 Flexible Box 的缩写，意为”弹性布局”</li>
 </ul>
 <a id="more"></a>
@@ -443,7 +440,7 @@ Flex 是 Flexible Box 的缩写，意为”弹性布局”">
 <li>设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效</li>
 </ul>
 </blockquote>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ul>
 <li>设置 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”</li>
 <li>所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”</li>
 <li>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）</li>
@@ -452,7 +449,7 @@ Flex 是 Flexible Box 的缩写，意为”弹性布局”">
 <li>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size</li>
 </ul>
 <p><img src="http://oqev4hx8u.bkt.clouddn.com/phone-8.png" alt="image"></p>
-<h2 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h2><ul>
+<h1 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h1><ul>
 <li>flex-direction</li>
 <li>flex-wrap</li>
 <li>flex-flow(不常用)</li>
@@ -583,7 +580,7 @@ Flex 是 Flexible Box 的缩写，意为”弹性布局”">
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">    body &#123;</div><div class="line">      padding: 20px;</div><div class="line">      margin: 0 auto;</div><div class="line">      background-color: #ccc;</div><div class="line">      max-width: 1024px;</div><div class="line">    &#125;</div><div class="line">    .box &#123;</div><div class="line">      background-color: white;</div><div class="line">      display: flex;</div><div class="line">    &#125;</div><div class="line">    .box-item &#123;</div><div class="line">      width: 150px;</div><div class="line">      height: 150px;</div><div class="line">      line-height: 150px;</div><div class="line">      margin: 5px;</div><div class="line">      background-color: #ffd200;</div><div class="line">      font-size: 100px;</div><div class="line">      color: white;</div><div class="line">      text-align: center;</div><div class="line">    &#125;</div><div class="line">    .box-21 &#123;</div><div class="line">      flex-wrap: wrap;</div><div class="line">      align-content: stretch;</div><div class="line">    &#125;</div><div class="line">    .box-21 .box-item &#123;</div><div class="line">      height: auto;</div><div class="line">    &#125;</div><div class="line">    .box-tall &#123;</div><div class="line">      height: 500px;</div><div class="line">    &#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box box-tall box-21"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-item"</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><img src="http://oqev4hx8u.bkt.clouddn.com/phone-31.png" alt="image"></p>
-<h2 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h2><ul>
+<h1 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h1><ul>
 <li>order(代替双飞翼)</li>
 <li>flex-grow</li>
 <li>flex-shrink(不常用)</li>
@@ -882,7 +879,7 @@ Flex 是 Flexible Box 的缩写，意为”弹性布局”">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#flex布局"><span class="nav-number">1.</span> <span class="nav-text">flex布局</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器的属性"><span class="nav-number">1.2.</span> <span class="nav-text">容器的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-direction"><span class="nav-number">1.2.1.</span> <span class="nav-text">flex-direction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-wrap"><span class="nav-number">1.2.2.</span> <span class="nav-text">flex-wrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-flow"><span class="nav-number">1.2.3.</span> <span class="nav-text">flex-flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#justify-content"><span class="nav-number">1.2.4.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-items"><span class="nav-number">1.2.5.</span> <span class="nav-text">align-items</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-content"><span class="nav-number">1.2.6.</span> <span class="nav-text">align-content</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目的属性"><span class="nav-number">1.3.</span> <span class="nav-text">项目的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#order"><span class="nav-number">1.3.1.</span> <span class="nav-text">order</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-grow"><span class="nav-number">1.3.2.</span> <span class="nav-text">flex-grow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-shrink"><span class="nav-number">1.3.3.</span> <span class="nav-text">flex-shrink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-basis属性"><span class="nav-number">1.3.4.</span> <span class="nav-text">flex-basis属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex属性"><span class="nav-number">1.3.5.</span> <span class="nav-text">flex属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-self属性"><span class="nav-number">1.3.6.</span> <span class="nav-text">align-self属性</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#容器的属性"><span class="nav-number">2.</span> <span class="nav-text">容器的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-direction"><span class="nav-number">2.0.1.</span> <span class="nav-text">flex-direction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-wrap"><span class="nav-number">2.0.2.</span> <span class="nav-text">flex-wrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-flow"><span class="nav-number">2.0.3.</span> <span class="nav-text">flex-flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#justify-content"><span class="nav-number">2.0.4.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-items"><span class="nav-number">2.0.5.</span> <span class="nav-text">align-items</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-content"><span class="nav-number">2.0.6.</span> <span class="nav-text">align-content</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目的属性"><span class="nav-number">3.</span> <span class="nav-text">项目的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#order"><span class="nav-number">3.0.1.</span> <span class="nav-text">order</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-grow"><span class="nav-number">3.0.2.</span> <span class="nav-text">flex-grow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-shrink"><span class="nav-number">3.0.3.</span> <span class="nav-text">flex-shrink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-basis属性"><span class="nav-number">3.0.4.</span> <span class="nav-text">flex-basis属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex属性"><span class="nav-number">3.0.5.</span> <span class="nav-text">flex属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#align-self属性"><span class="nav-number">3.0.6.</span> <span class="nav-text">align-self属性</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
