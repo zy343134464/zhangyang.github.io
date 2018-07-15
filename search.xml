@@ -19,7 +19,7 @@
     <entry>
       <title><![CDATA[React Router]]></title>
       <url>%2F2018%2F07%2F08%2F2018.7.8%2F</url>
-      <content type="text"><![CDATA[React 体系的一个重要部分：路由库React-Router,通过管理 URL，实现组件的切换和状态的变化 React Router中文教程 React Router英文教程]]></content>
+      <content type="text"><![CDATA[React 体系的一个重要部分：路由库React-Router,唯一可选的路由库 通过管理 URL，实现组件的切换和状态的变化，开发复杂的应用几乎肯定会用到 官网实例 基本用法React Router 安装命令 1npm install -S react-router 路由器Router就是React的一个组件 12import &#123; Router &#125; from 'react-router';render(&lt;Router/&gt;, document.getElementById('app')); Router组件本身只是一个容器，真正的路由要通过Route组件定义 12345678910// 用户访问根路由/（比如http://www.example.com/），组件APP就会加载到document.getElementById('app')// Router组件有一个参数history，它的值hashHistory表示，路由的切换由URL的hash变化决定，即URL的#部分发生变化// 举例来说，用户访问http://www.example.com/，实际会看到的是http://www.example.com/#/import &#123; Router, Route, hashHistory &#125; from 'react-router';render((&lt;Router history=&#123;hashHistory&#125;&gt;&lt;Route path="/" component=&#123;App&#125;/&gt;&lt;/Router&gt;), document.getElementById('app')); Route组件定义了URL路径与组件的对应关系。你可以同时使用多个Route组件 1234567// 用户访问/repos（比如http://localhost:8080/#/repos）时，加载Repos组件// 访问/about（http://localhost:8080/#/about）时，加载About组件&lt;Router history=&#123;hashHistory&#125;&gt;&lt;Route path="/" component=&#123;App&#125;/&gt;&lt;Route path="/repos" component=&#123;Repos&#125;/&gt;&lt;Route path="/about" component=&#123;About&#125;/&gt;&lt;/Router&gt;]]></content>
     </entry>
 
     

@@ -89,22 +89,22 @@
 
 
 
-<meta name="description" content="React 体系的一个重要部分：路由库React-Router,通过管理 URL，实现组件的切换和状态的变化
-React Router中文教程
-React Router英文教程">
+<meta name="description" content="React 体系的一个重要部分：路由库React-Router,唯一可选的路由库
+通过管理 URL，实现组件的切换和状态的变化，开发复杂的应用几乎肯定会用到
+官网实例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React Router">
 <meta property="og:url" content="http://yoursite.com/2018/07/08/2018.7.8/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="React 体系的一个重要部分：路由库React-Router,通过管理 URL，实现组件的切换和状态的变化
-React Router中文教程
-React Router英文教程">
-<meta property="og:updated_time" content="2018-07-12T13:14:42.882Z">
+<meta property="og:description" content="React 体系的一个重要部分：路由库React-Router,唯一可选的路由库
+通过管理 URL，实现组件的切换和状态的变化，开发复杂的应用几乎肯定会用到
+官网实例">
+<meta property="og:updated_time" content="2018-07-15T08:49:26.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Router">
-<meta name="twitter:description" content="React 体系的一个重要部分：路由库React-Router,通过管理 URL，实现组件的切换和状态的变化
-React Router中文教程
-React Router英文教程">
+<meta name="twitter:description" content="React 体系的一个重要部分：路由库React-Router,唯一可选的路由库
+通过管理 URL，实现组件的切换和状态的变化，开发复杂的应用几乎肯定会用到
+官网实例">
 
 
 
@@ -406,10 +406,17 @@ React Router英文教程">
       
 
       
-        <p>React 体系的一个重要部分：路由库React-Router,通过管理 URL，实现组件的切换和状态的变化</p>
-<p><a href="https://github.com/BerlinChan/react-router-tutorial-cn" target="_blank" rel="external">React Router中文教程</a></p>
-<p><a href="https://github.com/reactjs/react-router-tutorial/tree/master/lessons" target="_blank" rel="external">React Router英文教程</a></p>
-
+        <p>React 体系的一个重要部分：路由库React-Router,唯一可选的路由库</p>
+<p>通过管理 URL，实现组件的切换和状态的变化，开发复杂的应用几乎肯定会用到</p>
+<p><a href="https://github.com/reactjs/react-router-tutorial/tree/master/lessons" target="_blank" rel="external">官网实例</a><br><a id="more"></a></p>
+<h1 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h1><p>React Router 安装命令</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -S react-router</div></pre></td></tr></table></figure>
+<p>路由器Router就是React的一个组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Router &#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</div><div class="line">render(<span class="xml"><span class="tag">&lt;<span class="name">Router</span>/&gt;</span></span>, <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>));</div></pre></td></tr></table></figure>
+<p>Router组件本身只是一个容器，真正的路由要通过Route组件定义</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">//</span> 用户访问根路由<span class="regexp">/（比如http:/</span><span class="regexp">/www.example.com/</span>），组件APP就会加载到<span class="built_in">document</span>.getElementById(<span class="string">'app'</span>)</div><div class="line"><span class="regexp">//</span> Router组件有一个参数history，它的值hashHistory表示，路由的切换由URL的hash变化决定，即URL的<span class="comment">#部分发生变化</span></div><div class="line"><span class="regexp">//</span> 举例来说，用户访问http:<span class="regexp">//</span>www.example.com<span class="regexp">/，实际会看到的是http:/</span><span class="regexp">/www.example.com/</span><span class="comment">#/</span></div><div class="line"><span class="keyword">import</span> &#123; Router, Route, hashHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</div><div class="line"></div><div class="line">render((</div><div class="line">&lt;Router history=&#123;hashHistory&#125;&gt;</div><div class="line">&lt;Route path=<span class="string">"/"</span> component=&#123;App&#125;/&gt;</div><div class="line">&lt;/Router&gt;</div><div class="line">), <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>));</div></pre></td></tr></table></figure>
+<p>Route组件定义了URL路径与组件的对应关系。你可以同时使用多个Route组件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 用户访问/repos（比如http://localhost:8080/#/repos）时，加载Repos组件</div><div class="line">// 访问/about（http://localhost:8080/#/about）时，加载About组件</div><div class="line"><span class="tag">&lt;<span class="name">Router</span> <span class="attr">history</span>=<span class="string">&#123;hashHistory&#125;</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">component</span>=<span class="string">&#123;App&#125;/</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">"/repos"</span> <span class="attr">component</span>=<span class="string">&#123;Repos&#125;/</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">"/about"</span> <span class="attr">component</span>=<span class="string">&#123;About&#125;/</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Router</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -504,8 +511,17 @@ React Router英文教程">
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -642,6 +658,22 @@ React Router英文教程">
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本用法"><span class="nav-number">1.</span> <span class="nav-text">基本用法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
