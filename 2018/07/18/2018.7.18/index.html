@@ -1,0 +1,1025 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="PHP," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Learning and Doing" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="在面向对象的程序设计中，对象是一个由信息及对信息进行处理的描述所组成的整体，是对现实世界的抽象
+对象的主要三个特性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP面向对象">
+<meta property="og:url" content="http://yoursite.com/2018/07/18/2018.7.18/index.html">
+<meta property="og:site_name" content="Learning and Doing">
+<meta property="og:description" content="在面向对象的程序设计中，对象是一个由信息及对信息进行处理的描述所组成的整体，是对现实世界的抽象
+对象的主要三个特性">
+<meta property="og:updated_time" content="2018-07-17T15:24:24.605Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP面向对象">
+<meta name="twitter:description" content="在面向对象的程序设计中，对象是一个由信息及对信息进行处理的描述所组成的整体，是对现实世界的抽象
+对象的主要三个特性">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/18/2018.7.18/"/>
+
+
+
+
+
+  <title> PHP面向对象 | Learning and Doing </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Learning and Doing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/2018.7.18/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zhang Yang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Learning and Doing">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Learning and Doing" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                PHP面向对象
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-18T23:16:41+08:00">
+                2018-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BackEnd/" itemprop="url" rel="index">
+                    <span itemprop="name">BackEnd</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在面向对象的程序设计中，对象是一个由信息及对信息进行处理的描述所组成的整体，是对现实世界的抽象</p>
+<p>对象的主要三个特性<br><a id="more"></a></p>
+<ul>
+<li>对象的行为：可以对 对象施加那些操作，开灯，关灯就是行为。</li>
+<li>对象的形态：当施加那些方法是对象如何响应，颜色，尺寸，外型。</li>
+<li>对象的表示：对象的表示就相当于身份证，具体区分在相同的行为与状态下有什么不同</li>
+</ul>
+<h1 id="面向对象名词"><a href="#面向对象名词" class="headerlink" title="面向对象名词"></a>面向对象名词</h1><ul>
+<li>类 − 定义了一件事物的抽象特点</li>
+<li>对象 − 是类的实例</li>
+<li>成员变量 − 定义在类内部的变量</li>
+<li>成员函数 − 定义在类的内部,可用于访问对象的数据</li>
+<li>继承 − 继承性是子类自动共享父类数据结构和方法的机制,这是类之间的一种关系</li>
+<li>父类 − 一个类被其他类继承，可将该类称为父类，或基类，或超类</li>
+<li>子类 − 一个类继承其他类称为子类，也可称为派生类</li>
+<li>多态 − 多态性是指相同的函数或方法可作用于多种类型的对象上并获得不同的结果</li>
+<li>重载 − 简单说，就是函数或者方法有同样的名称，但是参数列表不相同的情形</li>
+<li>抽象性 − 抽象性是指将具有一致的数据结构（属性）和行为（操作）的对象抽象成类</li>
+<li>封装 − 封装是指将现实世界中存在的某个客体的属性与行为绑定在一起，并放置在一个逻辑单元内</li>
+<li>构造函数 − 主要用来在创建对象时初始化对象， 即为对象成员变量赋初始值，总与new运算符一起使用在创建对象的语句中</li>
+<li>析构函数 − 析构函数与构造函数相反,当对象结束其生命周期时（例如对象所在的函数已调用完毕）,系统自动执行析构函数</li>
+</ul>
+<p>通过 Car 类 创建了三个对象：Mercedes, Bmw, 和 Audi</p>
+<figure class="highlight cos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">$mercedes</span> = <span class="keyword">new</span> Car ()<span class="comment">;</span></div><div class="line"><span class="built_in">$bmw</span> = <span class="keyword">new</span> Car ()<span class="comment">;</span></div><div class="line"><span class="built_in">$audi</span> = <span class="keyword">new</span> Car ()<span class="comment">;</span></div></pre></td></tr></table></figure>
+<h1 id="PHP-类定义"><a href="#PHP-类定义" class="headerlink" title="PHP 类定义"></a>PHP 类定义</h1><p>PHP 定义类通常语法格式</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 类使用 class 关键字后加上类名定义</span></div><div class="line"><span class="comment">// 类名后的一对大括号(&#123;&#125;)内可以定义变量和方法</span></div><div class="line"><span class="comment">// 类的变量使用 var 来声明, 变量也可以初始化值</span></div><div class="line"><span class="comment">// 函数定义类似 PHP 函数的定义，但函数只能通过该类及其实例化的对象访问</span></div><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">phpClass</span> </span>&#123;</div><div class="line">  <span class="keyword">var</span> $var1;</div><div class="line">  <span class="keyword">var</span> $var2 = <span class="string">"constant string"</span>;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myfunc</span> <span class="params">($arg1, $arg2)</span> </span>&#123;</div><div class="line">     [..]</div><div class="line">  &#125;</div><div class="line">  [..]</div><div class="line">&#125;</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<p>实例</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 变量 $this 代表自身的对象</span></div><div class="line"><span class="comment">// PHP_EOL 为换行符</span></div><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Site</span> </span>&#123;</div><div class="line">  <span class="comment">/* 成员变量 */</span></div><div class="line">  <span class="keyword">var</span> $url;</div><div class="line">  <span class="keyword">var</span> $title;</div><div class="line">  </div><div class="line">  <span class="comment">/* 成员函数 */</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">setUrl</span><span class="params">($par)</span></span>&#123;</div><div class="line">     <span class="keyword">$this</span>-&gt;url = $par;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getUrl</span><span class="params">()</span></span>&#123;</div><div class="line">     <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;url . PHP_EOL;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">setTitle</span><span class="params">($par)</span></span>&#123;</div><div class="line">     <span class="keyword">$this</span>-&gt;title = $par;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getTitle</span><span class="params">()</span></span>&#123;</div><div class="line">     <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;title . PHP_EOL;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="PHP-中创建对象"><a href="#PHP-中创建对象" class="headerlink" title="PHP 中创建对象"></a>PHP 中创建对象</h1><p>类创建后，我们可以使用 new 运算符来实例化该类的对象</p>
+<figure class="highlight cos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">$runoob</span> = <span class="keyword">new</span> Site<span class="comment">;</span></div><div class="line"><span class="built_in">$taobao</span> = <span class="keyword">new</span> Site<span class="comment">;</span></div><div class="line"><span class="built_in">$google</span> = <span class="keyword">new</span> Site<span class="comment">;</span></div></pre></td></tr></table></figure>
+<h2 id="调用成员方法"><a href="#调用成员方法" class="headerlink" title="调用成员方法"></a>调用成员方法</h2><p>在实例化对象后，我们可以使用该对象调用成员方法，该对象的成员方法只能操作该对象的成员变量</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Site</span> </span>&#123;</div><div class="line">  <span class="comment">/* 成员变量 */</span></div><div class="line">  <span class="keyword">var</span> $url;</div><div class="line">  <span class="keyword">var</span> $title;</div><div class="line">  </div><div class="line">  <span class="comment">/* 成员函数 */</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">setUrl</span><span class="params">($par)</span></span>&#123;</div><div class="line">     <span class="keyword">$this</span>-&gt;url = $par;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getUrl</span><span class="params">()</span></span>&#123;</div><div class="line">     <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;url . PHP_EOL;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">setTitle</span><span class="params">($par)</span></span>&#123;</div><div class="line">     <span class="keyword">$this</span>-&gt;title = $par;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getTitle</span><span class="params">()</span></span>&#123;</div><div class="line">     <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;title . PHP_EOL;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$runoob = <span class="keyword">new</span> Site;</div><div class="line">$taobao = <span class="keyword">new</span> Site;</div><div class="line">$google = <span class="keyword">new</span> Site;</div><div class="line"></div><div class="line"><span class="comment">// 调用成员函数，设置标题和URL</span></div><div class="line">$runoob-&gt;setTitle( <span class="string">"菜鸟教程"</span> );</div><div class="line">$taobao-&gt;setTitle( <span class="string">"淘宝"</span> );</div><div class="line">$google-&gt;setTitle( <span class="string">"Google 搜索"</span> );</div><div class="line"></div><div class="line">$runoob-&gt;setUrl( <span class="string">'www.runoob.com'</span> );</div><div class="line">$taobao-&gt;setUrl( <span class="string">'www.taobao.com'</span> );</div><div class="line">$google-&gt;setUrl( <span class="string">'www.google.com'</span> );</div><div class="line"></div><div class="line"><span class="comment">// 调用成员函数，获取标题和URL</span></div><div class="line">$runoob-&gt;getTitle();</div><div class="line">$taobao-&gt;getTitle();</div><div class="line">$google-&gt;getTitle();</div><div class="line"></div><div class="line">$runoob-&gt;getUrl();</div><div class="line">$taobao-&gt;getUrl();</div><div class="line">$google-&gt;getUrl();</div><div class="line"><span class="meta">?&gt;</span></div><div class="line"></div><div class="line">// 输出</div><div class="line">菜鸟教程</div><div class="line">淘宝</div><div class="line">Google 搜索</div><div class="line">www.runoob.com</div><div class="line">www.taobao.com</div><div class="line">www.google.com</div></pre></td></tr></table></figure>
+<h1 id="PHP-构造函数"><a href="#PHP-构造函数" class="headerlink" title="PHP 构造函数"></a>PHP 构造函数</h1><p>用来在创建对象时初始化对象， 即为对象成员变量赋初始值，在创建对象的语句中与 new 运算符一起使用</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 通过构造方法来初始化 $url 和 $title 变量</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">( $par1, $par2 )</span> </span>&#123;</div><div class="line">   <span class="keyword">$this</span>-&gt;url = $par1;</div><div class="line">   <span class="keyword">$this</span>-&gt;title = $par2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>现在我们就不需要再调用 setTitle 和 setUrl 方法</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Site</span> </span>&#123;</div><div class="line">  <span class="comment">/* 成员变量 */</span></div><div class="line">  <span class="keyword">var</span> $url;</div><div class="line">  <span class="keyword">var</span> $title;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">( $par1, $par2 )</span> </span>&#123;</div><div class="line">    <span class="keyword">$this</span>-&gt;url = $par1;</div><div class="line">    <span class="keyword">$this</span>-&gt;title = $par2;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">/* 成员函数 */</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">setUrl</span><span class="params">($par)</span></span>&#123;</div><div class="line">     <span class="keyword">$this</span>-&gt;url = $par;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getUrl</span><span class="params">()</span></span>&#123;</div><div class="line">     <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;url . PHP_EOL;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">setTitle</span><span class="params">($par)</span></span>&#123;</div><div class="line">     <span class="keyword">$this</span>-&gt;title = $par;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getTitle</span><span class="params">()</span></span>&#123;</div><div class="line">     <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;title . PHP_EOL;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$runoob = <span class="keyword">new</span> Site(<span class="string">'www.runoob.com'</span>, <span class="string">'菜鸟教程'</span>);</div><div class="line">$taobao = <span class="keyword">new</span> Site(<span class="string">'www.taobao.com'</span>, <span class="string">'淘宝'</span>);</div><div class="line">$google = <span class="keyword">new</span> Site(<span class="string">'www.google.com'</span>, <span class="string">'Google 搜索'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 调用成员函数，获取标题和URL</span></div><div class="line">$runoob-&gt;getTitle();</div><div class="line">$taobao-&gt;getTitle();</div><div class="line">$google-&gt;getTitle();</div><div class="line"></div><div class="line">$runoob-&gt;getUrl();</div><div class="line">$taobao-&gt;getUrl();</div><div class="line">$google-&gt;getUrl();</div><div class="line"><span class="meta">?&gt;</span></div><div class="line"></div><div class="line">//输出</div><div class="line">菜鸟教程</div><div class="line">淘宝</div><div class="line">Google 搜索</div><div class="line">www.runoob.com</div><div class="line">www.taobao.com</div><div class="line">www.google.com</div></pre></td></tr></table></figure>
+<h1 id="析构函数"><a href="#析构函数" class="headerlink" title="析构函数"></a>析构函数</h1><p>析构函数(destructor) 与构造函数相反，当对象结束其生命周期时（例如对象所在的函数已调用完毕），系统自动执行析构函数</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyDestructableClass</span> </span>&#123;</div><div class="line">   <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">print</span> <span class="string">"构造函数\n"</span>;</div><div class="line">       <span class="keyword">$this</span>-&gt;name = <span class="string">"MyDestructableClass"</span>;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">print</span> <span class="string">"销毁 "</span> . <span class="keyword">$this</span>-&gt;name . <span class="string">"\n"</span>;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$obj = <span class="keyword">new</span> MyDestructableClass();</div><div class="line"><span class="meta">?&gt;</span></div><div class="line"></div><div class="line">// 输出</div><div class="line">构造函数</div><div class="line">销毁 MyDestructableClass</div></pre></td></tr></table></figure>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>PHP 使用关键字 extends 来继承一个类，PHP 不支持多继承</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 实例中 Child_Site 类继承了 Site 类，并扩展了功能</span></div><div class="line"><span class="meta">&lt;?php</span> </div><div class="line"><span class="comment">// 子类扩展站点类别</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child_Site</span> <span class="keyword">extends</span> <span class="title">Site</span> </span>&#123;</div><div class="line">   <span class="keyword">var</span> $category;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">setCate</span><span class="params">($par)</span></span>&#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;category = $par;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getCate</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;category . PHP_EOL;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h1><p>如果从父类继承的方法不能满足子类的需求，可以对其进行改写，这个过程叫方法的覆盖，也称为方法的重写</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 实例中重写了 getUrl 与 getTitle 方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUrl</span><span class="params">()</span> </span>&#123;</div><div class="line">   <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;url . PHP_EOL;</div><div class="line">   <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;url;</div><div class="line">&#125;</div><div class="line">   </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getTitle</span><span class="params">()</span></span>&#123;</div><div class="line">   <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;title . PHP_EOL;</div><div class="line">   <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;title;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h1><p>PHP 对属性或方法的访问控制，是通过在前面添加关键字 public（公有），protected（受保护）或 private（私有）来实现的</p>
+<ul>
+<li>public（公有）：公有的类成员可以在任何地方被访问</li>
+<li>protected（受保护）：受保护的类成员则可以被其自身以及其子类和父类访问</li>
+<li>private（私有）：私有的类成员则只能被其定义所在的类访问</li>
+</ul>
+<h2 id="属性的访问控制"><a href="#属性的访问控制" class="headerlink" title="属性的访问控制"></a>属性的访问控制</h2><p>类属性必须定义为公有，受保护，私有之一。如果用 var 定义，则被视为公有</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Define MyClass</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> $public = <span class="string">'Public'</span>;</div><div class="line">    <span class="keyword">protected</span> $protected = <span class="string">'Protected'</span>;</div><div class="line">    <span class="keyword">private</span> $private = <span class="string">'Private'</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">printHello</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;public;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;protected;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;private;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$obj = <span class="keyword">new</span> MyClass();</div><div class="line"><span class="keyword">echo</span> $obj-&gt;public; <span class="comment">// 这行能被正常执行</span></div><div class="line"><span class="keyword">echo</span> $obj-&gt;protected; <span class="comment">// 这行会产生一个致命错误</span></div><div class="line"><span class="keyword">echo</span> $obj-&gt;private; <span class="comment">// 这行也会产生一个致命错误</span></div><div class="line">$obj-&gt;printHello(); <span class="comment">// 输出 Public、Protected 和 Private</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Define MyClass2</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass2</span> <span class="keyword">extends</span> <span class="title">MyClass</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 可以对 public 和 protected 进行重定义，但 private 而不能</span></div><div class="line">    <span class="keyword">protected</span> $protected = <span class="string">'Protected2'</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">printHello</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;public;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;protected;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;private;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$obj2 = <span class="keyword">new</span> MyClass2();</div><div class="line"><span class="keyword">echo</span> $obj2-&gt;public; <span class="comment">// 这行能被正常执行</span></div><div class="line"><span class="keyword">echo</span> $obj2-&gt;private; <span class="comment">// 未定义 private</span></div><div class="line"><span class="keyword">echo</span> $obj2-&gt;protected; <span class="comment">// 这行会产生一个致命错误</span></div><div class="line">$obj2-&gt;printHello(); <span class="comment">// 输出 Public、Protected2 和 Undefined</span></div><div class="line"></div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="方法的访问控制"><a href="#方法的访问控制" class="headerlink" title="方法的访问控制"></a>方法的访问控制</h2><p>类中的方法可以被定义为公有，私有或受保护。如果没有设置这些关键字，则该方法默认为公有</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Define MyClass</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 声明一个公有的构造函数</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span> </span>&#123; &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 声明一个公有的方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">MyPublic</span><span class="params">()</span> </span>&#123; &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 声明一个受保护的方法</span></div><div class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">MyProtected</span><span class="params">()</span> </span>&#123; &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 声明一个私有的方法</span></div><div class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">MyPrivate</span><span class="params">()</span> </span>&#123; &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 此方法为公有</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Foo</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;MyPublic();</div><div class="line">        <span class="keyword">$this</span>-&gt;MyProtected();</div><div class="line">        <span class="keyword">$this</span>-&gt;MyPrivate();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$myclass = <span class="keyword">new</span> MyClass;</div><div class="line">$myclass-&gt;MyPublic(); <span class="comment">// 这行能被正常执行</span></div><div class="line">$myclass-&gt;MyProtected(); <span class="comment">// 这行会产生一个致命错误</span></div><div class="line">$myclass-&gt;MyPrivate(); <span class="comment">// 这行会产生一个致命错误</span></div><div class="line">$myclass-&gt;Foo(); <span class="comment">// 公有，受保护，私有都可以执行</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Define MyClass2</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass2</span> <span class="keyword">extends</span> <span class="title">MyClass</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 此方法为公有</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Foo2</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;MyPublic();</div><div class="line">        <span class="keyword">$this</span>-&gt;MyProtected();</div><div class="line">        <span class="keyword">$this</span>-&gt;MyPrivate(); <span class="comment">// 这行会产生一个致命错误</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$myclass2 = <span class="keyword">new</span> MyClass2;</div><div class="line">$myclass2-&gt;MyPublic(); <span class="comment">// 这行能被正常执行</span></div><div class="line">$myclass2-&gt;Foo2(); <span class="comment">// 公有的和受保护的都可执行，但私有的不行</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar</span> </span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;testPrivate();</div><div class="line">        <span class="keyword">$this</span>-&gt;testPublic();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testPublic</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"Bar::testPublic\n"</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">testPrivate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"Bar::testPrivate\n"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> <span class="keyword">extends</span> <span class="title">Bar</span> </span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testPublic</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"Foo::testPublic\n"</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">testPrivate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"Foo::testPrivate\n"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$myFoo = <span class="keyword">new</span> foo();</div><div class="line">$myFoo-&gt;test(); <span class="comment">// Bar::testPrivate </span></div><div class="line">                <span class="comment">// Foo::testPublic</span></div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>使用接口（interface），可以指定某个类必须实现哪些方法，但不需要定义这些方法的具体内容</p>
+<p>接口是通过 interface 关键字来定义的，就像定义一个标准的类一样，但其中定义所有的方法都是空的</p>
+<p>接口中定义的所有方法都必须是公有，这是接口的特性</p>
+<p>要实现一个接口，使用 implements 操作符。类中必须实现接口中定义的所有方法，否则会报一个致命错误。类可以实现多个接口，用逗号来分隔多个接口的名称</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"></div><div class="line"><span class="comment">// 声明一个'iTemplate'接口</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">iTemplate</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">setVariable</span><span class="params">($name, $var)</span></span>;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getHtml</span><span class="params">($template)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 实现接口</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Template</span> <span class="keyword">implements</span> <span class="title">iTemplate</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $vars = <span class="keyword">array</span>();</div><div class="line">  </div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">setVariable</span><span class="params">($name, $var)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;vars[$name] = $var;</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getHtml</span><span class="params">($template)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">foreach</span>(<span class="keyword">$this</span>-&gt;vars <span class="keyword">as</span> $name =&gt; $value) &#123;</div><div class="line">            $template = str_replace(<span class="string">'&#123;'</span> . $name . <span class="string">'&#125;'</span>, $value, $template);</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">        <span class="keyword">return</span> $template;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p>可以把在类中始终保持不变的值定义为常量。在定义和使用常量的时候不需要使用 $ 符号</p>
+<p>常量的值必须是一个定值，不能是变量，类属性，数学运算的结果或函数调用</p>
+<p>用一个变量来动态调用类。但该变量的值不能为关键字（如 self，parent 或 static）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">const</span> constant = <span class="string">'常量值'</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">showConstant</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">echo</span>  <span class="keyword">self</span>::constant . PHP_EOL;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">echo</span> MyClass::constant . PHP_EOL;</div><div class="line"></div><div class="line">$classname = <span class="string">"MyClass"</span>;</div><div class="line"><span class="keyword">echo</span> $classname::constant . PHP_EOL; <span class="comment">// 自 5.3.0 起</span></div><div class="line"></div><div class="line">$class = <span class="keyword">new</span> MyClass();</div><div class="line">$class-&gt;showConstant();</div><div class="line"></div><div class="line"><span class="keyword">echo</span> $class::constant . PHP_EOL; <span class="comment">// 自 PHP 5.3.0 起</span></div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><p>任何一个类，如果它里面至少有一个方法是被声明为抽象的，那么这个类就必须被声明为抽象的</p>
+<p>定义为抽象的类不能被实例化</p>
+<p>被定义为抽象的方法只是声明了其调用方式（参数），不能定义其具体的功能实现</p>
+<p>继承一个抽象类的时候，子类必须定义父类中的所有抽象方法,另外,这些方法的访问控制必须和父类中一样</p>
+<p>例如某个抽象方法被声明为受保护的，那么子类中实现的方法就应该声明为受保护的或者公有的，而不能定义为私有的。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractClass</span></span></div><div class="line">&#123;</div><div class="line"> <span class="comment">// 强制要求子类定义这些方法</span></div><div class="line">    <span class="keyword">abstract</span> <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">getValue</span><span class="params">()</span></span>;</div><div class="line">    <span class="keyword">abstract</span> <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">prefixValue</span><span class="params">($prefix)</span></span>;</div><div class="line"></div><div class="line">    <span class="comment">// 普通方法（非抽象方法）</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">printOut</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">print</span> <span class="keyword">$this</span>-&gt;getValue() . PHP_EOL;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteClass1</span> <span class="keyword">extends</span> <span class="title">AbstractClass</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">getValue</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"ConcreteClass1"</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">prefixValue</span><span class="params">($prefix)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"&#123;$prefix&#125;ConcreteClass1"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteClass2</span> <span class="keyword">extends</span> <span class="title">AbstractClass</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getValue</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"ConcreteClass2"</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">prefixValue</span><span class="params">($prefix)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"&#123;$prefix&#125;ConcreteClass2"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$class1 = <span class="keyword">new</span> ConcreteClass1;</div><div class="line">$class1-&gt;printOut();</div><div class="line"><span class="keyword">echo</span> $class1-&gt;prefixValue(<span class="string">'FOO_'</span>) . PHP_EOL;</div><div class="line"></div><div class="line">$class2 = <span class="keyword">new</span> ConcreteClass2;</div><div class="line">$class2-&gt;printOut();</div><div class="line"><span class="keyword">echo</span> $class2-&gt;prefixValue(<span class="string">'FOO_'</span>) . PHP_EOL;</div><div class="line"><span class="meta">?&gt;</span></div><div class="line"></div><div class="line">// 输出</div><div class="line">ConcreteClass1</div><div class="line">FOO_ConcreteClass1</div><div class="line">ConcreteClass2</div><div class="line">FOO_ConcreteClass2</div></pre></td></tr></table></figure>
+<p>子类方法可以包含父类抽象方法中不存在的可选参数</p>
+<p>子类定义了一个可选参数，而父类抽象方法的声明里没有，则也是可以正常运行的</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractClass</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 我们的抽象方法仅需要定义需要的参数</span></div><div class="line">    <span class="keyword">abstract</span> <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">prefixName</span><span class="params">($name)</span></span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteClass</span> <span class="keyword">extends</span> <span class="title">AbstractClass</span></span></div><div class="line">&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 我们的子类可以定义父类签名中不存在的可选参数</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">prefixName</span><span class="params">($name, $separator = <span class="string">"."</span>)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> ($name == <span class="string">"Pacman"</span>) &#123;</div><div class="line">            $prefix = <span class="string">"Mr"</span>;</div><div class="line">        &#125; <span class="keyword">elseif</span> ($name == <span class="string">"Pacwoman"</span>) &#123;</div><div class="line">            $prefix = <span class="string">"Mrs"</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            $prefix = <span class="string">""</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="string">"&#123;$prefix&#125;&#123;$separator&#125; &#123;$name&#125;"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$class = <span class="keyword">new</span> ConcreteClass;</div><div class="line"><span class="keyword">echo</span> $class-&gt;prefixName(<span class="string">"Pacman"</span>), <span class="string">"\n"</span>;</div><div class="line"><span class="keyword">echo</span> $class-&gt;prefixName(<span class="string">"Pacwoman"</span>), <span class="string">"\n"</span>;</div><div class="line"><span class="meta">?&gt;</span></div><div class="line"></div><div class="line">// 输出</div><div class="line">Mr. Pacman</div><div class="line">Mrs. Pacwoman</div></pre></td></tr></table></figure>
+<h1 id="Static-关键字"><a href="#Static-关键字" class="headerlink" title="Static 关键字"></a>Static 关键字</h1><p>声明类属性或方法为 static(静态)，就可以不实例化类而直接访问</p>
+<p>静态属性不能通过一个类已实例化的对象来访问（但静态方法可以）</p>
+<p>由于静态方法不需要通过对象即可调用，所以伪变量 $this 在静态方法中不可用</p>
+<p>静态属性不可以由对象通过 -&gt; 操作符来访问</p>
+<p>用一个变量来动态调用类。但该变量的值不能为关键字 self，parent 或 static</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</div><div class="line">  <span class="keyword">public</span> <span class="keyword">static</span> $my_static = <span class="string">'foo'</span>;</div><div class="line">  </div><div class="line">  <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">staticValue</span><span class="params">()</span> </span>&#123;</div><div class="line">     <span class="keyword">return</span> <span class="keyword">self</span>::$my_static;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">print</span> Foo::$my_static . PHP_EOL;</div><div class="line">$foo = <span class="keyword">new</span> Foo();</div><div class="line"></div><div class="line"><span class="keyword">print</span> $foo-&gt;staticValue() . PHP_EOL;</div><div class="line"><span class="meta">?&gt;</span></div><div class="line"></div><div class="line">// 输出</div><div class="line">foo</div><div class="line">foo</div></pre></td></tr></table></figure>
+<h1 id="Final-关键字"><a href="#Final-关键字" class="headerlink" title="Final 关键字"></a>Final 关键字</h1><p>如果父类中的方法被声明为 final，则子类无法覆盖该方法。如果一个类被声明为 final，则不能被继承</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">BaseClass</span> </span>&#123;</div><div class="line">   <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">echo</span> <span class="string">"BaseClass::test() called"</span> . PHP_EOL;</div><div class="line">   &#125;</div><div class="line">   </div><div class="line">   <span class="keyword">final</span> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">moreTesting</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">echo</span> <span class="string">"BaseClass::moreTesting() called"</span>  . PHP_EOL;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChildClass</span> <span class="keyword">extends</span> <span class="title">BaseClass</span> </span>&#123;</div><div class="line">   <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">moreTesting</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">echo</span> <span class="string">"ChildClass::moreTesting() called"</span>  . PHP_EOL;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 报错信息 Fatal error: Cannot override final method BaseClass::moreTesting()</span></div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="调用父类构造方法"><a href="#调用父类构造方法" class="headerlink" title="调用父类构造方法"></a>调用父类构造方法</h1><p>PHP 不会在子类的构造方法中自动的调用父类的构造方法。要执行父类的构造方法，需要在子类的构造方法中调用 parent::__construct()</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">BaseClass</span> </span>&#123;</div><div class="line">   function __construct() &#123;</div><div class="line">       print <span class="string">"BaseClass 类中构造方法"</span> . <span class="type">PHP_EOL</span>;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubClass</span> <span class="keyword">extends</span> <span class="title">BaseClass</span> </span>&#123;</div><div class="line">   function __construct() &#123;</div><div class="line">       parent::__construct();  <span class="comment">// 子类构造方法不能自动调用父类的构造方法</span></div><div class="line">       print <span class="string">"SubClass 类中构造方法"</span> . <span class="type">PHP_EOL</span>;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">OtherSubClass</span> <span class="keyword">extends</span> <span class="title">BaseClass</span> </span>&#123;</div><div class="line">    <span class="comment">// 继承 BaseClass 的构造方法</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 调用 BaseClass 构造方法</span></div><div class="line">$obj = <span class="keyword">new</span> <span class="type">BaseClass</span>();</div><div class="line"></div><div class="line"><span class="comment">// 调用 BaseClass、SubClass 构造方法</span></div><div class="line">$obj = <span class="keyword">new</span> <span class="type">SubClass</span>();</div><div class="line"></div><div class="line"><span class="comment">// 调用 BaseClass 构造方法</span></div><div class="line">$obj = <span class="keyword">new</span> <span class="type">OtherSubClass</span>();</div><div class="line">?&gt;</div><div class="line"></div><div class="line"><span class="comment">// 输出</span></div><div class="line"><span class="type">BaseClass</span> 类中构造方法</div><div class="line"><span class="type">BaseClass</span> 类中构造方法</div><div class="line"><span class="type">SubClass</span> 类中构造方法</div><div class="line"><span class="type">BaseClass</span> 类中构造方法</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/14/2018.7.14/" rel="next" title="【实战】React开发新闻头条平台">
+                <i class="fa fa-chevron-left"></i> 【实战】React开发新闻头条平台
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Zhang Yang" />
+          <p class="site-author-name" itemprop="name">Zhang Yang</p>
+           
+              <p class="site-description motion-element" itemprop="description">Learning and Doing</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">67</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zy343134464" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:zy343134464@163.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-phone"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-yang-72-78-25" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/153127314" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rubylouvre/" title="司徒正美" target="_blank">司徒正美</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.evanyou.me/" title="尤小溪" target="_blank">尤小溪</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://caibaojian.com/lifesinger" title="玉伯" target="_blank">玉伯</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://winter-cn.cnblogs.com/" title="winter" target="_blank">winter</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象名词"><span class="nav-number">1.</span> <span class="nav-text">面向对象名词</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP-类定义"><span class="nav-number">2.</span> <span class="nav-text">PHP 类定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP-中创建对象"><span class="nav-number">3.</span> <span class="nav-text">PHP 中创建对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调用成员方法"><span class="nav-number">3.1.</span> <span class="nav-text">调用成员方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP-构造函数"><span class="nav-number">4.</span> <span class="nav-text">PHP 构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#析构函数"><span class="nav-number">5.</span> <span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承"><span class="nav-number">6.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法重写"><span class="nav-number">7.</span> <span class="nav-text">方法重写</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#访问控制"><span class="nav-number">8.</span> <span class="nav-text">访问控制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性的访问控制"><span class="nav-number">8.1.</span> <span class="nav-text">属性的访问控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法的访问控制"><span class="nav-number">8.2.</span> <span class="nav-text">方法的访问控制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口"><span class="nav-number">9.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常量"><span class="nav-number">10.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽象类"><span class="nav-number">11.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Static-关键字"><span class="nav-number">12.</span> <span class="nav-text">Static 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Final-关键字"><span class="nav-number">13.</span> <span class="nav-text">Final 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#调用父类构造方法"><span class="nav-number">14.</span> <span class="nav-text">调用父类构造方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Yang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
