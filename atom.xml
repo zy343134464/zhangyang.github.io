@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-22T13:55:21.371Z</updated>
+  <updated>2018-07-24T23:22:09.110Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL数据库</title>
+    <link href="http://yoursite.com/2018/07/25/2018.7.25/"/>
+    <id>http://yoursite.com/2018/07/25/2018.7.25/</id>
+    <published>2018-07-25T15:16:41.000Z</published>
+    <updated>2018-07-24T23:22:09.110Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MySQL简介"><a href="#MySQL简介" class="headerlink" title="MySQL简介"></a>MySQL简介</h1><p>数据库（Database）是按照数据结构来组织、存储和管理数据的仓库<br><a id="more"></a></p>
+<h2 id="RDBMS-术语"><a href="#RDBMS-术语" class="headerlink" title="RDBMS 术语"></a>RDBMS 术语</h2><ul>
+<li>数据库: 数据库是一些关联表的集合</li>
+<li>数据表: 表是数据的矩阵。在一个数据库中的表看起来像一个简单的电子表格</li>
+<li>列: 一列(数据元素) 包含了相同的数据, 例如邮政编码的数据</li>
+<li>行：一行（=元组，或记录）是一组相关的数据，例如一条用户订阅的数据</li>
+<li>冗余：存储两倍数据，冗余降低了性能，但提高了数据的安全性</li>
+<li>主键：主键是唯一的。一个数据表中只能包含一个主键。你可以使用主键来查询数据</li>
+<li>外键：外键用于关联两个表</li>
+<li>复合键：复合键（组合键）将多个列作为一个索引键，一般用于复合索引</li>
+<li>索引：使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构。类似于书籍的目录</li>
+<li>参照完整性: 参照的完整性要求关系中不允许引用不存在的实体。与实体完整性是关系模型必须满足的完整性约束条件，目的是保证数据的一致性</li>
+</ul>
+<h2 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h2><p>MySQL 是一个关系型数据库管理系统，由瑞典 MySQL AB 公司开发，目前属于 Oracle 公司</p>
+<p>MySQL 是一种关联数据库管理系统，关联数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性</p>
+<ul>
+<li>MySQL 是开源的，所以你不需要支付额外的费用</li>
+<li>MySQL 支持大型的数据库。可以处理拥有上千万条记录的大型数据库</li>
+<li>MySQL 使用标准的SQL数据语言形式</li>
+<li>MySQL 可以运行于多个系统上，并且支持多种语言。这些编程语言包括C、C++、Python、Java、Perl、PHP、Eiffel、Ruby和Tcl等</li>
+<li>MySQL 对PHP有很好的支持，PHP是目前最流行的Web开发语言</li>
+<li>MySQL 支持大型数据库，支持5000万条记录的数据仓库，32位系统表文件最大可支持4GB，64位系统支持最大的表文件为8TB</li>
+<li>MySQL 是可以定制的，采用了GPL协议，你可以修改源码来开发自己的 MySQL 系统</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;MySQL简介&quot;&gt;&lt;a href=&quot;#MySQL简介&quot; class=&quot;headerlink&quot; title=&quot;MySQL简介&quot;&gt;&lt;/a&gt;MySQL简介&lt;/h1&gt;&lt;p&gt;数据库（Database）是按照数据结构来组织、存储和管理数据的仓库&lt;br&gt;
+    
+    </summary>
+    
+      <category term="BackEnd" scheme="http://yoursite.com/categories/BackEnd/"/>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP表单</title>
@@ -2158,84 +2204,6 @@
     
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【总结】2018年4&amp;5月份个人总结</title>
-    <link href="http://yoursite.com/2018/06/01/2018.4&amp;5summary/"/>
-    <id>http://yoursite.com/2018/06/01/2018.4&amp;5summary/</id>
-    <published>2018-05-31T16:40:15.000Z</published>
-    <updated>2018-06-27T16:39:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>白驹过隙,似水流年,不及时写月总结,你不知道时间过得有多快</p>
-<p>4、5月份我度过了人生最难熬的阶段,发生很多很多的事情，这也造成了提笔难言的窘境</p>
-<p>虽然人生在世会有种种不如意,但你仍可以在幸福与不幸中做出选择<br><a id="more"></a><br>在你最痛苦的阶段果然还是亲情和友情,很感动,远在北京老妹安慰、堂哥的劝说及爸妈的激励让我很快走出来,汕头7位兄弟及深圳同学,2个2个轮流请假从汕头到广州来找我玩</p>
-<p>度过后从痛苦转为焦虑,从未发现自身很多bug(衣着、生活、理想、三观),正有意识的在往好的方向改进</p>
-<p>请假回家有点多,家里房子重建6层,得到明年6月份完工,爸妈占时住旧房,养了2只猫,一个叫但丁，一只叫五一</p>
-<p>汕头节奏实在太慢,睡了足足1天都丝毫没负罪感;在广州一个晚上没看书学习就有深深地负罪,争取以后每个月都要写总结,阿尼陀佛</p>
-<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1.Vue.js: 中文官网看了遍,还没进行实践及踩坑,果然学得快忘得也快</p>
-<p>2.ES6: 看完阮一峰的ES6教程,吸收80%,感觉不难,下次多用</p>
-<p>3.C#: 公司用C#做后台,粗略看了菜鸟教程一遍,本来想深入系统学,问了阿里的朋友,被骂了一顿,批得体无完肤,说是C#碰都不要碰,没公司用了,所以简单学了下语法及模板,看得懂公司代码就行</p>
-<p>4.PHP: 一直想深入学PHP,最近把近2个月要学的内容路线资料整理完毕,争取早日从PHP切入后台的学习,虽然前端只需要了解后台,但是深入后台绝对是硬实力,往全栈方向是我的规划并进入大公司的前提</p>
-<p>5.专利: 买了专利法律知识、相关法律知识和专利代理实务。其中前两门是客观题，每门考试都是30道单选和70道多选，满分分别是150和100分，这两门的成绩加起来超过150分就算是法律考试通过；专利代理实务是主观题，一般有3—4道撰写题，考的就是专利申请、审查、复审、无效宣告等程序中的文件撰写，这一门满分150，及格线是90分;争取2个月赶紧学习专利理论基础</p>
-<p>6.电商: 准备从运营进入,再学SEO方面知识</p>
-<h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><p>1.把海尔小家电运营平台的前端业务代码实现看完,能快速定位bug并修改业务代码</p>
-<p>2.把工作用到的前端插件玩了一遍,包括ligerUi、validation-engine、layer、distpicker.js、ztree、plupload</p>
-<p>3.内部海尔插件进行修改、增加新功能</p>
-<p>4.公司运维走了,占时没招到满意的,我占时交接了运维的工作,看了文档后学了点电脑系统修复,软件破解,vpn上网,打印机的驱动等等(打杂的),还有内部一些系统的操作,服务器的报账流程及合同申请流程的操作</p>
-<p>5.海尔小家电运营平台增加自营产品管理产品导入,供应商外部link及客户管理功能</p>
-<p>6.熟悉前端工作流工作,节省了不少时间和提高了效率</p>
-<h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>1.从城中村搬到老小区住,安静清闲,太适合我的生活了,扔了旧的东西,买了很多新的家具,买了几件衣服,1双鞋子</p>
-<p>2.有段时间压力太大失眠,导致内分泌有点失调,好久没长痘,体验了把青春期的骚动~,接下来不熬夜,调整心态做好自己</p>
-<p>3.经常回家,买了点改善生活的用品给爸妈,毕竟还要住旧房1年,接了宽带,他们一天没上微信看到我们在群活跃都会打电话来问,尽量不让他们担心</p>
-<p>4.思想从在广州奋斗4、5年回汕头发展转为在广州定居,争取家里今年建好房子然后在广州买房,35到40岁有资金流动再回汕头养老,照顾得到父母,毕竟离不开汕头的空气和美食</p>
-<p>5.毕业到现在瘦了10多斤,接下来多吃,然后运动,再吃夜宵,今年目标胖10斤</p>
-<p>6.世界这么大,我想到处走走。我17年都一直宅家里学技术,这个月去了白云山爬到山顶、大夫山骑单车、红砖厂,争取1年把广州走遍,然后去外省玩</p>
-<p>7.认识了工作上几位比较好的同事,一位已经离职,最近老是在想待人接物的礼仪、言辞表达的自我训练,本身我性格比较内向,都是把自己定位为一个技术人员,但还是想努力提高人际这方面</p>
-<p>8.图书馆看的大部分都是文学的书,很崇拜会写诗文采好的人-“前方你的身影,开出花一朵”</p>
-<p>9.买了茶桌、餐桌、餐具、茶具</p>
-<p>10.厨艺有长进,起码喜欢吃的那几样潮汕小菜美滋滋,阿萌</p>
-<p>11.感觉自己写字太正,买了几本楷书字帖,每晚睡前练下,坚持1年看下成效</p>
-<p>12.迷上摄影照片,查了下支付宝钱包,一入单反毁一生,镜头是个无底洞,打消念头,但是也打消不了欣赏的心</p>
-<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>《Head First HTML与CSS》200%、《CSS权威指南》100%、《JavaScript高级程序设计》100%、《正见》300%、《ES6标准入门》80%、《JavaScript+DOM编程艺术》100%、《JavaScript语言精粹》40%、《锋利的jQuery》100%、《黑客与画家》100%、《你不知道的JavaScript(上)》60%、《软件随想录》100%</p>
-<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>《后来的我们》、《星际穿越》、《夏洛特烦恼》、《星球大战》、《速度与激情》、《猩球崛起》</p>
-<h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>《人生哲理》、《晓说》、《罗辑思维》</p>
-<h1 id="绩效评估"><a href="#绩效评估" class="headerlink" title="绩效评估"></a>绩效评估</h1><table>
-<thead>
-<tr>
-<th>学习</th>
-<th>工作</th>
-<th>生活</th>
-<th>阅读</th>
-<th>总分</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>5</td>
-<td>7</td>
-<td>7</td>
-<td>6</td>
-<td>25</td>
-</tr>
-</tbody>
-</table>
-<h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>坚持跑步,达到20公里、徒步一次从化、学PHP、电商、专利</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;白驹过隙,似水流年,不及时写月总结,你不知道时间过得有多快&lt;/p&gt;
-&lt;p&gt;4、5月份我度过了人生最难熬的阶段,发生很多很多的事情，这也造成了提笔难言的窘境&lt;/p&gt;
-&lt;p&gt;虽然人生在世会有种种不如意,但你仍可以在幸福与不幸中做出选择&lt;br&gt;
-    
-    </summary>
-    
-      <category term="lifes" scheme="http://yoursite.com/categories/lifes/"/>
-    
-    
-      <category term="个人总结" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
