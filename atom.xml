@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-26T15:06:59.443Z</updated>
+  <updated>2018-07-28T07:25:54.746Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP数据库</title>
+    <link href="http://yoursite.com/2018/07/28/2018.7.28/"/>
+    <id>http://yoursite.com/2018/07/28/2018.7.28/</id>
+    <published>2018-07-28T15:16:41.000Z</published>
+    <updated>2018-07-28T07:25:54.746Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="BackEnd" scheme="http://yoursite.com/categories/BackEnd/"/>
+    
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL数据库</title>
@@ -2266,58 +2286,6 @@
       &lt;p&gt;JavaScript的执行环境是单线程,只能一次完成一件任务&lt;/p&gt;
 &lt;p&gt;坏处: 浏览器无响应、JavaScript代码死循环&lt;/p&gt;
 &lt;p&gt;Javascript语言将任务的执行模式分成两种：同步和异步&lt;br&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript的10个设计缺陷</title>
-    <link href="http://yoursite.com/2018/06/02/2018.6.2-1/"/>
-    <id>http://yoursite.com/2018/06/02/2018.6.2-1/</id>
-    <published>2018-06-01T18:40:15.000Z</published>
-    <updated>2018-06-02T06:17:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>为什么现在的前端学JavaScript要学那么多的版本,并且一年一大更,半年一小更,还要用到很多js的库、模块化工具</p>
-<p>就是因为JavaScript的设计缺陷</p>
-<p>这篇主要是参考《JavaScript语言精髓》（JavaScript: The Good Parts）,总结的非常到位<br><a id="more"></a></p>
-<h1 id="大型程序不宜"><a href="#大型程序不宜" class="headerlink" title="大型程序不宜"></a>大型程序不宜</h1><p>Javascript没有名称空间（namespace），很难模块化</p>
-<h1 id="标准库小"><a href="#标准库小" class="headerlink" title="标准库小"></a>标准库小</h1><p>Javascript提供的标准函数库非常小，只能完成一些基本操作</p>
-<h1 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h1><p>传说是道格拉斯喝醉酒的时候,重复了发明了这两个数据类型,null和undefined可以认为是一样的</p>
-<h1 id="全局变量神出鬼没"><a href="#全局变量神出鬼没" class="headerlink" title="全局变量神出鬼没"></a>全局变量神出鬼没</h1><p>函数内部可以生成全局变量</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">a = <span class="number">1</span><span class="comment">;</span></div><div class="line">(<span class="name">function</span>()&#123;</div><div class="line">    b=2<span class="comment">;</span></div><div class="line">    alert(<span class="name">a</span>)<span class="comment">;</span></div><div class="line">&#125;)()<span class="comment">; // 1</span></div><div class="line">alert(<span class="name">b</span>)<span class="comment">; //2</span></div></pre></td></tr></table></figure>
-<h1 id="行尾分号自动加"><a href="#行尾分号自动加" class="headerlink" title="行尾分号自动加"></a>行尾分号自动加</h1><p>Javascript的所有语句，都可以不用以分号结尾</p>
-<p>比如，下面这个函数根本无法达到预期的结果，返回值不是一个对象，而是undefined</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">return</span></div><div class="line">    &#123;</div><div class="line">        i=<span class="number">1</span></div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>原因是解释器自动在return语句后面加上了分号</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">    &#123;</div><div class="line">        i=<span class="number">1</span></div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="加号运算符"><a href="#加号运算符" class="headerlink" title="加号运算符"></a>加号运算符</h1><p>+号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">alert</span>(<span class="number">1</span>+<span class="number">10</span>); <span class="comment">// 11</span></div><div class="line"><span class="selector-tag">alert</span>(<span class="string">"1"</span>+<span class="string">"10"</span>); <span class="comment">// 110</span></div></pre></td></tr></table></figure>
-<h1 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h1><p>NaN是一种数字，表示超出了解释器的极限。它有一些很奇怪的特性</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">NaN</span> === NaN; //<span class="literal">false</span></div></pre></td></tr></table></figure>
-<h1 id="数组和对象的区分"><a href="#数组和对象的区分" class="headerlink" title="数组和对象的区分"></a>数组和对象的区分</h1><p>数组也是对象,要确认对象是不是数组比较麻烦</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> ( arr &amp;&amp; </div><div class="line"><span class="keyword">typeof</span> arr === <span class="string">'object'</span> &amp;&amp;</div><div class="line"><span class="keyword">typeof</span> arr.length === <span class="string">'number'</span> &amp;&amp;</div><div class="line">!arr.propertyIsEnumerable(<span class="string">'length'</span>))&#123;</div><div class="line">    alert(<span class="string">"arr is an array"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="和"><a href="#和" class="headerlink" title="== 和 ==="></a>== 和 ===</h1><p>==会自动转换数据类型,得到的直觉不符合常理</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="string">""</span> == <span class="string">"0"</span> <span class="comment">// false</span></div><div class="line"><span class="number">0</span> == <span class="string">""</span> <span class="comment">// true</span></div><div class="line"><span class="number">0</span> == <span class="string">"0"</span> <span class="comment">// true</span></div><div class="line"><span class="literal">false</span> == <span class="string">"false"</span> <span class="comment">// false</span></div><div class="line"><span class="literal">false</span> == <span class="string">"0"</span> <span class="comment">// true</span></div><div class="line"><span class="literal">false</span> == <span class="literal">undefined</span> <span class="comment">// false</span></div><div class="line"><span class="literal">false</span> == <span class="literal">null</span> <span class="comment">// false</span></div><div class="line"><span class="literal">null</span> == <span class="literal">undefined</span> <span class="comment">// true</span></div><div class="line"><span class="string">" \t\r\n"</span> == <span class="number">0</span> <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<h1 id="基本类型的包装对象"><a href="#基本类型的包装对象" class="headerlink" title="基本类型的包装对象"></a>基本类型的包装对象</h1><p>Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="type">Boolean</span>(<span class="literal">false</span>);</div><div class="line"><span class="keyword">new</span> <span class="type">Number</span>(<span class="number">1234</span>);</div><div class="line"><span class="keyword">new</span> <span class="type">String</span>(<span class="string">"Hello World"</span>);</div></pre></td></tr></table></figure>
-<p>与基本数据类型对应的对象类型，作用很小，造成的混淆却很大</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert( <span class="keyword">typeof</span> <span class="number">1234</span>); <span class="comment">// number</span></div><div class="line">alert( <span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">1234</span>)); <span class="comment">// object</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>虽然JavaScript缺陷很多,但是ES6及很多库已经很多解决了这些缺陷的问题,完善了不少。并且JavaScript是浏览器唯一的编程语言,将来一定是随着时代发展不断进步</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;为什么现在的前端学JavaScript要学那么多的版本,并且一年一大更,半年一小更,还要用到很多js的库、模块化工具&lt;/p&gt;
-&lt;p&gt;就是因为JavaScript的设计缺陷&lt;/p&gt;
-&lt;p&gt;这篇主要是参考《JavaScript语言精髓》（JavaScript: The Good Parts）,总结的非常到位&lt;br&gt;
     
     </summary>
     
