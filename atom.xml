@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-29T14:20:08.241Z</updated>
+  <updated>2018-07-30T13:54:35.234Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,18 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2018/07/29/2018.7summary/"/>
-    <id>http://yoursite.com/2018/07/29/2018.7summary/</id>
-    <published>2018-07-28T17:20:23.658Z</published>
-    <updated>2018-07-29T14:20:08.241Z</updated>
+    <title>【总结】2018年7月份个人总结</title>
+    <link href="http://yoursite.com/2018/07/31/2018.7summary/"/>
+    <id>http://yoursite.com/2018/07/31/2018.7summary/</id>
+    <published>2018-07-31T15:40:15.000Z</published>
+    <updated>2018-07-30T13:54:35.234Z</updated>
     
-    <content type="html"><![CDATA[<hr>
-<p>title: 【总结】2018年7月份个人总结<br>date: 2018-07-31 23:40:15<br>categories: lifes<br>tags:</p>
-<ul>
-<li>个人总结</li>
-</ul>
-<p>人生何必如初见,但求两看相不厌</p>
+    <content type="html"><![CDATA[<p>人生何必如初见,但求两看相不厌</p>
 <p>7月份的工作量总体还好。总算熬过了醉人的6月。开始有了大块头的个人时间,恰好可以好好地重构以前做的项目<br><a id="more"></a><br>接触了node.js及php,遇到了几个坑爹的bug,然后一一解决对后端有了进一步的了解及学习</p>
 <p>希望以后有机会可以接触实际新项目,因为，我真切地感受到了，有实际项目练手确实比自己瞎折腾快上十倍都不算夸张</p>
 <p>益达的同学来广州找我玩,非常好的大学同学,毕业以后，我再也没有如此地敞开心扉想啥说啥，也再也没有如此的和弦而谈</p>
@@ -99,16 +94,15 @@
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title: 【总结】2018年7月份个人总结&lt;br&gt;date: 2018-07-31 23:40:15&lt;br&gt;categories: lifes&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;个人总结&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;人生何必如初见,但求两看相不厌&lt;/p&gt;
+      &lt;p&gt;人生何必如初见,但求两看相不厌&lt;/p&gt;
 &lt;p&gt;7月份的工作量总体还好。总算熬过了醉人的6月。开始有了大块头的个人时间,恰好可以好好地重构以前做的项目&lt;br&gt;
     
     </summary>
     
+      <category term="lifes" scheme="http://yoursite.com/categories/lifes/"/>
+    
+    
+      <category term="个人总结" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -1888,7 +1882,7 @@
     <link href="http://yoursite.com/2018/06/28/2018.6summary/"/>
     <id>http://yoursite.com/2018/06/28/2018.6summary/</id>
     <published>2018-06-27T16:40:15.000Z</published>
-    <updated>2018-06-28T13:54:52.000Z</updated>
+    <updated>2018-06-28T16:00:50.000Z</updated>
     
     <content type="html"><![CDATA[<p>是谁来自山川湖海,又囿于昼夜,厨房与爱</p>
 <p>这个六月,跟往常不太一样,重新一段几乎全新的生活,没有任何的不适,走了几个地方,认识几个朋友,人幽默很nice,我已经习惯这边的生活</p>
@@ -1961,7 +1955,7 @@
     <link href="http://yoursite.com/2018/06/25/2018.6.25/"/>
     <id>http://yoursite.com/2018/06/25/2018.6.25/</id>
     <published>2018-06-25T04:40:15.000Z</published>
-    <updated>2018-06-24T16:11:12.000Z</updated>
+    <updated>2018-07-08T01:45:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>JavaScript蝴蝶书,详细分析了Javascript中哪些部分是精粹，哪些部分是糟粕和鸡肋</p>
 <p>列出了11种应该避免使用的Javascript语法<br><a id="more"></a></p>
