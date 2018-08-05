@@ -111,9 +111,16 @@
     <link href="http://yoursite.com/2018/07/28/2018.7.28/"/>
     <id>http://yoursite.com/2018/07/28/2018.7.28/</id>
     <published>2018-07-28T15:16:41.000Z</published>
-    <updated>2018-07-28T07:31:02.968Z</updated>
+    <updated>2018-08-05T13:37:52.554Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PHP-MySQL-简介"><a href="#PHP-MySQL-简介" class="headerlink" title="PHP MySQL 简介"></a>PHP MySQL 简介</h1><h2 id="PHP-MySQL"><a href="#PHP-MySQL" class="headerlink" title="PHP + MySQL"></a>PHP + MySQL</h2><a id="more"></a>
+<p>PHP 与 MySQL 结合是跨平台的</p>
+<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><p>通过 MySQL，我们可以向数据库查询具体的信息，并得到返回的记录集</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 语句 set names utf8;用于设定数据库编码，让中文可以正常显示</span></div><div class="line"><span class="comment">// 选取了 "websites" 表中 "name" 列的所有数据</span></div><div class="line"></div><div class="line">mysql&gt; set names utf8;</div><div class="line"><span class="section">mysql&gt; SELECT name FROM websites;</span></div><div class="line">+---------------+</div><div class="line"><span class="section">| name          |</span></div><div class="line">+---------------+</div><div class="line">| Google        |</div><div class="line">| 淘宝        |</div><div class="line">| 菜鸟教程  |</div><div class="line">| 微博        |</div><div class="line">| Facebook      |</div><div class="line"><span class="section">| stackoverflow |</span></div><div class="line">+---------------+</div><div class="line">6 rows in set (0.00 sec)</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;PHP-MySQL-简介&quot;&gt;&lt;a href=&quot;#PHP-MySQL-简介&quot; class=&quot;headerlink&quot; title=&quot;PHP MySQL 简介&quot;&gt;&lt;/a&gt;PHP MySQL 简介&lt;/h1&gt;&lt;h2 id=&quot;PHP-MySQL&quot;&gt;&lt;a href=&quot;#PHP-MySQL&quot; class=&quot;headerlink&quot; title=&quot;PHP + MySQL&quot;&gt;&lt;/a&gt;PHP + MySQL&lt;/h2&gt;
     
     </summary>
     

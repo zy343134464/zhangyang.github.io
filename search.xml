@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[PHP数据库]]></title>
       <url>%2F2018%2F07%2F28%2F2018.7.28%2F</url>
-      <content type="text"></content>
+      <content type="text"><![CDATA[PHP MySQL 简介PHP + MySQL PHP 与 MySQL 结合是跨平台的 查询通过 MySQL，我们可以向数据库查询具体的信息，并得到返回的记录集 12345678910111213141516// 语句 set names utf8;用于设定数据库编码，让中文可以正常显示// 选取了 "websites" 表中 "name" 列的所有数据mysql&gt; set names utf8;mysql&gt; SELECT name FROM websites;+---------------+| name |+---------------+| Google || 淘宝 || 菜鸟教程 || 微博 || Facebook || stackoverflow |+---------------+6 rows in set (0.00 sec)]]></content>
     </entry>
 
     
