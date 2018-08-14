@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-30T13:54:35.234Z</updated>
+  <updated>2018-08-14T13:42:14.173Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【实战】React调色板</title>
+    <link href="http://yoursite.com/2018/08/03/2018.8.3/"/>
+    <id>http://yoursite.com/2018/08/03/2018.8.3/</id>
+    <published>2018-08-03T15:16:41.000Z</published>
+    <updated>2018-08-14T13:42:14.173Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我在生"><a href="#我在生" class="headerlink" title="我在生"></a>我在生</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;我在生&quot;&gt;&lt;a href=&quot;#我在生&quot; class=&quot;headerlink&quot; title=&quot;我在生&quot;&gt;&lt;/a&gt;我在生&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="React" scheme="http://yoursite.com/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>【总结】2018年7月份个人总结</title>
@@ -2696,55 +2718,6 @@
     
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端MVC设计模式</title>
-    <link href="http://yoursite.com/2018/06/07/2018.6.7/"/>
-    <id>http://yoursite.com/2018/06/07/2018.6.7/</id>
-    <published>2018-06-07T05:40:15.000Z</published>
-    <updated>2018-06-07T13:27:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h1><p>一个页面分为两部分，浏览器上面的工作交给前端做，服务器上面的工作交给后端做</p>
-<h1 id="页面开发流程"><a href="#页面开发流程" class="headerlink" title="页面开发流程"></a>页面开发流程</h1><a id="more"></a>
-<h2 id="浏览器第一次加载的页面只是一个占位符"><a href="#浏览器第一次加载的页面只是一个占位符" class="headerlink" title="浏览器第一次加载的页面只是一个占位符"></a>浏览器第一次加载的页面只是一个占位符</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">app</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="前端将其他-HTML-和从服务器获取的数据填到占位符里"><a href="#前端将其他-HTML-和从服务器获取的数据填到占位符里" class="headerlink" title="前端将其他 HTML 和从服务器获取的数据填到占位符里"></a>前端将其他 HTML 和从服务器获取的数据填到占位符里</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$.get(<span class="string">'/user/1'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;</div><div class="line">  template = (</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">  )</div><div class="line">  content = template.replace(<span class="string">'&#123;&#123; name &#125;&#125;'</span>, user.name)</div><div class="line">  $app.html(content)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="用户提交数据时，前端用-AJAX-提交异步请求"><a href="#用户提交数据时，前端用-AJAX-提交异步请求" class="headerlink" title="用户提交数据时，前端用 AJAX 提交异步请求"></a>用户提交数据时，前端用 AJAX 提交异步请求</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$form.on(<span class="string">'submit'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  $.post(<span class="string">'/user/1'</span>, $form.serialize()).then(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    alert(<span class="string">'提交成功'</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h1 id="前端MVC模式"><a href="#前端MVC模式" class="headerlink" title="前端MVC模式"></a>前端MVC模式</h1><h2 id="Model-封装数据操作"><a href="#Model-封装数据操作" class="headerlink" title="Model-封装数据操作"></a>Model-封装数据操作</h2><p>对用户的增删改成其实都是异步请求,数据相关的操作就都放到这个 model 上</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> userModel = &#123;</div><div class="line">  <span class="attr">find</span>: <span class="function"><span class="keyword">function</span>(<span class="params">id</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> $.get(<span class="string">'/user/'</span>+id).then(<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;</div><div class="line">      $.extend(userModel, user)</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">save</span>: <span class="function"><span class="keyword">function</span>(<span class="params">id, data</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> $.post(<span class="string">'/user/'</span>+id, data)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 用户数据的校验</span></div><div class="line">userModel.validate = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">if</span>(<span class="keyword">this</span>.name === <span class="string">''</span>) <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">  <span class="keyword">if</span>(<span class="keyword">this</span>.password === <span class="string">''</span>) <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="View-视图渲染"><a href="#View-视图渲染" class="headerlink" title="View-视图渲染"></a>View-视图渲染</h2><p>前端的视图也是 HTML,将数据与 HTML 混合起来</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">content</span> = template.replace(<span class="string">'&#123;&#123; name &#125;&#125;'</span>, user.name)</div></pre></td></tr></table></figure>
-<p>前端们模板引擎，如 Handlebars.js、React</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">content = templateEngine( template, <span class="keyword">user</span> <span class="title">)</span></div></pre></td></tr></table></figure>
-<h2 id="Controller-控制器"><a href="#Controller-控制器" class="headerlink" title="Controller-控制器"></a>Controller-控制器</h2><p>将 content 塞到页面里</p>
-<p>浏览器事件监听 - 用户点击视图后去更新数据</p>
-<p>数据事件监听 - user 数据更新后去更新视图</p>
-<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">controller = &#123;</div><div class="line">  model: userModel,</div><div class="line">  element: $app,</div><div class="line">  <span class="keyword">template</span>: '&lt;h1&gt;&#123;&#123; name &#125;&#125; &lt;/h1&gt;........',</div><div class="line">  events: &#123;</div><div class="line">    'click button': 'onButtonClick',</div><div class="line">    'submit form' : 'onSubmitForm'</div><div class="line">  &#125;,</div><div class="line">  modelEvents: &#123;</div><div class="line">    'update': 'onModelUpdate',</div><div class="line">    'remove': 'onModelRemove'</div><div class="line">  &#125;,</div><div class="line">  init: function()&#123;</div><div class="line">    <span class="keyword">var</span> content = templateEngine(this.<span class="keyword">template</span>, userModel)</div><div class="line">    this.element.append($app)</div><div class="line">    </div><div class="line">    // 遍历 events 并绑定对应的方法</div><div class="line">    // 遍历 modelEvents 并绑定对应的方法</div><div class="line">  &#125;,</div><div class="line">  onButtonClick: function()<span class="meta">&#123;...&#125;</span>,</div><div class="line">  onSubmitForm: function()<span class="meta">&#123;...&#125;</span>,</div><div class="line">  onModelUpdate: function()<span class="meta">&#123;...&#125;</span>,</div><div class="line">  onModelRemove: function()<span class="meta">&#123;...&#125;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>控制器作用</p>
-<ul>
-<li><p>Controller 监听 Model 变化，Model 一变，Controller 就会去更新 View</p>
-</li>
-<li><p>Controller 监听用户交互，用户点了提交或修改按钮，Controller 就要去更新 Model</p>
-</li>
-</ul>
-<h1 id="Router-路由"><a href="#Router-路由" class="headerlink" title="Router-路由"></a>Router-路由</h1><p>只是在每个页面局部使用 MVC，那么就不需要路由</p>
-<p>整站是一个单页面，那么就要处理 URL 的变化</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前后端分离&quot;&gt;&lt;a href=&quot;#前后端分离&quot; class=&quot;headerlink&quot; title=&quot;前后端分离&quot;&gt;&lt;/a&gt;前后端分离&lt;/h1&gt;&lt;p&gt;一个页面分为两部分，浏览器上面的工作交给前端做，服务器上面的工作交给后端做&lt;/p&gt;
-&lt;h1 id=&quot;页面开发流程&quot;&gt;&lt;a href=&quot;#页面开发流程&quot; class=&quot;headerlink&quot; title=&quot;页面开发流程&quot;&gt;&lt;/a&gt;页面开发流程&lt;/h1&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-      <category term="MVC" scheme="http://yoursite.com/tags/MVC/"/>
     
   </entry>
   
