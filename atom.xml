@@ -42,13 +42,15 @@
     <link href="http://yoursite.com/2018/08/06/2018.8.6/"/>
     <id>http://yoursite.com/2018/08/06/2018.8.6/</id>
     <published>2018-08-06T15:16:41.000Z</published>
-    <updated>2018-08-19T08:12:21.050Z</updated>
+    <updated>2018-08-21T13:50:28.424Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="我在生le"><a href="#我在生le" class="headerlink" title="我在生le"></a>我在生le</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="正则表达式简介"><a href="#正则表达式简介" class="headerlink" title="正则表达式简介"></a>正则表达式简介</h1><p>正则表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串<br><a id="more"></a></p>
+<h1 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h1><p>新建正则表达式有两种方法。一种是使用字面量，以斜杠表示开始和结束;另一种是使用RegExp构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 两种写法是等价的，都新建了一个内容为xyz的正则表达式对象</span></div><div class="line"><span class="keyword">var</span> regex = <span class="regexp">/xyz/</span>;</div><div class="line"><span class="comment">// 等价于</span></div><div class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'xyz'</span>);</div><div class="line"></div><div class="line"><span class="comment">// RegExp构造函数还可以接受第二个参数，表示修饰符</span></div><div class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'xyz'</span>, <span class="string">'i'</span>);</div><div class="line"><span class="comment">// 等价于</span></div><div class="line"><span class="keyword">var</span> regex = <span class="regexp">/xyz/i</span>;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;我在生le&quot;&gt;&lt;a href=&quot;#我在生le&quot; class=&quot;headerlink&quot; title=&quot;我在生le&quot;&gt;&lt;/a&gt;我在生le&lt;/h1&gt;
+      &lt;h1 id=&quot;正则表达式简介&quot;&gt;&lt;a href=&quot;#正则表达式简介&quot; class=&quot;headerlink&quot; title=&quot;正则表达式简介&quot;&gt;&lt;/a&gt;正则表达式简介&lt;/h1&gt;&lt;p&gt;正则表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串&lt;br&gt;
     
     </summary>
     

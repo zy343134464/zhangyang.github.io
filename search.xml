@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[正则表达式]]></title>
       <url>%2F2018%2F08%2F06%2F2018.8.6%2F</url>
-      <content type="text"><![CDATA[我在生le]]></content>
+      <content type="text"><![CDATA[正则表达式简介正则表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串 创建新建正则表达式有两种方法。一种是使用字面量，以斜杠表示开始和结束;另一种是使用RegExp构造函数 123456789// 两种写法是等价的，都新建了一个内容为xyz的正则表达式对象var regex = /xyz/;// 等价于var regex = new RegExp('xyz');// RegExp构造函数还可以接受第二个参数，表示修饰符var regex = new RegExp('xyz', 'i');// 等价于var regex = /xyz/i;]]></content>
     </entry>
 
     
