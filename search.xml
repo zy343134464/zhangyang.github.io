@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[form、a、iframe 和 table 详解]]></title>
       <url>%2F2018%2F08%2F13%2F2018.8.13%2F</url>
-      <content type="text"><![CDATA[我在生le]]></content>
+      <content type="text"><![CDATA[a标签href相对路径1&lt;a href="./xxx"&gt;点击&lt;/a&gt; 绝对路径 1&lt;a href="www.baidu.com"&gt;点击&lt;/a&gt; 有协议路径 1&lt;a href="https://www.baidu.com"&gt;点击&lt;/a&gt; 无协议路径(跟随文件所在协议) 1&lt;a href="//www.baidu.com"&gt;点击&lt;/a&gt; javascipt: 伪协议 1&lt;a href="javascript:;"&gt;点击&lt;/a&gt; 锚点（fragment） 12&lt;a href="#xxx"&gt;点击&lt;/a&gt;&lt;div id="xxx"&gt;2&lt;/div&gt; target_blank:打开新窗口 _self:自身窗口打开 _top:最顶层窗口打开 _parent:父窗口打开 a标签打开target给值都是窗口的name downloadiframe标签页面套页面 性能较低 name 属性 12&lt;a href="http://baidu.com" target="xxx"&gt;百度&lt;/a&gt;&lt;iframe src="/b" name="xxx" frameborder="0" width=900 height=900&gt;&lt;/iframe&gt; 其他属性 table标签table属性]]></content>
     </entry>
 
     

@@ -42,13 +42,37 @@
     <link href="http://yoursite.com/2018/08/13/2018.8.13/"/>
     <id>http://yoursite.com/2018/08/13/2018.8.13/</id>
     <published>2018-08-13T15:16:41.000Z</published>
-    <updated>2018-08-23T14:15:41.148Z</updated>
+    <updated>2018-08-27T15:11:50.090Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="我在生le"><a href="#我在生le" class="headerlink" title="我在生le"></a>我在生le</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h1><h2 id="href"><a href="#href" class="headerlink" title="href"></a>href</h2><p>相对路径<br><a id="more"></a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"./xxx"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>绝对路径</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"www.baidu.com"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>有协议路径</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://www.baidu.com"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>无协议路径(跟随文件所在协议)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"//www.baidu.com"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>javascipt: 伪协议</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>锚点（fragment）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#xxx"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"xxx"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="target"><a href="#target" class="headerlink" title="target"></a>target</h2><p>_blank:打开新窗口</p>
+<p>_self:自身窗口打开</p>
+<p>_top:最顶层窗口打开</p>
+<p>_parent:父窗口打开</p>
+<blockquote>
+<p>a标签打开target给值都是窗口的name</p>
+</blockquote>
+<h2 id="download"><a href="#download" class="headerlink" title="download"></a>download</h2><h1 id="iframe标签"><a href="#iframe标签" class="headerlink" title="iframe标签"></a>iframe标签</h1><p>页面套页面</p>
+<p>性能较低</p>
+<p>name 属性</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://baidu.com"</span> <span class="attr">target</span>=<span class="string">"xxx"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"/b"</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">900</span> <span class="attr">height</span>=<span class="string">900</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe" target="_blank" rel="external">其他属性</a></p>
+<h1 id="table标签"><a href="#table标签" class="headerlink" title="table标签"></a>table标签</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table" target="_blank" rel="external">table属性</a></p>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;我在生le&quot;&gt;&lt;a href=&quot;#我在生le&quot; class=&quot;headerlink&quot; title=&quot;我在生le&quot;&gt;&lt;/a&gt;我在生le&lt;/h1&gt;
+      &lt;h1 id=&quot;a标签&quot;&gt;&lt;a href=&quot;#a标签&quot; class=&quot;headerlink&quot; title=&quot;a标签&quot;&gt;&lt;/a&gt;a标签&lt;/h1&gt;&lt;h2 id=&quot;href&quot;&gt;&lt;a href=&quot;#href&quot; class=&quot;headerlink&quot; title=&quot;href&quot;&gt;&lt;/a&gt;href&lt;/h2&gt;&lt;p&gt;相对路径&lt;br&gt;
     
     </summary>
     
