@@ -107,6 +107,30 @@
   </entry>
   
   <entry>
+    <title>JS语音生成器</title>
+    <link href="http://yoursite.com/2018/08/23/2018.8.23/"/>
+    <id>http://yoursite.com/2018/08/23/2018.8.23/</id>
+    <published>2018-08-23T15:16:41.000Z</published>
+    <updated>2018-09-06T13:12:09.875Z</updated>
+    
+    <content type="html"><![CDATA[<p>给我一首歌的时间</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;给我一首歌的时间&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript assert</title>
     <link href="http://yoursite.com/2018/08/19/2018.8.19/"/>
     <id>http://yoursite.com/2018/08/19/2018.8.19/</id>
@@ -2770,55 +2794,6 @@
     
     
       <category term="个人总结" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript语言精粹</title>
-    <link href="http://yoursite.com/2018/06/25/2018.6.25/"/>
-    <id>http://yoursite.com/2018/06/25/2018.6.25/</id>
-    <published>2018-06-25T04:40:15.000Z</published>
-    <updated>2018-07-08T01:45:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>JavaScript蝴蝶书,详细分析了Javascript中哪些部分是精粹，哪些部分是糟粕和鸡肋</p>
-<p>列出了11种应该避免使用的Javascript语法<br><a id="more"></a></p>
-<h1 id=""><a href="#" class="headerlink" title="=="></a>==</h1><p>永远只使用===和!==。因为==默认会进行类型转换，规则十分难记。</p>
-<h1 id="with"><a href="#with" class="headerlink" title="with"></a>with</h1><p>解释器会首先判断obj.b和obj.d是否存在，如果不存在的话，再判断全局变量b和d是否存在</p>
-<p>这样就导致了低效率，而且可能会导致意外，因此最好不要使用with语句</p>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">obj.<span class="attr">a</span> = obj.b;</div><div class="line">obj.<span class="attr">c</span> = obj.d;</div><div class="line"></div><div class="line">// 可以简写成</div><div class="line"><span class="keyword">with</span>(obj) &#123;</div><div class="line">    <span class="attr">a</span> = b;</div><div class="line">    <span class="attr">c</span> = d;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="eval"><a href="#eval" class="headerlink" title="eval"></a>eval</h1><p>eval用来直接执行一个字符串,性能差</p>
-<p>eval能够做到的事情，不用它也能做到</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">eval</span>(<span class="string">"myValue = myObject."</span> + myKey + <span class="string">";"</span>);</div><div class="line"></div><div class="line"><span class="comment">// 可以直接写成</span></div><div class="line">myValue = myObject[myKey];</div></pre></td></tr></table></figure>
-<h1 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h1><p>这条命令的作用是返回到循环的头部，但是循环本来就会返回到头部</p>
-<p>避免使用这条命令，使得效率得到改善</p>
-<h1 id="switch-贯穿"><a href="#switch-贯穿" class="headerlink" title="switch 贯穿"></a>switch 贯穿</h1><p>switch结构中的case语句，默认是顺序执行，除非遇到break，return和throw</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span>(n) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">    <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">    <span class="keyword">break</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>建议避免switch贯穿，凡是有case的地方，一律加上break</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span>(n) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">    <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">    <span class="keyword">break</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="单行的块结构"><a href="#单行的块结构" class="headerlink" title="单行的块结构"></a>单行的块结构</h1><p>if、while、do和for，都是块结构语句，但是也可以接受单行命令,如</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if (<span class="name">ok</span>) <span class="literal">t</span> = true<span class="comment">;</span></div></pre></td></tr></table></figure>
-<p>不管是否只有一行命令，都一律加上大括号</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">if</span> (ok)&#123;</div><div class="line">    <span class="attribute">t</span> = <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="和–"><a href="#和–" class="headerlink" title="++和–"></a>++和–</h1><p>递增运算符++和递减运算符–,实际上会让代码看上去更复杂,为了代码的整洁性和易读性，不用为好</p>
-<h1 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h1><p>Javascript内部，所有数字都保存为双精度浮点数。如果使用它们的话，Javascript不得不将运算数先转为整数，然后再进行运算，这样就降低了速度</p>
-<h1 id="function语句"><a href="#function语句" class="headerlink" title="function语句"></a>function语句</h1><p>前一种写法会被解析器自动提升到代码的头部，因此违背了函数应该先定义后使用的要求，所以建议定义函数时，全部采用后一种写法</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">// 等价于</span></div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;&#125;</div></pre></td></tr></table></figure>
-<h1 id="基本数据类型的包装对象"><a href="#基本数据类型的包装对象" class="headerlink" title="基本数据类型的包装对象"></a>基本数据类型的包装对象</h1><p>Javascript的基本数据类型包括字符串、数字、布尔值，它们都有对应的包装对象String、Number和Boolean,这样写完全没有必要</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="type">String</span>(<span class="string">"Hello World"</span>);</div><div class="line"><span class="keyword">new</span> <span class="type">Number</span>(<span class="number">2000</span>);</div><div class="line"><span class="keyword">new</span> <span class="type">Boolean</span>(<span class="literal">false</span>);</div></pre></td></tr></table></figure>
-<h1 id="void"><a href="#void" class="headerlink" title="void"></a>void</h1><p>在Javascript中，void是一个运算符，接受一个运算数，并返回undefined,这个命令没什么用,避免使用</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> <span class="number">0</span>; <span class="comment">// undefined</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;JavaScript蝴蝶书,详细分析了Javascript中哪些部分是精粹，哪些部分是糟粕和鸡肋&lt;/p&gt;
-&lt;p&gt;列出了11种应该避免使用的Javascript语法&lt;br&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
   </entry>
   
