@@ -12,14 +12,14 @@
     <entry>
       <title><![CDATA[JS语音生成器]]></title>
       <url>%2F2018%2F08%2F23%2F2018.8.23%2F</url>
-      <content type="text"><![CDATA[给我一首歌的时间]]></content>
+      <content type="text"><![CDATA[JS 语录生成器 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374// index.html&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;title&gt;JS Bin&lt;/title&gt; &lt;link rel="stylesheet" href="./index.css"&gt;&lt;/head&gt;&lt;body&gt; &lt;div class="page"&gt; &lt;section class="editor"&gt; &lt;ul&gt; &lt;li&gt; &lt;input type="text" id="word1" value="真诚的爱情"&gt; &lt;/li&gt; &lt;li&gt; &lt;input type="text" id="word2" value="女孩子"&gt; &lt;/li&gt; &lt;li&gt; &lt;input type="text" id="word3" value="我爱你"&gt; &lt;/li&gt; &lt;li&gt; &lt;input type="text" id="word4" value="在这份爱上加上一个期限"&gt; &lt;/li&gt; &lt;/ul&gt; &lt;button id=generate&gt;生成&lt;/button&gt; &lt;/section&gt; &lt;section class="preview" id="preview"&gt; &lt;p&gt;曾经有一份 &lt;span id="place1"&gt;真诚的爱情&lt;/span&gt; 放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。 &lt;p&gt;如果上天能够给我一个再来一次的机会，我会对那个 &lt;span id="place2"&gt;女孩子&lt;/span&gt; 说三个字：&lt;span id="place3"&gt;我爱你&lt;/span&gt;。如果非要 &lt;span id="place4"&gt;在这份爱上加上一个期限&lt;/span&gt;，我希望是……一万年…… &lt;/section&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;// index.css*&#123; margin: 0;padding:0;box-sizing: border-box;&#125;ul,ol&#123; list-style: none;&#125;.page&#123; display: flex; padding: 1em;&#125;.page .editor&#123; margin-right: 3em;&#125;.page .preview p&#123; margin-bottom: 1em;&#125;// index.jsconsole.assert(generate.tagName === 'BUTTON')generate.onclick = function()&#123; var w1 = word1.value var w2 = word2.value var w3 = word3.value var w4 = word4.value // place1.innerText = w1// place2.innerText = w2// place3.innerText = w3// place4.innerText = w4 var html = `&lt;p&gt;曾经有一份$&#123;w1&#125;放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。 &lt;p&gt;如果上天能够给我一个再来一次的机会，我会对那个$&#123;w2&#125;说三个字：$&#123;w3&#125;。如果非要$&#123;w4&#125;，我希望是……一万年……` preview.innerHTML = html&#125;console.log(document.querySelectorAll('.preview&gt;p'))]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[JavaScript assert]]></title>
       <url>%2F2018%2F08%2F19%2F2018.8.19%2F</url>
-      <content type="text"><![CDATA[给我一首歌的时间]]></content>
+      <content type="text"><![CDATA[JS assert自学常用方法,assert来猜自己到底对不对,我错在哪12345678910function assert(value, description)&#123; description = description || '' if(value === true)&#123; console.info('[测试通过]'+ description) &#125;else&#123; console.error('[测试不通过]' + description) &#125;&#125;assert('1\n2'.length===3, '\\n占一个字符') 用 assert 学 JS12345678910111213function f1()&#123; return 'hello world'&#125;assert(f1 === 'hello world')assert(f1() === 'hello world')function f2()&#123; return function()&#123;&#125;&#125;assert(typeof f1() === 'function')assert(typeof document === 'object') 学会调试（console.log、console.assert、断点） 先做再理解（Demo 先行）]]></content>
     </entry>
 
     
