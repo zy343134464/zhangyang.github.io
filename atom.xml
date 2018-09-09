@@ -107,6 +107,30 @@
   </entry>
   
   <entry>
+    <title>前端调试</title>
+    <link href="http://yoursite.com/2018/08/26/2018.8.26/"/>
+    <id>http://yoursite.com/2018/08/26/2018.8.26/</id>
+    <published>2018-08-26T15:16:41.000Z</published>
+    <updated>2018-09-09T12:28:45.269Z</updated>
+    
+    <content type="html"><![CDATA[<p>给我一首歌的时间</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;给我一首歌的时间&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【实战】JS语音生成器</title>
     <link href="http://yoursite.com/2018/08/23/2018.8.23/"/>
     <id>http://yoursite.com/2018/08/23/2018.8.23/</id>
@@ -2722,79 +2746,6 @@
     
     
       <category term="React" scheme="http://yoursite.com/tags/React/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【总结】2018年6月份个人总结</title>
-    <link href="http://yoursite.com/2018/06/28/2018.6summary/"/>
-    <id>http://yoursite.com/2018/06/28/2018.6summary/</id>
-    <published>2018-06-27T16:40:15.000Z</published>
-    <updated>2018-06-28T16:00:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>是谁来自山川湖海,又囿于昼夜,厨房与爱</p>
-<p>这个六月,跟往常不太一样,重新一段几乎全新的生活,没有任何的不适,走了几个地方,认识几个朋友,人幽默很nice,我已经习惯这边的生活</p>
-<a id="more"></a>
-<p>念过往,畏将来,冥冥中这是我唯一要走的路。我是个喜欢怀旧的人，但我不想回到过去任何一个时间点，因为即使重来我还是会选择现在走过的路</p>
-<p>我向往大厂的技术及工资,并会不断努力达到进入要求。与在头条的老妹每次通话,都深知,高工资高成长的大厂,是每天起早贪黑的工作及学习,并要牺牲很多业余时间的代价</p>
-<p>所以我现在非常珍惜单纯快乐的时光，不需要考虑吃穿住行，不需要考虑家庭压力和责任，这样的日子也许是未来最美好的一段回忆。所以以更积极向上的姿态去拥抱生活,投资自己</p>
-<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1.React.js: 过了一遍文档,争取后期完成项目</p>
-<p>2.Canvas: 看MDN,写了个画板demo</p>
-<p>3.PHP: 学习基础语法及常用函数</p>
-<p>4.专利: 报名11月份考试,买5本考试书籍</p>
-<p>5.ES6: 重新总结ES6的大部分语法糖、变量的解构等等并实战了一遍</p>
-<p>6.前端MVC设计模式及网页性能优化</p>
-<p>7.CSS动画初试:transition和animation</p>
-<h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><p>1.海尔小家电运营平台增加订单管理功能</p>
-<p>2.海尔插件将jqueryHelp.js的createTree增加三属性isContact,isAddEvent,isHideExpandAll满足需求</p>
-<p>3.运维四台服务器的每月报账</p>
-<h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>1.学会素描,可以画猫、建筑</p>
-<p>2.每天坚持夜跑40分钟、练字半个钟</p>
-<p>3.大学毕业后转建筑的同学来找我玩,去了一趟大夫山骑单车,真是贼舒服,仿佛回到高三那时候周六晚都会在汕头骑单车放松听歌</p>
-<p>4.去市桥的游泳馆游了一次泳,终于突破2米的恐惧~只会费体力的自由泳及仰泳，学习蛙泳中</p>
-<p>5.六月十三日小学兼结拜兄弟紫菜结婚,八个结拜兄弟,已2位正式结婚,真怀念从小学玩到大一起踢球、打球、钓鱼、烧烤、游泳、爬山等等没心没肺的日子,感叹现在的聚少离多</p>
-<p>6.顺便请了个长假回家休息,唱K两次,释放压力,好男儿心怀向大海</p>
-<p>7.去了一趟汕大,人美学校也美</p>
-<p>8.这个月熬夜不多,12点前都坚持准时睡觉,除了一次看阿根廷的球赛熬了夜</p>
-<p>9.每周打扫一次卫生</p>
-<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>《ES6标准入门》100%、《React.js标准教程》100%、《JavaScript语言精粹》100%、《你不知道的JavaScript(上)》100%、《图解HTTP》20%、《Git版本控制管理》100%、《PHP和MySQL.Web开发(第4版)》10%、《机械领域专利申请文件的撰写与审查》10%、《计算机网络第五版》100%</p>
-<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>《傲慢与偏见》、《美国派1-4部》、《年鉴计划》</p>
-<h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>《原来你也在这里》、《每日最热资讯榜》、《局座悄悄话》</p>
-<h1 id="绩效评估"><a href="#绩效评估" class="headerlink" title="绩效评估"></a>绩效评估</h1><table>
-<thead>
-<tr>
-<th>学习</th>
-<th>工作</th>
-<th>生活</th>
-<th>阅读</th>
-<th>总分</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>7</td>
-<td>5</td>
-<td>8</td>
-<td>4</td>
-<td>25</td>
-</tr>
-</tbody>
-</table>
-<h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>学习目标:PHP、Vue全家桶、React深入、SVG、前端工作流工具</p>
-<p>另外说一句，我再海尔转正了，时光荏苒呀</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;是谁来自山川湖海,又囿于昼夜,厨房与爱&lt;/p&gt;
-&lt;p&gt;这个六月,跟往常不太一样,重新一段几乎全新的生活,没有任何的不适,走了几个地方,认识几个朋友,人幽默很nice,我已经习惯这边的生活&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="lifes" scheme="http://yoursite.com/categories/lifes/"/>
-    
-    
-      <category term="个人总结" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
