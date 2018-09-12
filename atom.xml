@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-05T09:34:04.907Z</updated>
+  <updated>2018-09-12T12:53:25.047Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/08/31/2018.8.31/"/>
     <id>http://yoursite.com/2018/08/31/2018.8.31/</id>
     <published>2018-08-31T15:16:41.000Z</published>
-    <updated>2018-09-05T09:34:04.907Z</updated>
+    <updated>2018-09-12T12:53:25.047Z</updated>
     
     <content type="html"><![CDATA[<p>生活不止眼前的苟且,还有诗与远方的田野<br><a id="more"></a></p>
 <p>时间的逝去总是让人悲叹，尤其是当你虚度时光之后，你事后的回眸才会发现时光给了你迎头痛击</p>
@@ -65,8 +65,7 @@
 <h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>《阮一峰JavaScript教程》、《爱前端JavaScript》、《月亮与三个便士》、《蜡笔小新合集二》、《海贼王》、《漫画数据库》、《PHP和MySQL.Web开发(原书第4版)》、《Node.js菜鸟教程》、《爱前端Node.js》、《nodejs入门经典》</p>
 <h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>《蚁人》、《狄仁杰之四大天王》</p>
 <h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>《JavaScript高程教程》</p>
-<h1 id="绩效评估"><a href="#绩效评估" class="headerlink" title="绩效评估"></a>绩效评估</h1><p>学习    工作    生活    阅读    总分<br>8    5    9    8    30</p>
-<table>
+<h1 id="绩效评估"><a href="#绩效评估" class="headerlink" title="绩效评估"></a>绩效评估</h1><table>
 <thead>
 <tr>
 <th>学习</th>
