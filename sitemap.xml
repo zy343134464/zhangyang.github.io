@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/09/06/2018.9.6/</loc>
+    
+    <lastmod>2018-09-18T14:24:32.396Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/07/14/2018.7.14/</loc>
+    
+    <lastmod>2018-09-18T14:23:43.685Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/09/03/2018.9.3/</loc>
     
     <lastmod>2018-09-16T06:04:03.602Z</lastmod>
@@ -103,13 +117,6 @@
     <loc>http://yoursite.com/2017/08/18/ydnjs/</loc>
     
     <lastmod>2018-07-24T12:45:15.851Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/07/13/2018.7.14/</loc>
-    
-    <lastmod>2018-07-24T12:21:14.710Z</lastmod>
     
   </url>
   
