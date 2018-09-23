@@ -1,0 +1,1024 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Learning and Doing" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="任务一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【实战】IFE的JavaScript练习">
+<meta property="og:url" content="http://yoursite.com/2018/09/10/2018.9.10/index.html">
+<meta property="og:site_name" content="Learning and Doing">
+<meta property="og:description" content="任务一">
+<meta property="og:updated_time" content="2018-09-23T13:52:08.662Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【实战】IFE的JavaScript练习">
+<meta name="twitter:description" content="任务一">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/10/2018.9.10/"/>
+
+
+
+
+
+  <title> 【实战】IFE的JavaScript练习 | Learning and Doing </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Learning and Doing</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/10/2018.9.10/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zhang Yang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Learning and Doing">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Learning and Doing" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                【实战】IFE的JavaScript练习
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-10T23:16:41+08:00">
+                2018-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="任务一"><a href="#任务一" class="headerlink" title="任务一"></a>任务一</h1><a id="more"></a>
+<h2 id="任务目的"><a href="#任务目的" class="headerlink" title="任务目的"></a>任务目的</h2><p>学习与实践JavaScript的基本语法、语言特性</p>
+<p>初步了解JavaScript的事件是什么</p>
+<p>初步了解JavaScript中的DOM是什么</p>
+<h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空</p>
+<p>有一个input输入框，以及4个操作按钮</p>
+<p>点击”左侧入”，将input中输入的数字从左侧插入队列中；</p>
+<p>点击”右侧入”，将input中输入的数字从右侧插入队列中；</p>
+<p>点击”左侧出”，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；</p>
+<p>点击”右侧出”，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；</p>
+<p>点击队列中任何一个元素，则该元素会被从队列中删除</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>实现简单功能的同时，请仔细学习JavaScript基本语法、事件、DOM相关的知识</p>
+<p>请注意代码风格的整齐、优雅</p>
+<p>代码中含有必要的注释</p>
+<p>示例图仅为参考，不需要完全一致</p>
+<p>需要考虑数字输入的合法性</p>
+<p>建议不使用任何第三方库、框架</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.imooc.com/learn/36" target="_blank" rel="external">JavaScript入门篇</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="external">MDN JavaScript</a></p>
+<h2 id="任务代码"><a href="#任务代码" class="headerlink" title="任务代码"></a>任务代码</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div></pre></td><td class="code"><pre><div class="line">// task.html</div><div class="line"><span class="meta">&lt;!DOCTYPE&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>IFE JavaScript Task 02<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">      <span class="selector-id">#leftIn</span>,</div><div class="line">      <span class="selector-id">#rightIn</span>,</div><div class="line">      <span class="selector-id">#leftOut</span>,</div><div class="line">      <span class="selector-id">#rightOut</span> &#123;</div><div class="line">        <span class="attribute">margin</span>:<span class="number">2px</span> <span class="number">4px</span>;</div><div class="line">        <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</div><div class="line">        <span class="attribute">background</span>: white;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-id">#rightIn</span> &#123;</div><div class="line">        <span class="attribute">margin-right</span>: <span class="number">20px</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-class">.numContent</span>&#123;</div><div class="line">        <span class="attribute">height</span>: <span class="number">40px</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-tag">span</span>&#123;</div><div class="line">        <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">        <span class="attribute">display</span>: inline-block;</div><div class="line">        <span class="attribute">text-align</span>: center;</div><div class="line">        <span class="attribute">color</span>: white;</div><div class="line">        <span class="attribute">background-color</span>: red;</div><div class="line">        <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">10px</span>;</div><div class="line">        <span class="attribute">padding-top</span>: <span class="number">10px</span>;</div><div class="line">        <span class="attribute">margin-right</span>: <span class="number">10px</span>;</div><div class="line">      &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"num"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"leftIn"</span>&gt;</span>左侧入<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rightIn"</span>&gt;</span>右侧入<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"leftOut"</span>&gt;</span>左侧出<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rightOut"</span>&gt;</span>右侧出<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"numContent"</span>&gt;</span></div><div class="line">    </div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="comment">//事件绑定函数，兼容浏览器差异</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">element, event, listener</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (element.addEventListener) &#123;</div><div class="line">        element.addEventListener(event, listener, <span class="literal">false</span>);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent) &#123;</div><div class="line">        element.attachEvent(<span class="string">"on"</span> + event, listener);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> &#123;</div><div class="line">        element[<span class="string">"on"</span> + event] = listener;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 复用id选择器</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//遍历数组的方法，针对数组中每一个元素执行fn函数，并将数组索引和元素作为参数传递</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">each</span>(<span class="params">arr, fn</span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> cur = <span class="number">0</span>; cur &lt; arr.length; cur++) &#123;</div><div class="line">        fn(arr[cur]);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> queue = &#123;</div><div class="line">      <span class="attr">str</span>: [],</div><div class="line">      <span class="attr">paint</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> html = <span class="string">''</span>;</div><div class="line">        each(<span class="keyword">this</span>.str,<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</div><div class="line">          html += <span class="string">"&lt;span&gt;"</span>+<span class="built_in">parseInt</span>(item)+<span class="string">"&lt;/span&gt;"</span></div><div class="line">        &#125;)</div><div class="line">        $(<span class="string">'numContent'</span>).innerHTML = html;</div><div class="line">        addDivDelEvent();</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">leftPush</span>: <span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">        <span class="keyword">this</span>.str.unshift(num)</div><div class="line">        <span class="keyword">this</span>.paint();</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">rightPush</span>: <span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.str.push(num);</div><div class="line">        <span class="keyword">this</span>.paint();</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">isEmpty</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.str.length == <span class="number">0</span>;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">leftPop</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.isEmpty()) &#123;</div><div class="line">          alert(<span class="keyword">this</span>.str.shift());</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">          alert(<span class="string">"队列已经是空的!"</span>);</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">rightPop</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.isEmpty()) &#123;</div><div class="line">          alert(<span class="keyword">this</span>.str.pop());</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">          alert(<span class="string">"队列已经是空的!"</span>);</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">deleteID</span>: <span class="function"><span class="keyword">function</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.str.splice(id, <span class="number">1</span>);</div><div class="line">        <span class="keyword">this</span>.paint();</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 为numContent中的每个span绑定删除函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addDivDelEvent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> cur = <span class="number">0</span>; cur &lt; $(<span class="string">'numContent'</span>).childNodes.length; cur++) &#123;</div><div class="line">        <span class="comment">// 这里要使用闭包，否则永远绑定到指定span上的delete函数的cur永远等于跳出循环时的cur值(length)</span></div><div class="line">        addEvent($(<span class="string">'numContent'</span>).childNodes[cur], <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cur</span>) </span>&#123;</div><div class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> queue.deleteID(cur)</div><div class="line">          &#125;</div><div class="line">        &#125;(cur))</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 4个按钮分别绑定事件函数</span></div><div class="line">    addEvent($(<span class="string">"leftIn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> num = $(<span class="string">'num'</span>).value;</div><div class="line">      <span class="keyword">if</span>((<span class="regexp">/^[0-9]+$/</span>).test(num))&#123;</div><div class="line">        queue.leftPush(num)</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        alert(<span class="string">"请输入一个整数!"</span>)</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"rightIn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> num = $(<span class="string">'num'</span>).value;</div><div class="line">      <span class="keyword">if</span>((<span class="regexp">/^[0-9]+$/</span>).test(num))&#123;</div><div class="line">        queue.rightPush(num)</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        alert(<span class="string">"请输入一个整数!"</span>)</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"leftOut"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      queue.leftPop()</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"rightOut"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      queue.rightPop()</div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><a href="https://zy343134464.github.io/js-IFE2016/task18/task.html" target="_blank" rel="external">任务一</a></p>
+<h1 id="任务二"><a href="#任务二" class="headerlink" title="任务二"></a>任务二</h1><h2 id="任务目的-1"><a href="#任务目的-1" class="headerlink" title="任务目的"></a>任务目的</h2><p>学习与实践JavaScript的基本语法、语言特性</p>
+<p>练习使用JavaScript实现简单的排序算法</p>
+<h2 id="任务描述-1"><a href="#任务描述-1" class="headerlink" title="任务描述"></a>任务描述</h2><p>基于任务18</p>
+<p>限制输入的数字在10-100</p>
+<p>队列元素数量最多限制为60个，当超过60个时，添加元素时alert出提示</p>
+<p>队列展现方式变化如图，直接用高度表示数字大小</p>
+<p>实现一个简单的排序功能，如冒泡排序（不限制具体算法），用可视化的方法表达出来，参考见下方参考资料</p>
+<h2 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h2><p>实现简单功能的同时，请仔细学习JavaScript基本语法、事件、DOM相关的知识</p>
+<p>请注意代码风格的整齐、优雅</p>
+<p>代码中含有必要的注释</p>
+<p>示例图仅为参考，不需要完全一致</p>
+<p>具体算法及可视化的形式不做特别限制，只要求能够展现出算法的过程</p>
+<p>建议不使用任何第三方库、框架</p>
+<h2 id="参考资料-1"><a href="#参考资料-1" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.imooc.com/learn/36" target="_blank" rel="external">JavaScript入门篇</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="external">MDN JavaScript</a></p>
+<h2 id="任务代码-1"><a href="#任务代码-1" class="headerlink" title="任务代码"></a>任务代码</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>IFE JavaScript Task 02<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">      <span class="selector-tag">button</span> &#123;</div><div class="line">        <span class="attribute">margin</span>:<span class="number">2px</span> <span class="number">4px</span>;</div><div class="line">        <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</div><div class="line">        <span class="attribute">background</span>: white;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-id">#numContent</span> &#123;</div><div class="line">        <span class="attribute">display</span>: flex;</div><div class="line">        <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">        <span class="attribute">height</span>: <span class="number">150px</span>;</div><div class="line">        <span class="attribute">align-items</span>: flex-end;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="selector-id">#numContent</span> <span class="selector-tag">span</span> &#123;</div><div class="line">        <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">15px</span>;</div><div class="line">        <span class="attribute">margin-right</span>: <span class="number">10px</span>;               </div><div class="line">        <span class="attribute">background-color</span>: red;</div><div class="line">      &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"num"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"leftIn"</span>&gt;</span>左侧入<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rightIn"</span>&gt;</span>右侧入<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"leftOut"</span>&gt;</span>左侧出<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rightOut"</span>&gt;</span>右侧出<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"sortBtn"</span>&gt;</span>队列排序<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"numContent"</span>&gt;</span></div><div class="line">    </div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="comment">//事件绑定函数，兼容浏览器差异</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">element, event, listener</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (element.addEventListener) &#123;</div><div class="line">        element.addEventListener(event, listener, <span class="literal">false</span>);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent) &#123;</div><div class="line">        element.attachEvent(<span class="string">"on"</span> + event, listener);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> &#123;</div><div class="line">        element[<span class="string">"on"</span> + event] = listener;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 复用id选择器</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//遍历数组的方法，针对数组中每一个元素执行fn函数，并将数组索引和元素作为参数传递</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">each</span>(<span class="params">arr, fn</span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> cur = <span class="number">0</span>; cur &lt; arr.length; cur++) &#123;</div><div class="line">        fn(arr[cur]);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> queue = &#123;</div><div class="line">      <span class="attr">str</span>: [],</div><div class="line">      <span class="attr">paint</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> html = <span class="string">''</span>;</div><div class="line">        each(<span class="keyword">this</span>.str,<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</div><div class="line">          html += <span class="string">"&lt;span style='height:"</span>+<span class="built_in">parseInt</span>(item)+<span class="string">"'&gt;&lt;/span&gt;"</span></div><div class="line">        &#125;)</div><div class="line">        $(<span class="string">'numContent'</span>).innerHTML = html;</div><div class="line">        addDivDelEvent();</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">leftPush</span>: <span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.str.length &gt;= <span class="number">60</span>) &#123;</div><div class="line">          alert(<span class="string">"队列元素数量最多为60个!"</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">          <span class="keyword">this</span>.str.unshift(num);</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">rightPush</span>: <span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.str.length &gt;= <span class="number">60</span>) &#123;</div><div class="line">          alert(<span class="string">"队列元素数量最多为60个!"</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">          <span class="keyword">this</span>.str.push(num);</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">isEmpty</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.str.length == <span class="number">0</span>;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">leftPop</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.isEmpty()) &#123;</div><div class="line">          alert(<span class="keyword">this</span>.str.shift());</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">          alert(<span class="string">"队列已经是空的!"</span>);</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">rightPop</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.isEmpty()) &#123;</div><div class="line">          alert(<span class="keyword">this</span>.str.pop());</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">          alert(<span class="string">"队列已经是空的!"</span>);</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">deleteID</span>: <span class="function"><span class="keyword">function</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.str.splice(id, <span class="number">1</span>);</div><div class="line">        <span class="keyword">this</span>.paint();</div><div class="line">      &#125;,</div><div class="line">      <span class="comment">// 冒泡排序</span></div><div class="line">      sortElements:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> Clock;</div><div class="line">        <span class="keyword">var</span> count = <span class="number">0</span>, i = <span class="number">0</span>;</div><div class="line">        Clock = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">          <span class="keyword">if</span> (count &gt;= <span class="keyword">this</span>.str.length) &#123;</div><div class="line">            clearInterval(Clock);</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">if</span> (i == <span class="keyword">this</span>.str.length - <span class="number">1</span> - count) &#123;</div><div class="line">            i = <span class="number">0</span>;</div><div class="line">            count++;</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">if</span> (<span class="keyword">this</span>.str[i] &gt; <span class="keyword">this</span>.str[i + <span class="number">1</span>]) &#123;</div><div class="line">            <span class="keyword">var</span> temp = <span class="keyword">this</span>.str[i];</div><div class="line">            <span class="keyword">this</span>.str[i] = <span class="keyword">this</span>.str[i + <span class="number">1</span>];</div><div class="line">            <span class="keyword">this</span>.str[i + <span class="number">1</span>] = temp;</div><div class="line">            <span class="keyword">this</span>.paint();</div><div class="line">          &#125;</div><div class="line">          i++;</div><div class="line">        &#125;.bind(<span class="keyword">this</span>), <span class="number">100</span>);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 为numContent中的每个span绑定删除函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addDivDelEvent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> cur = <span class="number">0</span>; cur &lt; $(<span class="string">'numContent'</span>).childNodes.length; cur++) &#123;</div><div class="line">        <span class="comment">// 使用立即执行函数,来解决闭包的影响</span></div><div class="line">        addEvent($(<span class="string">'numContent'</span>).childNodes[cur], <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cur</span>) </span>&#123;</div><div class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> queue.deleteID(cur)</div><div class="line">          &#125;</div><div class="line">        &#125;(cur))</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 4个按钮分别绑定事件函数</span></div><div class="line">    addEvent($(<span class="string">"leftIn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> num = $(<span class="string">'num'</span>).value;</div><div class="line">      <span class="keyword">if</span>((<span class="regexp">/^[0-9]+$/</span>).test(num))&#123;</div><div class="line">        <span class="comment">// 限制输入的数字在10-100</span></div><div class="line">        <span class="keyword">if</span> (<span class="built_in">parseInt</span>(num) &lt; <span class="number">10</span> || <span class="built_in">parseInt</span>(num) &gt; <span class="number">100</span>) &#123;</div><div class="line">          alert(<span class="string">"输入的数字必须在10-100之间!"</span>)</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">          queue.leftPush(num)</div><div class="line">        &#125;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        alert(<span class="string">"请输入一个整数!"</span>)</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"rightIn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> num = $(<span class="string">'num'</span>).value;</div><div class="line">      <span class="keyword">if</span>((<span class="regexp">/^[0-9]+$/</span>).test(num))&#123;</div><div class="line">        <span class="comment">// 限制输入的数字在10-100</span></div><div class="line">        <span class="keyword">if</span> (<span class="built_in">parseInt</span>(num) &lt; <span class="number">10</span> || <span class="built_in">parseInt</span>(num) &gt; <span class="number">100</span>) &#123;</div><div class="line">          alert(<span class="string">"输入的数字必须在10-100之间!"</span>)</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">          queue.rightPush(num)</div><div class="line">        &#125;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        alert(<span class="string">"请输入一个整数!"</span>)</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"leftOut"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      queue.leftPop()</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"rightOut"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      queue.rightPop()</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"sortBtn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      queue.sortElements()</div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="预览-1"><a href="#预览-1" class="headerlink" title="预览"></a>预览</h2><p><a href="https://zy343134464.github.io/js-IFE2016/task19/task.html" target="_blank" rel="external">任务二</a></p>
+<h1 id="任务三"><a href="#任务三" class="headerlink" title="任务三"></a>任务三</h1><h2 id="任务目的-2"><a href="#任务目的-2" class="headerlink" title="任务目的"></a>任务目的</h2><p>实践JavaScript数组、字符串相关操作</p>
+<h2 id="任务描述-2"><a href="#任务描述-2" class="headerlink" title="任务描述"></a>任务描述</h2><p>基于任务18进行升级</p>
+<p>将新元素输入框从input改为textarea</p>
+<p>允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔</p>
+<p>增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查询词为ab或bc，则该内容需要标识</p>
+<h2 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h2><p>实现简单功能的同时，请仔细学习JavaScript基本语法、事件、DOM相关的知识</p>
+<p>请注意代码风格的整齐、优雅</p>
+<p>代码中含有必要的注释</p>
+<p>建议不使用任何第三方库、框架</p>
+<h2 id="参考资料-2"><a href="#参考资料-2" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.imooc.com/learn/36" target="_blank" rel="external">JavaScript入门篇</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="external">MDN JavaScript</a></p>
+<p><a href="http://v.youku.com/v_show/id_XNTM1NTQxMDMy.html" target="_blank" rel="external">归并排序算法可视化</a></p>
+<p><a href="http://v.youku.com/v_show/id_XNjIwNTEzMTA0.html?from=y1.2-1-176.3.3-2.1-1-1-2-0" target="_blank" rel="external">15种排序算法可视化展示</a></p>
+<h2 id="任务代码-2"><a href="#任务代码-2" class="headerlink" title="任务代码"></a>任务代码</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>IFE JavaScript Task 02<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">      <span class="selector-tag">button</span> &#123;</div><div class="line">        <span class="attribute">margin</span>:<span class="number">2px</span> <span class="number">4px</span>;</div><div class="line">        <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</div><div class="line">        <span class="attribute">background</span>: white;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-class">.numContent</span>&#123;</div><div class="line">        <span class="attribute">height</span>: <span class="number">40px</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-tag">span</span>&#123;</div><div class="line">        <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">        <span class="attribute">display</span>: inline-block;</div><div class="line">        <span class="attribute">text-align</span>: center;</div><div class="line">        <span class="attribute">color</span>: white;</div><div class="line">        <span class="attribute">background-color</span>: red;</div><div class="line">        <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">10px</span>;</div><div class="line">        <span class="attribute">padding-top</span>: <span class="number">10px</span>;</div><div class="line">        <span class="attribute">margin-right</span>: <span class="number">10px</span>;</div><div class="line">      &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"num"</span> <span class="attr">cols</span>=<span class="string">"40"</span> <span class="attr">rows</span>=<span class="string">"10"</span>&gt;</span>你好,大家好， 才是 真的哈哈、好啊<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"leftIn"</span>&gt;</span>左侧入<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rightIn"</span>&gt;</span>右侧入<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"leftOut"</span>&gt;</span>左侧出<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rightOut"</span>&gt;</span>右侧出<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"searchInput"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"searchBtn"</span>&gt;</span>查询<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"numContent"</span>&gt;</span></div><div class="line">    </div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="comment">//事件绑定函数，兼容浏览器差异</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">element, event, listener</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (element.addEventListener) &#123;</div><div class="line">        element.addEventListener(event, listener, <span class="literal">false</span>);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent) &#123;</div><div class="line">        element.attachEvent(<span class="string">"on"</span> + event, listener);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> &#123;</div><div class="line">        element[<span class="string">"on"</span> + event] = listener;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 复用id选择器</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//遍历数组的方法，针对数组中每一个元素执行fn函数，并将数组索引和元素作为参数传递</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">each</span>(<span class="params">arr, fn</span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> cur = <span class="number">0</span>; cur &lt; arr.length; cur++) &#123;</div><div class="line">        fn(arr[cur]);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 为numContent中的每个span绑定删除函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addDivDelEvent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> cur = <span class="number">0</span>; cur &lt; $(<span class="string">'numContent'</span>).childNodes.length; cur++) &#123;</div><div class="line">        <span class="comment">// 这里要使用闭包，否则永远绑定到指定span上的delete函数的cur永远等于跳出循环时的cur值(length)</span></div><div class="line">        addEvent($(<span class="string">'numContent'</span>).childNodes[cur], <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cur</span>) </span>&#123;</div><div class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> queue.deleteID(cur)</div><div class="line">          &#125;</div><div class="line">        &#125;(cur))</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 将输入的内容分割为数组</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">spiltInput</span>(<span class="params">text</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> inputArray = [];</div><div class="line">      inputArray = (text).split(<span class="regexp">/[,，;；、\s\n]+/</span>);</div><div class="line">      <span class="keyword">return</span> inputArray;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> queue = &#123;</div><div class="line">      <span class="attr">str</span>: [],</div><div class="line">      <span class="attr">paint</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> html = <span class="string">''</span>;</div><div class="line">        each(<span class="keyword">this</span>.str,<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</div><div class="line">          html += <span class="string">"&lt;span&gt;"</span>+item+<span class="string">"&lt;/span&gt;"</span></div><div class="line">        &#125;)</div><div class="line">        $(<span class="string">'numContent'</span>).innerHTML = html;</div><div class="line">        addDivDelEvent();</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">leftPush</span>: <span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> cur <span class="keyword">in</span> num)&#123;</div><div class="line">          <span class="keyword">this</span>.str.unshift(num[cur]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.paint();</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">rightPush</span>: <span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> cur <span class="keyword">in</span> num)&#123;</div><div class="line">          <span class="keyword">this</span>.str.push(num[cur]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.paint();</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">isEmpty</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.str.length == <span class="number">0</span>;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">leftPop</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.isEmpty()) &#123;</div><div class="line">          alert(<span class="keyword">this</span>.str.shift());</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">          alert(<span class="string">"队列已经是空的!"</span>);</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">rightPop</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.isEmpty()) &#123;</div><div class="line">          alert(<span class="keyword">this</span>.str.pop());</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">          alert(<span class="string">"队列已经是空的!"</span>);</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">deleteID</span>: <span class="function"><span class="keyword">function</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.str.splice(id, <span class="number">1</span>);</div><div class="line">        <span class="keyword">this</span>.paint();</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">searchNumContent</span>: <span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; $(<span class="string">'numContent'</span>).childNodes.length; i++) &#123;</div><div class="line">          $(<span class="string">'numContent'</span>).childNodes[i].style.color = <span class="string">"#FFFFFF"</span>;</div><div class="line">          $(<span class="string">'numContent'</span>).childNodes[i].style.background = <span class="string">"red"</span>;</div><div class="line">          <span class="keyword">if</span> ($(<span class="string">'numContent'</span>).childNodes[i].innerHTML.indexOf(num) != <span class="number">-1</span>) &#123;</div><div class="line">            $(<span class="string">'numContent'</span>).childNodes[i].style.color = <span class="string">"green"</span>;</div><div class="line">            $(<span class="string">'numContent'</span>).childNodes[i].style.background = <span class="string">"black"</span>;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 4个按钮分别绑定事件函数</span></div><div class="line">    addEvent($(<span class="string">"leftIn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> num = spiltInput($(<span class="string">'num'</span>).value.trim())</div><div class="line">      queue.leftPush(num)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"rightIn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> num = spiltInput($(<span class="string">'num'</span>).value.trim())</div><div class="line">      queue.rightPush(num)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"leftOut"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      queue.leftPop()</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"rightOut"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      queue.rightPop()</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"searchBtn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> num = $(<span class="string">"searchInput"</span>).value</div><div class="line">      queue.searchNumContent(num)</div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="预览-2"><a href="#预览-2" class="headerlink" title="预览"></a>预览</h2><p><a href="https://zy343134464.github.io/js-IFE2016/task20/task.html" target="_blank" rel="external">任务三</a></p>
+<h1 id="任务四"><a href="#任务四" class="headerlink" title="任务四"></a>任务四</h1><h2 id="任务目的-3"><a href="#任务目的-3" class="headerlink" title="任务目的"></a>任务目的</h2><p>学习与实践JavaScript的基本语法、语言特性</p>
+<p>练习使用JavaScript实现拖拽功能</p>
+<h2 id="任务描述-3"><a href="#任务描述-3" class="headerlink" title="任务描述"></a>任务描述</h2><p>基于任务20，将任务20的代码进行抽象、封装，然后在此基础上实现如图中的两个需求：Tag输入和兴趣爱好输入</p>
+<p>如示例图上方，实现一个tag输入框</p>
+<p>要求遇到用户输入空格，逗号，回车时，都自动把当前输入的内容作为一个tag放在输入框下面</p>
+<p>Tag不能有重复的，遇到重复输入的Tag，自动忽视</p>
+<p>每个Tag请做trim处理</p>
+<p>最多允许10个Tag，多于10个时，按照录入的先后顺序，把最前面的删掉</p>
+<p>当鼠标悬停在tag上时，tag前增加删除二字，点击tag可删除</p>
+<p>如示例图下方，实现一个兴趣爱好输入的功能</p>
+<p>通过一个Textarea进行兴趣爱好的输入，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为间隔</p>
+<p>当点击“确认兴趣爱好”的按钮时，将textarea中的输入按照你设定的间隔符，拆解成一个个的爱好，显示在textarea下方</p>
+<p>爱好不能重复，所以在下方呈现前，需要做一个去重</p>
+<p>每个爱好内容需要做trim处理</p>
+<p>最多允许10个兴趣爱好，多于10个时，按照录入的先后顺序，把最前面的删掉</p>
+<h2 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h2><p>实现简单功能的同时，请仔细学习JavaScript基本语法、事件、DOM相关的知识</p>
+<p>示例图仅为参考，不需要完全一致</p>
+<p>请注意代码风格的整齐、优雅</p>
+<p>代码中含有必要的注释</p>
+<p>建议不使用任何第三方库、框架</p>
+<h2 id="参考资料-3"><a href="#参考资料-3" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.imooc.com/learn/36" target="_blank" rel="external">JavaScript入门篇</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="external">MDN JavaScript</a></p>
+<h2 id="任务代码-3"><a href="#任务代码-3" class="headerlink" title="任务代码"></a>任务代码</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>IFE JavaScript Task 02<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">      <span class="selector-tag">button</span> &#123;</div><div class="line">        <span class="attribute">margin</span>:<span class="number">2px</span> <span class="number">4px</span>;</div><div class="line">        <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</div><div class="line">        <span class="attribute">background</span>: white;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-id">#numContent</span>,</div><div class="line">      <span class="selector-id">#tagContent</span>&#123;</div><div class="line">        <span class="attribute">margin-top</span>: <span class="number">20px</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-tag">textarea</span>&#123;</div><div class="line">        <span class="attribute">margin-top</span>: <span class="number">20px</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-tag">span</span>&#123;</div><div class="line">        <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">        <span class="attribute">display</span>: inline-block;</div><div class="line">        <span class="attribute">text-align</span>: center;</div><div class="line">        <span class="attribute">color</span>: white;</div><div class="line">        <span class="attribute">background-color</span>: red;</div><div class="line">        <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">10px</span>;</div><div class="line">        <span class="attribute">padding-top</span>: <span class="number">10px</span>;</div><div class="line">        <span class="attribute">margin-right</span>: <span class="number">10px</span>;</div><div class="line">      &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>Tag: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"tagInput"</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tagContent"</span>&gt;</span></div><div class="line">    </div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"num"</span> <span class="attr">cols</span>=<span class="string">"40"</span> <span class="attr">rows</span>=<span class="string">"10"</span>&gt;</span>你好,大家好， 才是 真的哈哈、好啊<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"sureBtn"</span>&gt;</span>确认兴趣按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"numContent"</span>&gt;</span></div><div class="line">    </div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="comment">//事件绑定函数，兼容浏览器差异</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">element, event, listener</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (element.addEventListener) &#123;</div><div class="line">        element.addEventListener(event, listener, <span class="literal">false</span>);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent) &#123;</div><div class="line">        element.attachEvent(<span class="string">"on"</span> + event, listener);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> &#123;</div><div class="line">        element[<span class="string">"on"</span> + event] = listener;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 复用id选择器</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//遍历数组的方法，针对数组中每一个元素执行fn函数，并将数组索引和元素作为参数传递</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">each</span>(<span class="params">arr, fn</span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> cur = <span class="number">0</span>; cur &lt; arr.length; cur++) &#123;</div><div class="line">        fn(arr[cur]);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 为numContent中的每个span绑定删除函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addDivDelEvent</span>(<span class="params">Queue, container</span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(container.childNodes)</div><div class="line">      <span class="keyword">var</span> temp = []</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> cur = <span class="number">0</span>; cur &lt; container.childNodes.length; cur++) &#123;</div><div class="line">        temp.push(container.childNodes[cur].innerHTML);</div><div class="line">        <span class="comment">// 这里要使用闭包，否则永远绑定到指定span上的delete函数的cur永远等于跳出循环时的cur值(length)</span></div><div class="line">        addEvent(container.childNodes[cur], <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cur</span>) </span>&#123;</div><div class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> Queue.deleteID(cur)</div><div class="line">          &#125;</div><div class="line">        &#125;(cur))</div><div class="line">        addEvent(container.childNodes[cur], <span class="string">"mouseover"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cur</span>) </span>&#123;</div><div class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            container.childNodes[cur].style.background = <span class="string">"green"</span>;</div><div class="line">            container.childNodes[cur].innerHTML = <span class="string">"删除"</span> + temp[cur] + <span class="string">"?"</span>;</div><div class="line">          &#125;</div><div class="line">        &#125;(cur))</div><div class="line">        addEvent(container.childNodes[cur], <span class="string">"mouseout"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">cur</span>) </span>&#123;</div><div class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            container.childNodes[cur].style.background = <span class="string">"red"</span>;</div><div class="line">            container.childNodes[cur].innerHTML = temp[cur];</div><div class="line">          &#125;</div><div class="line">        &#125;(cur))</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 将输入的内容分割为数组</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">spiltInput</span>(<span class="params">text</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> inputArray = [];</div><div class="line">      inputArray = (text).split(<span class="regexp">/[,，;；、\s\n]+/</span>);</div><div class="line">      <span class="keyword">return</span> inputArray;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Queue</span>(<span class="params">container,isDelDiv</span>)</span>&#123;</div><div class="line">      <span class="keyword">this</span>.str = []</div><div class="line">      <span class="keyword">this</span>.paint = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> html = <span class="string">''</span>;</div><div class="line">        each(<span class="keyword">this</span>.str,<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</div><div class="line">          html += <span class="string">"&lt;span&gt;"</span>+item+<span class="string">"&lt;/span&gt;"</span></div><div class="line">        &#125;)</div><div class="line">        container.innerHTML = html;</div><div class="line">        <span class="keyword">if</span>(isDelDiv)&#123;</div><div class="line">          addDivDelEvent(<span class="keyword">this</span>,container)</div><div class="line">        &#125;;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">this</span>.leftPush = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (obj.length) &#123;</div><div class="line">          <span class="keyword">this</span>.str.unshift(obj);</div><div class="line">          <span class="keyword">this</span>.paint();</div><div class="line">        &#125;</div><div class="line">      &#125;  </div><div class="line">      <span class="keyword">this</span>.rightPush = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">          <span class="keyword">if</span> (obj.length) &#123;</div><div class="line">            <span class="keyword">this</span>.str.push(obj);</div><div class="line">            <span class="keyword">this</span>.paint();</div><div class="line">          &#125;</div><div class="line">      &#125;    </div><div class="line">      <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">          <span class="keyword">return</span> (<span class="keyword">this</span>.str.length == <span class="number">0</span>);</div><div class="line">      &#125;   </div><div class="line">      <span class="keyword">this</span>.leftPop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">          <span class="keyword">if</span> (!<span class="keyword">this</span>.isEmpty()) &#123;</div><div class="line">            <span class="keyword">this</span>.str.shift();</div><div class="line">            <span class="keyword">this</span>.paint();</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">else</span> &#123;</div><div class="line">            alert(<span class="string">"The queue is already empty!"</span>);</div><div class="line">          &#125;</div><div class="line">      &#125;   </div><div class="line">      <span class="keyword">this</span>.rightPop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">          <span class="keyword">if</span> (!<span class="keyword">this</span>.isEmpty()) &#123;</div><div class="line">            <span class="keyword">this</span>.str.pop();</div><div class="line">            <span class="keyword">this</span>.paint();</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">else</span> &#123;</div><div class="line">            alert(<span class="string">"The queue is already empty!"</span>);</div><div class="line">          &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">this</span>.deleteID = <span class="function"><span class="keyword">function</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.str.splice(id, <span class="number">1</span>);</div><div class="line">        <span class="keyword">this</span>.paint();</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//实例1：Tag;</span></div><div class="line">    <span class="keyword">var</span> tagQueue = <span class="keyword">new</span> Queue($(<span class="string">'tagContent'</span>), <span class="literal">true</span>);</div><div class="line"></div><div class="line">    <span class="comment">//实例2：不用给div增加删除事件</span></div><div class="line">    <span class="keyword">var</span> queue = <span class="keyword">new</span> Queue($(<span class="string">'numContent'</span>), <span class="literal">false</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 确认按钮分别绑定事件函数</span></div><div class="line">    addEvent($(<span class="string">"sureBtn"</span>),<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> num = spiltInput($(<span class="string">'num'</span>).value.trim())</div><div class="line">      each(num, <span class="function"><span class="keyword">function</span>(<span class="params">item, index</span>) </span>&#123;</div><div class="line">       <span class="keyword">if</span> (queue.str.indexOf(item) === <span class="number">-1</span>) &#123;</div><div class="line">          queue.rightPush(item);</div><div class="line">          <span class="keyword">if</span> (queue.str.length &gt; <span class="number">10</span>) &#123;</div><div class="line">            queue.leftPop();</div><div class="line">          &#125;</div><div class="line">        &#125; </div><div class="line">      &#125;)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    addEvent($(<span class="string">"tagInput"</span>),<span class="string">'keyup'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">      <span class="keyword">if</span> (<span class="regexp">/[,，;；、\s\n]+/</span>.test($(<span class="string">"tagInput"</span>).value) || e.keyCode ===<span class="number">13</span>) &#123;</div><div class="line">        <span class="keyword">var</span> tagInput = spiltInput($(<span class="string">'tagInput'</span>).value.trim())</div><div class="line">        <span class="keyword">var</span> data = tagInput[<span class="number">0</span>]</div><div class="line">        <span class="keyword">if</span> (tagQueue.str.indexOf(data) === <span class="number">-1</span>) &#123;</div><div class="line">          tagQueue.rightPush(data)</div><div class="line">          <span class="keyword">if</span> (tagQueue.str.length &gt; <span class="number">10</span>) &#123;</div><div class="line">            tagQueue.leftPop()</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">        $(<span class="string">"tagInput"</span>).value = <span class="string">""</span>;</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="预览-3"><a href="#预览-3" class="headerlink" title="预览"></a>预览</h2><p><a href="https://zy343134464.github.io/js-IFE2016/task21/task.html" target="_blank" rel="external">任务四</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/06/2018.9.6/" rel="next" title="【实战】速卖通产品页列表nodejs爬虫">
+                <i class="fa fa-chevron-left"></i> 【实战】速卖通产品页列表nodejs爬虫
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/14/2018.9.14/" rel="prev" title="【实战】亚马逊产品详情页nodejs爬虫">
+                【实战】亚马逊产品详情页nodejs爬虫 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Zhang Yang" />
+          <p class="site-author-name" itemprop="name">Zhang Yang</p>
+           
+              <p class="site-description motion-element" itemprop="description">Learning and Doing</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">44</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zy343134464" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:zy343134464@163.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-phone"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-yang-72-78-25" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/153127314" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rubylouvre/" title="司徒正美" target="_blank">司徒正美</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.evanyou.me/" title="尤小溪" target="_blank">尤小溪</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://caibaojian.com/lifesinger" title="玉伯" target="_blank">玉伯</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://winter-cn.cnblogs.com/" title="winter" target="_blank">winter</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#任务一"><span class="nav-number">1.</span> <span class="nav-text">任务一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#任务目的"><span class="nav-number">1.1.</span> <span class="nav-text">任务目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务描述"><span class="nav-number">1.2.</span> <span class="nav-text">任务描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">1.3.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.4.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务代码"><span class="nav-number">1.5.</span> <span class="nav-text">任务代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预览"><span class="nav-number">1.6.</span> <span class="nav-text">预览</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务二"><span class="nav-number">2.</span> <span class="nav-text">任务二</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#任务目的-1"><span class="nav-number">2.1.</span> <span class="nav-text">任务目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务描述-1"><span class="nav-number">2.2.</span> <span class="nav-text">任务描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项-1"><span class="nav-number">2.3.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料-1"><span class="nav-number">2.4.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务代码-1"><span class="nav-number">2.5.</span> <span class="nav-text">任务代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预览-1"><span class="nav-number">2.6.</span> <span class="nav-text">预览</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务三"><span class="nav-number">3.</span> <span class="nav-text">任务三</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#任务目的-2"><span class="nav-number">3.1.</span> <span class="nav-text">任务目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务描述-2"><span class="nav-number">3.2.</span> <span class="nav-text">任务描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项-2"><span class="nav-number">3.3.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料-2"><span class="nav-number">3.4.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务代码-2"><span class="nav-number">3.5.</span> <span class="nav-text">任务代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预览-2"><span class="nav-number">3.6.</span> <span class="nav-text">预览</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务四"><span class="nav-number">4.</span> <span class="nav-text">任务四</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#任务目的-3"><span class="nav-number">4.1.</span> <span class="nav-text">任务目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务描述-3"><span class="nav-number">4.2.</span> <span class="nav-text">任务描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项-3"><span class="nav-number">4.3.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料-3"><span class="nav-number">4.4.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务代码-3"><span class="nav-number">4.5.</span> <span class="nav-text">任务代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预览-3"><span class="nav-number">4.6.</span> <span class="nav-text">预览</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Yang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
