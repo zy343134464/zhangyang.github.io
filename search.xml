@@ -54,7 +54,7 @@
     <entry>
       <title><![CDATA[前端调试]]></title>
       <url>%2F2018%2F08%2F26%2F2018.8.26%2F</url>
-      <content type="text"><![CDATA[给我一首歌时间]]></content>
+      <content type="text"><![CDATA[bug是什么 程序错误,是程序设计中的术语，是指在软件运行中因为程序本身有错误而造成的功能不正常、死机、数据丢失、非正常中断等现象 HTML的bug解决方法:用 W3C Validator 可以验证语法;用 WebStorm 可以避免错误 1&lt;img scr="/1.png" /&gt; CSS的bug解决方法:border 大法开发者工具 1234.selector &#123; color: #fff; // 注释&#125; JS调试举例实战中会发现bug,console.log打印你认为对,进行修改 JS常见报错确定你的代码运行 用 WebStorm 可以避免拼写错误 用 console.log 或者 console.assert 验证]]></content>
     </entry>
 
     
