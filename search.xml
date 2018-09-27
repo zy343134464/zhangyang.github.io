@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[【总结】2018年9月份个人总结]]></title>
+      <url>%2F2018%2F09%2F30%2F2018.9.30%2F</url>
+      <content type="text"><![CDATA[我在生]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[【实战】封装获取url的querystring参数]]></title>
       <url>%2F2018%2F09%2F28%2F2018.9.28%2F</url>
       <content type="text"><![CDATA[需求 1234http://xxx.com/index.html?a=1$.bom.search('a') $.bom.search('a', 'xxx')http://xxx.com/index.html?a=xxx 源代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546window.$ = function()&#123; let array = [] return array&#125;$.bom = &#123; openAtCenter: function(width, height, url)&#123; window.open(url, '_blank', ` width=$&#123;width&#125;px,height=$&#123;height&#125;px, screenX=$&#123;screen.width/2 - width/2&#125;px, screenY=$&#123;screen.height/2 - height/2&#125;px `) &#125;, search: function(name, value)&#123; let searchAll = function()&#123; let result = &#123;&#125; let search = window.location.search // 去掉? if(search[0] === '?')&#123; search = search.slice(1) &#125; // 用 &amp; 分隔成数组 let searchArray = search.split('&amp;') // 遍历数组 for(var i =0;i&lt;searchArray.length; i++)&#123; let parts = searchArray[i].split('=') result[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1] || '') &#125; return result &#125; let result = searchAll() if(value === undefined)&#123; return result[name] &#125;else&#123; if(result[name] === undefined)&#123; location.search += `&amp;$&#123;encodeURIComponent(name)&#125;=$&#123;encodeURIComponent(value)&#125;` &#125;else&#123; result[name] = encodeURIComponent(value) let newSearch = '?' for(let key in result)&#123; newSearch += `$&#123;encodeURIComponent(key)&#125;=$&#123;encodeURIComponent(result[key])&#125;&amp;` &#125; location.search = newSearch &#125; &#125; &#125;&#125;]]></content>
