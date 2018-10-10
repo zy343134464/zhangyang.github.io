@@ -89,16 +89,19 @@
 
 
 
-<meta name="description" content="join应用12var array = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]array.join(&apos;-&apos;) // 结果是&apos;a-b-c&apos;">
+<meta name="description" content="join应用12var array = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]array.join(&apos;-&apos;) // 结果是&apos;a-b-c&apos;
+源代码实现">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES5数组扩展方法源代码">
 <meta property="og:url" content="http://yoursite.com/2018/06/19/2018.6.19/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="join应用12var array = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]array.join(&apos;-&apos;) // 结果是&apos;a-b-c&apos;">
-<meta property="og:updated_time" content="2018-06-19T14:44:16.000Z">
+<meta property="og:description" content="join应用12var array = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]array.join(&apos;-&apos;) // 结果是&apos;a-b-c&apos;
+源代码实现">
+<meta property="og:updated_time" content="2018-10-10T13:02:11.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES5数组扩展方法源代码">
-<meta name="twitter:description" content="join应用12var array = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]array.join(&apos;-&apos;) // 结果是&apos;a-b-c&apos;">
+<meta name="twitter:description" content="join应用12var array = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]array.join(&apos;-&apos;) // 结果是&apos;a-b-c&apos;
+源代码实现">
 
 
 
@@ -401,8 +404,8 @@
 
       
         <h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var<span class="built_in"> array </span>= ['a','b','c']</div><div class="line">array.join('-') // 结果是'a-b-c'</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="源代码实现"><a href="#源代码实现" class="headerlink" title="源代码实现"></a>源代码实现</h2><p>1.array.join是Array.prototype.join对应的函数</p>
+<h2 id="源代码实现"><a href="#源代码实现" class="headerlink" title="源代码实现"></a>源代码实现</h2><a id="more"></a>
+<p>1.array.join是Array.prototype.join对应的函数</p>
 <p>2.array.join(‘-‘)等价于array.join.call(array,’-‘)</p>
 <p>3.join函数的this和arguments[0]可以得到array和’-‘两个值</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.join = <span class="function"><span class="keyword">function</span>(<span class="params">char</span>)</span>&#123;</div><div class="line">  <span class="keyword">let</span> result = <span class="keyword">this</span>[<span class="number">0</span>] || <span class="string">''</span></div><div class="line">  <span class="keyword">let</span> length = <span class="keyword">this</span>.length</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">1</span>; i&lt; length; i++)&#123;</div><div class="line">      result += char + <span class="keyword">this</span>[i]</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result</div><div class="line">&#125;</div></pre></td></tr></table></figure>

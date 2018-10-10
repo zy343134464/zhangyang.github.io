@@ -89,16 +89,19 @@
 
 
 
-<meta name="description" content="ES6的简介ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015">
+<meta name="description" content="ES6的简介ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015
+Babel转码器Babel 是一个广泛使用的 ES6 转码器，可以将 ES6 代码转为 ES5 代码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6核心">
 <meta property="og:url" content="http://yoursite.com/2017/09/05/es6/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="ES6的简介ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015">
-<meta property="og:updated_time" content="2018-07-19T12:28:01.651Z">
+<meta property="og:description" content="ES6的简介ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015
+Babel转码器Babel 是一个广泛使用的 ES6 转码器，可以将 ES6 代码转为 ES5 代码">
+<meta property="og:updated_time" content="2018-10-10T13:07:07.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6核心">
-<meta name="twitter:description" content="ES6的简介ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015">
+<meta name="twitter:description" content="ES6的简介ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015
+Babel转码器Babel 是一个广泛使用的 ES6 转码器，可以将 ES6 代码转为 ES5 代码">
 
 
 
@@ -400,9 +403,8 @@
       
 
       
-        <h1 id="ES6的简介"><a href="#ES6的简介" class="headerlink" title="ES6的简介"></a>ES6的简介</h1><p>ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015<br><a id="more"></a></p>
-<h2 id="Babel转码器"><a href="#Babel转码器" class="headerlink" title="Babel转码器"></a>Babel转码器</h2><p>Babel 是一个广泛使用的 ES6 转码器，可以将 ES6 代码转为 ES5 代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 转码前</span></div><div class="line">input.map(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="comment">// 转码后</span></div><div class="line">input.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> item + <span class="number">1</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+        <h1 id="ES6的简介"><a href="#ES6的简介" class="headerlink" title="ES6的简介"></a>ES6的简介</h1><p>ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015</p>
+<h2 id="Babel转码器"><a href="#Babel转码器" class="headerlink" title="Babel转码器"></a>Babel转码器</h2><p>Babel 是一个广泛使用的 ES6 转码器，可以将 ES6 代码转为 ES5 代码<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 转码前</span></div><div class="line">input.map(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="comment">// 转码后</span></div><div class="line">input.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> item + <span class="number">1</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <h1 id="let和const命令"><a href="#let和const命令" class="headerlink" title="let和const命令"></a>let和const命令</h1><h2 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h2><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效</p>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="keyword">let</span> a = <span class="number">10</span>;</div><div class="line">  <span class="keyword">var</span> b = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">a <span class="comment">// ReferenceError: a is not defined.</span></div><div class="line">b <span class="comment">// 1</span></div></pre></td></tr></table></figure>
 <p>使用let，声明的变量仅在块级作用域内有效,解决如下代码问题</p>

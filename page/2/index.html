@@ -405,7 +405,10 @@
 
       
         
-          <p>生活不止眼前的苟且,还有诗与远方的田野<br>
+          <p>生活不止眼前的苟且,还有诗与远方的田野</p>
+<p>时间的逝去总是让人悲叹，尤其是当你虚度时光之后，你事后的回眸才会发现时光给了你迎头痛击</p>
+<p>2018年鬼知道我经历了什么，无法挽回，唯有回味、总结，但对未来的憧憬我一直在路上</p>
+<p>没想到已经8月份已经过去,感觉时间要炸了<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/31/2018.8.31/#more" rel="contents">
@@ -552,7 +555,8 @@
 
       
         
-          <h1 id="bug是什么"><a href="#bug是什么" class="headerlink" title="bug是什么"></a>bug是什么</h1>
+          <h1 id="bug是什么"><a href="#bug是什么" class="headerlink" title="bug是什么"></a>bug是什么</h1><p>程序错误,是程序设计中的术语，是指在软件运行中因为程序本身有错误而造成的功能不正常、死机、数据丢失、非正常中断等现象</p>
+<h1 id="HTML的bug"><a href="#HTML的bug" class="headerlink" title="HTML的bug"></a>HTML的bug</h1><p>解决方法:用 W3C Validator 可以验证语法;用 WebStorm 可以避免错误<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/26/2018.8.26/#more" rel="contents">
@@ -846,7 +850,8 @@
 
       
         
-          <h1 id="JS-assert"><a href="#JS-assert" class="headerlink" title="JS assert"></a>JS assert</h1><p>自学常用方法,assert来猜自己到底对不对,我错在哪<br>
+          <h1 id="JS-assert"><a href="#JS-assert" class="headerlink" title="JS assert"></a>JS assert</h1><p>自学常用方法,assert来猜自己到底对不对,我错在哪</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function assert(value, <span class="keyword">description</span>)&#123;</div><div class="line">  <span class="keyword">description</span> = <span class="keyword">description</span> || <span class="string">''</span></div><div class="line">  <span class="keyword">if</span>(value === <span class="keyword">true</span>)&#123;</div><div class="line">    console.info(<span class="string">'[测试通过]'</span>+ <span class="keyword">description</span>)</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    console.error(<span class="string">'[测试不通过]'</span> + <span class="keyword">description</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">assert(<span class="string">'1\n2'</span>.length===<span class="number">3</span>, <span class="string">'\\n占一个字符'</span>)</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/19/2018.8.19/#more" rel="contents">
@@ -994,6 +999,8 @@
       
         
           <p>兼容手机、电脑、ipad、宽屏电脑四种设备的简单响应式页面</p>
+<h1 id="设计图"><a href="#设计图" class="headerlink" title="设计图"></a>设计图</h1><p><img src="https://jscode.me/uploads/default/original/2X/e/e1fdde35d7ed6a9c61829804d33aaffff9e75e9a.jpg" alt="image"></p>
+<h1 id="HTML部分"><a href="#HTML部分" class="headerlink" title="HTML部分"></a>HTML部分</h1>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/16/2018.8.16/#more" rel="contents">
@@ -1140,7 +1147,7 @@
 
       
         
-          <h1 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h1><h2 id="href"><a href="#href" class="headerlink" title="href"></a>href</h2>
+          <h1 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h1><h2 id="href"><a href="#href" class="headerlink" title="href"></a>href</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 相对路径</span></div><div class="line">&lt;<span class="selector-tag">a</span> href=<span class="string">"./xxx"</span>&gt;点击&lt;/a&gt;</div><div class="line"></div><div class="line"><span class="comment">// 绝对路径</span></div><div class="line">&lt;<span class="selector-tag">a</span> href=<span class="string">"www.baidu.com"</span>&gt;点击&lt;/a&gt;</div><div class="line"></div><div class="line"><span class="comment">// 有协议路径</span></div><div class="line">&lt;<span class="selector-tag">a</span> href=<span class="string">"https://www.baidu.com"</span>&gt;点击&lt;/a&gt;</div><div class="line"></div><div class="line"><span class="comment">// 无协议路径(跟随文件所在协议)</span></div><div class="line">&lt;<span class="selector-tag">a</span> href=<span class="string">"//www.baidu.com"</span>&gt;点击&lt;/a&gt;</div><div class="line"></div><div class="line"><span class="comment">// javascipt: 伪协议</span></div><div class="line">&lt;<span class="selector-tag">a</span> href=<span class="string">"javascript:;"</span>&gt;点击&lt;/a&gt;</div><div class="line"></div><div class="line"><span class="comment">// 锚点（fragment）</span></div><div class="line">&lt;<span class="selector-tag">a</span> href=<span class="string">"#xxx"</span>&gt;点击&lt;/a&gt;</div><div class="line">&lt;<span class="selector-tag">div</span> id=<span class="string">"xxx"</span>&gt;<span class="number">2</span>&lt;/div&gt;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/13/2018.8.13/#more" rel="contents">
@@ -1429,7 +1436,8 @@
 
       
         
-          <h1 id="正则表达式简介"><a href="#正则表达式简介" class="headerlink" title="正则表达式简介"></a>正则表达式简介</h1><p>正则表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串<br>
+          <h1 id="正则表达式简介"><a href="#正则表达式简介" class="headerlink" title="正则表达式简介"></a>正则表达式简介</h1><p>正则表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串</p>
+<h1 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h1><p>新建正则表达式有两种方法。一种是使用字面量，以斜杠表示开始和结束;另一种是使用RegExp构造函数<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/06/2018.8.6/#more" rel="contents">
@@ -1720,7 +1728,9 @@
       
         
           <p>人生何必如初见,但求两看相不厌</p>
-<p>7月份的工作量总体还好。总算熬过了醉人的6月。开始有了大块头的个人时间,恰好可以好好地重构以前做的项目<br>
+<p>7月份的工作量总体还好。总算熬过了醉人的6月。开始有了大块头的个人时间,恰好可以好好地重构以前做的项目</p>
+<p>接触了node.js及php,遇到了几个坑爹的bug,然后一一解决对后端有了进一步的了解及学习</p>
+<p>希望以后有机会可以接触实际新项目,因为，我真切地感受到了，有实际项目练手确实比自己瞎折腾快上十倍都不算夸张<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/31/2018.7summary/#more" rel="contents">

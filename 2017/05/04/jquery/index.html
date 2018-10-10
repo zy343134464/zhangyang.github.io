@@ -89,12 +89,16 @@
 
 
 
-<meta name="description" content="jQuery本质和隐式迭代本质">
+<meta name="description" content="jQuery本质和隐式迭代本质
+Jquery对象本质“可以看成”是一个包含一个dom数组和所有Jquery方法的容器（方法在所有jq对象共享的jq原型属性prototype中，jq对象本质是一个“类数组”）
+每当我们调用选择器方法查找dom树里的元素时，其实就是把找到的dom元素存入一个JQ对象里的dom数组中，然后再把这个JQ对象返回">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery">
 <meta property="og:url" content="http://yoursite.com/2017/05/04/jquery/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="jQuery本质和隐式迭代本质">
+<meta property="og:description" content="jQuery本质和隐式迭代本质
+Jquery对象本质“可以看成”是一个包含一个dom数组和所有Jquery方法的容器（方法在所有jq对象共享的jq原型属性prototype中，jq对象本质是一个“类数组”）
+每当我们调用选择器方法查找dom树里的元素时，其实就是把找到的dom元素存入一个JQ对象里的dom数组中，然后再把这个JQ对象返回">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-0.png">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-1.png">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-2.png">
@@ -128,10 +132,12 @@
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-30.png">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-31.gif">
 <meta property="og:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-32.gif">
-<meta property="og:updated_time" content="2018-07-01T06:42:06.000Z">
+<meta property="og:updated_time" content="2018-10-10T13:08:10.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery">
-<meta name="twitter:description" content="jQuery本质和隐式迭代本质">
+<meta name="twitter:description" content="jQuery本质和隐式迭代本质
+Jquery对象本质“可以看成”是一个包含一个dom数组和所有Jquery方法的容器（方法在所有jq对象共享的jq原型属性prototype中，jq对象本质是一个“类数组”）
+每当我们调用选择器方法查找dom树里的元素时，其实就是把找到的dom元素存入一个JQ对象里的dom数组中，然后再把这个JQ对象返回">
 <meta name="twitter:image" content="http://oqev4hx8u.bkt.clouddn.com/jquery-0.png">
 
 
@@ -434,11 +440,11 @@
       
 
       
-        <h1 id="jQuery本质和隐式迭代"><a href="#jQuery本质和隐式迭代" class="headerlink" title="jQuery本质和隐式迭代"></a>jQuery本质和隐式迭代</h1><h2 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h2><a id="more"></a>
-<ul>
+        <h1 id="jQuery本质和隐式迭代"><a href="#jQuery本质和隐式迭代" class="headerlink" title="jQuery本质和隐式迭代"></a>jQuery本质和隐式迭代</h1><h2 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h2><ul>
 <li>Jquery对象本质“可以看成”是一个包含一个dom数组和所有Jquery方法的容器（方法在所有jq对象共享的jq原型属性prototype中，jq对象本质是一个“类数组”）</li>
 <li>每当我们调用选择器方法查找dom树里的元素时，其实就是把找到的dom元素存入一个JQ对象里的dom数组中，然后再把这个JQ对象返回</li>
 </ul>
+<a id="more"></a>
 <h2 id="隐式迭代"><a href="#隐式迭代" class="headerlink" title="隐式迭代"></a>隐式迭代</h2><ul>
 <li>当我们调用Jquery方法时(如 html()),jq方法会遍历内部dom数组,并调用每个dom元素的对应的dom属性或方法(如innerHTML),完成操作</li>
 </ul>

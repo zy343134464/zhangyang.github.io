@@ -90,18 +90,30 @@
 
 
 <meta name="description" content="模块化的写法
-一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块">
+一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块
+
+原始写法
+只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块
+缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模块化基础">
 <meta property="og:url" content="http://yoursite.com/2017/06/12/modular/index.html">
 <meta property="og:site_name" content="Learning and Doing">
 <meta property="og:description" content="模块化的写法
-一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块">
-<meta property="og:updated_time" content="2018-06-30T17:14:44.000Z">
+一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块
+
+原始写法
+只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块
+缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系">
+<meta property="og:updated_time" content="2018-10-10T13:08:33.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模块化基础">
 <meta name="twitter:description" content="模块化的写法
-一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块">
+一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块
+
+原始写法
+只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块
+缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系">
 
 
 
@@ -404,11 +416,13 @@
 
       
         <h1 id="模块化的写法"><a href="#模块化的写法" class="headerlink" title="模块化的写法"></a>模块化的写法</h1><ul>
-<li>一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块<a id="more"></a>
-<h2 id="原始写法"><a href="#原始写法" class="headerlink" title="原始写法"></a>原始写法</h2></li>
+<li>一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块</li>
+</ul>
+<h2 id="原始写法"><a href="#原始写法" class="headerlink" title="原始写法"></a>原始写法</h2><ul>
 <li>只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块</li>
 <li>缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系</li>
 </ul>
+<a id="more"></a>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 函数m1()和m2()，组成一个模块。使用的时候，直接调用就行了</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  statement</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  statement</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="对象写法"><a href="#对象写法" class="headerlink" title="对象写法"></a>对象写法</h2><ul>
 <li>为了解决上面的缺点，可以把模块写成一个对象，所有的模块成员都放到这个对象里面</li>

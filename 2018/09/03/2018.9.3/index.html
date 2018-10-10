@@ -89,16 +89,19 @@
 
 
 
-<meta name="description" content="任务一任务目的">
+<meta name="description" content="任务一任务目的JavaScript初体验
+初步明白JavaScript的简单基本语法，如变量、函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【实战】IFE的JavaScript编码">
 <meta property="og:url" content="http://yoursite.com/2018/09/03/2018.9.3/index.html">
 <meta property="og:site_name" content="Learning and Doing">
-<meta property="og:description" content="任务一任务目的">
-<meta property="og:updated_time" content="2018-09-16T06:04:03.602Z">
+<meta property="og:description" content="任务一任务目的JavaScript初体验
+初步明白JavaScript的简单基本语法，如变量、函数">
+<meta property="og:updated_time" content="2018-10-10T13:05:49.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【实战】IFE的JavaScript编码">
-<meta name="twitter:description" content="任务一任务目的">
+<meta name="twitter:description" content="任务一任务目的JavaScript初体验
+初步明白JavaScript的简单基本语法，如变量、函数">
 
 
 
@@ -400,10 +403,8 @@
       
 
       
-        <h1 id="任务一"><a href="#任务一" class="headerlink" title="任务一"></a>任务一</h1><h2 id="任务目的"><a href="#任务目的" class="headerlink" title="任务目的"></a>任务目的</h2><a id="more"></a>
-<p>JavaScript初体验</p>
-<p>初步明白JavaScript的简单基本语法，如变量、函数</p>
-<p>初步了解JavaScript的事件是什么</p>
+        <h1 id="任务一"><a href="#任务一" class="headerlink" title="任务一"></a>任务一</h1><h2 id="任务目的"><a href="#任务目的" class="headerlink" title="任务目的"></a>任务目的</h2><p>JavaScript初体验</p>
+<p>初步明白JavaScript的简单基本语法，如变量、函数<br><a id="more"></a><br>初步了解JavaScript的事件是什么</p>
 <p>初步了解JavaScript中的DOM是什么</p>
 <h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><p>用户可以在输入框中输入任何内容，点击“确认填写”按钮后，用户输入的内容会显示在“您输入的值是”文字的右边</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>IFE JavaScript Task 01<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>请输入北京今天空气质量：<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"aqi-input"</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"button"</span>&gt;</span>确认填写<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>您输入的值是：<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"aqi-display"</span>&gt;</span>尚无录入<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></span></div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="comment">/*	</span></div><div class="line">  在注释下方写下代码</div><div class="line">  给按钮button绑定一个点击事件</div><div class="line">  在事件处理函数中</div><div class="line">  获取aqi-input输入的值，并显示在aqi-display中</div><div class="line">  */</div><div class="line"></div><div class="line">&#125;)();</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>

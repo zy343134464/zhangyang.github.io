@@ -90,18 +90,18 @@
 
 
 <meta name="description" content="前后端分离一个页面分为两部分，浏览器上面的工作交给前端做，服务器上面的工作交给后端做
-页面开发流程">
+页面开发流程浏览器第一次加载的页面只是一个占位符">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端MVC设计模式">
 <meta property="og:url" content="http://yoursite.com/2018/06/07/2018.6.7/index.html">
 <meta property="og:site_name" content="Learning and Doing">
 <meta property="og:description" content="前后端分离一个页面分为两部分，浏览器上面的工作交给前端做，服务器上面的工作交给后端做
-页面开发流程">
-<meta property="og:updated_time" content="2018-06-07T13:27:00.000Z">
+页面开发流程浏览器第一次加载的页面只是一个占位符">
+<meta property="og:updated_time" content="2018-10-10T13:02:35.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端MVC设计模式">
 <meta name="twitter:description" content="前后端分离一个页面分为两部分，浏览器上面的工作交给前端做，服务器上面的工作交给后端做
-页面开发流程">
+页面开发流程浏览器第一次加载的页面只是一个占位符">
 
 
 
@@ -404,8 +404,8 @@
 
       
         <h1 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h1><p>一个页面分为两部分，浏览器上面的工作交给前端做，服务器上面的工作交给后端做</p>
-<h1 id="页面开发流程"><a href="#页面开发流程" class="headerlink" title="页面开发流程"></a>页面开发流程</h1><a id="more"></a>
-<h2 id="浏览器第一次加载的页面只是一个占位符"><a href="#浏览器第一次加载的页面只是一个占位符" class="headerlink" title="浏览器第一次加载的页面只是一个占位符"></a>浏览器第一次加载的页面只是一个占位符</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">app</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="页面开发流程"><a href="#页面开发流程" class="headerlink" title="页面开发流程"></a>页面开发流程</h1><h2 id="浏览器第一次加载的页面只是一个占位符"><a href="#浏览器第一次加载的页面只是一个占位符" class="headerlink" title="浏览器第一次加载的页面只是一个占位符"></a>浏览器第一次加载的页面只是一个占位符</h2><a id="more"></a>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">app</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="前端将其他-HTML-和从服务器获取的数据填到占位符里"><a href="#前端将其他-HTML-和从服务器获取的数据填到占位符里" class="headerlink" title="前端将其他 HTML 和从服务器获取的数据填到占位符里"></a>前端将其他 HTML 和从服务器获取的数据填到占位符里</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$.get(<span class="string">'/user/1'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;</div><div class="line">  template = (</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">  )</div><div class="line">  content = template.replace(<span class="string">'&#123;&#123; name &#125;&#125;'</span>, user.name)</div><div class="line">  $app.html(content)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h2 id="用户提交数据时，前端用-AJAX-提交异步请求"><a href="#用户提交数据时，前端用-AJAX-提交异步请求" class="headerlink" title="用户提交数据时，前端用 AJAX 提交异步请求"></a>用户提交数据时，前端用 AJAX 提交异步请求</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$form.on(<span class="string">'submit'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  $.post(<span class="string">'/user/1'</span>, $form.serialize()).then(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    alert(<span class="string">'提交成功'</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h1 id="前端MVC模式"><a href="#前端MVC模式" class="headerlink" title="前端MVC模式"></a>前端MVC模式</h1><h2 id="Model-封装数据操作"><a href="#Model-封装数据操作" class="headerlink" title="Model-封装数据操作"></a>Model-封装数据操作</h2><p>对用户的增删改成其实都是异步请求,数据相关的操作就都放到这个 model 上</p>
