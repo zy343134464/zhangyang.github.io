@@ -88,11 +88,11 @@
   </entry>
   
   <entry>
-    <title>【实战】js注册登录表单</title>
+    <title>【实战】js+node.js实现注册登录</title>
     <link href="http://yoursite.com/2018/11/05/2018.11.5/"/>
     <id>http://yoursite.com/2018/11/05/2018.11.5/</id>
     <published>2018-11-05T15:17:50.000Z</published>
-    <updated>2018-12-07T15:19:21.028Z</updated>
+    <updated>2018-12-09T11:29:05.999Z</updated>
     
     <content type="html"><![CDATA[<h1 id="登录与注册"><a href="#登录与注册" class="headerlink" title="登录与注册"></a>登录与注册</h1><h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><p><a href="https://dribbble.com/search?q=login" target="_blank" rel="external">dribbble</a><br><a id="more"></a></p>
 <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>1.需求分析</p>
@@ -120,6 +120,8 @@
     
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
     
   </entry>
   
