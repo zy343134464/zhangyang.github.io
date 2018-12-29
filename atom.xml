@@ -218,9 +218,9 @@
     <link href="http://yoursite.com/2018/11/05/2018.11.5/"/>
     <id>http://yoursite.com/2018/11/05/2018.11.5/</id>
     <published>2018-11-05T15:17:50.000Z</published>
-    <updated>2018-12-27T14:45:08.832Z</updated>
+    <updated>2018-12-29T15:49:30.022Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="登录与注册"><a href="#登录与注册" class="headerlink" title="登录与注册"></a>登录与注册</h1><h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><p><a href="https://dribbble.com/search?q=login" target="_blank" rel="external">dribbble</a><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<h1 id="登录与注册"><a href="#登录与注册" class="headerlink" title="登录与注册"></a>登录与注册</h1><h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><p><a href="https://dribbble.com/search?q=login" target="_blank" rel="external">dribbble</a></p>
 <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>1.需求分析</p>
 <ul>
 <li>登录（邮箱、密码）</li>
@@ -228,6 +228,7 @@
 <li>重置密码（邮箱）</li>
 <li>已登录</li>
 </ul>
+<a id="more"></a>
 <p>2.寻找后端代码</p>
 <p><a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a></p>
 <p>或者用Node.js写一个后端,然后买一个服务器或VPS来运行Node.js,确保接口可用</p>
@@ -239,7 +240,14 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;登录与注册&quot;&gt;&lt;a href=&quot;#登录与注册&quot; class=&quot;headerlink&quot; title=&quot;登录与注册&quot;&gt;&lt;/a&gt;登录与注册&lt;/h1&gt;&lt;h2 id=&quot;UI&quot;&gt;&lt;a href=&quot;#UI&quot; class=&quot;headerlink&quot; title=&quot;UI&quot;&gt;&lt;/a&gt;UI&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://dribbble.com/search?q=login&quot;&gt;dribbble&lt;/a&gt;&lt;br&gt;
+      &lt;h1 id=&quot;登录与注册&quot;&gt;&lt;a href=&quot;#登录与注册&quot; class=&quot;headerlink&quot; title=&quot;登录与注册&quot;&gt;&lt;/a&gt;登录与注册&lt;/h1&gt;&lt;h2 id=&quot;UI&quot;&gt;&lt;a href=&quot;#UI&quot; class=&quot;headerlink&quot; title=&quot;UI&quot;&gt;&lt;/a&gt;UI&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://dribbble.com/search?q=login&quot;&gt;dribbble&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;流程&quot;&gt;&lt;a href=&quot;#流程&quot; class=&quot;headerlink&quot; title=&quot;流程&quot;&gt;&lt;/a&gt;流程&lt;/h2&gt;&lt;p&gt;1.需求分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登录（邮箱、密码）&lt;/li&gt;
+&lt;li&gt;注册（邮箱、密码、重复密码）&lt;/li&gt;
+&lt;li&gt;重置密码（邮箱）&lt;/li&gt;
+&lt;li&gt;已登录&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
