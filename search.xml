@@ -19,7 +19,7 @@
     <entry>
       <title><![CDATA[缓存]]></title>
       <url>%2F2018%2F12%2F15%2F2018.12.15%2F</url>
-      <content type="text"><![CDATA[CacheControl缓存是浏览器为了加载文件性能(默认都是有缓存),缓存是以URL为依据 加缓存后台http头加 Cache-Control:public,max-age=3600 去除缓存1.Chrome F12点击Network,勾选Disable cache 2.Chrome 手动清掉痕迹3.在每个文件后面加?随机数]]></content>
+      <content type="text"><![CDATA[CacheControl缓存是浏览器为了加载文件性能(默认都是有缓存),缓存是以URL为依据 加缓存后台http头加 Cache-Control:public,max-age=3600 去除缓存1.Chrome F12点击Network,勾选Disable cache 2.Chrome 手动清掉痕迹 3.在每个文件后面加?随机数]]></content>
     </entry>
 
     
