@@ -116,22 +116,18 @@
     <link href="http://yoursite.com/2018/12/15/2018.12.15/"/>
     <id>http://yoursite.com/2018/12/15/2018.12.15/</id>
     <published>2018-12-15T15:17:50.000Z</published>
-    <updated>2019-01-28T12:23:05.300Z</updated>
+    <updated>2019-01-30T13:19:34.800Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CacheControl"><a href="#CacheControl" class="headerlink" title="CacheControl"></a>CacheControl</h1><p>缓存是浏览器为了加载文件性能(默认都是有缓存),缓存是以URL为依据</p>
 <h2 id="加缓存"><a href="#加缓存" class="headerlink" title="加缓存"></a>加缓存</h2><p>后台http头加 Cache-Control:public,max-age=3600</p>
 <h2 id="去除缓存"><a href="#去除缓存" class="headerlink" title="去除缓存"></a>去除缓存</h2><p>1.Chrome F12点击Network,勾选Disable cache</p>
 <p>2.Chrome 手动清掉痕迹</p>
 <p>3.在每个文件后面加?随机数</p>
-<a id="more"></a>]]></content>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;CacheControl&quot;&gt;&lt;a href=&quot;#CacheControl&quot; class=&quot;headerlink&quot; title=&quot;CacheControl&quot;&gt;&lt;/a&gt;CacheControl&lt;/h1&gt;&lt;p&gt;缓存是浏览器为了加载文件性能(默认都是有缓存),缓存是以URL为依据&lt;/p&gt;
-&lt;h2 id=&quot;加缓存&quot;&gt;&lt;a href=&quot;#加缓存&quot; class=&quot;headerlink&quot; title=&quot;加缓存&quot;&gt;&lt;/a&gt;加缓存&lt;/h2&gt;&lt;p&gt;后台http头加 Cache-Control:public,max-age=3600&lt;/p&gt;
-&lt;h2 id=&quot;去除缓存&quot;&gt;&lt;a href=&quot;#去除缓存&quot; class=&quot;headerlink&quot; title=&quot;去除缓存&quot;&gt;&lt;/a&gt;去除缓存&lt;/h2&gt;&lt;p&gt;1.Chrome F12点击Network,勾选Disable cache&lt;/p&gt;
-&lt;p&gt;2.Chrome 手动清掉痕迹&lt;/p&gt;
-&lt;p&gt;3.在每个文件后面加?随机数&lt;/p&gt;
+      &lt;h1 id=&quot;CacheControl&quot;&gt;&lt;a href=&quot;#CacheControl&quot; class=&quot;headerlink&quot; title=&quot;CacheControl&quot;&gt;&lt;/a&gt;CacheControl&lt;/h1&gt;&lt;p&gt;缓存是浏览器为了加载文件性能(默认都是有缓存),缓存是以UR
     
     </summary>
     
@@ -139,12 +135,6 @@
     
     
       <category term="CacheControl" scheme="http://yoursite.com/tags/CacheControl/"/>
-    
-      <category term="MD5" scheme="http://yoursite.com/tags/MD5/"/>
-    
-      <category term="Cookie" scheme="http://yoursite.com/tags/Cookie/"/>
-    
-      <category term="Session" scheme="http://yoursite.com/tags/Session/"/>
     
   </entry>
   
