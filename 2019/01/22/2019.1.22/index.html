@@ -93,8 +93,7 @@
 JavaScript语言就采用这种机制，来解决单线程运行带来的一些问题
 运行以后的程序叫做”进程”（process），一般情况下，一个进程一次只能执行一个任务
 进程很多任务需要执行，解决方法
-1.排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务
-2.新建进程。使用fork命令，为每个任务">
+1.排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Event Loop">
 <meta property="og:url" content="http://yoursite.com/2019/01/22/2019.1.22/index.html">
@@ -103,20 +102,18 @@ JavaScript语言就采用这种机制，来解决单线程运行带来的一些�
 JavaScript语言就采用这种机制，来解决单线程运行带来的一些问题
 运行以后的程序叫做”进程”（process），一般情况下，一个进程一次只能执行一个任务
 进程很多任务需要执行，解决方法
-1.排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务
-2.新建进程。使用fork命令，为每个任务">
+1.排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务">
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/201310/2013102002.png">
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/201310/2013102003.png">
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/201310/2013102004.png">
-<meta property="og:updated_time" content="2019-01-31T12:43:13.227Z">
+<meta property="og:updated_time" content="2019-02-17T15:37:36.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Event Loop">
 <meta name="twitter:description" content="概念Event Loop 是一个很重要的概念，指的是计算机系统的一种运行机制
 JavaScript语言就采用这种机制，来解决单线程运行带来的一些问题
 运行以后的程序叫做”进程”（process），一般情况下，一个进程一次只能执行一个任务
 进程很多任务需要执行，解决方法
-1.排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务
-2.新建进程。使用fork命令，为每个任务">
+1.排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务">
 <meta name="twitter:image" content="http://www.ruanyifeng.com/blogimg/asset/201310/2013102002.png">
 
 
@@ -423,9 +420,8 @@ JavaScript语言就采用这种机制，来解决单线程运行带来的一些�
 <p>JavaScript语言就采用这种机制，来解决单线程运行带来的一些问题</p>
 <p>运行以后的程序叫做”进程”（process），一般情况下，一个进程一次只能执行一个任务</p>
 <h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><p>很多任务需要执行，解决方法</p>
-<p>1.排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务</p>
-<p>2.新建进程。使用fork命令，为每个任务新建一个进程。</p>
-<p>3.新建线程。因为进程太耗费资源，所以如今的程序往往允许一个进程包含多个线程，由线程去完成任务<br><a id="more"></a></p>
+<p>1.排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务<br><a id="more"></a><br>2.新建进程。使用fork命令，为每个任务新建一个进程。</p>
+<p>3.新建线程。因为进程太耗费资源，所以如今的程序往往允许一个进程包含多个线程，由线程去完成任务</p>
 <h1 id="JavaScript线程"><a href="#JavaScript线程" class="headerlink" title="JavaScript线程"></a>JavaScript线程</h1><p>JavaScript为一种单线程语言,所有任务都在一个线程上完成，即采用排队方法</p>
 <h2 id="单线程"><a href="#单线程" class="headerlink" title="单线程"></a>单线程</h2><p>某个任务很耗时，比如涉及很多I/O（输入/输出）操作，线程的运行如下图,绿色部分是程序的运行时间，红色部分是等待时间</p>
 <p><img src="http://www.ruanyifeng.com/blogimg/asset/201310/2013102002.png" alt="image"></p>
