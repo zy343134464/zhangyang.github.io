@@ -93,9 +93,7 @@
 一款 nodejs 的应用
 用来构建前端自动化工作流
 可以实现实现代码的打包、压缩、合并、转译等
-拥有很丰富的插件系统
-
-安装">
+拥有很丰富的插件系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gulp&Wepback打包">
 <meta property="og:url" content="http://yoursite.com/2019/02/18/2019.2.20/index.html">
@@ -104,19 +102,15 @@
 一款 nodejs 的应用
 用来构建前端自动化工作流
 可以实现实现代码的打包、压缩、合并、转译等
-拥有很丰富的插件系统
-
-安装">
-<meta property="og:updated_time" content="2019-03-03T08:06:58.009Z">
+拥有很丰富的插件系统">
+<meta property="og:updated_time" content="2019-03-06T14:50:32.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp&Wepback打包">
 <meta name="twitter:description" content="gulp
 一款 nodejs 的应用
 用来构建前端自动化工作流
 可以实现实现代码的打包、压缩、合并、转译等
-拥有很丰富的插件系统
-
-安装">
+拥有很丰富的插件系统">
 
 
 
@@ -424,8 +418,8 @@
 <li>可以实现实现代码的打包、压缩、合并、转译等</li>
 <li>拥有很丰富的插件系统</li>
 </ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><a id="more"></a>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g gulp</div><div class="line"></div><div class="line">如果报错：Error: EACCES, open '/Users/xxx/xxx.lock</div><div class="line">先执行：sudo chown -R $(whoami) $HOME/.npm 开启管理员</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g gulp</div><div class="line"></div><div class="line">如果报错：Error: EACCES, open '/Users/xxx/xxx.lock</div><div class="line">先执行：sudo chown -R $(whoami) $HOME/.npm 开启管理员</div></pre></td></tr></table></figure>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//安装插件</span></div><div class="line">npm install gulp-imagemin --save-dev <span class="comment">//图片压缩</span></div><div class="line">npm install gulp-cssnano --save-dev <span class="comment">//css压缩</span></div><div class="line">npm install uglify --save-dev <span class="comment">//js压缩</span></div><div class="line">npm install gulp-jshint --save-dev <span class="comment">//js规范检查</span></div><div class="line">npm install gulp-concat --save-dev <span class="comment">//文件合并</span></div><div class="line">npm install gulp-rename --save-dev <span class="comment">//重命名</span></div><div class="line"></div><div class="line"><span class="comment">//gulpfile.js</span></div><div class="line"><span class="comment">//引入插件</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    cssnano = <span class="built_in">require</span>(<span class="string">'gulp-cssnano'</span>),</div><div class="line">    concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>),</div><div class="line">    jshint = <span class="built_in">require</span>(<span class="string">'gulp-jshint'</span>),</div><div class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</div><div class="line">    imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>),</div><div class="line">    rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>),</div><div class="line"></div><div class="line">  <span class="comment">//css合并压缩</span></div><div class="line">  gulp.task(<span class="string">'build:css'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      gulp.src(<span class="string">'./src/css/*.css'</span>)</div><div class="line">        .pipe(concat(<span class="string">'merge.css'</span>))</div><div class="line">        .pipe(rename(&#123;</div><div class="line">            <span class="attr">suffix</span>: <span class="string">'.min'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(cssnano())</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css/'</span>));</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">//js合并压缩</span></div><div class="line">   gulp.task(<span class="string">'build:js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      gulp.src(<span class="string">'src/js/*.js'</span>)</div><div class="line">        .pipe(jshint())</div><div class="line">        .pipe(jshint.reporter(<span class="string">'default'</span>))</div><div class="line">        .pipe(concat(<span class="string">'merge.js'</span>))</div><div class="line">        .pipe(rename(&#123;</div><div class="line">          <span class="attr">suffix</span>: <span class="string">'.min'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(uglify())</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js/'</span>));</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">//图片压缩</span></div><div class="line">  gulp.task(<span class="string">'build:image'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      gulp.src(<span class="string">'src/imgs/*'</span>)</div><div class="line">        .pipe(imagemin())</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/imgs/'</span>));</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'build'</span>, [<span class="string">'build:css'</span>, <span class="string">'build:js'</span>, <span class="string">'build:image'</span>]);</div><div class="line"></div><div class="line"><span class="comment">//命令行</span></div><div class="line">gulp build</div></pre></td></tr></table></figure>
 <h1 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h1><ul>
 <li>webpack是一款模块加载器兼打包工具，它能把各种资源JS/CSS/图片等都作为模块来使用和处理</li>
