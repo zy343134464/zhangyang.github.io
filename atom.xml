@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-19T15:00:58.015Z</updated>
+  <updated>2019-03-23T02:08:25.305Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【实战】Canvas画板</title>
+    <link href="http://yoursite.com/2019/03/10/2019.3.10/"/>
+    <id>http://yoursite.com/2019/03/10/2019.3.10/</id>
+    <published>2019-03-10T15:17:50.000Z</published>
+    <updated>2019-03-23T02:08:25.305Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MDN-Canvas"><a href="#MDN-Canvas" class="headerlink" title="MDN Canvas"></a>MDN Canvas</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial</a></p>
+<h1 id="功能需求"><a href="#功能需求" class="headerlink" title="功能需求"></a>功能需求</h1><h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;MDN-Canvas&quot;&gt;&lt;a href=&quot;#MDN-Canvas&quot; class=&quot;headerlink&quot; title=&quot;MDN Canvas&quot;&gt;&lt;/a&gt;MDN Canvas&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="Canvas" scheme="http://yoursite.com/tags/Canvas/"/>
+    
+  </entry>
   
   <entry>
     <title>【总结】2019年2月份个人总结</title>
@@ -1010,31 +1033,6 @@
     
     
       <category term="个人总结" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【实战】封装获取url的querystring参数</title>
-    <link href="http://yoursite.com/2018/09/28/2018.9.28/"/>
-    <id>http://yoursite.com/2018/09/28/2018.9.28/</id>
-    <published>2018-09-28T15:16:41.000Z</published>
-    <updated>2018-10-10T13:05:44.046Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">http:<span class="comment">//xxx.com/index.html?a=1</span></div><div class="line">$<span class="selector-class">.bom</span><span class="selector-class">.search</span>(<span class="string">'a'</span>)  </div><div class="line">$<span class="selector-class">.bom</span><span class="selector-class">.search</span>(<span class="string">'a'</span>, <span class="string">'xxx'</span>)</div><div class="line">http:<span class="comment">//xxx.com/index.html?a=xxx</span></div></pre></td></tr></table></figure>
-<h1 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h1><a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.$ = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">let</span> array = []</div><div class="line">  <span class="keyword">return</span> array</div><div class="line">&#125;</div><div class="line">$.bom = &#123;</div><div class="line">  <span class="attr">openAtCenter</span>: <span class="function"><span class="keyword">function</span>(<span class="params">width, height, url</span>)</span>&#123;</div><div class="line">    <span class="built_in">window</span>.open(url, <span class="string">'_blank'</span>, <span class="string">`</span></div><div class="line">      width=<span class="subst">$&#123;width&#125;</span>px,height=<span class="subst">$&#123;height&#125;</span>px,</div><div class="line">      screenX=<span class="subst">$&#123;screen.width<span class="regexp">/2 - width/</span><span class="number">2</span>&#125;</span>px,</div><div class="line">      screenY=<span class="subst">$&#123;screen.height<span class="regexp">/2 - height/</span><span class="number">2</span>&#125;</span>px</div><div class="line">    `)</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">search</span>: <span class="function"><span class="keyword">function</span>(<span class="params">name, value</span>)</span>&#123;</div><div class="line">    <span class="keyword">let</span> searchAll = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">let</span> result = &#123;&#125;</div><div class="line">      <span class="keyword">let</span> search = <span class="built_in">window</span>.location.search</div><div class="line">      <span class="comment">// 去掉?</span></div><div class="line">      <span class="keyword">if</span>(search[<span class="number">0</span>] === <span class="string">'?'</span>)&#123;</div><div class="line">        search = search.slice(<span class="number">1</span>)</div><div class="line">      &#125;</div><div class="line">      <span class="comment">// 用 &amp; 分隔成数组</span></div><div class="line">      <span class="keyword">let</span> searchArray = search.split(<span class="string">'&amp;'</span>)</div><div class="line">      <span class="comment">// 遍历数组</span></div><div class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;searchArray.length; i++)&#123;</div><div class="line">        <span class="keyword">let</span> parts = searchArray[i].split(<span class="string">'='</span>)</div><div class="line">        result[<span class="built_in">decodeURIComponent</span>(parts[<span class="number">0</span>])] = <span class="built_in">decodeURIComponent</span>(parts[<span class="number">1</span>] || <span class="string">''</span>)</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> result</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">let</span> result = searchAll()</div><div class="line">    <span class="keyword">if</span>(value === <span class="literal">undefined</span>)&#123;</div><div class="line">      <span class="keyword">return</span> result[name]</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">      <span class="keyword">if</span>(result[name] === <span class="literal">undefined</span>)&#123;</div><div class="line">        location.search += <span class="string">`&amp;<span class="subst">$&#123;<span class="built_in">encodeURIComponent</span>(name)&#125;</span>=<span class="subst">$&#123;<span class="built_in">encodeURIComponent</span>(value)&#125;</span>`</span></div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        result[name] = <span class="built_in">encodeURIComponent</span>(value)</div><div class="line">        <span class="keyword">let</span> newSearch = <span class="string">'?'</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> result)&#123;</div><div class="line">          newSearch += <span class="string">`<span class="subst">$&#123;<span class="built_in">encodeURIComponent</span>(key)&#125;</span>=<span class="subst">$&#123;<span class="built_in">encodeURIComponent</span>(result[key])&#125;</span>&amp;`</span></div><div class="line">        &#125;</div><div class="line">        location.search = newSearch</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h1&gt;&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;http:&lt;span class=&quot;comment&quot;&gt;//xxx.com/index.html?a=1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$&lt;span class=&quot;selector-class&quot;&gt;.bom&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.search&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;)  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$&lt;span class=&quot;selector-class&quot;&gt;.bom&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.search&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;xxx&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;http:&lt;span class=&quot;comment&quot;&gt;//xxx.com/index.html?a=xxx&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;源代码&quot;&gt;&lt;a href=&quot;#源代码&quot; class=&quot;headerlink&quot; title=&quot;源代码&quot;&gt;&lt;/a&gt;源代码&lt;/h1&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
   </entry>
   
