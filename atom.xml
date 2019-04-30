@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-21T07:34:20.760Z</updated>
+  <updated>2019-04-30T03:11:57.174Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>forEach和sort的实现</title>
+    <link href="http://yoursite.com/2019/03/16/2019.3.16/"/>
+    <id>http://yoursite.com/2019/03/16/2019.3.16/</id>
+    <published>2019-03-16T15:17:50.000Z</published>
+    <updated>2019-04-30T03:11:57.174Z</updated>
+    
+    <content type="html"><![CDATA[<p>看了数组的一些源码,总结了规律,典型的forEach和sort的实现,基本上其他ES5数组的方法实现也是照葫芦画瓢</p>
+<h1 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h1><a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.myForEach = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> len = <span class="keyword">this</span>.length;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</div><div class="line">    <span class="comment">//将元素传给回调函数</span></div><div class="line">    fn(<span class="keyword">this</span>[i],i);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">arr.myForEach(<span class="function"><span class="keyword">function</span> (<span class="params">ele, index</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(ele, index);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h1 id="sort原理"><a href="#sort原理" class="headerlink" title="sort原理"></a>sort原理</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</div><div class="line"><span class="built_in">Array</span>.prototype.myMap = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> len = <span class="keyword">this</span>.length;</div><div class="line">    <span class="comment">//创建新数组</span></div><div class="line">    <span class="keyword">var</span> arr = [];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</div><div class="line">        arr.push(fn(<span class="keyword">this</span>[i],i))</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> arr;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> aa = arr.myMap(<span class="function"><span class="keyword">function</span>(<span class="params">ele, index</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> ele * <span class="number">2</span>;</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(aa);</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;看了数组的一些源码,总结了规律,典型的forEach和sort的实现,基本上其他ES5数组的方法实现也是照葫芦画瓢&lt;/p&gt;
+&lt;h1 id=&quot;forEach&quot;&gt;&lt;a href=&quot;#forEach&quot; class=&quot;headerlink&quot; title=&quot;forEach&quot;&gt;&lt;/a&gt;forEach&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>【实战】Canvas画板</title>
@@ -933,108 +959,6 @@
     
     
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【总结】2018年9月份个人总结</title>
-    <link href="http://yoursite.com/2018/09/30/2018.9.30/"/>
-    <id>http://yoursite.com/2018/09/30/2018.9.30/</id>
-    <published>2018-09-30T15:16:41.000Z</published>
-    <updated>2018-10-21T01:18:43.895Z</updated>
-    
-    <content type="html"><![CDATA[<p>面对梦想,不要卑微了沉默</p>
-<p>没想到2018年的国庆也马上就要开始了，时间快得要炸了</p>
-<p>国庆7天大长假，准备回大汕头浪一浪</p>
-<p>接下来好好利用时间,把时间规划总结了下来<br><a id="more"></a></p>
-<ul>
-<li>上班的时间规划</li>
-</ul>
-<p>碎片时间:1(学习)+1.5(其它)+1.5(其它)+1(运动)+2(学习)+1(其它)=8</p>
-<p>学习时间(3)+其它(4)+运动(1)</p>
-<p>0:00-7:00   睡觉</p>
-<p>7:00-8:00   复习</p>
-<p>8:00-9:30   地铁</p>
-<p>9:30-18:30  上班</p>
-<p>18:30-20:00 回家</p>
-<p>20:00-21:00 运动</p>
-<p>21:00-23:00 学习</p>
-<p>23:00-24:00 总结</p>
-<ul>
-<li>周末的时间规划</li>
-</ul>
-<p>碎片时间:2(学习)+3.5(学习)+4(其它)+3(运动)+2(学习)+2(其它)=16.5</p>
-<p>学习时间(7.5)+其它(6)+运动(3)</p>
-<p>0:00-7:00   睡觉</p>
-<p>7:00-9:00   复习</p>
-<p>9:00-12:30  学习</p>
-<p>12:30-13:30 午睡</p>
-<p>13:30-17:00 兴趣</p>
-<p>17:00-20:00 运动</p>
-<p>20:00-22:00 学习</p>
-<p>22:00-24:00 总结</p>
-<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1.学习node.js，重新看了常用的那些模块</p>
-<p>2.学习用node.js写爬虫(亚马逊、天猫、速卖通)</p>
-<p>3.开始刷IFE的HTMLCSSJavaScript题目,已经刷一大半</p>
-<p>4.学习微信小程序开发，微信小程序算是对HTML5和CSS3的封装(入门阶段)</p>
-<p>5.学习数据结构和算法，数据结构和算法或许现在不太能用上，但是还是觉得必须要有一点了解，况且现在大厂招人都是看中这些基础</p>
-<p>6.了解了一下设计方面的书籍</p>
-<p>7.重新学习JavaScript,整理github及博客分类</p>
-<p>8.学习fiexbox及gird,对响应式布局有了更深入的了解及应用</p>
-<h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><p>1.亚马逊-MWS端点配置新增及修改页及haier-core.js封装点击窗口错误不刷新父页面功能</p>
-<p>2.亚马逊-开发者账号管理(新增及修改页)</p>
-<p>3.亚马逊店铺管理(新增及修改页)</p>
-<p>4.速卖通产品页列表爬虫</p>
-<p>5.亚马逊产品详情页nodejs爬虫</p>
-<p>6.Ozon产品列表页及产品详情页nodejs爬虫</p>
-<h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>1.写字帖、夜跑</p>
-<p>2.中午利用午休1小时看书</p>
-<p>3.11点半前睡,7点起</p>
-<p>4.和同事打了5 6次篮球</p>
-<p>5.确实有那么点想家，已经半年没回去,特别是在小伙伴一到小长假就商量着什么时候回家的时候</p>
-<p>6.国庆87岁的爷爷过来广州玩几天，住我哥那，带领我们4个去拜访老朋友老亲戚</p>
-<p>7.回汕头和海尔同事踢了场10人一场足球</p>
-<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>《编程之美》、《Don’t Make Me Think》、《大话数据结构》、《浪潮之巅》、《我编程、我快乐》、《node.js权威指南》、《计算思维》、《人月神话》</p>
-<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>《动物世界》、《黄金兄弟》、《快带走我哥》、《蚁人2》</p>
-<h1 id="绩效评估"><a href="#绩效评估" class="headerlink" title="绩效评估"></a>绩效评估</h1><table>
-<thead>
-<tr>
-<th>学习</th>
-<th>工作</th>
-<th>生活</th>
-<th>阅读</th>
-<th>总分</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>8</td>
-<td>8</td>
-<td>5</td>
-<td>8</td>
-<td>29</td>
-</tr>
-</tbody>
-</table>
-<h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>1.刷完IEF所有题</p>
-<p>2.学习Canvas</p>
-<p>3.学习计算思维、设计模式及构架思想</p>
-<p>4.复习js组件开发</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;面对梦想,不要卑微了沉默&lt;/p&gt;
-&lt;p&gt;没想到2018年的国庆也马上就要开始了，时间快得要炸了&lt;/p&gt;
-&lt;p&gt;国庆7天大长假，准备回大汕头浪一浪&lt;/p&gt;
-&lt;p&gt;接下来好好利用时间,把时间规划总结了下来&lt;br&gt;
-    
-    </summary>
-    
-      <category term="lifes" scheme="http://yoursite.com/categories/lifes/"/>
-    
-    
-      <category term="个人总结" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
