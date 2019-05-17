@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[forEach和sort的实现]]></title>
       <url>%2F2019%2F03%2F16%2F2019.3.16%2F</url>
-      <content type="text"><![CDATA[看了数组的一些源码,总结了规律,典型的forEach和sort的实现,基本上其他ES5数组的方法实现也是照葫芦画瓢 forEach 12345678910Array.prototype.myForEach = function(fn)&#123; var len = this.length; for(var i = 0; i &lt; len; i ++)&#123; //将元素传给回调函数 fn(this[i],i); &#125;&#125;arr.myForEach(function (ele, index)&#123; console.log(ele, index);&#125;) sort原理1234567891011121314var arr = [1, 2, 3, 4, 5]Array.prototype.myMap = function(fn)&#123; var len = this.length; //创建新数组 var arr = []; for(var i = 0; i &lt; len; i ++)&#123; arr.push(fn(this[i],i)) &#125; return arr;&#125;var aa = arr.myMap(function(ele, index)&#123; return ele * 2;&#125;)console.log(aa);]]></content>
+      <content type="text"><![CDATA[看了数组的一些源码,总结了规律,典型的forEach和sort的实现,基本上其他ES5数组的方法实现也是照葫芦画瓢 forEach12345678910Array.prototype.myForEach = function(fn)&#123; var len = this.length; for(var i = 0; i &lt; len; i ++)&#123; //将元素传给回调函数 fn(this[i],i); &#125;&#125;arr.myForEach(function (ele, index)&#123; console.log(ele, index);&#125;) sort原理1234567891011121314var arr = [1, 2, 3, 4, 5]Array.prototype.myMap = function(fn)&#123; var len = this.length; //创建新数组 var arr = []; for(var i = 0; i &lt; len; i ++)&#123; arr.push(fn(this[i],i)) &#125; return arr;&#125;var aa = arr.myMap(function(ele, index)&#123; return ele * 2;&#125;)console.log(aa);]]></content>
     </entry>
 
     

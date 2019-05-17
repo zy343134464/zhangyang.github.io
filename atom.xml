@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-30T03:11:57.174Z</updated>
+  <updated>2019-05-17T15:47:55.487Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,17 +20,15 @@
     <link href="http://yoursite.com/2019/03/16/2019.3.16/"/>
     <id>http://yoursite.com/2019/03/16/2019.3.16/</id>
     <published>2019-03-16T15:17:50.000Z</published>
-    <updated>2019-04-30T03:11:57.174Z</updated>
+    <updated>2019-05-17T15:47:55.487Z</updated>
     
-    <content type="html"><![CDATA[<p>看了数组的一些源码,总结了规律,典型的forEach和sort的实现,基本上其他ES5数组的方法实现也是照葫芦画瓢</p>
-<h1 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h1><a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.myForEach = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> len = <span class="keyword">this</span>.length;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</div><div class="line">    <span class="comment">//将元素传给回调函数</span></div><div class="line">    fn(<span class="keyword">this</span>[i],i);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">arr.myForEach(<span class="function"><span class="keyword">function</span> (<span class="params">ele, index</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(ele, index);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<p>看了数组的一些源码,总结了规律,典型的forEach和sort的实现,基本上其他ES5数组的方法实现也是照葫芦画瓢<br><a id="more"></a></p>
+<h1 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.myForEach = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> len = <span class="keyword">this</span>.length;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</div><div class="line">    <span class="comment">//将元素传给回调函数</span></div><div class="line">    fn(<span class="keyword">this</span>[i],i);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">arr.myForEach(<span class="function"><span class="keyword">function</span> (<span class="params">ele, index</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(ele, index);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h1 id="sort原理"><a href="#sort原理" class="headerlink" title="sort原理"></a>sort原理</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</div><div class="line"><span class="built_in">Array</span>.prototype.myMap = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> len = <span class="keyword">this</span>.length;</div><div class="line">    <span class="comment">//创建新数组</span></div><div class="line">    <span class="keyword">var</span> arr = [];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i ++)&#123;</div><div class="line">        arr.push(fn(<span class="keyword">this</span>[i],i))</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> arr;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> aa = arr.myMap(<span class="function"><span class="keyword">function</span>(<span class="params">ele, index</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> ele * <span class="number">2</span>;</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(aa);</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;看了数组的一些源码,总结了规律,典型的forEach和sort的实现,基本上其他ES5数组的方法实现也是照葫芦画瓢&lt;/p&gt;
-&lt;h1 id=&quot;forEach&quot;&gt;&lt;a href=&quot;#forEach&quot; class=&quot;headerlink&quot; title=&quot;forEach&quot;&gt;&lt;/a&gt;forEach&lt;/h1&gt;
+      &lt;p&gt;看了数组的一些源码,总结了规律,典型的forEach和sort的实现,基本上其他ES5数组的方法实现也是照葫芦画瓢&lt;br&gt;
     
     </summary>
     
